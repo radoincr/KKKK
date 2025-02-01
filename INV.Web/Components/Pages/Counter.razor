@@ -1,0 +1,50 @@
+﻿@page "/counter"
+@using INV.Web.Components.Layout.Toast
+@rendermode InteractiveServer
+
+<PageTitle>Toas</PageTitle>
+
+<h1>Toast by INV</h1>
+
+
+
+<button @onclick="@Sucses" class="btn btn-success">Toast Sucses</button>
+<button @onclick="@Warning" class="btn btn-warning">Toast Warning</button>
+<button @onclick="@Danger" class="btn btn-danger">Toast Danger</button>
+
+<ToastValidation Type="toastType" Title="@toastTitle" Message="@toastMessage" IsVisible="isToastVisible"
+                 OnClose="CloseToast"/>
+
+
+@code {
+   
+    private bool isToastVisible = false;
+    private ToastType toastType = ToastType.Success;
+    private string toastTitle = string.Empty;
+    private string toastMessage = string.Empty;
+
+    public void Sucses()
+    {
+        ShowToast("Sucses", "Sucses INV !", ToastType.Success);
+    }
+    public void Warning()
+    {
+        ShowToast("Warning", "Warning INV !", ToastType.Warning);
+    } public void Danger()
+    {
+        ShowToast("Danger", "Danger INV !", ToastType.Danger);
+    }
+
+    private void ShowToast(string title, string message, ToastType type)
+    {
+        toastTitle = title;
+        toastMessage = message;
+        toastType = type;
+        isToastVisible = true;
+    }
+    private void CloseToast()
+    {
+        isToastVisible = false;
+    }
+
+}

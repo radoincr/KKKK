@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\INV.Domain\INV.Domain.csproj" />
+      <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj" />
+      <ProjectReference Include="..\INV.Infrasrtacture\INV.Infrasrtacture.csproj" />
+      <ProjectReference Include="..\INV.Web\INV.Web.csproj" />
+    </ItemGroup>
+
+</Project>
