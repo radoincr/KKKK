@@ -1,52 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {
-      "INV.Infrasrtacture/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "INV.Web": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/INV.Infrasrtacture.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/INV.Infrasrtacture.dll": {}
-        }
-      },
-      "INV.Web/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/INV.Web.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/INV.Web.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      }
-    }
+    "net9.0": {}
   },
-  "libraries": {
-    "INV.Infrasrtacture/1.0.0": {
-      "type": "project",
-      "path": "../INV.Infrasrtacture/INV.Infrasrtacture.csproj",
-      "msbuildProject": "../INV.Infrasrtacture/INV.Infrasrtacture.csproj"
-    },
-    "INV.Web/1.0.0": {
-      "type": "project",
-      "path": "../INV.Web/INV.Web.csproj",
-      "msbuildProject": "../INV.Web/INV.Web.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net9.0": [
-      "INV.Infrasrtacture >= 1.0.0",
-      "INV.Web >= 1.0.0"
-    ]
+    "net9.0": []
   },
   "packageFolders": {
     "C:\\Users\\radoi\\.nuget\\packages\\": {}
@@ -72,14 +31,7 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {
-            "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Infrasrtacture\\INV.Infrasrtacture.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Infrasrtacture\\INV.Infrasrtacture.csproj"
-            },
-            "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Web\\INV.Web.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Web\\INV.Web.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -5,42 +5,12 @@
       "INV.Implementation/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "INV.Infrasrtacture": "1.0.0",
-          "INV.Web": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/INV.Implementation.dll": {}
         },
         "runtime": {
           "bin/placeholder/INV.Implementation.dll": {}
         }
-      },
-      "INV.Infrasrtacture/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "INV.Web": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/INV.Infrasrtacture.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/INV.Infrasrtacture.dll": {}
-        }
-      },
-      "INV.Web/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/INV.Web.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/INV.Web.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -49,23 +19,11 @@
       "type": "project",
       "path": "../INV.Implementation/INV.Implementation.csproj",
       "msbuildProject": "../INV.Implementation/INV.Implementation.csproj"
-    },
-    "INV.Infrasrtacture/1.0.0": {
-      "type": "project",
-      "path": "../INV.Infrasrtacture/INV.Infrasrtacture.csproj",
-      "msbuildProject": "../INV.Infrasrtacture/INV.Infrasrtacture.csproj"
-    },
-    "INV.Web/1.0.0": {
-      "type": "project",
-      "path": "../INV.Web/INV.Web.csproj",
-      "msbuildProject": "../INV.Web/INV.Web.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "INV.Implementation >= 1.0.0",
-      "INV.Infrasrtacture >= 1.0.0",
-      "INV.Web >= 1.0.0"
+      "INV.Implementation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -95,12 +53,6 @@
           "projectReferences": {
             "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Implementation\\INV.Implementation.csproj": {
               "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Implementation\\INV.Implementation.csproj"
-            },
-            "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Infrasrtacture\\INV.Infrasrtacture.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Infrasrtacture\\INV.Infrasrtacture.csproj"
-            },
-            "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Web\\INV.Web.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Web\\INV.Web.csproj"
             }
           }
         }

@@ -1,0 +1,121 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<div class="order-document">
+    <h4>Order Document</h4>
+    <div class="order-info">
+        <span class="order-id">Number: 46 </span>
+        <span class="order-date">Date: @DateTime.Now.ToString("yyyy-MM-dd")</span>
+    </div>
+
+    @foreach (var sectionItem in sectionItems)
+    {
+        <div class="section">
+            <button class="toggle-button" @onclick="() => ToggleSection(sectionItem)" aria-label="@($"Toggle {sectionItem.Title} section")">
+                @GetSectionIcon(sectionItem.IsVisible)
+            </button>
+            <span class="section-title">@sectionItem.Title</span>
+            @if (sectionItem.IsVisible)
+            {
+                <div class="section-content">
+                    @if (sectionItem.Title == "Definition of the contracting authority")
+                    {
+
+                    }
+                    else if (sectionItem.Title == "Definition of the economic operator")
+                    {
+                        <div class="form-group">
+                            <label for="supplierExists">Does the supplier exist?</label>
+                            <select id="supplierExists"  class="input-field">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First and Last Name:</label>
+                                    <input type="text" id="firstName" @bind="firstName" placeholder="Enter Full Name" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="companyName">Or Company Name (Legal form determination):</label>
+                                    <input type="text" id="companyName" @bind="companyName" placeholder="Enter Company Name" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="actsOnBehalf">Acts on Behalf of:</label>
+                                    <input type="text" id="actsOnBehalf" @bind="actsOnBehalf" placeholder="Enter Representative Name" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="operatorAddress">Address:</label>
+                                    <input type="text" id="operatorAddress" @bind="operatorAddress" placeholder="Enter Address" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="operatorContact">Phone or Fax:</label>
+                                    <input type="number" id="operatorContact" @bind="operatorContact" placeholder="Enter Phone/Fax" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registrationNumber">Commercial registration number:</label>
+                                    <input type="text" id="registrationNumber" @bind="registrationNumber" placeholder="Enter Registration Number" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="articleNumber">Article number:</label>
+                                    <input type="number" id="articleNumber" @bind="articleNumber" placeholder="Enter Article Number" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tin">Tax identification number (TIN):</label>
+                                    <input type="number" id="tin" @bind="tin" placeholder="Enter TIN" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="statisticalNumber">Statistical identification number:</label>
+                                    <input type="number" id="statisticalNumber" @bind="statisticalNumber" placeholder="Enter Statistical Number" class="input-field"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bankStatement">Bank or postal account statement:</label>
+                                    <input type="text" id="bankStatement" @bind="bankStatement" placeholder="Enter Bank Statement" class="input-field"/>
+                                </div>
+                            
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+    <button class="create-button" @onclick="CreateOrder">Create</button>
+</div>
+
+@code {
+    private List<SectionItem> sectionItems = new()
+    {
+        new SectionItem { Title = "Definition of the contracting authority" },
+        new SectionItem { Title = "Definition of the economic operator" },
+        new SectionItem { Title = "Characteristics of the order" }
+    };
+    private string firstName;
+    private string companyName;
+    private string actsOnBehalf;
+    private string operatorAddress;
+    private int operatorContact;
+    private string registrationNumber;
+    private int articleNumber;
+    private int tin;
+    private int statisticalNumber;
+    private string bankStatement;
+
+    private void ToggleSection(SectionItem sectionItem)
+    {
+        sectionItem.IsVisible = !sectionItem.IsVisible;
+    }
+
+    private string GetSectionIcon(bool isVisible)
+    {
+        return isVisible ? "▼" : "►";
+    }
+    private void CreateOrder()
+    {
+    }
+
+    public class SectionItem
+    {
+        public string Title { get; set; }
+        public bool IsVisible { get; set; } = false;
+    }
+}

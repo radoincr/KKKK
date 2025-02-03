@@ -1,0 +1,12 @@
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\bin\Debug\net9.0\INV.Implementation.deps.json
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\bin\Debug\net9.0\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\bin\Debug\net9.0\INV.Implementation.pdb
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.AssemblyInfoInputs.cache
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.AssemblyInfo.cs
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.csproj.CoreCompileInputs.cache
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.sourcelink.json
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\refint\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\INV.Implementation.pdb
+C:\Users\radoi\RiderProjects\INV\INV.Implementation\obj\Debug\net9.0\ref\INV.Implementation.dll

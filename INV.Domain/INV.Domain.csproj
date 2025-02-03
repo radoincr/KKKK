@@ -7,13 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Entity\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj" />
-      <ProjectReference Include="..\INV.Infrasrtacture\INV.Infrasrtacture.csproj" />
-      <ProjectReference Include="..\INV.Web\INV.Web.csproj" />
     </ItemGroup>
 
 </Project>
