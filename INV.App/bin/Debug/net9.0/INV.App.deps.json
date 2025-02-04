@@ -8,13 +8,92 @@
     ".NETCoreApp,Version=v9.0": {
       "INV.App/1.0.0": {
         "dependencies": {
-          "INV.Domain": "1.0.0"
+          "INV.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration": "9.0.1",
+          "System.Configuration.ConfigurationManager": "9.0.1"
         },
         "runtime": {
           "INV.App.dll": {}
         }
       },
+      "Microsoft.Extensions.Configuration/9.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.1",
+          "Microsoft.Extensions.Primitives": "9.0.1"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/9.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.1"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.1": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/9.0.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.1"
+        },
+        "runtime": {
+          "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/9.0.1": {
+        "runtime": {
+          "lib/net9.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/9.0.1": {
+        "runtime": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.124.61010"
+          }
+        }
+      },
       "INV.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "9.0.1",
+          "System.Configuration.ConfigurationManager": "9.0.1"
+        },
         "runtime": {
           "INV.Domain.dll": {
             "assemblyVersion": "1.0.0",
@@ -29,6 +108,48 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Extensions.Configuration/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VuthqFS+ju6vT8W4wevdhEFiRi1trvQtkzWLonApfF5USVzzDcTBoY3F24WvN/tffLSrycArVfX1bThm/9xY2A==",
+      "path": "microsoft.extensions.configuration/9.0.1",
+      "hashPath": "microsoft.extensions.configuration.9.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+4hfFIY1UjBCXFTTOd+ojlDPq6mep3h5Vq5SYE3Pjucr7dNXmq4S/6P/LoVnZFz2e/5gWp/om4svUFgznfULcA==",
+      "path": "microsoft.extensions.configuration.abstractions/9.0.1",
+      "hashPath": "microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bHtTesA4lrSGD1ZUaMIx6frU3wyy0vYtTa/hM6gGQu5QNrydObv8T5COiGUWsisflAfmsaFOe9Xvw5NSO99z0g==",
+      "path": "microsoft.extensions.primitives/9.0.1",
+      "hashPath": "microsoft.extensions.primitives.9.0.1.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ntDQ+3A7vGq6jnv3KI8nv1Tfgmos9TG863xd/5tmms6LqrIxEze1RLuA3JB/AcpXMUSO70DXzXfPnJD2ZHFX0Q==",
+      "path": "system.configuration.configurationmanager/9.0.1",
+      "hashPath": "system.configuration.configurationmanager.9.0.1.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iVnDpgYJsRaRFnk77kcLA3+913WfWDtnAKrQl9tQ5ahqKANTaJKmQdsuPWWiAPWE9pk1Kj4Pg9JGXWfFYYyakQ==",
+      "path": "system.diagnostics.eventlog/9.0.1",
+      "hashPath": "system.diagnostics.eventlog.9.0.1.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/9.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u+4PH6GyDjEsWgcpKp1S/DiyxtGvazNPdaPFR6p6/qZr3TW+oZWvwfHO2H2CSpS4KGl2z2CBfU6eB38PsmoxtA==",
+      "path": "system.security.cryptography.protecteddata/9.0.1",
+      "hashPath": "system.security.cryptography.protecteddata.9.0.1.nupkg.sha512"
     },
     "INV.Domain/1.0.0": {
       "type": "project",

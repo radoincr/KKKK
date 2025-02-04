@@ -8,7 +8,7 @@ using Web.Models.SupplierModels;
 
 namespace Web.Components.Pages;
 
-public partial class SupplierPage
+public partial class Supplier
 {
     [Inject] public ISupplierService SupplierService { get; set; }
     SupplierModel newSupplier = new SupplierModel();
@@ -29,7 +29,7 @@ public partial class SupplierPage
             }
             else
             {
-                var sup = new Supplier()
+                var sup = new Entity.SupplierEntity.Supplier()
                 {
                     ID = Guid.NewGuid(),
                     SupplierName = newSupplier.NameSupplier,

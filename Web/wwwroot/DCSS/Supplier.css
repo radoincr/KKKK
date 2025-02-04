@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 800px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 20px;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
@@ -62,7 +62,7 @@
 
 /* Input Fields */
 .commend-input {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .commend-input label {
@@ -70,15 +70,15 @@
     margin-bottom: 10px;
     font-weight: 500;
     color: #257180; /* Primary color */
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .commend-input input {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #fff;
     color: #333;
     transition: all 0.3s ease;
@@ -101,18 +101,18 @@
 /* Button Container */
 .commend-pos-btn {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     margin-top: 30px;
     justify-content: space-between;
     flex-direction: row-reverse;
 }
 
 .commend-pos-btn button {
-    padding: 14px 28px;
+    padding: 12px 24px;
     background-color: #257180; /* Primary button color */
     color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -148,7 +148,7 @@
 .input2 {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 13px;
 }
 
 .input2 .commend-input {
@@ -168,7 +168,7 @@
     }
 
     .commend-pos-btn button {
-        font-size: 16px;
+        font-size: 14px;
         padding: 12px 24px;
     }
 }
@@ -261,12 +261,12 @@
 }
 
 .buttons button {
-    padding: 8px 25px;
+    padding: 8px 23px;
     background: #4070f4;
     border: none;
     border-radius: 8px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
@@ -285,10 +285,10 @@
 /*================*/
 /* General Button Styles */
 .commend-pos-btn button {
-    padding: 12px 24px;
+    padding: 12px 23px;
     background-color: #257180; /* Primary color */
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     border: none;
     border-radius: 6px;

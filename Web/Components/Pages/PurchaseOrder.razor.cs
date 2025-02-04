@@ -7,7 +7,7 @@ using Web.Components.Layout.Toast;
 
 namespace Web.Components.Pages;
 
-public partial class PurchasePage
+public partial class PurchaseOrder
 {
     [Inject] private NavigationManager navigationManager { get; set; }
      private List<SectionItem> sectionItems = new()
@@ -25,12 +25,14 @@ public partial class PurchasePage
     private string companyName;
     private string actsOnBehalf;
     private string operatorAddress;
+    private string email;
     private int operatorContact;
     private string registrationNumber;
     private int articleNumber;
     private int tin;
     private int statisticalNumber;
-    private string bankStatement;
+    private string bankAccount;
+    private string bankAddress;
     private int delivery_time;
 
     private void ToggleSection(SectionItem sectionItem)
@@ -91,5 +93,11 @@ public partial class PurchasePage
         for (int i = product.Number; i <= products.Count; i++)
         {
         }
+    }
+    private bool SupplierSelected = false;
+
+    private void OnSupplierSelected(ChangeEventArgs e)
+    {
+        SupplierSelected = e.Value?.ToString() != "0";
     }
 }

@@ -1,5 +1,8 @@
 ﻿@page "/Supplier"
 @rendermode InteractiveServer
+
+<PageTitle>Add Supplier</PageTitle>
+
 <div class="form-container">
     <EditForm Model="newSupplier" OnValidSubmit="OnCreate" FormName="AddSupplier" >
         <DataAnnotationsValidator />
@@ -32,21 +35,19 @@
                     <ValidationMessage For="() => newSupplier.NameAccount" />
                 </div>
 
-
-
                 <div class="commend-input">
-                    <label>Email</label>
-                    <InputText @bind-Value="newSupplier.Email" placeholder="Enter Supplier Email" />
-                    <ValidationMessage For="() => newSupplier.Email" />
+                    <label>Address</label>
+                    <InputText @bind-Value="newSupplier.Address" placeholder="Enter Supplier Address" />
+                    <ValidationMessage For="() => newSupplier.Address" />
                 </div>
             </div>
 
             <div class="input2">
 
                 <div class="commend-input">
-                    <label>Address</label>
-                    <InputText @bind-Value="newSupplier.Address" placeholder="Enter Supplier Address" />
-                    <ValidationMessage For="() => newSupplier.Address" />
+                    <label>Email</label>
+                    <InputText @bind-Value="newSupplier.Email" placeholder="Enter Supplier Email" />
+                    <ValidationMessage For="() => newSupplier.Email" />
                 </div>
 
                 <div class="commend-input">
@@ -60,7 +61,7 @@
             <hr />
             <div class="input2">
                 <div class="commend-input">
-                    <label>ART</label>
+                    <label>Article number (ART)</label>
                     <InputNumber @bind-Value="newSupplier.ART" placeholder="Enter ART" />
                     <ValidationMessage For="() => newSupplier.ART" />
                 </div>
@@ -75,7 +76,7 @@
 
             <div class="input2">
                 <div class="commend-input">
-                    <label>RC</label>
+                    <label>Commercial registration number (RC) </label>
                     <InputText @bind-Value="newSupplier.RC" placeholder="Enter RC" />
                     <ValidationMessage For="() => newSupplier.RC" />
                 </div>
@@ -92,7 +93,7 @@
             <div class="input2">
 
                 <div class="commend-input">
-                    <label>Account Bank</label>
+                    <label>Bank Account (RIB)</label>
                     <InputNumber @bind-Value="newSupplier.RIB" placeholder="Enter RIB" />
                     <ValidationMessage For="() => newSupplier.RIB" />
                 </div>

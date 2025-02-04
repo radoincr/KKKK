@@ -1,0 +1,68 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+
+<div class="page-container">
+    <div class="header-container">
+        <h1>About IMS Project</h1>
+        <div class="background-shape" style="background-color:#FD8B51;"></div>
+    </div>
+    <div class="content">
+        <p>Our inventory management system simplifies inventory processes with an intuitive design. It offers real-time information, a barcode scanner, and comprehensive reporting. Built on a robust infrastructure, it ensures scalability and security. This translates into increased satisfaction and accuracy for businesses.</p>
+    </div>
+</div>
+<div class="dashboard">
+    <div class="card">
+        <h3><i class="fas fa-box"></i> Total Products in Stock</h3>
+        <p class="stat-value" style="color:#FD8B51;">@TotalProducts</p>
+    </div>
+
+    <div class="card">
+        <h3>
+            <i class="fas fa-clock"></i> Latest Stock Entries
+        </h3>
+        <ul class="latest-entries">
+            @foreach (var category in LatestProducts)
+            {
+                <li>@category.Name - Quantity: @category.Quantity</li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="button-group">
+    <button class="btn btn-primary" @onclick="NavigateToInventory">Manage Inventory</button>
+    <button class="btn btn-secondary" @onclick="NavigateToReports">View Reports</button>
+</div>
+
+
+@code {
+    private int TotalProducts = 250;
+
+    private List<Category> LatestProducts = new List<Category>
+    {
+        new Category { Name = "Category A", Quantity = 20 },
+        new Category { Name = "Category B", Quantity = 55 },
+        new Category { Name = "Category C", Quantity = 30 },
+        new Category { Name = "Category D", Quantity = 05 }
+
+    };
+
+    private void NavigateToInventory()
+    {
+        Navigation.NavigateTo("/inventory");
+    }
+
+    private void NavigateToReports()
+    {
+        Navigation.NavigateTo("/categories");
+    }
+
+
+    private class Category
+    {
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+    }
+}
