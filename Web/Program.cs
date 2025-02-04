@@ -1,3 +1,7 @@
+using App.ISupplierService;
+using Interface.SupplierStorages;
+using Service.SupplierServices;
+using Storage.SupplierStorages;
 using Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
+builder.Services.AddScoped<ISupplierStorage, SupplierStorage>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,7 +27,7 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
-app.MapRazorComponents<App>()
+app.MapRazorComponents<Web.Components.App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();

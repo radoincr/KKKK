@@ -2,9 +2,7 @@ C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.App.deps.json
 C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.App.dll
 C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.App.pdb
 C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.Domain.dll
-C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.Implementation.dll
 C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.Domain.pdb
-C:\Users\radoi\RiderProjects\INV\INV.App\bin\Debug\net9.0\INV.Implementation.pdb
 C:\Users\radoi\RiderProjects\INV\INV.App\obj\Debug\net9.0\INV.App.csproj.AssemblyReference.cache
 C:\Users\radoi\RiderProjects\INV\INV.App\obj\Debug\net9.0\INV.App.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\radoi\RiderProjects\INV\INV.App\obj\Debug\net9.0\INV.App.AssemblyInfoInputs.cache

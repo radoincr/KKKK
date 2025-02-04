@@ -8,27 +8,15 @@
     ".NETCoreApp,Version=v9.0": {
       "INV.App/1.0.0": {
         "dependencies": {
-          "INV.Domain": "1.0.0",
-          "INV.Implementation": "1.0.0"
+          "INV.Domain": "1.0.0"
         },
         "runtime": {
           "INV.App.dll": {}
         }
       },
       "INV.Domain/1.0.0": {
-        "dependencies": {
-          "INV.Implementation": "1.0.0"
-        },
         "runtime": {
           "INV.Domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "INV.Implementation/1.0.0": {
-        "runtime": {
-          "INV.Implementation.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -43,11 +31,6 @@
       "sha512": ""
     },
     "INV.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "INV.Implementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -28,9 +28,6 @@
             "projectReferences": {
               "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Domain\\INV.Domain.csproj": {
                 "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Domain\\INV.Domain.csproj"
-              },
-              "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Implementation\\INV.Implementation.csproj": {
-                "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Implementation\\INV.Implementation.csproj"
               }
             }
           }
@@ -90,11 +87,7 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {
-              "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Implementation\\INV.Implementation.csproj": {
-                "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Implementation\\INV.Implementation.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -152,7 +145,17 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\radoi\\RiderProjects\\INV\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.App\\INV.App.csproj"
+              },
+              "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Domain\\INV.Domain.csproj"
+              },
+              "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

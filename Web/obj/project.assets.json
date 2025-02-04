@@ -647,8 +647,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "INV.Domain": "1.0.0",
-          "INV.Implementation": "1.0.0"
+          "INV.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/INV.App.dll": {}
@@ -660,9 +659,6 @@
       "INV.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "INV.Implementation": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/INV.Domain.dll": {}
         },
@@ -673,6 +669,11 @@
       "INV.Implementation/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "INV.App": "1.0.0",
+          "INV.Domain": "1.0.0",
+          "INV.Infrastructure": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/INV.Implementation.dll": {}
         },

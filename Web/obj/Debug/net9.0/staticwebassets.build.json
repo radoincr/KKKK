@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6KFjpBD2U/sgVaikH44v6LcdgkqFKLXTYCGYS0KBhOk=",
+  "Hash": "K0NwT0v5RUl24iTEAs0Hk99pIVKiEWRcRehWc6/aqJA=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -162,6 +162,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\6171yyfv4s-hk4fjhxfx9.gz",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "ICSS/PurchaseOrder#[.{fingerprint=hk4fjhxfx9}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\ICSS\\PurchaseOrder.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "x5hydtr1y4",
+      "Integrity": "ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\ICSS\\PurchaseOrder.css"
     },
     {
       "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\6bir0r8491-8muxwues8a.gz",
@@ -773,6 +794,27 @@
       "OriginalItemSpec": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+      "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\t98cp12fq1-pq5c27ycmq.gz",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "DCSS/Command#[.{fingerprint=pq5c27ycmq}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Command.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "f0yahewxql",
+      "Integrity": "r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Command.css"
+    },
+    {
       "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\ucgiwmn21o-iovd86k7lj.gz",
       "SourceId": "Web",
       "SourceType": "Discovered",
@@ -962,6 +1004,27 @@
       "OriginalItemSpec": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\ygjdfotdet-xl7nl9j8i6.gz",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "DCSS/Createreception#[.{fingerprint=xl7nl9j8i6}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Createreception.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "9i1yh79jxp",
+      "Integrity": "IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Createreception.css"
+    },
+    {
       "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\yijslo3x3h-hd3gran6i8.gz",
       "SourceId": "Web",
       "SourceType": "Discovered",
@@ -1067,6 +1130,48 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
+      "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Command.css",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "DCSS/Command#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pq5c27ycmq",
+      "Integrity": "EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DCSS\\Command.css"
+    },
+    {
+      "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Createreception.css",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "DCSS/Createreception#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xl7nl9j8i6",
+      "Integrity": "u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DCSS\\Createreception.css"
+    },
+    {
       "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\favicon.png",
       "SourceId": "Web",
       "SourceType": "Discovered",
@@ -1086,6 +1191,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\ICSS\\PurchaseOrder.css",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "ICSS/PurchaseOrder#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hk4fjhxfx9",
+      "Integrity": "4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ICSS\\PurchaseOrder.css"
     },
     {
       "Identity": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\Images\\danger.png",
@@ -2354,6 +2480,602 @@
       ]
     },
     {
+      "Route": "DCSS/Command.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\t98cp12fq1-pq5c27ycmq.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000559910414"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1785"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Command.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Command.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Command.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\t98cp12fq1-pq5c27ycmq.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1785"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Command.pq5c27ycmq.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\t98cp12fq1-pq5c27ycmq.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000559910414"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1785"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pq5c27ycmq"
+        },
+        {
+          "Name": "label",
+          "Value": "DCSS/Command.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Command.pq5c27ycmq.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Command.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pq5c27ycmq"
+        },
+        {
+          "Name": "label",
+          "Value": "DCSS/Command.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EYYfVF5pvFA/DUiHBe6sw9GXmEWPKB6ceJTNvhlpY0c="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Command.pq5c27ycmq.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\t98cp12fq1-pq5c27ycmq.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1785"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pq5c27ycmq"
+        },
+        {
+          "Name": "label",
+          "Value": "DCSS/Command.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r7N2UeUEutloFwN0QyMlQxw7NomvOynxtQQym5EAsf4="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Createreception.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\ygjdfotdet-xl7nl9j8i6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001007049345"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "992"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:23:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Createreception.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Createreception.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:23:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Createreception.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\ygjdfotdet-xl7nl9j8i6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "992"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:23:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Createreception.xl7nl9j8i6.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\ygjdfotdet-xl7nl9j8i6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001007049345"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "992"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:23:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xl7nl9j8i6"
+        },
+        {
+          "Name": "label",
+          "Value": "DCSS/Createreception.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Createreception.xl7nl9j8i6.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Createreception.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:23:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xl7nl9j8i6"
+        },
+        {
+          "Name": "label",
+          "Value": "DCSS/Createreception.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u1CLywJa/GH6w1QZ6tjCt8kwIl89UPUjBQ4yHRc0too="
+        }
+      ]
+    },
+    {
+      "Route": "DCSS/Createreception.xl7nl9j8i6.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\ygjdfotdet-xl7nl9j8i6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "992"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 09:23:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xl7nl9j8i6"
+        },
+        {
+          "Name": "label",
+          "Value": "DCSS/Createreception.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IbkRrK/YqGwnEaSTWg5O55iMYulR7VTO9iqQxabRO8A="
+        }
+      ]
+    },
+    {
       "Route": "favicon.ifv42okdf2.png",
       "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\favicon.png",
       "Selectors": [],
@@ -2432,6 +3154,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/PurchaseOrder.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\6171yyfv4s-hk4fjhxfx9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000972762646"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1027"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 11:44:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/PurchaseOrder.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\ICSS\\PurchaseOrder.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3553"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 11:44:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/PurchaseOrder.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\6171yyfv4s-hk4fjhxfx9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 11:44:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/PurchaseOrder.hk4fjhxfx9.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\6171yyfv4s-hk4fjhxfx9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000972762646"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1027"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 11:44:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hk4fjhxfx9"
+        },
+        {
+          "Name": "label",
+          "Value": "ICSS/PurchaseOrder.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/PurchaseOrder.hk4fjhxfx9.css",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\ICSS\\PurchaseOrder.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3553"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 11:44:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hk4fjhxfx9"
+        },
+        {
+          "Name": "label",
+          "Value": "ICSS/PurchaseOrder.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4WuS1B7UWstJFwVkphDj0yu3bv9aOzaHZhGsmMV25X0="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/PurchaseOrder.hk4fjhxfx9.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\obj\\Debug\\net9.0\\compressed\\6171yyfv4s-hk4fjhxfx9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Feb 2025 11:44:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hk4fjhxfx9"
+        },
+        {
+          "Name": "label",
+          "Value": "ICSS/PurchaseOrder.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZTyRY/VqcX1K5lx80nrpGkCp1d308WjNDHi4vVOyNUs="
         }
       ]
     },

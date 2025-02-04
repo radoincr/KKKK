@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\Web.8muxwues8a.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Command.css",
+      "PackagePath": "staticwebassets\\DCSS\\Command.css"
+    },
+    {
+      "Id": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\DCSS\\Createreception.css",
+      "PackagePath": "staticwebassets\\DCSS\\Createreception.css"
+    },
+    {
+      "Id": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\ICSS\\PurchaseOrder.css",
+      "PackagePath": "staticwebassets\\ICSS\\PurchaseOrder.css"
+    },
+    {
       "Id": "C:\\Users\\radoi\\RiderProjects\\INV\\Web\\wwwroot\\Images\\danger.png",
       "PackagePath": "staticwebassets\\Images\\danger.png"
     },

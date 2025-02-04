@@ -126,3 +126,6 @@ C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\refint\Web.dll
 C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\Web.pdb
 C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\Web.genruntimeconfig.cache
 C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\ref\Web.dll
+C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\compressed\t98cp12fq1-pq5c27ycmq.gz
+C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\compressed\ygjdfotdet-xl7nl9j8i6.gz
+C:\Users\radoi\RiderProjects\INV\Web\obj\Debug\net9.0\compressed\6171yyfv4s-hk4fjhxfx9.gz
