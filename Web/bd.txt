@@ -1,0 +1,97 @@
+﻿USE [INV]
+GO
+/****** Object:  Table [dbo].[OrderDetail]    Script Date: 2/4/2025 13:24:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrderDetail](
+	[ID] [uniqueidentifier] NOT NULL,
+	[IDPurchaseDetail] [uniqueidentifier] NOT NULL,
+	[IDProducts] [uniqueidentifier] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[UnitPrice] [decimal](18, 2) NOT NULL,
+	[TVA] [int] NOT NULL,
+ CONSTRAINT [PK_OrderDetails] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC,
+	[IDPurchaseDetail] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 2/4/2025 13:24:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Product](
+	[ID] [uniqueidentifier] NOT NULL,
+	[Designation] [varchar](50) NOT NULL,
+	[UnitMeasure] [varchar](50) NOT NULL,
+	[DefaultTVARate] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PurchaseOrder]    Script Date: 2/4/2025 13:24:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PurchaseOrder](
+	[ID] [uniqueidentifier] NOT NULL,
+	[IDSupplier] [uniqueidentifier] NOT NULL,
+	[Number] [int] NOT NULL,
+	[Date] [date] NOT NULL,
+	[State] [varchar](50) NOT NULL,
+	[Chapter] [int] NOT NULL,
+	[Article] [int] NOT NULL,
+	[TypeBudget] [varchar](50) NOT NULL,
+	[TypeService] [varchar](50) NOT NULL,
+	[THT] [decimal](10, 2) NOT NULL,
+	[TVA] [decimal](10, 2) NOT NULL,
+	[TTC] [decimal](10, 2) NOT NULL,
+	[CompletionDelay] [int] NOT NULL,
+ CONSTRAINT [PK_PurchaseOrder] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Supplier]    Script Date: 2/4/2025 13:24:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Supplier](
+	[ID] [uniqueidentifier] NOT NULL,
+	[RC] [varchar](50) NOT NULL,
+	[NIS] [int] NOT NULL,
+	[RIB] [int] NOT NULL,
+	[SupplierName] [varchar](50) NOT NULL,
+	[CompanyName] [varchar](50) NOT NULL,
+	[AccountName] [varchar](50) NOT NULL,
+	[Address] [varchar](50) NOT NULL,
+	[Phone] [int] NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[ART] [int] NOT NULL,
+	[NIF] [int] NOT NULL,
+	[BankAgency] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Supplire_1] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[OrderDetail]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetail_Product] FOREIGN KEY([IDPurchaseDetail])
+REFERENCES [dbo].[PurchaseOrder] ([ID])
+GO
+ALTER TABLE [dbo].[OrderDetail] CHECK CONSTRAINT [FK_OrderDetail_Product]
+GO
+ALTER TABLE [dbo].[PurchaseOrder]  WITH CHECK ADD  CONSTRAINT [FK_PurchaseOrder_Supplire] FOREIGN KEY([IDSupplier])
+REFERENCES [dbo].[Supplier] ([ID])
+GO
+ALTER TABLE [dbo].[PurchaseOrder] CHECK CONSTRAINT [FK_PurchaseOrder_Supplire]
+GO
