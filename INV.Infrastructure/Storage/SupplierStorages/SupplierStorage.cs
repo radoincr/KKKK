@@ -15,54 +15,71 @@ namespace Storage.SupplierStorages
             _connectionString = configuration.GetConnectionString("INV");
         }
 
-        private const string insertSupplier =
-            @"Insert into Supplier (ID,RC,NIS,RIB,SupplierName,CompanyName,AccountName,Address,Phone,Email,ART,NIF,BankAgency)
-            VALUES (@ID,@RC,@NIS,@RIB,@SupplierName,@CompanyName,@AccountName,@address,@Phone,@Email,@ART,@NIF,@BankAgency)";
+        private const string InsertSupplierQuery = @"
+            INSERT INTO Supplier (ID, RC, NIS, RIB, SupplierName, CompanyName, AccountName, Address, Phone, Email, ART, NIF, BankAgency)
+            VALUES (@ID, @RC, @NIS, @RIB, @SupplierName, @CompanyName, @AccountName, @Address, @Phone, @Email, @ART, @NIF, @BankAgency)";
 
-        private static Supplier getDataFromDataRow(DataRow row)
+        private const string SelectAllSuppliersQuery = "SELECT * FROM Supplier";
+
+        private static Supplier getAllSupplier(SqlDataReader reader)
         {
             return new Supplier
             {
-                ID = (Guid)row["ID"],
-                RC = row["RC"].ToString(),
-                NIS = (int)row["RC"],
-                RIB = (int)row["RIB"],
-                SupplierName=row["SupplierName"].ToString(),
-                CompanyName = row["CompanyName"].ToString(),
-                AccountName = row[""].ToString(),
-                
+                ID = (Guid)reader["ID"],
+                RC = reader["RC"].ToString(),
+                NIS = (int)reader["NIS"],
+                RIB = reader["RIB"].ToString(),
+                SupplierName = reader["SupplierName"].ToString(),
+                CompanyName = reader["CompanyName"].ToString(),
+                AccountName = reader["AccountName"].ToString(),
+                Address = reader["Address"].ToString(),
+                Phone = reader["Phone"].ToString(),  
+                Email = reader["Email"].ToString(),
+                ART =(long)reader["ART"],
+                NIF = (long)reader["NIF"],
+                BankAgency = reader["BankAgency"].ToString()
             };
         }
-       
-        public async Task<int> InsertSupplier(Supplier supplier) {
 
-            try
-            {
-                using var sqlconnection = new SqlConnection(_connectionString);
-                var cmd = new SqlCommand(insertSupplier, sqlconnection);
-                await sqlconnection.OpenAsync();
-                cmd.Parameters.AddWithValue("@ID", supplier.ID);
-                cmd.Parameters.AddWithValue("@RC", supplier.RC);
-                cmd.Parameters.AddWithValue("@NIS", supplier.NIS);
-                cmd.Parameters.AddWithValue("@RIB", supplier.RIB);
-                cmd.Parameters.AddWithValue("@SupplierName", supplier.SupplierName);
-                cmd.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
-                cmd.Parameters.AddWithValue("@AccountName", supplier.AccountName);
-                cmd.Parameters.AddWithValue("@address", supplier.Address);
-                cmd.Parameters.AddWithValue("@Phone", supplier.Phone);
-                cmd.Parameters.AddWithValue("@Email", supplier.Email);
-                cmd.Parameters.AddWithValue("@ART", supplier.ART);
-                cmd.Parameters.AddWithValue("@NIF", supplier.NIF);
-                cmd.Parameters.AddWithValue("@BankAgency", supplier.BankAgency);
-             
-                return  cmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                throw;
-            }
+        public async Task<int> InsertSupplier(Supplier supplier)
+        {
+            using var sqlConnection = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(InsertSupplierQuery, sqlConnection);
             
+            cmd.Parameters.AddWithValue("@ID", supplier.ID);
+            cmd.Parameters.AddWithValue("@RC", supplier.RC);
+            cmd.Parameters.AddWithValue("@NIS", supplier.NIS);
+            cmd.Parameters.AddWithValue("@RIB", supplier.RIB);
+            cmd.Parameters.AddWithValue("@SupplierName", supplier.SupplierName);
+            cmd.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
+            cmd.Parameters.AddWithValue("@AccountName", supplier.AccountName);
+            cmd.Parameters.AddWithValue("@Address", supplier.Address);
+            cmd.Parameters.AddWithValue("@Phone", supplier.Phone);
+            cmd.Parameters.AddWithValue("@Email", supplier.Email);
+            cmd.Parameters.AddWithValue("@ART", supplier.ART);
+            cmd.Parameters.AddWithValue("@NIF", supplier.NIF);
+            cmd.Parameters.AddWithValue("@BankAgency", supplier.BankAgency);
+
+            await sqlConnection.OpenAsync();
+            return await cmd.ExecuteNonQueryAsync();
         }
 
+        public async Task<List<Supplier>> SelectAllSupplier()
+        {
+            var suppliers = new List<Supplier>();
+
+            using var sqlConnection = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(SelectAllSuppliersQuery, sqlConnection);
+
+            await sqlConnection.OpenAsync();
+            using var reader = await cmd.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                suppliers.Add(getAllSupplier(reader));
+            }
+
+            return suppliers;
+        }
     }
 }

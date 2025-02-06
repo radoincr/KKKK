@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "GbV2+Xhaiq0=",
+  "dgSpecHash": "2tEVttAYc6A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\bouce\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj",
+  "projectFilePath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bouce\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.1\\microsoft.extensions.configuration.9.0.1.nupkg.sha512",
-    "C:\\Users\\bouce\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.1\\microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
-    "C:\\Users\\bouce\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.1\\microsoft.extensions.primitives.9.0.1.nupkg.sha512",
-    "C:\\Users\\bouce\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.1\\system.configuration.configurationmanager.9.0.1.nupkg.sha512",
-    "C:\\Users\\bouce\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.1\\system.diagnostics.eventlog.9.0.1.nupkg.sha512",
-    "C:\\Users\\bouce\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.1\\system.security.cryptography.protecteddata.9.0.1.nupkg.sha512"
+    "C:\\Users\\radoi\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.1\\microsoft.extensions.configuration.9.0.1.nupkg.sha512",
+    "C:\\Users\\radoi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.1\\microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
+    "C:\\Users\\radoi\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.1\\microsoft.extensions.primitives.9.0.1.nupkg.sha512",
+    "C:\\Users\\radoi\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.1\\system.configuration.configurationmanager.9.0.1.nupkg.sha512",
+    "C:\\Users\\radoi\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.1\\system.diagnostics.eventlog.9.0.1.nupkg.sha512",
+    "C:\\Users\\radoi\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.1\\system.security.cryptography.protecteddata.9.0.1.nupkg.sha512"
   ],
   "logs": []
 }

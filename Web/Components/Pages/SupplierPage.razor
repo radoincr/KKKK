@@ -7,7 +7,6 @@
     <EditForm Model="newSupplier" OnValidSubmit="OnCreate" FormName="AddSupplier" >
         <DataAnnotationsValidator />
         <ValidationSummary />
-        @*<ValidationMessage/>*@
         <div class="commend-content">
             <div class="commend-titel">
                 <h3>Information of Supplier</h3>
@@ -52,7 +51,7 @@
 
                 <div class="commend-input">
                     <label>Phone or Fax</label>
-                    <InputNumber @bind-Value="newSupplier.Phone" placeholder="Enter Supplier Phone" />
+                    <InputText @bind-Value="newSupplier.Phone" placeholder="Enter Supplier Phone" />
                     <ValidationMessage For="() => newSupplier.Phone" />
                 </div>
 
@@ -94,7 +93,7 @@
 
                 <div class="commend-input">
                     <label>Bank Account (RIB)</label>
-                    <InputNumber @bind-Value="newSupplier.RIB" placeholder="Enter RIB" />
+                    <InputText @bind-Value="newSupplier.RIB" placeholder="Enter RIB" />
                     <ValidationMessage For="() => newSupplier.RIB" />
                 </div>
 

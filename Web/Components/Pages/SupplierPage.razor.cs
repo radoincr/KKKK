@@ -8,7 +8,7 @@ using Web.Models.SupplierModels;
 
 namespace Web.Components.Pages;
 
-public partial class Supplier
+public partial class SupplierPage
 {
     [Inject] public ISupplierService SupplierService { get; set; }
     SupplierModel newSupplier = new SupplierModel();
@@ -21,15 +21,7 @@ public partial class Supplier
     {
         try
         {
-            var editContext = new EditContext(newSupplier);
-            if (!editContext.Validate())
-            {
-                ShowToast("Validation Error", "Please fill all required fields.", ToastType.Warning);
-                return;
-            }
-            else
-            {
-                var sup = new Entity.SupplierEntity.Supplier()
+                var sup = new Supplier()
                 {
                     ID = Guid.NewGuid(),
                     SupplierName = newSupplier.NameSupplier,
@@ -48,7 +40,7 @@ public partial class Supplier
 
                 await SupplierService.AddSupplier(sup);
                 ShowToast("Succses", "Succses Add Supplier", ToastType.Success);
-            }
+            
         }
         catch (Exception ex)
         {

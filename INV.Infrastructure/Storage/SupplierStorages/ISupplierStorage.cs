@@ -6,6 +6,7 @@ namespace Interface.SupplierStorages
     {
         Task<int> InsertSupplier(Supplier supplier);
         
+        Task<List<Supplier>> SelectAllSupplier();
     }
 }
 

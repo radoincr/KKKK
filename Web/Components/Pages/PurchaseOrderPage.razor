@@ -1,0 +1,231 @@
+﻿@page "/purchaseOrder"
+@using global::Models.authorityModel
+@using Web.Models.SupplierModels
+
+@rendermode InteractiveServer
+<PageTitle>Purchase Order</PageTitle>
+<div class="order-document">
+    <EditForm Model="supplierModel" OnValidSubmit="OnCreate" FormName="AddPurchaseOrder">
+        @*<DataAnnotationsValidator/>
+        <ValidationSummary/>*@
+        <h4>Order Document</h4>
+        @foreach (var sectionItem in sectionItems)
+        {
+            <div class="section">
+                <button  type="button" class="toggle-button" @onclick="() => ToggleSection(sectionItem)" aria-label="@($"Toggle {sectionItem.Title} section")">
+                    @GetSectionIcon(sectionItem.IsVisible)
+                </button>
+                <span class="section-title">@sectionItem.Title</span>
+                @if (sectionItem.IsVisible)
+                {
+                    <div class="section-content">
+                        @if (sectionItem.Title == "Definition of the contracting authority")
+                        {
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contractingName">Naming</label>
+                                    <InputText id="contractingName" @bind-Value="authority.Name" class="input-field" disabled/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payingAgentCode">Paying Agent Code (Disbursement Order)</label>
+                                    <InputText id="payingAgentCode" @bind-Value="authority.AgentCode" class="input-field" disabled/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contractingAddress">Address</label>
+                                    <InputText id="contractingAddress" @bind-Value="authority.Address" class="input-field" disabled/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactInfo">Phone or Fax</label>
+                                    <InputText id="contactInfo" @bind-Value="authority.Phone" class="input-field" disabled/>
+                                </div>
+                            </div>
+                        }
+                        else if (sectionItem.Title == "Definition of the economic operator")
+                        {
+                            <div class="form-group">
+                                <label>Choose a Supplier:</label>
+                                <select id="supplierExists" class="input-field" @onchange="OnSupplierSelected">
+                                    <option value="0" selected disabled>Select a Supplier</option>
+                                    @foreach (var supplier in suppliers)
+                                    {
+                                        <option value="@supplier.ID">@supplier.SupplierName</option>
+                                    }
+                                </select>
+                                <button type="button" class="add" @onclick="navigatePage"><i class="fa fa-plus"></i>Add a Supplier</button>
+                            </div>
+
+                            @if (SupplierSelected)
+                            {
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">Full Name</label>
+                                        <InputText id="firstName" @bind-Value="supplierModel.NameSupplier" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="companyName">Or Company Name (Legal form determination)</label>
+                                        <InputText id="companyName" @bind-Value="supplierModel.NameCompany" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="actsOnBehalf">Acts on Behalf of</label>
+                                        <InputText id="actsOnBehalf" @bind-Value="supplierModel.NameAccount" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="operatorAddress">Address</label>
+                                        <InputText id="operatorAddress" @bind-Value="supplierModel.Address" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <InputText id="email" @bind-Value="supplierModel.Email" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="operatorContact">Phone</label>
+                                        <InputText id="operatorContact" @bind-Value="supplierModel.Phone" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="registrationNumber">Commercial registration number (RC)</label>
+                                        <InputText id="registrationNumber" @bind-Value="supplierModel.RC" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tin">Tax identification number (TIN)</label>
+                                        <InputNumber id="tin" @bind-Value="supplierModel.NIF" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="statisticalNumber">Statistical identification number</label>
+                                        <InputNumber id="statisticalNumber" @bind-Value="supplierModel.NIS" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bankAccount">Bank Account (RIB)</label>
+                                        <InputText id="bankAccount" @bind-Value="supplierModel.RIB" class="input-field" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bankAddress">Bank Address</label>
+                                        <InputText id="bankAddress" @bind-Value="supplierModel.BankAgency" class="input-field" disabled/>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        @if (sectionItem.Title == "Characteristics of the order")
+                        {
+                            <div class="card p-4 shadow-sm">
+                                <div class="container">
+                                    <div class="column">
+                                        <p class="checkbox-group">
+                                            <span>Works</span>  <InputCheckbox @bind-Value="s1"></InputCheckbox>
+                                            <br/>
+                                            <span>Equipment</span>  <InputCheckbox @bind-Value="s2"></InputCheckbox>
+                                            <br/>
+                                            <span>Services</span> <InputCheckbox @bind-Value="s3"></InputCheckbox>
+
+                                            <br/>
+                                            
+                                        </p>
+                                       
+                                    </div>
+                                    <div class="column">
+                                        <p class="radio-group">
+                                            <InputRadioGroup @bind-Value="OrderCategory">
+                                                <InputRadio Value="bg1" />Operating Expenses
+                                                <InputRadio Value="bg2" />Equipment Expenses
+                                                <InputRadio Value="bg3" />Other Expenses
+                                            </InputRadioGroup>
+                                          
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Choose a Chapter and an Article :</label>
+                                    <InputSelect class="input-field" @bind-Value="SelectedChapter">
+                                        <option disabled selected>Select a Chapter and an Article</option>
+                                        <option value="25/40">25/40</option>
+                                        <option value="26/41">26/41</option>
+                                        <option value="27/42">27/42</option>
+                                        <option value="28/43">28/43</option>
+                                    </InputSelect>
+
+                                  
+                                </div>
+                                @*<button onclick="@c">click</button>*@
+                                <div style="max-height: 300px; overflow-y: auto;">
+                                    <table class="table table-bordered mt-3">
+                                        <thead class="table-light">
+                                        <tr>
+                                            <th style="width: 8%;">Number</th>
+                                            <th style="width: 46%;">Data</th>
+                                            <th style="width: 8%;">Unit of Measure</th>
+                                            <th style="width: 9%;">Quantity</th>
+                                            <th style="width: 15%;">Unit Price</th>
+                                            <th style="width: 10%;">TVA</th>
+                                            <th style="width: 4%;">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach (var product in products)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <InputNumber class="form-control" @bind-Value="product.Number" disabled/>
+                                                </td>
+                                                <td>
+                                                    <InputText class="form-control" @bind-Value="product.Data"/>
+                                                </td>
+                                                <td>
+                                                    <InputText class="form-control" @bind-Value="product.UnitOfMeasure"/>
+                                                </td>
+                                                <td>
+                                                    <InputNumber class="form-control" @bind-Value="product.Quantity"/>
+                                                </td>
+                                                <td>
+                                                    <InputNumber class="form-control" @bind-Value="product.UnitPrice"/>
+                                                </td>
+                                                <td>
+                                                    <InputSelect class="input-field2" @bind-Value="product.TVA">
+                                                        <option value="9">9%</option>
+                                                        <option value="19" selected>19%</option>
+                                                        <option value="0">Exonerated</option>
+                                                    </InputSelect>
+
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-danger" @onclick="() => DeleteProduct(product)">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Choose TVA :</label>
+                                    <InputSelect class="input-field" @bind-Value="SelectedTVA">
+                                        <option disabled selected>Select Rate TVA</option>
+                                        <option value="9">9%</option>
+                                        <option value="19" selected>19%</option>
+                                        <option value="exonerated">exonerated</option>
+                                    </InputSelect>
+                                 
+                                    <button type="button" class="add" @onclick="AddProduct">
+                                        <i class="fa fa-plus"></i>Add a product
+                                    </button>
+                                </div>
+
+                                <br/>
+                                <p>The economic operator is obligated to fulfill this order according to the specified conditions.</p>
+                                <p>
+                                    The delivery or execution time is estimated at:
+                                    <InputNumber id="delivery_time" @bind-Value="DeliveryTime" class="input-field delivery-time"/> days
+                                </p>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+
+        <button type="submit" class="create-button">Create</button>
+    </EditForm>
+</div>
+<ToastValidation Type="toastType" Title="@toastTitle" Message="@toastMessage" IsVisible="isToastVisible"
+                 OnClose="CloseToast"/>

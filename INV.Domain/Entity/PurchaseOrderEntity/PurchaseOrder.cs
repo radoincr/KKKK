@@ -12,9 +12,9 @@
         
         public string Status { set; get; }
         
-        public int Chapter { set; get; }
+        public string Chapter { set; get; }
         
-        public int Article { set; get; }
+        public string Article { set; get; }
 
         public string TypeBudget { set; get; }
 
