@@ -6,6 +6,8 @@ using Intefrace.ProductStorages;
 using Interface.OrderDetailsStorage;
 using Interface.PurchaseOrderStorage;
 using Interface.SupplierStorages;
+using INV.App.IGeneratePdfServices;
+using Service.GeneratePdfServices;
 using Service.OrderDetailServices;
 using Service.ProductServices;
 using Service.PurchseOrderServices;
@@ -29,6 +31,7 @@ builder.Services.AddScoped<IProductStorage, ProductStorage>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPurchaseOrderStorage, PurchaseOrderStorage>();
 builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
+builder.Services.AddScoped<IGenPurchaseOrderPDF, GenPurchaseOrderPDF>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

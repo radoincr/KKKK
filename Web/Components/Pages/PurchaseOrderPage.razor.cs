@@ -39,6 +39,7 @@ public partial class PurchaseOrderPage
         new SectionItem { Title = "Characteristics of the order" }
     };
 
+    
     private string contractingName;
     private int payingAgentCode;
     private string contractingAddress;

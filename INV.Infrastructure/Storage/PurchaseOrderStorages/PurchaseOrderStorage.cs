@@ -26,8 +26,9 @@ namespace Storage.PurchaseOrderStorage
                     @TypeBudget, @TypeService, @THT, @TVA, @TTC, @CompletionDelay)";
 
 
-        private const string selectAllPurchaseOrders = @"
-            SELECT *  FROM PurchaseOrder";
+        private const string selectAllPurchaseOrderByID = @" SELECT * FROM [INV].[dbo].[PurchaseOrder]
+            WHERE CAST(Date AS DATE) = @SelectedDate
+            ORDER BY Number";
 
 
         private static PurchaseOrder getPurchaseOrders(SqlDataReader reader)
@@ -81,29 +82,31 @@ namespace Storage.PurchaseOrderStorage
         }
 
 
-        public async Task<List<PurchaseOrder>> SelectAllPurchaseOrder()
+        public async Task<List<PurchaseOrder>> SelectPurchaseOrdersByDate(DateOnly selectedDate)
         {
             var purchaseOrders = new List<PurchaseOrder>();
             try
             {
                 using var sqlConnection = new SqlConnection(_connectionString);
-                var cmd = new SqlCommand(selectAllPurchaseOrders, sqlConnection);
-                await sqlConnection.OpenAsync();
+                var cmd = new SqlCommand(selectAllPurchaseOrderByID, sqlConnection);
 
+                cmd.Parameters.AddWithValue("@SelectedDate", selectedDate.ToDateTime(TimeOnly.MinValue));
+
+                await sqlConnection.OpenAsync();
                 using var reader = await cmd.ExecuteReaderAsync();
                 while (await reader.ReadAsync())
                 {
                     var purchaseOrder = getPurchaseOrders(reader);
                     purchaseOrders.Add(purchaseOrder);
                 }
-
-                return purchaseOrders;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 throw;
             }
+            return purchaseOrders;
         }
+
 
         public async Task<(List<PurchaseOrder>, List<Supplier>, List<ProductPdf>)> SelectPurchaseOrderDetails(
             int purchaseOrderNumber)
@@ -151,6 +154,7 @@ namespace Storage.PurchaseOrderStorage
                         Phone = reader["Phone"].ToString(),
                         Email = reader["Email"].ToString(),
                         RC = reader["RC"].ToString(),
+                        ART = (long)reader["ART"],
                         NIS = (int)reader["NIS"],
                         NIF = (long)reader["NIF"],
                         RIB = reader["RIB"].ToString(),

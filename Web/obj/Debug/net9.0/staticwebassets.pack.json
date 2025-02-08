@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Web.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Web.o2k5cto8jt.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Web.sgjdtghgzv.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\wwwroot\\DCSS\\Createreception.css",
@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\ICSS\\Home.css"
     },
     {
+      "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\wwwroot\\ICSS\\ListPurchaseOrder.css",
+      "PackagePath": "staticwebassets\\ICSS\\ListPurchaseOrder.css"
+    },
+    {
       "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\wwwroot\\ICSS\\PurchaseOrder.css",
       "PackagePath": "staticwebassets\\ICSS\\PurchaseOrder.css"
     },
@@ -27,6 +31,10 @@
     {
       "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\wwwroot\\Images\\logo1.png",
       "PackagePath": "staticwebassets\\Images\\logo1.png"
+    },
+    {
+      "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\wwwroot\\Images\\pdf.png",
+      "PackagePath": "staticwebassets\\Images\\pdf.png"
     },
     {
       "Id": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\wwwroot\\Images\\succes.png",

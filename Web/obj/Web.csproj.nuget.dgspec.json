@@ -213,10 +213,6 @@
               "target": "Package",
               "version": "[2.7.0, )"
             },
-            "Humanizer": {
-              "target": "Package",
-              "version": "[2.14.1, )"
-            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -396,10 +392,6 @@
             "Farsi.Library": {
               "target": "Package",
               "version": "[2.7.0, )"
-            },
-            "Humanizer": {
-              "target": "Package",
-              "version": "[2.14.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",

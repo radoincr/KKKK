@@ -1,5 +1,4 @@
-</body>
-</html>
+
 <div class="content">
 
     <div class="titel-page">
@@ -10,7 +9,7 @@
     <div class="part1">
         <div class="informationusers">
             <div class="part1tab1">
-                <table>
+                <table class="red">
                     <tr>
                         <td class="header" colspan="2">سند الطلب</td>
                     </tr>
@@ -22,7 +21,7 @@
             </div>
 
             <div class="part1tab2" id="tab2">
-                <table>
+                <table class="red">
                     <tr>
                         <td class="header">التعريف بالمصلحة النتعاقدة</td>
                     </tr>
@@ -38,7 +37,7 @@
             </div>
 
             <div class="part1tab2">
-                <table>
+                <table class="red">
                     <tr>
                         <td class="header">التعريف بالمتعامل الاقتصادي</td>
                     </tr>
@@ -75,10 +74,10 @@
 <div class="part2">
     <div class="part2tab1">
 
-        <table>
+        <table class="red">
             <tr>
                 <td>رقم السجل التجاري:{{RC}}</td>
-                <td>رفم المادة:</td>
+                <td>رقم المادة:{{ART}}</td>
             </tr>
             <tr>
                 <td>رفم التعريف الجبائي:{{NIF}}</td>
@@ -99,9 +98,9 @@
 
     <div class="part3tab1">
 
-        <table>
+        <table class="red">
             <tr>
-                <td class="header" colspan="2">خصوصيات الطلب</td>
+                <td class="header" colspan="4">خصوصيات الطلب</td>
             </tr>
 
             <tr>
@@ -129,13 +128,14 @@
 
 <div class="part4">
     <div class="part4tab1">
-        <table>
+        <table class="red">
             <tr class="part4tab1tr">
                 <th>الرقم</th>
                 <th>البيانات</th>
                 <th>وحدة القياس</th>
                 <th>الكمية</th>
                 <th>سعر الوحدة</th>
+                <th>قيمة الضريبة</th>
                 <th>المبلغ</th>
             </tr>
             {{OrderDetails}}
@@ -148,7 +148,7 @@
 <div class="part5">
 
     <div class="part5tab1">
-        <table>
+        <table class="red">
             <tr>
                 <td class="bold" colspan="1">المبلغ بدون الرسم</td>
                 <td>{{TotalHT}}</td>
@@ -168,7 +168,7 @@
 <div class="part6">
 
     <div class="part6tab1">
-        <table>
+        <table class="red">
             <tr class="part6tab1tr1">
                 <td>يوقف سند هذا الطلب على المبلغ الإجمالي (بالحروف):{{TotalTTCArabic}}
                 </td>
@@ -183,8 +183,8 @@
 
     <div class="part7text">
         <p>يلتلزم المتعامل الاقتصادي بتنفيذ هذا الطلب, حسب الشروط المحددة</p>
-        <p>مصدر التموين</p>
-        <p> تقدر مدة التسليم او التنفيذ ب ({{CompletionDelay}}) وهذا ابتداء من تاريخ امضاء هذا السند</p>
+        <p> مصدر التموين N/A </p>
+        <p> تقدر مدة التسليم او التنفيذ ب ({{CompletionDelay}}) أيام وهذا ابتداء من تاريخ امضاء هذا السند</p>
     </div>
 
 </div>
@@ -308,5 +308,9 @@
 
     .part7text {
         direction: rtl;
+    }
+    red {
+
+        border-radius: 10px; 
     }
 </style>
