@@ -4,7 +4,7 @@
 <div class="order-document">
 <EditForm Model="supplierModel" OnValidSubmit="OnCreate" FormName="AddPurchaseOrder">
 <DataAnnotationsValidator/>
-<ValidationSummary/>
+
 <h4>Order Document</h4>
 @foreach (var sectionItem in sectionItems)
 {
@@ -144,6 +144,8 @@
                             <span>Services</span> <InputCheckbox @bind-Value="s3"></InputCheckbox>
                         </div>
 
+                        
+
                     </div>
 
                 </div>
@@ -163,6 +165,8 @@
                                 Other Expenses<InputRadio Value="bg3"/>
                             </div>
                         </InputRadioGroup>
+
+                         <ValidationMessage For="@(() => OrderCategory)" />
 
                     </div>
                 </div>
@@ -210,10 +214,10 @@
                                     <InputText class="form-control" @bind-Value="product.UnitOfMeasure"/>
                                 </td>
                                 <td>
-                                    <InputNumber class="form-control" @bind-Value="product.Quantity"/>
+                                    <InputNumber class="form-control" @bind-Value="product.Quantity" min=1/>
                                 </td>
                                 <td>
-                                    <InputNumber class="form-control" @bind-Value="product.UnitPrice"/>
+                                     <InputNumber class="form-control" @bind-Value="product.UnitPrice" min=1 />
                                 </td>
                                 <td>
                                     <InputSelect class="input-field2" @bind-Value="product.TVA">
@@ -259,7 +263,7 @@
                 <p>The economic operator is obligated to fulfill this order according to the specified conditions.</p>
                 <p>
                     The delivery or execution time is estimated at:
-                    <InputNumber id="delivery_time" @bind-Value="DeliveryTime" class="input-field delivery-time"/> days
+                                    <InputNumber id="delivery_time" @bind-Value="DeliveryTime" class="input-field delivery-time" min=1 /> days
                 </p>
             </div>
         }

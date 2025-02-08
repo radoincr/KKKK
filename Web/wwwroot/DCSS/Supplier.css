@@ -1,6 +1,5 @@
 ﻿/* General Container Styling */
 .form-container {
-
     width: 100%;
     max-width: 800px;
     margin: 40px auto;
@@ -11,40 +10,41 @@
     font-family: 'Arial', sans-serif;
     background-color: #F2E5BF; /* Soft background color */
 }
+
 .commend-titel {
     margin: 2% 0 4% 0;
 }
 
-/* Form Title */
-.commend-titel h3 {
-    text-align: center;
-    font-size: 40px; /* Larger and more professional size */
-    font-weight: 600; /* Semi-bold for sophistication */
-    color: #257180; /* Primary color */
-    margin-bottom: 20px;
-    letter-spacing: 1px; /* Subtle letter-spacing for clarity */
-    text-transform: capitalize; /* Capitalize for a more refined look */
-    position: relative;
-}
+    /* Form Title */
+    .commend-titel h3 {
+        text-align: center;
+        font-size: 40px; /* Larger and more professional size */
+        font-weight: 600; /* Semi-bold for sophistication */
+        color: #257180; /* Primary color */
+        margin-bottom: 20px;
+        letter-spacing: 1px; /* Subtle letter-spacing for clarity */
+        text-transform: capitalize; /* Capitalize for a more refined look */
+        position: relative;
+    }
 
-/* Title Subtle Underline Effect */
-.commend-titel h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%; /* Slightly narrower underline */
-    height: 3px;
-    background-color: #FD8B51; /* Soft accent color */
-    border-radius: 2px;
-}
+        /* Title Subtle Underline Effect */
+        .commend-titel h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%; /* Slightly narrower underline */
+            height: 3px;
+            background-color: #FD8B51; /* Soft accent color */
+            border-radius: 2px;
+        }
 
-/* Hover Effect for the Title */
-.commend-titel h3:hover {
-    color: #FD8B51; /* Accent color on hover */
-    transition: color 0.3s ease-in-out;
-}
+        /* Hover Effect for the Title */
+        .commend-titel h3:hover {
+            color: #FD8B51; /* Accent color on hover */
+            transition: color 0.3s ease-in-out;
+        }
 
 /* Responsive Title Adjustment */
 @media (max-width: 768px) {
@@ -65,31 +65,31 @@
     margin-bottom: 20px;
 }
 
-.commend-input label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-    color: #257180; /* Primary color */
-    font-size: 14px;
-}
+    .commend-input label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #257180; /* Primary color */
+        font-size: 14px;
+    }
 
-.commend-input input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: #fff;
-    color: #333;
-    transition: all 0.3s ease;
-}
+    .commend-input input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        background-color: #fff;
+        color: #333;
+        transition: all 0.3s ease;
+    }
 
-/* Input Focus Effect */
-.commend-input input:focus {
-    border-color: #FD8B51; /* Focus color */
-    outline: none;
-    box-shadow: 0 0 8px rgba(253, 139, 81, 0.2);
-}
+        /* Input Focus Effect */
+        .commend-input input:focus, input:hover {
+            border-color: #FD8B51; /* Focus color */
+            outline: none;
+            box-shadow: 0 0 8px rgba(253, 139, 81, 0.2);
+        }
 
 /* Validation Message */
 .validation-message {
@@ -107,42 +107,42 @@
     flex-direction: row-reverse;
 }
 
-.commend-pos-btn button {
-    padding: 12px 24px;
-    background-color: #257180; /* Primary button color */
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    .commend-pos-btn button {
+        padding: 12px 24px;
+        background-color: #257180; /* Primary button color */
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-/* Button Hover & Active States */
-.commend-pos-btn button:hover {
-    background-color: #FD8B51; /* Hover color */
-    transform: translateY(-3px); /* Slight lift effect */
-}
+        /* Button Hover & Active States */
+        .commend-pos-btn button:hover {
+            background-color: #FD8B51; /* Hover color */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
 
-.commend-pos-btn button:active {
-    background-color: #e67e22; /* Darker active color */
-    transform: translateY(2px); /* Slight press effect */
-}
+        .commend-pos-btn button:active {
+            background-color: #e67e22; /* Darker active color */
+            transform: translateY(2px); /* Slight press effect */
+        }
 
-/* Back Button Styling */
-.commend-pos-btn button[type="button"] {
-    background-color: #F2E5BF; /* Soft background for Back button */
-    color: #257180;
-    border: 1px solid #ddd;
-}
+        /* Back Button Styling */
+        .commend-pos-btn button[type="button"] {
+            background-color: #F2E5BF; /* Soft background for Back button */
+            color: #257180;
+            border: 1px solid #ddd;
+        }
 
-.commend-pos-btn button[type="button"]:hover {
-    background-color: #FFD08F; /* Slight hover effect */
-    transform: translateY(-3px);
-}
+            .commend-pos-btn button[type="button"]:hover {
+                background-color: #FFD08F; /* Slight hover effect */
+                transform: translateY(-3px);
+            }
 
 /* Form Row Layout for Multiple Inputs */
 .input2 {
@@ -151,9 +151,9 @@
     gap: 13px;
 }
 
-.input2 .commend-input {
-    width: 48%;
-}
+    .input2 .commend-input {
+        width: 48%;
+    }
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -185,10 +185,10 @@
         align-items: center;
     }
 
-    .commend-pos-btn button {
-        width: 100%;
-        margin-bottom: 12px;
-    }
+        .commend-pos-btn button {
+            width: 100%;
+            margin-bottom: 12px;
+        }
 
     .input2 .commend-input {
         width: 100%;
@@ -198,14 +198,7 @@
 
 
 /**============*/
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 400px;
-    width: 100%;
-}
+
 
 .container .steps {
     display: flex;
@@ -231,13 +224,13 @@
     transition-delay: 0s;
 }
 
-.steps .circle.active {
-    font-size: 26px;
-    background-color: #257180;
-    transition-delay: 100ms;
-    border-color: #257180;
-    color: #FFF;
-}
+    .steps .circle.active {
+        font-size: 26px;
+        background-color: #257180;
+        transition-delay: 100ms;
+        border-color: #257180;
+        color: #FFF;
+    }
 
 .steps .progress-bar {
     position: absolute;
@@ -273,14 +266,14 @@
     transition: all 200ms linear;
 }
 
-.buttons button:active {
-    transform: scale(0.97);
-}
+    .buttons button:active {
+        transform: scale(0.97);
+    }
 
-.buttons button:disabled {
-    background: #87a5f8;
-    cursor: not-allowed;
-}
+    .buttons button:disabled {
+        background: #87a5f8;
+        cursor: not-allowed;
+    }
 
 /*================*/
 /* General Button Styles */
@@ -296,29 +289,29 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Hover Effect */
-.commend-pos-btn button:hover {
-    background-color: #FD8B51; /* Accent color */
-}
+    /* Hover Effect */
+    .commend-pos-btn button:hover {
+        background-color: #FD8B51; /* Accent color */
+    }
 
-/* Active/Pressed Effect */
-.commend-pos-btn button:active {
-    transform: scale(0.96);
-}
+    /* Active/Pressed Effect */
+    .commend-pos-btn button:active {
+        transform: scale(0.96);
+    }
 
-/* Disabled Button */
-.commend-pos-btn button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
+    /* Disabled Button */
+    .commend-pos-btn button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+    }
 
-/* Back Button Styling */
-.commend-pos-btn button[type="button"] {
-    background-color: #F2E5BF;
-    color: #257180;
-    border: 1px solid #257180;
-}
+    /* Back Button Styling */
+    .commend-pos-btn button[type="button"] {
+        background-color: #F2E5BF;
+        color: #257180;
+        border: 1px solid #257180;
+    }
 
-.commend-pos-btn button[type="button"]:hover {
-    background-color: #FFD08F;
-}
+        .commend-pos-btn button[type="button"]:hover {
+            background-color: #FFD08F;
+        }

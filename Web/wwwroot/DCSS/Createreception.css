@@ -9,14 +9,14 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Titre du formulaire */
-.form-container h3 {
-    text-align: center;
-    color: #333;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
+    /* Titre du formulaire */
+    .form-container h3 {
+        text-align: center;
+        color: #333;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
 
 /* Lignes et champs */
 .line-1, .line-2, .line-3, .line-4 {
@@ -32,78 +32,33 @@
     flex-direction: column;
 }
 
-.fieldInput label {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 5px;
-}
+    .fieldInput label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+    }
 
-.fieldInput input,
-.fieldInput select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    transition: border-color 0.3s ease;
-}
+    .fieldInput input,
+    .fieldInput select {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: border-color 0.3s ease;
+    }
 
-.fieldInput input:focus,
-.fieldInput select:focus {
-    border-color: #007bff;
-    outline: none;
-}
+        .fieldInput input:focus,
+        .fieldInput select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
 
 /* Boutons */
 .pos-btn-reception2 {
     text-align: end;
     margin-top: 20px;
-}
-
-button[type="button"] {
-    background-color: #00ff21;
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="button"]:hover {
-    background-color: #4cff00;
-}
-
-
-button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-button[name="adding"] {
-    background-color: #dc3545;
-    color: #fff;
-    font-size: 1rem;
-    padding: 6px 11px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[name="adding"]:hover {
-    background-color: #a71d2a;
 }
 
 /* Texte d'état de chargement */
@@ -143,9 +98,9 @@ button[name="adding"]:hover {
     position: relative;
 }
 
-.popup-content h3 {
-    margin-top: 0;
-}
+    .popup-content h3 {
+        margin-top: 0;
+    }
 
 .cart-container {
     margin-top: 30px;
@@ -156,8 +111,8 @@ button[name="adding"]:hover {
     border-collapse: collapse;
 }
 
-.cart-table th, .cart-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
+    .cart-table th, .cart-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
