@@ -1,4 +1,6 @@
-﻿namespace Entity.OrderDetailsEntity
+﻿using Entity.ProductEntity;
+
+namespace Entity.OrderDetailsEntity
 {
     public class OrderDetail
     {
@@ -8,5 +10,7 @@
         public int Quantity{ set; get; }
         public Decimal UnitPrice { set; get; }
         public string TVA { set; get; }
+
+       
     }
 }

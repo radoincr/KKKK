@@ -1,4 +1,8 @@
-﻿using Entity.PurchaseOrderEntity;
+﻿using System.Data;
+using Entity.OrderDetailsEntity;
+using Entity.ProductPDF;
+using Entity.PurchaseOrderEntity;
+using Entity.SupplierEntity;
 using Interface.PurchaseOrderStorage;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
@@ -99,6 +103,81 @@ namespace Storage.PurchaseOrderStorage
             {
                 throw;
             }
+        }
+
+        public async Task<(List<PurchaseOrder>, List<Supplier>, List<ProductPdf>)> SelectPurchaseOrderDetails(
+            int purchaseOrderNumber)
+        {
+            var purchaseOrders = new List<PurchaseOrder>();
+            var suppliers = new List<Supplier>();
+            var productPdf = new List<ProductPdf>();
+            try
+            {
+                using var sqlConnection = new SqlConnection(_connectionString);
+                using var cmd = new SqlCommand("SelectPurchaseOrderByNumber", sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@PurchaseOrderNumber", purchaseOrderNumber);
+                await sqlConnection.OpenAsync();
+                using var reader = await cmd.ExecuteReaderAsync();
+                while (await reader.ReadAsync())
+                {
+                    var purchaseOrder = new PurchaseOrder
+                    {
+                        Number = (int)reader["PurchaseOrderNumber"],
+                        Date = DateOnly.FromDateTime((DateTime)reader["OrderDate"]) ,
+                        Status = reader["OrderState"]?.ToString(),
+                        TypeBudget = reader["TypeBudget"].ToString(),
+                        TypeService = reader["TypeService"].ToString(),
+                        Chapter = reader["Chapter"].ToString(),
+                        Article = reader["Article"].ToString(),
+                        THT = (decimal)reader["THT"],
+                        TVA = (decimal)reader["TVA"],
+                        TTC = (decimal)reader["TTC"],
+                        CompletionDelay =(int)reader["CompletionDelay"]
+                    };
+                    purchaseOrders.Add(purchaseOrder);
+                }
+                await reader.NextResultAsync();
+                while (await reader.ReadAsync())
+                {
+                    var supplier = new Supplier
+                    {
+                        SupplierName = reader["SupplierName"].ToString(),
+                        CompanyName = reader["CompanyName"].ToString(),
+                        AccountName = reader["AccountName"].ToString(),
+                        Address = reader["Address"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        RC = reader["RC"].ToString(),
+                        NIS = (int)reader["NIS"],
+                        NIF = (long)reader["NIF"],
+                        RIB = reader["RIB"].ToString(),
+                        BankAgency = reader["BankAgency"].ToString()
+                    };
+                    suppliers.Add(supplier);
+                }
+                await reader.NextResultAsync();
+                while (await reader.ReadAsync())
+                {
+                    var product_pdf = new ProductPdf
+                    {
+                        Designation =reader["Designation"].ToString() ,
+                        Unitmesure = reader["UnitMeasure"].ToString(),
+                        Quantity = (int)reader["Quantity"],
+                        Price = (decimal)reader["UnitPrice"],
+                        TVA = reader["OrderDetailTVA"].ToString(),
+                    };
+                    productPdf.Add(product_pdf);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+                throw;
+            }
+            return (purchaseOrders, suppliers, productPdf);
         }
     }
 }

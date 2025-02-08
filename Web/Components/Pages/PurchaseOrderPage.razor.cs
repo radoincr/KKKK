@@ -3,6 +3,7 @@ using App.IOrderDetailServices;
 using App.IProductServices;
 using App.IPurchaseOrderServices;
 using App.ISupplierService;
+using Azure.Core;
 using Entity.OrderDetailsEntity;
 using Entity.ProductEntity;
 using Entity.PurchaseOrderEntity;
@@ -204,7 +205,26 @@ public partial class PurchaseOrderPage
 
     private async Task OnCreate()
     {
+        decimal TVA = 0;
+        decimal THT = 0;
+        decimal TCT = 0;
         Guid idPurchaseOrder = Guid.NewGuid();
+        foreach (var pd in products)
+        {
+            var orderDetail = new OrderDetail()
+            {
+                UnitPrice = pd.UnitPrice,
+                Quantity = pd.Quantity,
+                TVA = pd.TVA
+            };
+            decimal ordertva = decimal.Parse(orderDetail.TVA);
+            decimal tvaValue = (orderDetail.UnitPrice * orderDetail.Quantity * ordertva) / 100;
+            TVA += tvaValue;
+            decimal thtValue = orderDetail.UnitPrice * orderDetail.Quantity;
+            THT += thtValue;
+        }
+
+        TCT = THT + TVA;
         var purchaseOrder = new PurchaseOrder()
         {
             ID = idPurchaseOrder,
@@ -216,9 +236,9 @@ public partial class PurchaseOrderPage
             Chapter = SelectedChapter,
             Date = DateOnly.FromDateTime(DateTime.Now.Date),
             Status = "In Progress",
-            TVA = 0,
-            TTC = 0,
-            THT = 0
+            TVA = TVA,
+            TTC = TCT,
+            THT = THT
         };
 
         try
@@ -255,6 +275,8 @@ public partial class PurchaseOrderPage
 
                 await orderDetailService.AddOrderDetail(orderDetail);
             }
+
+            ShowToast("Success", "Purchase Order created successfully", ToastType.Success);
         }
         catch (Exception ex)
         {

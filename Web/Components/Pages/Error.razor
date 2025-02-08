@@ -1,33 +1,26 @@
-﻿@*
-@page "/a"
+﻿@page "/a"
+@using global::App.IPurchaseOrderServices
+@using Service.PurchseOrderServices
 @rendermode InteractiveServer
-<div class="column">
-    <p class="radio-group">
-        <!-- Radio group to bind to 'OrderCategory' -->
-        <InputRadioGroup @bind-Value="OrderCategory">
-            <!-- Each radio button has a value that will be assigned to 'OrderCategory' -->
-            <InputRadio id="operating" Value="Operating" name="orderCategory" />
-            <label for="operating">Operating expenses</label>
+<button onclick="@generate">GEN</button>
 
-            <InputRadio id="equipment-expense" Value="Equipment" name="orderCategory" />
-            <label for="equipment-expense">Equipment expenses</label>
 
-            <InputRadio id="other" Value="Other" name="orderCategory" />
-            <label for="other">Other expenses</label>
-        </InputRadioGroup>
-    </p>
-</div>
+@code{
+    [Inject] public IPurchaseOrderService PurchaseOrderService { get; set; }
 
-<p>Selected Order Category: <strong>@OrderCategory</strong></p>
+    private async Task generate()
+    {
+        try
+        {
+           await PurchaseOrderService.GeneratePurchaseOrderPdf(30, @"C:\Users\radoi\Videos\pdf.pdf", @"C:\Users\radoi\RiderProjects\INV2\Web\Components\Pages\a.html");
+            Console.WriteLine("true");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("erro:" + e.Message);
+            throw;
+        }
+    }
 
-@code {
-// Make sure the property 'OrderCategory' is of type string
-private string OrderCategory { get; set; }
 
-// Optional: You can initialize with a default value, e.g., "Operating"
-protected override void OnInitialized()
-{
-OrderCategory = "Operating"; // Set default value to match one of the radio buttons
 }
-}
-*@
