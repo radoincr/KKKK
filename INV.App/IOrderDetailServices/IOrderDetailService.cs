@@ -1,7 +1,6 @@
-﻿using Entity.OrderDetailsEntity;
+﻿using INV.Domain.Entity.OrderDetailsEntity;
 
-
-namespace App.IOrderDetailServices
+namespace INV.App.IOrderDetailServices
 {
     public interface IOrderDetailService
     {

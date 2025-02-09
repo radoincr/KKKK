@@ -40,8 +40,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQdXJjaGFzZU9yZGVyUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/radoi/RiderProjects/INV2/Web/Components/Pages/PurchaseOrders/PurchseOrderListPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQdXJjaGFzZU9yZGVyc1xQdXJjaHNlT3JkZXJMaXN0UGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radoi/RiderProjects/INV2/Web/Components/Pages/SupplierPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdXBwbGllclBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/RiderProjects/INV2/Web/Components/Pages/Suppliers/SupplierListPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdXBwbGllcnNcU3VwcGxpZXJMaXN0UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radoi/RiderProjects/INV2/Web/Components/Pages/Toast.razor]

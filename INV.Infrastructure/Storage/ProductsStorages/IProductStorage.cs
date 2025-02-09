@@ -1,6 +1,6 @@
-﻿using Entity.ProductEntity;
+﻿using INV.Domain.Entity.ProductEntity;
 
-namespace Intefrace.ProductStorages
+namespace INV.Infrastructure.Storage.ProductsStorages
 {
     public interface IProductStorage
     {

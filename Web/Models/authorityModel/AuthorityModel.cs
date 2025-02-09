@@ -1,4 +1,4 @@
-﻿namespace Models.authorityModel
+﻿namespace Web.Models.authorityModel
 {
     public record AuthorityModel
     {

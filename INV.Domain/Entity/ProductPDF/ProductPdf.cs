@@ -1,4 +1,4 @@
-﻿namespace Entity.ProductPDF;
+﻿namespace INV.Domain.Entity.ProductPDF;
 
 public class ProductPdf
 {

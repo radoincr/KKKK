@@ -1,9 +1,8 @@
-﻿using Entity.ProductEntity;
-using Intefrace.ProductStorages;
+﻿using INV.Domain.Entity.ProductEntity;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
-namespace Storage.ProductStorage
+namespace INV.Infrastructure.Storage.ProductsStorages
 {
     public class ProductStorage : IProductStorage
     {

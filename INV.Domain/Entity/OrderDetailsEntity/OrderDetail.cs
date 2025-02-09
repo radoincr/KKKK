@@ -1,6 +1,6 @@
-﻿using Entity.ProductEntity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Entity.OrderDetailsEntity
+namespace INV.Domain.Entity.OrderDetailsEntity
 {
     public class OrderDetail
     {

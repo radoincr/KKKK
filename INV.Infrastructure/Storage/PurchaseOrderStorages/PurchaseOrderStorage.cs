@@ -1,13 +1,11 @@
 ﻿using System.Data;
-using Entity.OrderDetailsEntity;
-using Entity.ProductPDF;
-using Entity.PurchaseOrderEntity;
-using Entity.SupplierEntity;
-using Interface.PurchaseOrderStorage;
+using INV.Domain.Entity.ProductPDF;
+using INV.Domain.Entity.PurchaseOrderEntity;
+using INV.Domain.Entity.SupplierEntity;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
-namespace Storage.PurchaseOrderStorage
+namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 {
     public class PurchaseOrderStorage : IPurchaseOrderStorage
     {
@@ -29,6 +27,19 @@ namespace Storage.PurchaseOrderStorage
         private const string selectAllPurchaseOrderByID = @" SELECT * FROM [INV].[dbo].[PurchaseOrder]
             WHERE CAST(Date AS DATE) = @SelectedDate
             ORDER BY Number";
+        
+        private const string selectPurchaseOrdersInfo = @"SELECT 
+      p.[Number],
+      p.[ID],
+	  p.[IDSupplier],
+	  s.SupplierName As SupplierName,
+      p.[Date],
+      p.[State]
+     
+  FROM [INV].[dbo].[PurchaseOrder] p
+  left Join
+    Supplier s ON
+p.IDSupplier=s.ID";
 
 
         private static PurchaseOrder getPurchaseOrders(SqlDataReader reader)
@@ -50,7 +61,43 @@ namespace Storage.PurchaseOrderStorage
                 CompletionDelay = (int)reader["CompletionDelay"]
             };
         }
+        
+        private static PurchaseOrder getPurchaseOrdersInfo(SqlDataReader reader)
+        {
+            return new PurchaseOrder
+            {
+                ID = (Guid)reader["ID"],
+                IDSupplier = (Guid)reader["IDSupplier"],
+                Number = (int)reader["Number"],
+                Status = reader["State"].ToString(),
+                SupplierName=reader["SupplierName"].ToString(),
+                Date = DateOnly.FromDateTime((DateTime)reader["Date"])
+            };
+        }
 
+        public async Task<List<PurchaseOrder>> SelectPurchaseOrderInfo()
+        {     var purchaseOrders = new List<PurchaseOrder>();
+            try
+            {
+           
+                using var sqlConnection = new SqlConnection(_connectionString);
+                var cmd = new SqlCommand(selectPurchaseOrdersInfo, sqlConnection);
+                await sqlConnection.OpenAsync();
+                using var reader = await cmd.ExecuteReaderAsync();
+                while (await reader.ReadAsync())
+                {
+                    var purchaseOrder = getPurchaseOrdersInfo(reader);
+                    purchaseOrders.Add(purchaseOrder);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return purchaseOrders;
+        }
 
         public async Task<int> InsertPurchaseOrder(PurchaseOrder purchaseOrder)
         {

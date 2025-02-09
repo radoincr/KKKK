@@ -1,6 +1,6 @@
-﻿using Entity.OrderDetailsEntity;
+﻿using INV.Domain.Entity.OrderDetailsEntity;
 
-namespace Entity.ProductEntity
+namespace INV.Domain.Entity.ProductEntity
 {
     public class Product
     {

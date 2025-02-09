@@ -8,12 +8,14 @@
     ".NETCoreApp,Version=v9.0": {
       "Web/1.0.0": {
         "dependencies": {
+          "Blazor.Bootstrap": "3.3.1",
           "EasternArabicNumeralsConvertor": "1.0.0",
           "Farsi.Library": "2.7.0",
           "INV.App": "1.0.0",
           "INV.Domain": "1.0.0",
           "INV.Implementation": "1.0.0",
           "INV.Infrastructure": "1.0.0",
+          "INVUIs": "1.0.0",
           "Microsoft.Extensions.Configuration": "9.0.1",
           "NumberToWordsArabic": "1.0.0",
           "NumberToWordsConverter": "1.0.0",
@@ -59,6 +61,17 @@
           }
         }
       },
+      "Blazor.Bootstrap/3.3.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/BlazorBootstrap.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
+        }
+      },
       "EasternArabicNumeralsConvertor/1.0.0": {
         "runtime": {
           "lib/net6.0/Eastern Arabic Numerals Convertor.dll": {
@@ -79,6 +92,35 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authorization/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "9.0.0",
+          "Microsoft.AspNetCore.Components.Analyzers": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {},
+      "Microsoft.AspNetCore.Components.Forms/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "9.0.0",
+          "Microsoft.AspNetCore.Components.Forms": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0",
+          "Microsoft.Extensions.Primitives": "9.0.1",
+          "Microsoft.JSInterop": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/9.0.0": {},
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -225,7 +267,7 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/8.0.0": {
+      "Microsoft.Extensions.DependencyInjection/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         }
@@ -233,7 +275,7 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {},
       "Microsoft.Extensions.Logging/8.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
           "Microsoft.Extensions.Options": "9.0.0"
         }
@@ -345,6 +387,7 @@
           }
         }
       },
+      "Microsoft.JSInterop/9.0.0": {},
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -519,6 +562,20 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "INVUIs/1.0.0": {
+        "dependencies": {
+          "Blazor.Bootstrap": "3.3.1",
+          "INV.App": "1.0.0",
+          "INV.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Components.Web": "9.0.0"
+        },
+        "runtime": {
+          "INVUIs.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -542,6 +599,13 @@
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
     },
+    "Blazor.Bootstrap/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YJUyRsTYXr2SbDugC6zWSr2dz2hPK+8BYdigZ6oI0ERkFWkebzxMsDlF3eiomqBnVuG/PBB5KUfgw4Vp2LBCHA==",
+      "path": "blazor.bootstrap/3.3.1",
+      "hashPath": "blazor.bootstrap.3.3.1.nupkg.sha512"
+    },
     "EasternArabicNumeralsConvertor/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -555,6 +619,48 @@
       "sha512": "sha512-X6BEfmxFZJtnjkVpHn3pSI1dzCoCExcPgpF7TgeNIjCOM/Ktfy7W/7lCGsjuONBN/qXKa7DamLPEjP6GWZGOmA==",
       "path": "farsi.library/2.7.0",
       "hashPath": "farsi.library.2.7.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authorization/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qDJlBC5pUQ/3o6/C6Vuo9CGKtV5TAe5AdKeHvDR2bgmw8vwPxsAy3KG5eU0i1C+iAUNbmq+iDTbiKt16f9pRiA==",
+      "path": "microsoft.aspnetcore.authorization/9.0.0",
+      "hashPath": "microsoft.aspnetcore.authorization.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xKzY0LRqWrwuPVzKIF9k1kC21NrLmIE2qPhhKlInEAdYqNe8qcMoPWZy7fo1uScHkz5g73nTqDDra3+aAV7mTQ==",
+      "path": "microsoft.aspnetcore.components/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-maOE1qlJ9hf1Fb7PhFLw9bgP9mWckuDOcn1uKNt9/msdJG2YHl3cPRHojYa6CxliGHIXL8Da4qPgeUc4CaOoeg==",
+      "path": "microsoft.aspnetcore.components.analyzers/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Forms/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-orHGxDkbAa9syuaLVtZWOhNC8IddnCsDqpFaKjBj4zxe+B8cd6kcNf/t4Lv5hWBQ7mODiRCzEfKBnpU+GCHvbw==",
+      "path": "microsoft.aspnetcore.components.forms/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.forms.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Web/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZfJwwV05T+268cnJsO6yfi9oXYLe3ATRAEk0VZgBMptA5HVsduIsnFLjhNOYT7+I8NolxDEx1CEW8yKe5xTb6Q==",
+      "path": "microsoft.aspnetcore.components.web/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.web.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X81C891nMuWgzNHyZ0C3s+blSDxRHzQHDFYQoOKtFvFuxGq3BbkLbc5CfiCqIzA/sWIfz6u8sGBgwntQwBJWBw==",
+      "path": "microsoft.aspnetcore.metadata/9.0.0",
+      "hashPath": "microsoft.aspnetcore.metadata.9.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -612,12 +718,12 @@
       "path": "microsoft.extensions.configuration.abstractions/9.0.1",
       "hashPath": "microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection/8.0.0": {
+    "Microsoft.Extensions.DependencyInjection/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-V8S3bsm50ig6JSyrbcJJ8bW2b9QLGouz+G1miK3UTaOWmMtFwNNNzUf4AleyDWUmTrWMLNnFSLEQtxmxgNQnNQ==",
-      "path": "microsoft.extensions.dependencyinjection/8.0.0",
-      "hashPath": "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512"
+      "sha512": "sha512-MCPrg7v3QgNMr0vX4vzRXvkNGgLg8vKWX0nKCWUxu2uPyMsaRgiRc1tHBnbTcfJMhMKj2slE/j2M9oGkd25DNw==",
+      "path": "microsoft.extensions.dependencyinjection/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
       "type": "package",
@@ -709,6 +815,13 @@
       "sha512": "sha512-owe33wqe0ZbwBxM3D90I0XotxNyTdl85jud03d+OrUOJNnTiqnYePwBk3WU9yW0Rk5CYX+sfSim7frmu6jeEzQ==",
       "path": "microsoft.identitymodel.tokens/7.5.0",
       "hashPath": "microsoft.identitymodel.tokens.7.5.0.nupkg.sha512"
+    },
+    "Microsoft.JSInterop/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-efQKxKUPe8OuH0hRiYsvBJkhhPzIYFNcr9+3wanQ7Bch/wr1JWNd90GYiPLtkSHepE1zMEoaLkAxi5N5/eyC4Q==",
+      "path": "microsoft.jsinterop/9.0.0",
+      "hashPath": "microsoft.jsinterop.9.0.0.nupkg.sha512"
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
@@ -852,6 +965,11 @@
       "sha512": ""
     },
     "INV.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "INVUIs/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

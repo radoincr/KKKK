@@ -1,10 +1,10 @@
-﻿using App.ISupplierService;
-using Entity.SupplierEntity;
+﻿using INV.App.Suppliers;
+using INV.Domain.Entity.SupplierEntity;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.Extensions.Options;
 using Web.Components.Layout.Toast;
-using Web.Models.SupplierModels;
+using Web.Models.SupplierModel;
 
 namespace Web.Components.Pages;
 
@@ -39,12 +39,14 @@ public partial class SupplierPage
                 };
 
                 await SupplierService.AddSupplier(sup);
+                await ClearForm();
                 ShowToast("Succses", "Succses Add Supplier", ToastType.Success);
+                
             
         }
         catch (Exception ex)
         {
-            ShowToast("Error", "Formailer is null", ToastType.Danger);
+            ShowToast("Error", "Supplier Exsist ", ToastType.Danger);
         }
     }
     private void ShowToast(string title, string message, ToastType type)
@@ -57,5 +59,9 @@ public partial class SupplierPage
     public void CloseToast()
     {
         isToastVisible = false;
+    }
+    private async Task ClearForm()
+    {
+        newSupplier = new SupplierModel();
     }
 }

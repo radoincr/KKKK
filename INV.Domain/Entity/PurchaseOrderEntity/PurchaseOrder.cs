@@ -1,4 +1,4 @@
-﻿namespace Entity.PurchaseOrderEntity
+﻿namespace INV.Domain.Entity.PurchaseOrderEntity
 {
     public class PurchaseOrder
     {
@@ -27,5 +27,7 @@
         public Decimal TTC { set; get; }
         
         public int CompletionDelay { set; get; }
+
+        public string SupplierName { set; get; }
     }
 }

@@ -1,14 +1,13 @@
-﻿using Entity.OrderDetailsEntity;
-using Entity.ProductEntity;
-using Entity.PurchaseOrderEntity;
+﻿using INV.Domain.Entity.PurchaseOrderEntity;
 
-namespace App.IPurchaseOrderServices
+namespace INV.App.PurchaseOrders
 {
     public interface IPurchaseOrderService
     {
         Task<int> AddPurchaseOrder(PurchaseOrder purchaseOrder);
 
         Task<List<PurchaseOrder>> GetPurchaseOrdersByDate(DateOnly dateOnly);
+        Task<List<PurchaseOrderInfo>> GetPurchaseOrderInfo();
 
     }
 }

@@ -214,7 +214,7 @@
                                     <InputText class="form-control" @bind-Value="product.UnitOfMeasure"/>
                                 </td>
                                 <td>
-                                    <InputNumber class="form-control" @bind-Value="product.Quantity" min=1/>
+                                    <InputNumber class="form-control" @bind-Value="product.Quantity" min=1 />
                                 </td>
                                 <td>
                                      <InputNumber class="form-control" @bind-Value="product.UnitPrice" min=1 />
@@ -239,7 +239,7 @@
                 </div>
 
                 <div class="container2">
-                    <div class="input-chapter">
+                    @*<div class="input-chapter">
                         <div class="input-titel">
                             <h6>Choose a Chapter and an Article</h6>
                         </div>
@@ -251,7 +251,7 @@
                                 <option value="exonerated">0%</option>
                             </InputSelect>
                         </div>
-                    </div>
+                    </div>*@
                     <div class="btn-add-product">
                         <button type="button" class="add" @onclick="AddProduct">
                             <i class="fa fa-plus"></i>Add a product

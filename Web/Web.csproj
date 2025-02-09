@@ -11,9 +11,11 @@
       <ProjectReference Include="..\INV.Domain\INV.Domain.csproj" />
       <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj" />
       <ProjectReference Include="..\INV.Infrastructure\INV.Infrastructure.csproj" />
+      <ProjectReference Include="..\INVUIs\INVUIs.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Blazor.Bootstrap" Version="3.3.1" />
       <PackageReference Include="EasternArabicNumeralsConvertor" Version="1.0.0" />
       <PackageReference Include="Farsi.Library" Version="2.7.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />

@@ -1,8 +1,6 @@
-﻿using Entity.ProductEntity;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using INV.Domain.Entity.ProductEntity;
 
-namespace App.IProductServices
+namespace INV.App.Products
 {
     public interface IProductService
     {

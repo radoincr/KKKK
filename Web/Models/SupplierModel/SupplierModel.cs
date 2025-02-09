@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Web.Models.SupplierModels
+namespace Web.Models.SupplierModel
 {
     public class SupplierModel
     {

@@ -1,9 +1,8 @@
-﻿using Entity.OrderDetailsEntity;
-using Entity.ProductPDF;
-using Entity.PurchaseOrderEntity;
-using Entity.SupplierEntity;
+﻿using INV.Domain.Entity.ProductPDF;
+using INV.Domain.Entity.PurchaseOrderEntity;
+using INV.Domain.Entity.SupplierEntity;
 
-namespace Interface.PurchaseOrderStorage
+namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 {
     public interface IPurchaseOrderStorage
     {
@@ -12,5 +11,6 @@ namespace Interface.PurchaseOrderStorage
         
         Task<(List<PurchaseOrder>,List<Supplier>,List<ProductPdf>)> SelectPurchaseOrderDetails(int purchaseOrderNumber);
         Task<List<PurchaseOrder>> SelectPurchaseOrdersByDate(DateOnly dateOnly);
+        Task<List<PurchaseOrder>> SelectPurchaseOrderInfo();
     }
 }

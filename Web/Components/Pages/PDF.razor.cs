@@ -1,12 +1,8 @@
-﻿
-
-
-using App.IPurchaseOrderServices;
-using Entity.PurchaseOrderEntity;
-using INV.App.IGeneratePdfServices;
+﻿using INV.App.IGeneratePdfServices;
+using INV.App.PurchaseOrders;
+using INV.Domain.Entity.PurchaseOrderEntity;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using Models.PurchaseModel;
 
 namespace Web.Components.Pages;
 
@@ -56,15 +52,4 @@ public partial class PDF
             Console.WriteLine($"error{e.Message}");
         }
     }
-
-
-  
-}
-public class OrderModel
-{
-    public int Number { get; set; }
-    public DateTime Date { get; set; }
-    public string FileName { get; set; }
-    public string FileUrl { get; set; }
-
 }

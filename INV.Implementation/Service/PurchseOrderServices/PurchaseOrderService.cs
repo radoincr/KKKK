@@ -1,16 +1,10 @@
-﻿using System.Globalization;
-using System.Net;
-using System.Text;
-using App.IPurchaseOrderServices;
-using Entity.ProductPDF;
-using Entity.PurchaseOrderEntity;
-using Entity.SupplierEntity;
-using Interface.PurchaseOrderStorage;
-using PuppeteerSharp;
-using PuppeteerSharp.Media;
-using Service.MyToolServices;
+﻿using INV.App.PurchaseOrders;
+using INV.Domain.Entity.ProductPDF;
+using INV.Domain.Entity.PurchaseOrderEntity;
+using INV.Domain.Entity.SupplierEntity;
+using INV.Infrastructure.Storage.PurchaseOrderStorages;
 
-namespace Service.PurchseOrderServices;
+namespace INV.Implementation.Service.PurchseOrderServices;
 
 public class PurchaseOrderService : IPurchaseOrderService
 {
@@ -40,5 +34,20 @@ public class PurchaseOrderService : IPurchaseOrderService
         throw new ArgumentNullException(nameof(dateOnly));
       
         return await purchaseOrderStorage.SelectPurchaseOrdersByDate(dateOnly);
+    }
+
+    public async Task<List<PurchaseOrderInfo>> GetPurchaseOrderInfo()
+    {
+        List<PurchaseOrder> result = await purchaseOrderStorage.SelectPurchaseOrderInfo();
+       
+        return result.Select(s => new PurchaseOrderInfo()
+        {
+            ID = s.ID,
+            IDSupplier = s.IDSupplier,
+            SupplierName = s.SupplierName,
+            Number = s.Number,
+            Date = s.Date,
+            State = s.Status
+        }).ToList();    
     }
 }

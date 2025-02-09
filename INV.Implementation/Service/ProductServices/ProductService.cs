@@ -1,8 +1,8 @@
-﻿using App.IProductServices;
-using Entity.ProductEntity;
-using Intefrace.ProductStorages;
+﻿using INV.App.Products;
+using INV.Domain.Entity.ProductEntity;
+using INV.Infrastructure.Storage.ProductsStorages;
 
-namespace Service.ProductServices;
+namespace INV.Implementation.Service.ProductServices;
 
 public class ProductService : IProductService
 {

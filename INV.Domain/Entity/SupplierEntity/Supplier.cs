@@ -1,4 +1,6 @@
-﻿namespace Entity.SupplierEntity
+﻿using Entity.SupplierEntity;
+
+namespace INV.Domain.Entity.SupplierEntity
 
 {
     public class Supplier
@@ -16,11 +18,11 @@
         public string AccountName { set; get; }
         public string Address { set; get; }
         public string Phone { set; get; }
-
         public string Email { set; get; }
         public long ART { set; get; }
         public long NIF { set; get; }
-        
         public string BankAgency { set; get; }
+
+        public SupplierState State { set; get; }
     }
 }

@@ -1,18 +1,18 @@
 ﻿using System.Security.Principal;
-using App.IOrderDetailServices;
-using App.IProductServices;
-using App.IPurchaseOrderServices;
-using App.ISupplierService;
 using Azure.Core;
-using Entity.OrderDetailsEntity;
-using Entity.ProductEntity;
-using Entity.PurchaseOrderEntity;
-using Entity.SupplierEntity;
+using INV.App.IOrderDetailServices;
+using INV.App.Products;
+using INV.App.PurchaseOrders;
+using INV.App.Suppliers;
+using INV.Domain.Entity.OrderDetailsEntity;
+using INV.Domain.Entity.ProductEntity;
+using INV.Domain.Entity.PurchaseOrderEntity;
+using INV.Domain.Entity.SupplierEntity;
 using Microsoft.AspNetCore.Components;
-using Models.authorityModel;
-using Models.PurchaseModel;
 using Web.Components.Layout.Toast;
-using Web.Models.SupplierModels;
+using Web.Models.authorityModel;
+using Web.Models.PurchaseModel;
+using Web.Models.SupplierModel;
 
 namespace Web.Components.Pages;
 
@@ -182,7 +182,7 @@ public partial class PurchaseOrderPage
 
     public async Task Suppliers()
     {
-        suppliers = await supplierService.GetAllSupplier();
+        //suppliers = await supplierService.GetAllSupplier();
     }
 
     public string bg1 { set; get; } = "Bg1";
@@ -278,10 +278,26 @@ public partial class PurchaseOrderPage
             }
 
             ShowToast("Success", "Purchase Order created successfully", ToastType.Success);
+            await ClearForm();
         }
         catch (Exception ex)
         {
+            ShowToast("Error", "Error From Purchase Order created ", ToastType.Danger);
             Console.Error.WriteLine($"{ex.Message}");
         }
+    }
+    private async Task ClearForm()
+    {
+        supplierModel = new SupplierModel();
+        products = new List<ProductModel>();
+        SelectedChapter = "";
+        SelectedTVA = "19";
+        DeliveryTime = 0;
+        OrderCategory = "";
+        s1 = false;
+        s2 = false;
+        s3 = false;
+        products=new List<ProductModel>();
+        suppliers = new List<Supplier>();
     }
 }

@@ -1,6 +1,6 @@
-﻿using Entity.OrderDetailsEntity;
+﻿using INV.Domain.Entity.OrderDetailsEntity;
 
-namespace Interface.OrderDetailsStorage
+namespace INV.Infrastructure.Storage.OrderDetailsStorages
 {
     public interface IOrderDetailStorage
     {

@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using Entity.SupplierEntity;
-using Interface.SupplierStorages;
+using INV.Domain.Entity.SupplierEntity;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
-namespace Storage.SupplierStorages
+namespace INV.Infrastructure.Storage.SupplierStorages
 {
     public class SupplierStorage : ISupplierStorage
     {
@@ -20,6 +20,7 @@ namespace Storage.SupplierStorages
             VALUES (@ID, @RC, @NIS, @RIB, @SupplierName, @CompanyName, @AccountName, @Address, @Phone, @Email, @ART, @NIF, @BankAgency)";
 
         private const string SelectAllSuppliersQuery = "SELECT * FROM Supplier";
+        private const string SelectSuppliersByID = "SELECT * FROM Supplier where ID=@ID";
 
         private static Supplier getAllSupplier(SqlDataReader reader)
         {
@@ -33,11 +34,14 @@ namespace Storage.SupplierStorages
                 CompanyName = reader["CompanyName"].ToString(),
                 AccountName = reader["AccountName"].ToString(),
                 Address = reader["Address"].ToString(),
-                Phone = reader["Phone"].ToString(),  
+                Phone = reader["Phone"].ToString(),
                 Email = reader["Email"].ToString(),
-                ART =(long)reader["ART"],
+                ART = (long)reader["ART"],
                 NIF = (long)reader["NIF"],
-                BankAgency = reader["BankAgency"].ToString()
+                BankAgency = reader["BankAgency"].ToString(),
+                State = Enum.TryParse<SupplierState>(reader["Status"].ToString(), out var state)
+                    ? state
+                    : SupplierState.Deleted
             };
         }
 
@@ -45,7 +49,7 @@ namespace Storage.SupplierStorages
         {
             using var sqlConnection = new SqlConnection(_connectionString);
             using var cmd = new SqlCommand(InsertSupplierQuery, sqlConnection);
-            
+
             cmd.Parameters.AddWithValue("@ID", supplier.ID);
             cmd.Parameters.AddWithValue("@RC", supplier.RC);
             cmd.Parameters.AddWithValue("@NIS", supplier.NIS);
@@ -79,6 +83,23 @@ namespace Storage.SupplierStorages
                 suppliers.Add(getAllSupplier(reader));
             }
 
+            return suppliers;
+        }
+
+       
+
+        public async Task<Supplier> SelectSupplierByID(Guid id)
+        {
+            var suppliers = new Supplier();
+
+            using var sqlConnection = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(SelectSuppliersByID, sqlConnection);
+            cmd.Parameters.AddWithValue("@ID", id);
+            await sqlConnection.OpenAsync();
+            using var reader = await cmd.ExecuteReaderAsync();
+            
+            suppliers = (getAllSupplier(reader));
+            
             return suppliers;
         }
     }

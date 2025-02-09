@@ -1,8 +1,8 @@
-﻿using App.IOrderDetailServices;
-using Entity.OrderDetailsEntity;
-using Interface.OrderDetailsStorage;
+﻿using INV.App.IOrderDetailServices;
+using INV.Domain.Entity.OrderDetailsEntity;
+using INV.Infrastructure.Storage.OrderDetailsStorages;
 
-namespace Service.OrderDetailServices;
+namespace INV.Implementation.Service.OrderDetailServices;
 
 public class OrderDetailService : IOrderDetailService
 {

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Threading.Tasks;
-using Entity.OrderDetailsEntity;
-using Interface.OrderDetailsStorage;
+﻿using INV.Domain.Entity.OrderDetailsEntity;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
-namespace Storage.OrderDetailsStorage
+namespace INV.Infrastructure.Storage.OrderDetailsStorages
 {
     public class OrderDetailStorage : IOrderDetailStorage
     {

@@ -1,14 +1,14 @@
 ﻿using System.Text;
-using Entity.ProductPDF;
-using Entity.PurchaseOrderEntity;
-using Entity.SupplierEntity;
-using Interface.PurchaseOrderStorage;
 using INV.App.IGeneratePdfServices;
+using INV.Domain.Entity.ProductPDF;
+using INV.Domain.Entity.PurchaseOrderEntity;
+using INV.Domain.Entity.SupplierEntity;
+using INV.Implementation.Service.MyToolServices;
+using INV.Infrastructure.Storage.PurchaseOrderStorages;
 using PuppeteerSharp;
 using PuppeteerSharp.Media;
-using Service.MyToolServices;
 
-namespace Service.GeneratePdfServices;
+namespace INV.Implementation.Service.GeneratePdfServices;
 
 public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
 {

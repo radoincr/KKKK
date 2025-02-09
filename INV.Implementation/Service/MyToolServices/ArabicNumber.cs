@@ -1,4 +1,4 @@
-﻿namespace Service.MyToolServices;
+﻿namespace INV.Implementation.Service.MyToolServices;
 public class ArabicNumber
 {
     private static readonly string[] aname = { "", "واحد", "اثنان", "ثلاثة", "أربعة", "خمسة", "ستة", "سبعة", "ثمانية", "تسعة", "عشرة", "أحد عشر", "اثنا عشر" };

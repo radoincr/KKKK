@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Models.PurchaseModel;
+namespace Web.Models.PurchaseModel;
 
 public class ProductModel
 {
