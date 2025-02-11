@@ -33,11 +33,12 @@ public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
 
             string updatedHtmlContent = injectPurchaseOrderToHtml(htmlContent, purchaseOrders, suppliers, orderDetails);
 
-         await new BrowserFetcher().DownloadAsync();
+         /*await new BrowserFetcher().DownloadAsync();*/
 
             await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
             {
                 Headless = true,
+                ExecutablePath = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
             });
             await using var page = await browser.NewPageAsync();
             await page.SetContentAsync(

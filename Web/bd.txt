@@ -1,6 +1,6 @@
 ﻿USE [INV]
 GO
-/****** Object:  Table [dbo].[OrderDetail]    Script Date: 2/6/2025 18:08:44 ******/
+/****** Object:  Table [dbo].[OrderDetail]    Script Date: 2/11/2025 14:52:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[OrderDetail](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Product]    Script Date: 2/6/2025 18:08:44 ******/
+/****** Object:  Table [dbo].[Product]    Script Date: 2/11/2025 14:52:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -35,7 +35,7 @@ CREATE TABLE [dbo].[Product](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PurchaseOrder]    Script Date: 2/6/2025 18:08:44 ******/
+/****** Object:  Table [dbo].[PurchaseOrder]    Script Date: 2/11/2025 14:52:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -60,7 +60,7 @@ CREATE TABLE [dbo].[PurchaseOrder](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Supplier]    Script Date: 2/6/2025 18:08:44 ******/
+/****** Object:  Table [dbo].[Supplier]    Script Date: 2/11/2025 14:52:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -79,11 +79,64 @@ CREATE TABLE [dbo].[Supplier](
 	[ART] [bigint] NOT NULL,
 	[NIF] [bigint] NOT NULL,
 	[BankAgency] [varchar](50) NOT NULL,
+	[Status] [int] NOT NULL,
  CONSTRAINT [PK_Supplire_1] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+INSERT [dbo].[OrderDetail] ([ID], [IDPurchaseOrder], [IDProducts], [Quantity], [UnitPrice], [TVA]) VALUES (N'43088510-74d2-4db4-ba0b-1158b4c53cf3', N'a24bceb4-85c1-4d7b-934b-da0db97df812', N'443b9895-b339-4f7e-92eb-425f1b3e835d', 13, CAST(2100.00 AS Decimal(18, 2)), 19)
+GO
+INSERT [dbo].[OrderDetail] ([ID], [IDPurchaseOrder], [IDProducts], [Quantity], [UnitPrice], [TVA]) VALUES (N'b040d4d1-4c68-4e3e-bd4f-69501300dbfd', N'4fd01f32-20ba-4992-b735-9e9169b296ef', N'de1c268f-4bcb-4d01-8e74-1a6097f36475', 50, CAST(5000.00 AS Decimal(18, 2)), 19)
+GO
+INSERT [dbo].[OrderDetail] ([ID], [IDPurchaseOrder], [IDProducts], [Quantity], [UnitPrice], [TVA]) VALUES (N'35a6ea7a-a407-4d59-823b-7cfa90774073', N'4fd01f32-20ba-4992-b735-9e9169b296ef', N'086172e5-dc5a-464e-8e3c-830dc44124d5', 30, CAST(200.00 AS Decimal(18, 2)), 9)
+GO
+INSERT [dbo].[OrderDetail] ([ID], [IDPurchaseOrder], [IDProducts], [Quantity], [UnitPrice], [TVA]) VALUES (N'b4dc6061-8a72-4375-b1cd-a9f948a5ba27', N'a24bceb4-85c1-4d7b-934b-da0db97df812', N'e2d43210-c38b-4a10-b50e-909c2a20ad27', 12, CAST(2100.00 AS Decimal(18, 2)), 9)
+GO
+INSERT [dbo].[Product] ([ID], [Designation], [UnitMeasure], [DefaultTVARate]) VALUES (N'de1c268f-4bcb-4d01-8e74-1a6097f36475', N'pc', N'u', N'19')
+GO
+INSERT [dbo].[Product] ([ID], [Designation], [UnitMeasure], [DefaultTVARate]) VALUES (N'443b9895-b339-4f7e-92eb-425f1b3e835d', N'pc', N'u', N'19')
+GO
+INSERT [dbo].[Product] ([ID], [Designation], [UnitMeasure], [DefaultTVARate]) VALUES (N'086172e5-dc5a-464e-8e3c-830dc44124d5', N'telephone', N'u', N'19')
+GO
+INSERT [dbo].[Product] ([ID], [Designation], [UnitMeasure], [DefaultTVARate]) VALUES (N'e2d43210-c38b-4a10-b50e-909c2a20ad27', N'tablet', N'u', N'19')
+GO
+SET IDENTITY_INSERT [dbo].[PurchaseOrder] ON 
+GO
+INSERT [dbo].[PurchaseOrder] ([ID], [Number], [IDSupplier], [Date], [State], [Chapter], [Article], [TypeBudget], [TypeService], [THT], [TVA], [TTC], [CompletionDelay]) VALUES (N'4fd01f32-20ba-4992-b735-9e9169b296ef', 34, N'1194a2b8-86c5-4c0d-91e9-825715b2c354', CAST(N'2025-02-09' AS Date), N'In Progress', N'26/41', N'data from article', N's1', N'Bg1', CAST(256000.00 AS Decimal(10, 2)), CAST(48040.00 AS Decimal(10, 2)), CAST(304040.00 AS Decimal(10, 2)), 10)
+GO
+INSERT [dbo].[PurchaseOrder] ([ID], [Number], [IDSupplier], [Date], [State], [Chapter], [Article], [TypeBudget], [TypeService], [THT], [TVA], [TTC], [CompletionDelay]) VALUES (N'a24bceb4-85c1-4d7b-934b-da0db97df812', 33, N'5d76e6ec-a3e8-4c42-8b9b-462848caf108', CAST(N'2025-02-09' AS Date), N'In Progress', N'26/41', N'data from article', N's1', N'Bg1', CAST(52500.00 AS Decimal(10, 2)), CAST(7455.00 AS Decimal(10, 2)), CAST(59955.00 AS Decimal(10, 2)), 8)
+GO
+SET IDENTITY_INSERT [dbo].[PurchaseOrder] OFF
+GO
+INSERT [dbo].[Supplier] ([ID], [RC], [NIS], [RIB], [SupplierName], [CompanyName], [AccountName], [Address], [Phone], [Email], [ART], [NIF], [BankAgency], [Status]) VALUES (N'5d76e6ec-a3e8-4c42-8b9b-462848caf108', N'00a12345678912', 12345, N'00100365000123444556', N'sriti ali', N'eurl ids', N'eurl ids', N'cite qri dfg', N'0558628237', N'amrisamer55@gmail.com', 12345678912, 123456789123456, N'cdsvbnvcbdsnvcdnv', 1)
+GO
+INSERT [dbo].[Supplier] ([ID], [RC], [NIS], [RIB], [SupplierName], [CompanyName], [AccountName], [Address], [Phone], [Email], [ART], [NIF], [BankAgency], [Status]) VALUES (N'1194a2b8-86c5-4c0d-91e9-825715b2c354', N'76543266678', 543, N'76543266678098768765', N'tabbi ilhem', N'ims', N'ims', N'ouled djellal', N'0675684155', N'aalkourn@gmail.com', 76543266678, 765432666789898, N'badr', 1)
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ__Supplier__321537CCBB1CC5CD]    Script Date: 2/11/2025 14:52:59 ******/
+ALTER TABLE [dbo].[Supplier] ADD UNIQUE NONCLUSTERED 
+(
+	[RC] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ__Supplier__C7DEC3C342D648B3]    Script Date: 2/11/2025 14:52:59 ******/
+ALTER TABLE [dbo].[Supplier] ADD UNIQUE NONCLUSTERED 
+(
+	[NIS] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ__Supplier__CAFF413566083F0F]    Script Date: 2/11/2025 14:52:59 ******/
+ALTER TABLE [dbo].[Supplier] ADD UNIQUE NONCLUSTERED 
+(
+	[RIB] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Supplier] ADD  CONSTRAINT [DF_Supplier_Status]  DEFAULT ((1)) FOR [Status]
 GO
 ALTER TABLE [dbo].[OrderDetail]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetail_OrderDetail] FOREIGN KEY([IDPurchaseOrder])
 REFERENCES [dbo].[PurchaseOrder] ([ID])
@@ -94,4 +147,62 @@ ALTER TABLE [dbo].[PurchaseOrder]  WITH CHECK ADD  CONSTRAINT [FK_PurchaseOrder_
 REFERENCES [dbo].[Supplier] ([ID])
 GO
 ALTER TABLE [dbo].[PurchaseOrder] CHECK CONSTRAINT [FK_PurchaseOrder_Supplire]
+GO
+/****** Object:  StoredProcedure [dbo].[SelectPurchaseOrderByNumber]    Script Date: 2/11/2025 14:52:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[SelectPurchaseOrderByNumber]
+    @PurchaseOrderNumber INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        po.Number AS PurchaseOrderNumber,
+        po.Date AS OrderDate,
+        po.State AS OrderState,
+        po.TypeBudget,
+        po.TypeService,
+		po.Chapter,
+		po.Article,
+		po.CompletionDelay,
+        po.THT,
+        po.TVA,
+        po.TTC,
+        po.CompletionDelay
+    FROM [INV].[dbo].[PurchaseOrder] po
+    WHERE po.Number = @PurchaseOrderNumber;
+
+    SELECT 
+        s.SupplierName,
+        s.CompanyName,
+        s.AccountName,
+        s.Address,
+        s.Phone,
+        s.Email,
+        s.RC,
+		s.ART,
+        s.NIS,
+        s.NIF,
+        s.RIB,
+        s.BankAgency
+    FROM [INV].[dbo].[Supplier] s
+    JOIN [INV].[dbo].[PurchaseOrder] po ON po.IDSupplier = s.ID
+    WHERE po.Number = @PurchaseOrderNumber;
+
+    SELECT 
+        od.Quantity,
+        od.UnitPrice,
+        od.TVA AS OrderDetailTVA,
+        p.Designation,
+        p.UnitMeasure,
+        p.DefaultTVARate
+    FROM [INV].[dbo].[OrderDetail] od
+    JOIN [INV].[dbo].[Product] p ON od.IDProducts = p.ID
+    JOIN [INV].[dbo].[PurchaseOrder] po ON od.IDPurchaseOrder = po.ID
+    WHERE po.Number = @PurchaseOrderNumber;
+END;
+
 GO
