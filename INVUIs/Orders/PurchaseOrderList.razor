@@ -1,0 +1,48 @@
+﻿@using INV.App.PurchaseOrders
+@using INV.App.Suppliers
+@*@using BlazorBootstrap;*@
+@if (purchaseOrderInfos is null)
+{
+    <h3>Loading...</h3>
+
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Number</th>
+            <th>Supplier Name</th>
+            <th>Date</th>
+            <th>State</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (PurchaseOrderInfo purchaseOrderInfo in purchaseOrderInfos)
+        {
+            <tr>
+                <td>
+                    <a href="/purchaseOrde/@purchaseOrderInfo.ID">
+                        @purchaseOrderInfo.Number
+                    </a>
+                </td>
+                <td>@purchaseOrderInfo.SupplierName</td>
+                <td>@purchaseOrderInfo.Date</td>
+                <td>@purchaseOrderInfo.State</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@*<Spinner Color="SpinnerColor.Warning" VisuallyHiddenText="Data is null"/>
+<Alert Color="AlertColor.Primary"> A simple primary alert - check it out! </Alert>
+<Callout>
+    <strong>This is a default callout</strong>. Example text to show it in action. See <a href="https://getblazorbootstrap.com/docs/components/callout">callout documentation</a>.
+</Callout>*@
+
+@code
+{
+    [Parameter] public List<PurchaseOrderInfo> purchaseOrderInfos { get; set; }
+
+}

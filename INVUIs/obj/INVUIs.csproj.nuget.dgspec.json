@@ -1,0 +1,411 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj",
+        "projectName": "INV.App",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj",
+        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "NumberToWordsArabic": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "PuppeteerSharp": {
+              "target": "Package",
+              "version": "[20.1.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
+        "projectName": "INV.Domain",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
+        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "PuppeteerSharp": {
+              "target": "Package",
+              "version": "[20.1.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj",
+        "projectName": "INV.Implementation",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj",
+        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              },
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              },
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "EasternArabicNumeralsConvertor": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Farsi.Library": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "NumberToWordsConverter": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "PuppeteerSharp": {
+              "target": "Package",
+              "version": "[20.1.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
+        "projectName": "INV.Infrastructure",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              },
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "PuppeteerSharp": {
+              "target": "Package",
+              "version": "[20.1.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj",
+        "projectName": "INVUIs",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj",
+        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              },
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj"
+              },
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
