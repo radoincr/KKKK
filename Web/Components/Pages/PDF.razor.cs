@@ -41,7 +41,7 @@ public partial class PDF
         try
         {
             string filePath = $"C:/Users/radoi/Videos/PurchaseOrder_{orderNumber}.pdf";
-            string templatePath = "C:/Users/radoi/RiderProjects/INV2/Web/Components/Pages/a.html";
+            string templatePath = "C://Users//radoi//OneDrive//Desktop//New folder (4)//INV//Web//Components//Pages//a.html";
 
             await genPurchaseOrderPdf.GeneratePurchaseOrderPdf(orderNumber, filePath, templatePath);
             var fileBytes = await File.ReadAllBytesAsync(filePath);
