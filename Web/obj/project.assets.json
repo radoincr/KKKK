@@ -972,9 +972,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Blazor.Bootstrap": "3.3.1",
           "INV.App": "1.0.0",
-          "INV.Domain": "1.0.0",
+          "INV.Implementation": "1.0.0",
+          "INV.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Components.Web": "9.0.0"
         },
         "compile": {
@@ -2352,11 +2352,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\Web.csproj",
+      "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\Web.csproj",
       "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\Web\\obj\\",
+      "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2371,20 +2371,20 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.App\\INV.App.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.App\\INV.App.csproj"
+            "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
+              "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
             },
-            "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj"
+            "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
+              "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
             },
-            "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Implementation\\INV.Implementation.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Implementation\\INV.Implementation.csproj"
+            "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj": {
+              "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj"
             },
-            "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj"
+            "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
             },
-            "C:\\Users\\radoi\\RiderProjects\\INV2\\INVUIs\\INVUIs.csproj": {
-              "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INVUIs\\INVUIs.csproj"
+            "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj": {
+              "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj"
             }
           }
         }

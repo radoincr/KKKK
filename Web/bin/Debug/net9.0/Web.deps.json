@@ -565,9 +565,9 @@
       },
       "INVUIs/1.0.0": {
         "dependencies": {
-          "Blazor.Bootstrap": "3.3.1",
           "INV.App": "1.0.0",
-          "INV.Domain": "1.0.0",
+          "INV.Implementation": "1.0.0",
+          "INV.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Components.Web": "9.0.0"
         },
         "runtime": {

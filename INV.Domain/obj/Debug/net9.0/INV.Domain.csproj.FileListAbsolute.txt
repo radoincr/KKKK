@@ -36,3 +36,16 @@ C:\Users\radoi\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.dll
 C:\Users\radoi\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\refint\INV.Domain.dll
 C:\Users\radoi\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.pdb
 C:\Users\radoi\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\ref\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\bin\Debug\net9.0\INV.Domain.deps.json
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.AssemblyReference.cache
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfoInputs.cache
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfo.cs
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.sourcelink.json
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\refint\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\INV.Domain.pdb
+C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INV.Domain\obj\Debug\net9.0\ref\INV.Domain.dll

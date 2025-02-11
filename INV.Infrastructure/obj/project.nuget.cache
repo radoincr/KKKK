@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4d6jPRskqk8=",
+  "dgSpecHash": "pMpSy0WgT4A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\radoi\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\radoi\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

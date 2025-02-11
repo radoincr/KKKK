@@ -34,7 +34,6 @@ public partial class PurchaseOrderPage
 
     private List<SectionItem> sectionItems = new()
     {
-        new SectionItem { Title = "Definition of the contracting authority" },
         new SectionItem { Title = "Definition of the economic operator" },
         new SectionItem { Title = "Characteristics of the order" }
     };
@@ -42,6 +41,7 @@ public partial class PurchaseOrderPage
     
     private string contractingName;
     private int payingAgentCode;
+    private string SelectedArticle;
     private string contractingAddress;
     private int contactInfo;
     private string firstName;

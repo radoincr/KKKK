@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj": {}
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
         "projectName": "INV.Domain",
-        "projectPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
         "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\obj\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4gLfdMgjwh4=",
+  "dgSpecHash": "lWy0buJ9d80=",
   "success": true,
-  "projectFilePath": "C:\\Users\\radoi\\RiderProjects\\INV2\\INV.Domain\\INV.Domain.csproj",
+  "projectFilePath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\radoi\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.1\\microsoft.extensions.configuration.9.0.1.nupkg.sha512",
     "C:\\Users\\radoi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.1\\microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
