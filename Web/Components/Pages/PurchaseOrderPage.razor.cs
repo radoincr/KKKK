@@ -59,11 +59,10 @@ public partial class PurchaseOrderPage
     private string bankAccount;
     private string bankAddress;
     private int delivery_time;
-    private bool Works { get; set; }
-    private bool Equipment { get; set; }
-    private bool Services { get; set; }
+    private string description_article;
 
     private string SelectedChapter { get; set; }
+
     private string SelectedTVA { get; set; } = "19";
     private int DeliveryTime { get; set; }
 
@@ -119,8 +118,9 @@ public partial class PurchaseOrderPage
     private void DeleteProduct(ProductModel product)
     {
         products.Remove(product);
-        for (int i = product.Number; i <= products.Count; i++)
+        for (int i = 0; i < products.Count; i++)
         {
+            products[i].Number = i + 1;
         }
     }
 
@@ -191,14 +191,10 @@ public partial class PurchaseOrderPage
     public string bg2 { set; get; } = "Bg2";
     public string bg3 { set; get; } = "Bg3";
 
-    public bool s1 { set; get; } = false;
-    public bool s2 { set; get; } = false;
-    public bool s3 { set; get; } = false;
-
-    public string serviceOrder { set; get; }
-
-
-    private bool OrderService;
+    public string s1 { set; get; } = "s1";
+    public string s2 { set; get; } = "s2";
+    public string s3 { set; get; } = "s3";
+    private string OrderService { get; set; }
     private string OrderCategory { get; set; }
 
     public void c()
@@ -231,11 +227,11 @@ public partial class PurchaseOrderPage
         var purchaseOrder = new PurchaseOrder()
         {
             ID = idPurchaseOrder,
-            IDSupplier = supplierModel.ID,
-            TypeBudget = s1 ? "s1" : s2 ? "s2" : s3 ? "s3" : "",
-            TypeService = OrderCategory,
+            IDSupplier = supplierModel.ID, 
+            TypeService = OrderService, 
+            TypeBudget = OrderCategory,
             CompletionDelay = DeliveryTime,
-            Article = "data from article",
+            Article = SelectedArticle,
             Chapter = SelectedChapter,
             Date = DateOnly.FromDateTime(DateTime.Now.Date),
             Status = "In Progress",
@@ -293,12 +289,11 @@ public partial class PurchaseOrderPage
         supplierModel = new SupplierModel();
         products = new List<ProductModel>();
         SelectedChapter = "";
+        SelectedArticle = "";
         SelectedTVA = "19";
         DeliveryTime = 0;
         OrderCategory = "";
-        s1 = false;
-        s2 = false;
-        s3 = false;
+        OrderService = "";
         products=new List<ProductModel>();
         suppliers = new List<Supplier>();
     }

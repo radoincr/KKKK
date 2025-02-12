@@ -22,12 +22,12 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #007bff;
+    color: #257180;
     transition: color 0.3s ease;
 }
 
     .toggle-button:hover {
-        color: #0056b3;
+        color: #25718;
     }
 
 .section-title {
@@ -64,7 +64,7 @@ textarea.form-control.valid {
 }
 
     .input-field:focus {
-        border-color: #007bff;
+        border-color: #257180;
         outline: none;
     }
 
@@ -89,46 +89,41 @@ h4 {
         background-color: #0056b3;
     }
 
-.add {
-    width: max-content;
-    margin-left: 25px;
-    background-color: #0dcaf0;
+.addproduct-button, .addsupplier-button {
+    margin-left: 20px;
+    background-color: #FD8B51;
     color: white;
     border: none;
-    padding: 7px 11px;
-    border-radius: 3px;
+    padding: 0.6rem 0.9rem;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     transition: background 0.3s ease;
     margin-top: 10px;
 }
-
-    .add:hover {
-        background-color: #3dd5f3;
-    }
+.addproduct-button:hover,
+.addsupplier-button:hover {
+    background-color: #fd8b51b5;
+}
 
 select.input-field {
-    border-color: #FD8B51;
-    outline: none;
-    box-shadow: 0 0 8px rgba(253, 139, 81, 0.2);
-    width: 50%;
     padding: 10px;
-    border-radius: 8px;
+    margin-top: 4px;
     font-size: 14px;
-    background-color: #ffffff;
-    color: #333;
-    transition: all 0.3s ease;
+    border: 1px solid #257180;
+    border-radius: 6px;
+    background-color: #fff;
 }
 
     select.input-field:focus {
-        border-color: #007bff;
+        border-color: #257180;
         outline: none;
     }
 
     select.input-field option {
         padding: 6px;
     }
-
+/*
 select.input-field2 {
     padding: 6px;
     font-size: 13px;
@@ -139,32 +134,35 @@ select.input-field2 {
 }
 
     select.input-field2:focus {
-        border-color: #007bff;
+        border-color: #257180;
         outline: none;
     }
 
     select.input-field2 option {
         padding: 4px;
-    }
-
-input[type="radio"],
-input[type="checkbox"] {
+    }  */ 
+.input-description{
+    padding: 6px;
+    margin-top: 4px;
+    font-size: 14px;
+    border: 1px solid #257180;
+    border-radius: 6px;
+}
+input[type="radio"]{
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #0dcaf0;
+    border: 2px solid #FD8B51;
     border-radius: 4px;
     cursor: pointer;
 }
 
-    input[type="radio"]:checked,
-    input[type="checkbox"]:checked {
-        background-color: #0dcaf0;
-        border-color: #0dcaf0;
+    input[type="radio"]:checked{
+        background-color: #FD8B51;
+        border-color: #FD8B51;
     }
 
-        input[type="radio"]:checked::after,
-        input[type="checkbox"]:checked::after {
+        input[type="radio"]:checked::after {
             content: "✔";
             font-size: 14px;
             color: white;
@@ -174,25 +172,17 @@ input[type="checkbox"] {
         }
 
 p {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 label {
     font-size: 14px;
+    display: block;
+    font-weight: bold;
+    color: #333;
     margin-left: 5px;
 }
-/*
-.radio-group, .checkbox-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}*/
-.checkbox-group {
-    width: 100%;
-    display: flex;
-    gap: 5%;
-    justify-content: flex-start;
-}
+
 
 .input-titel {
     width: 100%;
@@ -201,7 +191,6 @@ label {
     .input-titel h6 {
         font-size: 1rem;
         font-weight: bold;
-        text-decoration: underline;
     }
 
 .input-container {
@@ -224,13 +213,13 @@ label {
 }
 
 .delivery-time {
-    margin-left: 20px;
+    margin-left: 10px;
     width: 10% !important;
 }
 
 .form-control:disabled {
     border: none;
-    background-color: transparent;
+    background-color: #e9ecef8c;
 }
 
 .input-tva {
@@ -250,15 +239,15 @@ label {
 }
 
 select#supplierExists {
-    border-color: #FD8B51;
+    border-color: #257180;
     outline: none;
     box-shadow: 0 0 8px rgba(253, 139, 81, 0.2);
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    padding: 9px;
     /* border: 1px solid #ddd; */
     border-radius: 8px;
     font-size: 14px;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #333;
     transition: all 0.3s ease;
 }
@@ -275,7 +264,27 @@ select#supplierExists {
 .input-chapter {
     width: 100%;
 }
-
+.deleteproduct-button {
+     background-color: red;
+     transition: color 0.3s ease;
+     cursor: pointer;
+     border: none;
+     border-radius: 4px;
+    margin-top: 2px;
+ }
+.deleteproduct-button:hover {
+    background-color: darkred;
+}
+.bi-trash-fill {
+    color: white;
+    font-size: 1.1rem;
+}
+.commend-inputt label {
+    display: block;
+    font-weight: 500;
+    color: #257180;
+    font-size: 14px;
+}
 @media (max-width: 800px) {
     .form-row {
         grid-template-columns: 1fr;

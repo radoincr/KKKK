@@ -33,3 +33,38 @@ C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INVUIs\bin\Debug\net9.0\INV.I
 C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INVUIs\bin\Debug\net9.0\INV.Infrastructure.dll
 C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INVUIs\bin\Debug\net9.0\INV.Implementation.pdb
 C:\Users\radoi\OneDrive\Desktop\New folder (4)\INV\INVUIs\bin\Debug\net9.0\INV.Infrastructure.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INVUIs.staticwebassets.runtime.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INVUIs.staticwebassets.endpoints.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INVUIs.deps.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INVUIs.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INVUIs.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.App.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.Implementation.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.Infrastructure.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.App.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.Implementation.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\bin\Debug\net9.0\INV.Infrastructure.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.csproj.AssemblyReference.cache
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.AssemblyInfoInputs.cache
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.AssemblyInfo.cs
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.csproj.CoreCompileInputs.cache
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.sourcelink.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\scopedcss\bundle\INVUIs.styles.css
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\compressed\o9szr4dzh0-6pqz8bsss0.gz
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets\msbuild.INVUIs.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets\msbuild.INVUIs.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets\msbuild.build.INVUIs.props
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.INVUIs.props
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.INVUIs.props
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.csproj.Up2Date
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\refint\INVUIs.dll
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\INVUIs.pdb
+C:\Users\bouce\RiderProjects\web2\INVUIs\obj\Debug\net9.0\ref\INVUIs.dll

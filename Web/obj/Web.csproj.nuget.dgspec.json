@@ -1,33 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\Web.csproj": {}
+    "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
+    "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj",
+        "projectUniqueName": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj",
         "projectName": "INV.App",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj",
-        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\obj\\",
+        "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj",
+        "packagesPath": "C:\\Users\\bouce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bouce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj"
               }
             }
           }
@@ -41,7 +48,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -80,26 +88,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
+    "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj",
         "projectName": "INV.Domain",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj",
-        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\obj\\",
+        "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj",
+        "packagesPath": "C:\\Users\\bouce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bouce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -117,7 +132,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -152,40 +168,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj": {
+    "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj",
+        "projectUniqueName": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj",
         "projectName": "INV.Implementation",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj",
-        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\obj\\",
+        "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj",
+        "packagesPath": "C:\\Users\\bouce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bouce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj"
               }
             }
           }
@@ -199,7 +222,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -246,37 +270,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+    "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj",
         "projectName": "INV.Infrastructure",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\bouce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bouce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj"
               }
             }
           }
@@ -290,7 +321,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -329,40 +361,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj": {
+    "C:\\Users\\bouce\\RiderProjects\\web2\\INVUIs\\INVUIs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj",
+        "projectUniqueName": "C:\\Users\\bouce\\RiderProjects\\web2\\INVUIs\\INVUIs.csproj",
         "projectName": "INVUIs",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj",
-        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\obj\\",
+        "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INVUIs\\INVUIs.csproj",
+        "packagesPath": "C:\\Users\\bouce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INVUIs\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bouce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj"
+              },
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj"
               }
             }
           }
@@ -376,7 +418,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -403,46 +446,53 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\Web.csproj": {
+    "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\Web.csproj",
-        "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\Web\\obj\\",
+        "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\bouce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bouce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.App\\INV.App.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.App\\INV.App.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Domain\\INV.Domain.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Implementation\\INV.Implementation.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Implementation\\INV.Implementation.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder (4)\\INV\\INVUIs\\INVUIs.csproj"
+              "C:\\Users\\bouce\\RiderProjects\\web2\\INVUIs\\INVUIs.csproj": {
+                "projectPath": "C:\\Users\\bouce\\RiderProjects\\web2\\INVUIs\\INVUIs.csproj"
               }
             }
           }
@@ -456,7 +506,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -514,7 +565,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
