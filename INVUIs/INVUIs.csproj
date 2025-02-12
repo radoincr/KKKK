@@ -8,15 +8,16 @@
 
 
     <ItemGroup>
-        <SupportedPlatform Include="browser"/>
+        <SupportedPlatform Include="browser" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\INV.App\INV.App.csproj" />
+      <ProjectReference Include="..\INV.Domain\INV.Domain.csproj" />
       <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj" />
       <ProjectReference Include="..\INV.Infrastructure\INV.Infrastructure.csproj" />
     </ItemGroup>

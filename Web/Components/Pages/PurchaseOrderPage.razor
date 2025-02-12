@@ -29,7 +29,8 @@
                                             <option value="@supplier.ID">@supplier.SupplierName</option>
                                         }
                                     </select>
-                                    <button type="button" class="add" @onclick="navigatePage"><i class="fa fa-plus"></i>Add a Supplier</button>
+                                   
+                                    <button type="button" class="add" @onclick="() => supplierSelector.ShowModal()"><i class="fa fa-plus"></i>Add a Supplier</button>
                                 </div>
                             </div>
 
@@ -228,3 +229,4 @@
 </div>
 <ToastValidation Type="toastType" Title="@toastTitle" Message="@toastMessage" IsVisible="isToastVisible"
                  OnClose="CloseToast"/>
+<SupplierSelector @ref="supplierSelector" />

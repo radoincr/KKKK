@@ -8,6 +8,7 @@ using INV.Domain.Entity.OrderDetailsEntity;
 using INV.Domain.Entity.ProductEntity;
 using INV.Domain.Entity.PurchaseOrderEntity;
 using INV.Domain.Entity.SupplierEntity;
+using INVUIs.Suppliers;
 using Microsoft.AspNetCore.Components;
 using Web.Components.Layout.Toast;
 using Web.Models.authorityModel;
@@ -31,6 +32,7 @@ public partial class PurchaseOrderPage
     SupplierModel supplierModel = new SupplierModel();
     private List<Supplier> suppliers = new List<Supplier>();
     private AuthorityModel authority = new AuthorityModel();
+    private SupplierSelector supplierSelector = new SupplierSelector();
 
     private List<SectionItem> sectionItems = new()
     {
