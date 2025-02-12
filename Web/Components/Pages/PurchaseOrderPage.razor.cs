@@ -61,7 +61,7 @@ public partial class PurchaseOrderPage
     private int delivery_time;
     private string description_article;
 
-    private string SelectedChapter { get; set; }
+    private string SelectedChapter;
 
     private string SelectedTVA { get; set; } = "19";
     private int DeliveryTime { get; set; }
@@ -89,7 +89,7 @@ public partial class PurchaseOrderPage
     private string toastTitle = string.Empty;
     private string toastMessage = string.Empty;
 
-    public void navigatePage()
+    public void NavigatePage()
     {
         navigationManager.NavigateTo("Supplier");
     }
@@ -230,9 +230,10 @@ public partial class PurchaseOrderPage
             IDSupplier = supplierModel.ID, 
             TypeService = OrderService, 
             TypeBudget = OrderCategory,
-            CompletionDelay = DeliveryTime,
-            Article = SelectedArticle,
+            CompletionDelay = DeliveryTime, 
             Chapter = SelectedChapter,
+            Article = SelectedArticle,
+            DesignationArticle=description_article,
             Date = DateOnly.FromDateTime(DateTime.Now.Date),
             Status = "In Progress",
             TVA = TVA,
@@ -290,6 +291,7 @@ public partial class PurchaseOrderPage
         products = new List<ProductModel>();
         SelectedChapter = "";
         SelectedArticle = "";
+        description_article = "";
         SelectedTVA = "19";
         DeliveryTime = 0;
         OrderCategory = "";
