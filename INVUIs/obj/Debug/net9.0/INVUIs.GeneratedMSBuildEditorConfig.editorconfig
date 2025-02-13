@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = T3JkZXJzXFB1cmNoYXNlT3JkZXJMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/bouce/RiderProjects/web2/INVUIs/Suppliers/SupplierForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/bouce/RiderProjects/web2/INVUIs/Suppliers/SupplierList.razor]
 build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

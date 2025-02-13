@@ -1,42 +1,64 @@
 ﻿@using INV.App.Suppliers
 
+<div class="list-title">
+    <h4>List of Suppliers</h4>
+</div>
+<div>
+    <input type="text" @bind="searchName" placeholder="Search by supplier name" class="number-input" />
+    <button class="search-button">Search</button>
+</div>
+<br /> 
+<button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i>  Add a Supplier</button>
+
 @if (Suppliers is null)
 {
     <h3>Loading...</h3>
 }
 else
-{
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Supplier Name</th>
-            <th>Supplier Address</th>
-            <th>Supplier Phone</th>
-            <th>Supplier Email</th>
-        </tr>
-        </thead>
-        <tbody>
+{ <div class="list-supplier-container">
+
         @foreach (SupplierInfo supplier in Suppliers)
         {
-            <tr>
-                <td>
-                    <a href =@selectedLink(supplier.ID)>
+            <div class="purchase-order-card">
+                <label class="purchase-order-header">
+                    <a href=@selectedLink(supplier.ID)>
                         @supplier.Name
                     </a>
-                </td>
-                <td>@supplier.Address</td>
-                <td>@supplier.Phone</td>
-                <td>@supplier.Email</td>
-            </tr>
+                </label>
+                <label class="purchase-order">@supplier.Address</label>
+                <label class="purchase-order">@supplier.Email</label>
+                <label class="purchase-order">@supplier.Phone</label>
+            </div>
         }
-        </tbody>
-    </table>
+    </div>
+
 }
-
-
-
-@code
-{
+<SupplierForm @ref="supplierSelector"/>
+@code{
     [Parameter] public List<SupplierInfo> Suppliers { get; set; }
     private string selectedLink(Guid id)=> $"suppliers/{id}";
+    [Inject] private NavigationManager navigationManager { get; set; }
+    private string? searchName;
+    private SupplierForm supplierSelector = new SupplierForm();
+    private bool displayModal = false;
+   /* SupplierModel newSupplier = new SupplierModel();
+
+    private void Close()
+    {
+        newSupplier = new SupplierModel(); 
+        displayModal = false;
+        StateHasChanged(); 
+    }
+*/
+
+    public void NavigatePage()
+    {
+        navigationManager.NavigateTo("Supplier");
+    }
+    public void ShowModal()
+    {
+        displayModal = true;
+        StateHasChanged();
+    }
 }
+

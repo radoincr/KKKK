@@ -1,0 +1,94 @@
+﻿@if (displayModal)
+{
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <EditForm Model="newSupplier" OnValidSubmit="OnCreate" FormName="AddSupplier">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="commend-content">
+                    <div class="commend-titel">
+                        <h3>Information of Supplier</h3>
+                    </div>
+
+                    <div class="input2">
+                        <div class="commend-input">
+                            <label>Full Name</label>
+                            <InputText @bind-Value="newSupplier.NameSupplier" placeholder="Enter Supplier Name" />
+                            <ValidationMessage For="() => newSupplier.NameSupplier" />
+                        </div>
+
+                        <div class="commend-input">
+                            <label>Company Name (Legal from determination)</label>
+                            <InputText @bind-Value="newSupplier.NameCompany" placeholder="Enter Supplier Company" />
+                            <ValidationMessage For="() => newSupplier.NameCompany" />
+                        </div> </div>
+                        <div class="input">
+                        <div class="commend-input">
+                            <label>Address</label>
+                            <InputText @bind-Value="newSupplier.Address" placeholder="Enter Supplier Address" />
+                            <ValidationMessage For="() => newSupplier.Address" />
+                        </div>
+                    </div>
+
+                    <div class="input2">
+                        <div class="commend-input">
+                            <label>Phone</label>
+                            <InputText @bind-Value="newSupplier.Phone" placeholder="Enter Supplier Phone" />
+                            <ValidationMessage For="() => newSupplier.Phone" />
+                        </div>
+                        <div class="commend-input">
+                            <label>Email</label>
+                            <InputText @bind-Value="newSupplier.Email" placeholder="Enter Supplier Email"/>
+                            <ValidationMessage For="() => newSupplier.Email"/>
+                        </div>
+                    </div>
+
+                    <div class="input2">
+                        <div class="commend-input">
+                            <label>Commercial registration number (RC)</label>
+                            <InputText @bind-Value="newSupplier.RC" placeholder="Enter RC" />
+                            <ValidationMessage For="() => newSupplier.RC" />
+                        </div>
+                        <div class="commend-input">
+                            <label>Article number (ART)</label>
+                            <InputNumber @bind-Value="newSupplier.ART" placeholder="Enter ART"/>
+                            <ValidationMessage For="() => newSupplier.ART"/>
+                        </div>
+                    </div>
+
+                    <div class="input2">
+                        <div class="commend-input">
+                            <label>NIF</label>
+                            <InputNumber @bind-Value="newSupplier.NIF" placeholder="Enter NIF"/>
+                            <ValidationMessage For="() => newSupplier.NIF"/>
+                        </div>
+                        <div class="commend-input">
+                            <label>NIS</label>
+                            <InputNumber @bind-Value="newSupplier.NIS" placeholder="Enter NIS" />
+                            <ValidationMessage For="() => newSupplier.NIS" />
+                        </div>
+                    </div>
+                    
+                    <div class="input2">
+                        <div class="commend-input">
+                            <label>Bank Account (RIB)</label>
+                            <InputText @bind-Value="newSupplier.RIB" placeholder="Enter RIB" />
+                            <ValidationMessage For="() => newSupplier.RIB" />
+                        </div>
+
+                        <div class="commend-input">
+                            <label>Bank Address</label>
+                            <InputText @bind-Value="newSupplier.BankAgency" placeholder="Enter Bank Address" />
+                            <ValidationMessage For="() => newSupplier.BankAgency" />
+                        </div>
+                    </div>
+
+                    <div class="commend-pos-btn">
+                        <button type="submit">Create Supplier</button>
+                        <button type="button" @onclick="close">Close</button>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+}

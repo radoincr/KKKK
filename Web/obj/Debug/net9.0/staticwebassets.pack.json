@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\ICSS\\PurchaseOrder.css"
     },
     {
+      "Id": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\ICSS\\SupplierList.css",
+      "PackagePath": "staticwebassets\\ICSS\\SupplierList.css"
+    },
+    {
       "Id": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\Images\\danger.png",
       "PackagePath": "staticwebassets\\Images\\danger.png"
     },

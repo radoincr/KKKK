@@ -657,7 +657,6 @@ C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\q8v6i1uv3e-pis
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\36w3eu0hkb-j8zp7bt7w3.gz
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\mfzx4sb2rv-79hai7knhw.gz
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\ygjdfotdet-r1ub6n1gr1.gz
-C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\ae8ugmsc49-pj1u6fwifu.gz
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\rydsrs2hrg-7ar6te8uqa.gz
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\kv5qubemy1-uzw3zolrln.gz
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\7ygf986cjc-t1cqhe9u97.gz
@@ -724,3 +723,5 @@ C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\Web.genruntimeconfig.cach
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\ref\Web.dll
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\lqvgqijwbg-2cp7y8z72z.gz
 C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\6171yyfv4s-hwk9sgxx0w.gz
+C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\oaqrrr9js5-tdvrle37e6.gz
+C:\Users\bouce\RiderProjects\web2\Web\obj\Debug\net9.0\compressed\ae8ugmsc49-e7t4iefxnc.gz

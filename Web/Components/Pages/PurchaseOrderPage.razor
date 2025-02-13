@@ -29,8 +29,11 @@
                                             <option value="@supplier.ID">@supplier.SupplierName</option>
                                         }
                                     </select>
-                                   
-                                    <button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i>  Add a Supplier</button>
+
+                                    <button type="button" class="add" @onclick="() =>  supplierSelector.ShowModal()"><i class="fa fa-plus"></i>Add a Supplier</button>
+                                    <button type="button" @onclick="() => addSupplier.ShowModal(aaa)" class="btn text-primary  border-0" disabled=@controlDisabled>
+                                        @*<i class="fa fa-search"></i>*@jjjj
+                                    </button>
                                 </div>
                             </div>
 
@@ -39,37 +42,27 @@
                                 <div class="input2">
                                     <div class="commend-input">
                                         <label for="firstName">Full Name</label>
-                                        <InputText id="firstName" @bind-Value="supplierModel.NameSupplier" class="input-field" disabled/>
+                                        <InputText id="firstName" @bind-Value="sup.NameSupplier" class="input-field" disabled/>
                                     </div>
 
                                     <div class="commend-input">
                                         <label for="companyName">Or Company Name (Legal form determination)</label>
-                                        <InputText id="companyName" @bind-Value="supplierModel.NameCompany" class="input-field" disabled/>
+                                        <InputText id="companyName" @bind-Value="sup.Email" class="input-field" disabled/>
                                     </div>
                                 </div>
                                 <div class="input2">
 
                                     <div class="commend-input">
                                         <label for="actsOnBehalf">Acts on Behalf of</label>
-                                        <InputText id="actsOnBehalf" @bind-Value="supplierModel.NameAccount" class="input-field"/>
+                                        <InputText id="actsOnBehalf" @bind-Value="sup.Phone" class="input-field"/>
                                     </div>
 
                                     <div class="commend-input">
                                         <label for="operatorAddress">Address</label>
-                                        <InputText id="operatorAddress" @bind-Value="supplierModel.Address" class="input-field" disabled/>
+                                        <InputText id="operatorAddress" @bind-Value="sup.Address" class="input-field" disabled/>
                                     </div>
                                 </div>
-                                <div class="input2">
-                                    <div class="commend-input">
-                                        <label for="email">Email</label>
-                                        <InputText id="email" @bind-Value="supplierModel.Email" class="input-field" disabled/>
-                                    </div>
 
-                                    <div class="commend-input">
-                                        <label for="operatorContact">Phone</label>
-                                        <InputText id="operatorContact" @bind-Value="supplierModel.Phone" class="input-field" disabled/>
-                                    </div>
-                                </div>
                             }
                         }
                         @if (sectionItem.Title == "Characteristics of the order")
@@ -77,81 +70,87 @@
                             <div class="card p-4 shadow-sm">
                                 <div class="container">
                                     <div class="input-titel">
-                                        <label>Select your Services</label>
+                                        <h6>Select your Services</h6>
                                     </div>
-                                    <div class="radio-group">
-                                        <InputRadioGroup @bind-Value="OrderService">
-                                            <div class="input-container">
-                                                <InputRadio Value="s1"/> Works
-                                            </div>
-                                            <div class="input-container">
-                                                <InputRadio Value="s2"/> Equipment
-                                            </div>
-                                            <div class="input-container">
-                                                <InputRadio Value="s3"/> Services
-                                            </div>
-                                        </InputRadioGroup>
-                                    </div> <br/>
-                                        <div class="container">
-                                            <div class="input-titel">
-                                                <label>Select your Budget</label>
-                                            </div>
+                                    <div class="checkbox-group">
+                                        <div class="input-container">
+                                            <span>Works</span> <InputCheckbox @bind-Value="s1"></InputCheckbox>
+                                        </div>
+
+                                        <div class="input-container">
+                                            <span>Equipment</span> <InputCheckbox @bind-Value="s2"></InputCheckbox>
+                                        </div>
+
+                                        <div class="input-container">
+                                            <span>Services</span> <InputCheckbox @bind-Value="s3"></InputCheckbox>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div class="input-titel">
+                                        <h6>Select your Badget</h6>
+                                    </div>
                                     <div class="radio-group">
                                         <InputRadioGroup @bind-Value="OrderCategory">
                                             <div class="input-container">
-                                                <InputRadio Value="bg1"/> Operating Expenses
+                                                Operating Expenses <InputRadio Value="bg1"/>
                                             </div>
                                             <div class="input-container">
-                                                <InputRadio Value="bg2"/> Equipment Expenses
+                                                Equipment Expenses <InputRadio Value="bg2"/>
                                             </div>
                                             <div class="input-container">
-                                                <InputRadio Value="bg3"/> Other Expenses
+                                                Other Expenses<InputRadio Value="bg3"/>
                                             </div>
                                         </InputRadioGroup>
-                                    </div>
+
+                                        <ValidationMessage For="@(() => OrderCategory)"/>
+
                                     </div>
                                 </div>
 
 
-                                <div class="input2">
-                                       <div class="commend-input">
-                                           <label>Choose a Chapter</label>
-                                       <InputSelect class="input-field" @bind-Value="SelectedChapter">
-                                           <option disabled selected>Select a Chapter</option>
-                                           <option value="25">25</option>
-                                           <option value="26">26</option>
-                                           <option value="27">27</option>
-                                           <option value="28">28</option>
-                                       </InputSelect>
-                                   </div>
-                                      <div class="commend-input">
-                                        <label>Choose an Article</label>
+                                <div class="container">
+                                    <div class="input-titel">
+                                        <h6>Choose a Chapter</h6>
+                                    </div>
+                                    <div class="select-group">
+                                        <InputSelect class="input-field" @bind-Value="SelectedChapter">
+                                            <option disabled selected>Select a Chapter and an Article</option>
+                                            <option value="25/40">25/40</option>
+                                            <option value="26/41">26/41</option>
+                                            <option value="27/42">27/42</option>
+                                            <option value="28/43">28/43</option>
+                                        </InputSelect>
+                                    </div>
+                                    <div class="input-titel">
+                                        <h6>Choose an Article</h6>
+                                    </div>
+                                    <div class="select-group">
                                         <InputSelect class="input-field" @bind-Value="SelectedArticle">
                                             <option disabled selected>Select an Article</option>
-                                            <option value="40">40</option>
-                                            <option value="41">41</option>
-                                            <option value="42">42</option>
-                                            <option value="43">43</option>
+                                            <option value="25/40">25/40</option>
+                                            <option value="26/41">26/41</option>
+                                            <option value="27/42">27/42</option>
+                                            <option value="28/43">28/43</option>
                                         </InputSelect>
-                                        </div>
-                                    <div class="commend-input">
-                                        <label for="description">Description Article</label>
-                                        <InputTextArea id="description" @bind-Value="description_article" style="margin-top: 4px"  placeholder="Enter Description" class="form-control valid"/>
-                                    </div> </div>
-                                
+                                    </div>
+                                </div>
 
                                 <div style="max-height: 300px; overflow-y: auto;">
-                                    <table class="table table-bordered mt-3 text-center">
-                                        <thead class="table-light">
+                                    <table class="table table-bordered mt-3">
+                                        <thead>
                                         <tr>
-                                            <th style="width: 3%;">Number</th>
-                                            <th style="width: 40%;">Data</th>
-                                            <th style="width: 4%;">Unit of Measure</th>
-                                            <th style="width: 7%;">Quantity</th>
+                                            <th style="width: 8%;">Number</th>
+                                            <th style="width: 46%;">Data</th>
+                                            <th style="width: 15%;">Unit of Measure</th>
+                                            <th style="width: 9%;">Quantity</th>
                                             <th style="width: 15%;">Unit Price</th>
-                                            <th style="width: 9%;">TVA</th>
+                                            <th style="width: 10%;">TVA</th>
                                             <th style="width: 18%;">Total</th>
-                                            <th style="width: 2%;">Actions</th>
+                                            <th style="width: 3%;">Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -175,10 +174,10 @@
                                                 </td>
 
                                                 <td>
-                                                    <InputSelect class="form-control text-center valid" @bind-Value="product.TVA">
-                                                        <option value="0">0%</option>
-                                                        <option value="9" >9%</option>
+                                                    <InputSelect class="input-field2" @bind-Value="product.TVA">
+                                                        <option value="9">9%</option>
                                                         <option value="19" selected>19%</option>
+                                                        <option value="0">0%</option>
                                                     </InputSelect>
 
                                                 </td>
@@ -186,7 +185,7 @@
                                                     <InputNumber class="form-control" @bind-Value="product.UnitPrice" min=1 disabled/>
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="deleteproduct-button text-center" @onclick="() => DeleteProduct(product)">
+                                                    <button type="button" class="btn btn-danger" @onclick="() => DeleteProduct(product)">
                                                         <i class="bi bi-trash-fill"></i>
                                                     </button>
                                                 </td>
@@ -199,8 +198,8 @@
                                 <div class="container2">
 
                                     <div class="btn-add-product">
-                                        <button type="button" class="addproduct-button" @onclick="AddProduct">
-                                            <i class="bi bi-plus-circle"></i>  Add a product
+                                        <button type="button" class="add" @onclick="AddProduct">
+                                            <i class="fa fa-plus"></i>Add a product
                                         </button>
                                     </div>
                                 </div>
@@ -223,4 +222,6 @@
 </div>
 <ToastValidation Type="toastType" Title="@toastTitle" Message="@toastMessage" IsVisible="isToastVisible"
                  OnClose="CloseToast"/>
-<SupplierSelector @ref="supplierSelector" />
+<SupplierForm @ref="supplierSelector" />
+
+<SupplierSelector Title="Sélectionner un fournisseur" @ref="addSupplier" OnSelected="SupplierSelectednew" Supplier="aaa"/>

@@ -1,82 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Components;
 using INV.App.Suppliers;
-using INV.Domain.Entity.SupplierEntity;
-using INVUIs.Models.Supplier;
-using Microsoft.AspNetCore.Components;
-using INVUIs.Models.Supplier;
+namespace INVUIs.Suppliers;
 
-namespace INVUIs.Suppliers
+public partial class SupplierSelector 
 {
-    public partial class SupplierSelector
+    [Parameter] public List<SupplierInfo> Supplier { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public EventCallback<SupplierInfo> OnSelected { get; set; }
+    public SupplierInfo SelectedSupplier = null;
+    private bool displayModal = false;
+    private string SearchTerm { get; set; } = "";
+
+    private List<SupplierInfo> displayedItems =>
+        Supplier.Where(i => i.Name.ToLower().Contains(SearchTerm.ToLower()) ||
+                            i.Email.ToString().ToLower().Contains(SearchTerm.ToLower()))
+            .ToList();
+
+    private void close()
     {
-        [Inject] public ISupplierService SupplierService { get; set; }
-        SupplierModel newSupplier = new SupplierModel();
-        private bool displayModal = false;
-        private void close()
-        {
-            newSupplier = new SupplierModel(); // Reset instead of null
-            displayModal = false;
-            StateHasChanged(); // Force UI re-render
-        }
+        Supplier = null;
+        displayModal = false;
+        StateHasChanged();
+    }
 
-    
+    private void selectItem(SupplierInfo selected)
+    {
+        OnSelected.InvokeAsync(selected);
+        close();
+    }
 
-        public void ShowModal()
-        {
-            displayModal = true;
-            StateHasChanged();
-        }
+    public void ShowModal()
+    {
+        displayModal = true;
+        StateHasChanged();
+    }
 
-        private async Task OnCreate()
-        {
-            try
-            {
-                var sup = new Supplier()
-                {
-                    ID = Guid.NewGuid(),
-                    SupplierName = newSupplier.NameSupplier,
-                    CompanyName = newSupplier.NameCompany,
-                    AccountName = newSupplier.NameCompany,
-                    Email = newSupplier.Email,
-                    Address = newSupplier.Address,
-                    Phone = newSupplier.Phone,
-                    ART = newSupplier.ART,
-                    NIF = newSupplier.NIF,
-                    RC = newSupplier.RC,
-                    NIS = newSupplier.NIS,
-                    RIB = newSupplier.RIB,
-                    BankAgency = newSupplier.BankAgency
-                };
-
-                await SupplierService.AddSupplier(sup);
-                await ClearForm();
-             
-
-
-            }
-            catch (Exception ex)
-            {
-              
-            }
-        }
-     /*   private void ShowToast(string title, string message, ToastType type)
-        {
-            toastTitle = title;
-            toastMessage = message;
-            toastType = type;
-            isToastVisible = true;
-        }
-        public void CloseToast()
-        {
-            isToastVisible = false;
-        }*/
-        private async Task ClearForm()
-        {
-            newSupplier = new SupplierModel();
-        }
+    public void ShowModal(List<SupplierInfo> Supplier)
+    {
+        Supplier = Supplier;
+        ShowModal();
     }
 }

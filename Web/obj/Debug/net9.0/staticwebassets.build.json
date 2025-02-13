@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Iwsjf1p1GJw4xrpaBSSuU5VH9XBLRoA7w49WNgQUjX8=",
+  "Hash": "72A9ZzmhHbdFAsYXQXoVJA+sxDFZKUAG3M3Qt/7Pe40=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -582,12 +582,12 @@
       "OriginalItemSpec": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-pj1u6fwifu.gz",
+      "Identity": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-e7t4iefxnc.gz",
       "SourceId": "Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Web",
-      "RelativePath": "DCSS/Supplier#[.{fingerprint=pj1u6fwifu}]?.css.gz",
+      "RelativePath": "DCSS/Supplier#[.{fingerprint=e7t4iefxnc}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -596,8 +596,8 @@
       "RelatedAsset": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\DCSS\\Supplier.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "w48pp7jmwm",
-      "Integrity": "cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8=",
+      "Fingerprint": "q09obatunt",
+      "Integrity": "Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\DCSS\\Supplier.css"
@@ -1063,6 +1063,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\oaqrrr9js5-tdvrle37e6.gz",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "ICSS/SupplierList#[.{fingerprint=tdvrle37e6}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\ICSS\\SupplierList.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "745lwy3pj1",
+      "Integrity": "J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\ICSS\\SupplierList.css"
     },
     {
       "Identity": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\q6tcj720kj-sejl45xvog.gz",
@@ -1646,8 +1667,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pj1u6fwifu",
-      "Integrity": "VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4=",
+      "Fingerprint": "e7t4iefxnc",
+      "Integrity": "2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\DCSS\\Supplier.css"
@@ -1735,6 +1756,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ICSS\\PurchaseOrder.css"
+    },
+    {
+      "Identity": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\ICSS\\SupplierList.css",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "ICSS/SupplierList#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tdvrle37e6",
+      "Integrity": "ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ICSS\\SupplierList.css"
     },
     {
       "Identity": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\Images\\danger.png",
@@ -5262,12 +5304,12 @@
     },
     {
       "Route": "DCSS/Supplier.css",
-      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-pj1u6fwifu.gz",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-e7t4iefxnc.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000481231954"
+          "Quality": "0.000479846449"
         }
       ],
       "ResponseHeaders": [
@@ -5277,15 +5319,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2077"
+          "Value": "2083"
         },
         {
           "Name": "ETag",
-          "Value": "\"cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8=\""
+          "Value": "\"Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:06:03 GMT"
+          "Value": "Thu, 13 Feb 2025 11:23:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5305,13 +5347,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4=\""
+          "Value": "W/\"2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4="
+          "Value": "sha256-2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA="
         }
       ]
     },
@@ -5326,7 +5368,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8193"
+          "Value": "8215"
         },
         {
           "Name": "Content-Type",
@@ -5334,11 +5376,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4=\""
+          "Value": "\"2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:06:03 GMT"
+          "Value": "Thu, 13 Feb 2025 11:23:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5348,13 +5390,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4="
+          "Value": "sha256-2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA="
         }
       ]
     },
     {
       "Route": "DCSS/Supplier.css.gz",
-      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-pj1u6fwifu.gz",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-e7t4iefxnc.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5363,7 +5405,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2077"
+          "Value": "2083"
         },
         {
           "Name": "Content-Type",
@@ -5371,11 +5413,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8=\""
+          "Value": "\"Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:06:03 GMT"
+          "Value": "Thu, 13 Feb 2025 11:23:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5393,18 +5435,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8="
+          "Value": "sha256-Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM="
         }
       ]
     },
     {
-      "Route": "DCSS/Supplier.pj1u6fwifu.css",
-      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-pj1u6fwifu.gz",
+      "Route": "DCSS/Supplier.e7t4iefxnc.css",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-e7t4iefxnc.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000481231954"
+          "Quality": "0.000479846449"
         }
       ],
       "ResponseHeaders": [
@@ -5414,15 +5456,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2077"
+          "Value": "2083"
         },
         {
           "Name": "ETag",
-          "Value": "\"cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8=\""
+          "Value": "\"Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:06:03 GMT"
+          "Value": "Thu, 13 Feb 2025 11:23:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5442,13 +5484,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4=\""
+          "Value": "W/\"2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pj1u6fwifu"
+          "Value": "e7t4iefxnc"
         },
         {
           "Name": "label",
@@ -5456,12 +5498,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4="
+          "Value": "sha256-2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA="
         }
       ]
     },
     {
-      "Route": "DCSS/Supplier.pj1u6fwifu.css",
+      "Route": "DCSS/Supplier.e7t4iefxnc.css",
       "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\DCSS\\Supplier.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5471,7 +5513,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8193"
+          "Value": "8215"
         },
         {
           "Name": "Content-Type",
@@ -5479,11 +5521,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4=\""
+          "Value": "\"2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:06:03 GMT"
+          "Value": "Thu, 13 Feb 2025 11:23:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5493,7 +5535,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pj1u6fwifu"
+          "Value": "e7t4iefxnc"
         },
         {
           "Name": "label",
@@ -5501,13 +5543,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VUW4E0yIpcYmgCNMfKnjIssNTTSjxRbM7fXv8tuHfI4="
+          "Value": "sha256-2uYk/folLcczW9NojIMIq6IDsy6vqOqdAzzNsIoqgLA="
         }
       ]
     },
     {
-      "Route": "DCSS/Supplier.pj1u6fwifu.css.gz",
-      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-pj1u6fwifu.gz",
+      "Route": "DCSS/Supplier.e7t4iefxnc.css.gz",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\ae8ugmsc49-e7t4iefxnc.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5516,7 +5558,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2077"
+          "Value": "2083"
         },
         {
           "Name": "Content-Type",
@@ -5524,11 +5566,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8=\""
+          "Value": "\"Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Feb 2025 08:06:03 GMT"
+          "Value": "Thu, 13 Feb 2025 11:23:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5546,7 +5588,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pj1u6fwifu"
+          "Value": "e7t4iefxnc"
         },
         {
           "Name": "label",
@@ -5554,7 +5596,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cNo80J2qiAt8K9G3wvw/h0EKfMQJ7u4lwt8yYJgdRW8="
+          "Value": "sha256-Vhn/rvDK35zYCFBez++XE0QvYHZTrIEYGyiEBgqE3LM="
         }
       ]
     },
@@ -6531,6 +6573,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-nvWiHIq15uvn3L3N2sNCSLVfyYzTsNHfrqqUoAnt3KQ="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/SupplierList.css",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\oaqrrr9js5-tdvrle37e6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002801120448"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "356"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:56:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/SupplierList.css",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\ICSS\\SupplierList.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:56:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/SupplierList.css.gz",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\oaqrrr9js5-tdvrle37e6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:56:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/SupplierList.tdvrle37e6.css",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\oaqrrr9js5-tdvrle37e6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002801120448"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "356"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:56:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tdvrle37e6"
+        },
+        {
+          "Name": "label",
+          "Value": "ICSS/SupplierList.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/SupplierList.tdvrle37e6.css",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\wwwroot\\ICSS\\SupplierList.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:56:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tdvrle37e6"
+        },
+        {
+          "Name": "label",
+          "Value": "ICSS/SupplierList.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ofTJcc/Wt+ZILD+B0n75+A4MAoLXdfM4p/+pv1soIpk="
+        }
+      ]
+    },
+    {
+      "Route": "ICSS/SupplierList.tdvrle37e6.css.gz",
+      "AssetFile": "C:\\Users\\bouce\\RiderProjects\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\oaqrrr9js5-tdvrle37e6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:56:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tdvrle37e6"
+        },
+        {
+          "Name": "label",
+          "Value": "ICSS/SupplierList.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2UVDA8tvFh062R1JolK79E2sUUqQOXZXP6Mcav6TzI="
         }
       ]
     },

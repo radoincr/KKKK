@@ -1,6 +1,4 @@
-﻿using System.Security.Principal;
-using Azure.Core;
-using INV.App.IOrderDetailServices;
+﻿using INV.App.IOrderDetailServices;
 using INV.App.Products;
 using INV.App.PurchaseOrders;
 using INV.App.Suppliers;
@@ -31,8 +29,11 @@ public partial class PurchaseOrderPage
     ProductModel product = new ProductModel();
     SupplierModel supplierModel = new SupplierModel();
     private List<Supplier> suppliers = new List<Supplier>();
+    private List<SupplierInfo> aaa = new List<SupplierInfo>();
     private AuthorityModel authority = new AuthorityModel();
-    private SupplierSelector supplierSelector = new SupplierSelector();
+    private SupplierSelector addSupplier = new SupplierSelector();
+    private SupplierForm supplierSelector = new SupplierForm();
+    private EventCallback<SupplierInfo> supplierSelected;
 
     private List<SectionItem> sectionItems = new()
     {
@@ -40,7 +41,8 @@ public partial class PurchaseOrderPage
         new SectionItem { Title = "Characteristics of the order" }
     };
 
-    
+    private bool controlDisabled = false;
+
     private string contractingName;
     private int payingAgentCode;
     private string SelectedArticle;
@@ -59,10 +61,11 @@ public partial class PurchaseOrderPage
     private string bankAccount;
     private string bankAddress;
     private int delivery_time;
-    private string description_article;
+    private bool Works { get; set; }
+    private bool Equipment { get; set; }
+    private bool Services { get; set; }
 
-    private string SelectedChapter;
-
+    private string SelectedChapter { get; set; }
     private string SelectedTVA { get; set; } = "19";
     private int DeliveryTime { get; set; }
 
@@ -72,6 +75,23 @@ public partial class PurchaseOrderPage
     {
         sectionItem.IsVisible = !sectionItem.IsVisible;
     }
+
+    public SupplierModel sup;
+    private async Task SupplierSelectednew(SupplierInfo supplierInfo)
+    {
+        sup = new SupplierModel
+        {
+            ID = supplierInfo.ID,
+            NameSupplier = supplierInfo.Name,
+            Email = supplierInfo.Email,
+            Phone = supplierInfo.Phone,
+          Address = supplierInfo.Address
+            
+        };
+        SupplierSelected = true;
+        StateHasChanged();
+    }
+
 
     private string GetSectionIcon(bool isVisible)
     {
@@ -89,7 +109,7 @@ public partial class PurchaseOrderPage
     private string toastTitle = string.Empty;
     private string toastMessage = string.Empty;
 
-    public void NavigatePage()
+    public void navigatePage()
     {
         navigationManager.NavigateTo("Supplier");
     }
@@ -118,13 +138,14 @@ public partial class PurchaseOrderPage
     private void DeleteProduct(ProductModel product)
     {
         products.Remove(product);
-        for (int i = 0; i < products.Count; i++)
+        for (int i = product.Number; i <= products.Count; i++)
         {
-            products[i].Number = i + 1;
         }
     }
 
     private bool SupplierSelected = false;
+
+   
 
     private async void OnSupplierSelected(ChangeEventArgs e)
     {
@@ -179,6 +200,7 @@ public partial class PurchaseOrderPage
 
     protected override async Task OnInitializedAsync()
     {
+        aaa = await supplierService.GetAllSupplier();
         await Suppliers();
     }
 
@@ -191,10 +213,14 @@ public partial class PurchaseOrderPage
     public string bg2 { set; get; } = "Bg2";
     public string bg3 { set; get; } = "Bg3";
 
-    public string s1 { set; get; } = "s1";
-    public string s2 { set; get; } = "s2";
-    public string s3 { set; get; } = "s3";
-    private string OrderService { get; set; }
+    public bool s1 { set; get; } = false;
+    public bool s2 { set; get; } = false;
+    public bool s3 { set; get; } = false;
+
+    public string serviceOrder { set; get; }
+
+
+    private bool OrderService;
     private string OrderCategory { get; set; }
 
     public void c()
@@ -227,13 +253,12 @@ public partial class PurchaseOrderPage
         var purchaseOrder = new PurchaseOrder()
         {
             ID = idPurchaseOrder,
-            IDSupplier = supplierModel.ID, 
-            TypeService = OrderService, 
-            TypeBudget = OrderCategory,
-            CompletionDelay = DeliveryTime, 
+            IDSupplier = supplierModel.ID,
+            TypeBudget = s1 ? "s1" : s2 ? "s2" : s3 ? "s3" : "",
+            TypeService = OrderCategory,
+            CompletionDelay = DeliveryTime,
+            Article = "data from article",
             Chapter = SelectedChapter,
-            Article = SelectedArticle,
-            DesignationArticle=description_article,
             Date = DateOnly.FromDateTime(DateTime.Now.Date),
             Status = "In Progress",
             TVA = TVA,
@@ -285,18 +310,19 @@ public partial class PurchaseOrderPage
             Console.Error.WriteLine($"{ex.Message}");
         }
     }
+
     private async Task ClearForm()
     {
         supplierModel = new SupplierModel();
         products = new List<ProductModel>();
         SelectedChapter = "";
-        SelectedArticle = "";
-        description_article = "";
         SelectedTVA = "19";
         DeliveryTime = 0;
         OrderCategory = "";
-        OrderService = "";
-        products=new List<ProductModel>();
+        s1 = false;
+        s2 = false;
+        s3 = false;
+        products = new List<ProductModel>();
         suppliers = new List<Supplier>();
     }
 }

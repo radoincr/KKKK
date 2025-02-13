@@ -10,22 +10,15 @@ namespace INVUIs.Models.Supplier
     internal class SupplierModel
     {
         public Guid ID { get; set; }
-
-        [Required(ErrorMessage = "Name of Supplier is required.")]
         public string NameSupplier { get; set; }
-
-        [Required(ErrorMessage = "Company Name is required.")]
         public string NameCompany { get; set; }
 
-        [Required(ErrorMessage = "Account Name is required.")]
         public string NameAccount { get; set; }
 
         [Required(ErrorMessage = "Address is required.")]
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Phone number is required.")]
-        [RegularExpression(@"^(07|06|05)\d{8}$|^(033)\d{6}$",
-            ErrorMessage = "Phone number start with 07, 06, 05, or 033.")]
         public string Phone { get; set; }
 
         [Required(ErrorMessage = "Email is required.")]
@@ -46,6 +39,7 @@ namespace INVUIs.Models.Supplier
         public long NIF { get; set; }
 
         [Required(ErrorMessage = "NIS is required.")]
+        [Range(100000000000000, 999999999999999, ErrorMessage = "NIS must be exactly 15 digits.")]
         public int NIS { get; set; }
 
         [Required(ErrorMessage = "RIB is required.")]

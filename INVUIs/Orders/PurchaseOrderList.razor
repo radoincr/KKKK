@@ -1,6 +1,15 @@
 ﻿@using INV.App.PurchaseOrders
-@using INV.App.Suppliers
-@*@using BlazorBootstrap;*@
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<div>
+    <input type="number" @bind="searchNumber" min="1" placeholder="Search by order number" class="number-input" />
+    <input type="date" @bind="searchDate" />
+    <button class="search-button" @onclick="GetPurchaseOrder">Search</button>
+</div>
+<br />
+<button type="button" class="addsupplier-button" @onclick="NavigateToPurchaseOrder"><i class="bi bi-cart-plus"></i>  Add a Purchase Order</button>
+
 @if (purchaseOrderInfos is null)
 {
     <h3>Loading...</h3>
@@ -35,14 +44,34 @@ else
     </table>
 }
 
-@*<Spinner Color="SpinnerColor.Warning" VisuallyHiddenText="Data is null"/>
-<Alert Color="AlertColor.Primary"> A simple primary alert - check it out! </Alert>
-<Callout>
-    <strong>This is a default callout</strong>. Example text to show it in action. See <a href="https://getblazorbootstrap.com/docs/components/callout">callout documentation</a>.
-</Callout>*@
 
-@code
-{
+@code{
     [Parameter] public List<PurchaseOrderInfo> purchaseOrderInfos { get; set; }
+    private List<PurchaseOrderInfo> filteredOrders = new();
+    [Inject] public IPurchaseOrderService purchaseOrderService { get; set; }
 
+    private int? searchNumber;
+    private DateTime? searchDate;
+    private async Task GetPurchaseOrder()
+    {
+        if (searchDate.HasValue)
+        {   DateOnly selectedDate = DateOnly.FromDateTime(searchDate.Value);
+           //purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrdersByDate(selectedDate);
+            SearchOrders();
+        }
+    }
+
+    private void SearchOrders()
+    {
+        DateOnly? selectedDate = searchDate.HasValue ? DateOnly.FromDateTime(searchDate.Value) : null;
+
+        filteredOrders = purchaseOrderInfos.Where(order =>
+            (!searchNumber.HasValue || order.Number == searchNumber.Value) &&
+            (!selectedDate.HasValue || order.Date == selectedDate.Value)
+        ).ToList();
+    }
+    private void NavigateToPurchaseOrder()
+    {
+        Navigation.NavigateTo("/purchaseOrder");
+    } 
 }
