@@ -1,5 +1,4 @@
-﻿/* General Container Styling */
-.form-container {
+﻿.form-container {
     width: 100%;
     max-width: 600px;
     margin: 30px auto;
@@ -15,36 +14,36 @@
     margin: 2% 0 4% 0;
 }
 
-    /* Form Title */
-    .commend-titel h3 {
-        text-align: center;
-        font-size: 30px; /* Larger and more professional size */
-        font-weight: 600; /* Semi-bold for sophistication */
-        color: #257180; /* Primary color */
-        margin-bottom: 15px;
-        letter-spacing: 1px; /* Subtle letter-spacing for clarity */
-        text-transform: capitalize; /* Capitalize for a more refined look */
-        position: relative;
-    }
+/* Form Title */
+.commend-titel h3 {
+    text-align: center;
+    font-size: 30px; /* Larger and more professional size */
+    font-weight: 600; /* Semi-bold for sophistication */
+    color: #257180; /* Primary color */
+    margin-bottom: 15px;
+    letter-spacing: 1px; /* Subtle letter-spacing for clarity */
+    text-transform: capitalize; /* Capitalize for a more refined look */
+    position: relative;
+}
 
-        /* Title Subtle Underline Effect */
-        .commend-titel h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%; /* Slightly narrower underline */
-            height: 3px;
-            background-color: #FD8B51; /* Soft accent color */
-            border-radius: 2px;
-        }
+/* Title Subtle Underline Effect */
+.commend-titel h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; /* Slightly narrower underline */
+    height: 3px;
+    background-color: #FD8B51; /* Soft accent color */
+    border-radius: 2px;
+}
 
-        /* Hover Effect for the Title */
-        .commend-titel h3:hover {
-            color: #FD8B51; /* Accent color on hover */
-            transition: color 0.3s ease-in-out;
-        }
+/* Hover Effect for the Title */
+.commend-titel h3:hover {
+    color: #FD8B51; /* Accent color on hover */
+    transition: color 0.3s ease-in-out;
+}
 
 /* Responsive Title Adjustment */
 @media (max-width: 768px) {
@@ -62,33 +61,33 @@
 
 /* Input Fields */
 .commend-input {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-    .commend-input label {
-        display: block;
-        font-weight: 500;
-        color: #257180; /* Primary color */
-        font-size: 14px;
-    }
+.commend-input label {
+    display: block;
+    font-weight: 500;
+    color: #257180; /* Primary color */
+    font-size: 14px;
+}
 
-    .commend-input input {
-        width: 100%;
-        padding: 9px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 14px;
-        background-color: #fff;
-        color: #333;
-        transition: all 0.3s ease;
-    }
+.commend-input input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+}
 
-        /* Input Focus Effect */
-        .commend-input input:focus, input:hover {
-            border-color: #FD8B51; /* Focus color */
-            outline: none;
-            box-shadow: 0 0 8px rgba(253, 139, 81, 0.2);
-        }
+/* Input Focus Effect */
+.commend-input input:focus, input:hover {
+    border-color: #FD8B51; /* Focus color */
+    outline: none;
+    box-shadow: 0 0 8px rgba(253, 139, 81, 0.2);
+}
 
 /* Validation Message */
 .validation-message {
@@ -106,42 +105,41 @@
     flex-direction: row-reverse;
 }
 
-    .commend-pos-btn button {
-        padding: 10px 22px;
-        background-color: #257180; /* Primary button color */
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+.commend-pos-btn button {
+    padding: 8px 18px;
+    background-color: #257180; /* Primary button color */
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
 
-        /* Button Hover & Active States */
-        .commend-pos-btn button:hover {
-            background-color: #FD8B51; /* Hover color */
-            transform: translateY(-3px); /* Slight lift effect */
-        }
+}
 
-        .commend-pos-btn button:active {
-            background-color: #e67e22; /* Darker active color */
-            transform: translateY(2px); /* Slight press effect */
-        }
+/* Button Hover & Active States */
+.commend-pos-btn button:hover {
+    background-color: #FD8B51; /* Hover color */
+    transform: translateY(-3px); /* Slight lift effect */
+}
 
-        /* Back Button Styling */
-        .commend-pos-btn button[type="button"] {
-            background-color: #F2E5BF; /* Soft background for Back button */
-            color: #257180;
-            border: 1px solid #ddd;
-        }
+.commend-pos-btn button:active {
+    background-color: #e67e22; /* Darker active color */
+    transform: translateY(2px); /* Slight press effect */
+}
 
-            .commend-pos-btn button[type="button"]:hover {
-                background-color: #FFD08F; /* Slight hover effect */
-                transform: translateY(-3px);
-            }
+/* Back Button Styling */
+.commend-pos-btn button[type="button"] {
+    background-color: #F2E5BF; /* Soft background for Back button */
+    color: #257180;
+    border: 1px solid #ddd;
+}
+
+.commend-pos-btn button[type="button"]:hover {
+    background-color: #FFD08F; /* Slight hover effect */
+    transform: translateY(-3px);
+}
 
 /* Form Row Layout for Multiple Inputs */
 .input2 {
@@ -150,18 +148,18 @@
     gap: 5px;
 }
 
-    .input2 .commend-input {
-        width: 45%;
-    }
+.input2 .commend-input {
+    width: 45%;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .form-container {
         padding: 20px;
     }
-hr{
-    margin: 0rem;
-}
+    hr{
+        margin: 0rem;
+    }
 
 
     .commend-input input {
@@ -186,10 +184,10 @@ hr{
         align-items: center;
     }
 
-        .commend-pos-btn button {
-            width: 100%;
-            margin-bottom: 9px;
-        }
+    .commend-pos-btn button {
+        width: 100%;
+        margin-bottom: 9px;
+    }
 
     .input2 .commend-input {
         width: 100%;
@@ -225,13 +223,13 @@ hr{
     transition-delay: 0s;
 }
 
-    .steps .circle.active {
-        font-size: 26px;
-        background-color: #257180;
-        transition-delay: 100ms;
-        border-color: #257180;
-        color: #FFF;
-    }
+.steps .circle.active {
+    font-size: 26px;
+    background-color: #257180;
+    transition-delay: 100ms;
+    border-color: #257180;
+    color: #FFF;
+}
 
 .steps .progress-bar {
     position: absolute;
@@ -267,14 +265,14 @@ hr{
     transition: all 200ms linear;
 }
 
-    .buttons button:active {
-        transform: scale(0.97);
-    }
+.buttons button:active {
+    transform: scale(0.97);
+}
 
-    .buttons button:disabled {
-        background: #87a5f8;
-        cursor: not-allowed;
-    }
+.buttons button:disabled {
+    background: #87a5f8;
+    cursor: not-allowed;
+}
 
 /*================*/
 /* General Button Styles */
@@ -290,32 +288,32 @@ hr{
     transition: background-color 0.3s, transform 0.2s;
 }
 
-    /* Hover Effect */
-    .commend-pos-btn button:hover {
-        background-color: #FD8B51; /* Accent color */
-    }
+/* Hover Effect */
+.commend-pos-btn button:hover {
+    background-color: #FD8B51; /* Accent color */
+}
 
-    /* Active/Pressed Effect */
-    .commend-pos-btn button:active {
-        transform: scale(0.96);
-    }
+/* Active/Pressed Effect */
+.commend-pos-btn button:active {
+    transform: scale(0.96);
+}
 
-    /* Disabled Button */
-    .commend-pos-btn button:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-    }
+/* Disabled Button */
+.commend-pos-btn button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
 
-    /* Back Button Styling */
-    .commend-pos-btn button[type="button"] {
-        background-color: #F2E5BF;
-        color: #257180;
-        border: 1px solid #257180;
-    }
+/* Back Button Styling */
+.commend-pos-btn button[type="button"] {
+    background-color: #F2E5BF;
+    color: #257180;
+    border: 1px solid #257180;
+}
 
-        .commend-pos-btn button[type="button"]:hover {
-            background-color: #FFD08F;
-        }
+.commend-pos-btn button[type="button"]:hover {
+    background-color: #FFD08F;
+}
 
 /* Modal Overlay (Dark Background) */
 .modal-overlay {
@@ -334,9 +332,9 @@ hr{
 /* Modal Content */
 .modal-content {
     background: #fff;
-    padding: 26px;
-    border-radius: 12px;
-    width: 85% !important;
+    padding: 12px;
+    border-radius: 3px !important;
+    width: 50% !important;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     position: relative;
     animation: fadeIn 0.3s ease-in-out;

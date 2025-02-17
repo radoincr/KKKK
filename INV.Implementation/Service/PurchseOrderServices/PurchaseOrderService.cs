@@ -1,7 +1,7 @@
 ﻿using INV.App.PurchaseOrders;
-using INV.Domain.Entity.ProductPDF;
-using INV.Domain.Entity.PurchaseOrderEntity;
-using INV.Domain.Entity.SupplierEntity;
+using INV.Domain.Entities.ProductPDF;
+using INV.Domain.Entities.PurchaseOrders;
+using INV.Domain.Entities.SupplierEntity;
 using INV.Infrastructure.Storage.PurchaseOrderStorages;
 
 namespace INV.Implementation.Service.PurchseOrderServices;
@@ -22,7 +22,7 @@ public class PurchaseOrderService : IPurchaseOrderService
         return await purchaseOrderStorage.InsertPurchaseOrder(purchaseOrder);
     }
     
-    public async Task<(List<PurchaseOrder>, List<Supplier>, List<ProductPdf>)> GetPurchaseOrderDetails(
+    public async Task<(PurchaseOrder, Supplier, List<ProductPdf>)> GetPurchaseOrderDetails(
         int purchaseOrderNumber)
     {
         return await purchaseOrderStorage.SelectPurchaseOrderDetails(purchaseOrderNumber);
@@ -38,16 +38,28 @@ public class PurchaseOrderService : IPurchaseOrderService
 
     public async Task<List<PurchaseOrderInfo>> GetPurchaseOrderInfo()
     {
-        List<PurchaseOrder> result = await purchaseOrderStorage.SelectPurchaseOrderInfo();
-       
-        return result.Select(s => new PurchaseOrderInfo()
+        try
         {
-            ID = s.ID,
-            IDSupplier = s.IDSupplier,
-            SupplierName = s.SupplierName,
-            Number = s.Number,
-            Date = s.Date,
-            State = s.Status
-        }).ToList();    
+            return await purchaseOrderStorage.SelectPurchaseOrderInfo();
+        }
+        catch (Exception e)
+        {
+            throw new($"Purchase Order service error : {e.Message}");
+        }
+        
+    }
+    public async Task<List<PurchaseOrder>> GetPurchaseOrdersByIdSupplier(Guid idSupplier)
+    {
+        if ( idSupplier== null)
+            throw new ArgumentNullException(nameof(idSupplier));
+      
+        return await purchaseOrderStorage.SelectPurchaseOrdersByIDSupplier(idSupplier);
+    }
+    
+    public async Task<PurchaseOrder> GetPurchaseOrdersByID(Guid id)
+    {
+        if (id == null)
+            throw new ArgumentNullException(nameof(id));
+        return await purchaseOrderStorage.SelectPurchaseOrdersByID(id);
     }
 }

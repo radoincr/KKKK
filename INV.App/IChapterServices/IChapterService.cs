@@ -1,9 +1,10 @@
-﻿using INV.Domain.Entity.ChapterEntity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using INV.Domain.Entities.Budget;
+
 namespace INV.App.IChapterServices
 {
     public interface IChapterService

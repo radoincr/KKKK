@@ -1,15 +1,14 @@
 ﻿@using INV.App.PurchaseOrders
 @inject NavigationManager Navigation
 @rendermode InteractiveServer
+<div class="list-title">
+    <h4>List of Purchase Orders</h4>
+</div>
 
 <div>
-    <input type="number" @bind="searchNumber" min="1" placeholder="Search by order number" class="number-input" />
-    <input type="date" @bind="searchDate" />
-    <button class="search-button" @onclick="GetPurchaseOrder">Search</button>
-</div>
-<br />
+    <input type="text" @bind-value="SearchTerm" placeholder="Search by order number or by supplier name" class="number-input" @bind-value:event="oninput" />
 <button type="button" class="addsupplier-button" @onclick="NavigateToPurchaseOrder"><i class="bi bi-cart-plus"></i>  Add a Purchase Order</button>
-
+</div> <br/><br/><br/>
 @if (purchaseOrderInfos is null)
 {
     <h3>Loading...</h3>
@@ -17,7 +16,7 @@
 }
 else
 {
-    <table class="table table-striped">
+    <table class="table">
         <thead>
         <tr>
             <th>Number</th>
@@ -27,51 +26,20 @@ else
         </tr>
         </thead>
         <tbody>
-        @foreach (PurchaseOrderInfo purchaseOrderInfo in purchaseOrderInfos)
+        @foreach (var purchaseOrderInfo in displayedItems)
         {
             <tr>
-                <td>
-                    <a href="/purchaseOrde/@purchaseOrderInfo.ID">
+                <td >
+                    <a href="/profileOrder/@purchaseOrderInfo.ID">
                         @purchaseOrderInfo.Number
                     </a>
+
                 </td>
                 <td>@purchaseOrderInfo.SupplierName</td>
                 <td>@purchaseOrderInfo.Date</td>
-                <td>@purchaseOrderInfo.State</td>
+                <td>@purchaseOrderInfo.Status</td>
             </tr>
         }
         </tbody>
     </table>
-}
-
-
-@code{
-    [Parameter] public List<PurchaseOrderInfo> purchaseOrderInfos { get; set; }
-    private List<PurchaseOrderInfo> filteredOrders = new();
-    [Inject] public IPurchaseOrderService purchaseOrderService { get; set; }
-
-    private int? searchNumber;
-    private DateTime? searchDate;
-    private async Task GetPurchaseOrder()
-    {
-        if (searchDate.HasValue)
-        {   DateOnly selectedDate = DateOnly.FromDateTime(searchDate.Value);
-           //purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrdersByDate(selectedDate);
-            SearchOrders();
-        }
-    }
-
-    private void SearchOrders()
-    {
-        DateOnly? selectedDate = searchDate.HasValue ? DateOnly.FromDateTime(searchDate.Value) : null;
-
-        filteredOrders = purchaseOrderInfos.Where(order =>
-            (!searchNumber.HasValue || order.Number == searchNumber.Value) &&
-            (!selectedDate.HasValue || order.Date == selectedDate.Value)
-        ).ToList();
-    }
-    private void NavigateToPurchaseOrder()
-    {
-        Navigation.NavigateTo("/purchaseOrder");
-    } 
 }

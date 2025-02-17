@@ -8,7 +8,7 @@ using INV.Implementation.Service.OrderDetailServices;
 using INV.Implementation.Service.ProductServices;
 using INV.Implementation.Service.PurchseOrderServices;
 using INV.Implementation.Service.Suppliers;
-using INV.Infrastructure.Storage.OrderDetailsStorages;
+
 using INV.Infrastructure.Storage.ProductsStorages;
 using INV.Infrastructure.Storage.PurchaseOrderStorages;
 using INV.Infrastructure.Storage.SupplierStorages;
@@ -21,10 +21,6 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddScoped<ISupplierStorage, SupplierStorage>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
-builder.Services.AddScoped<ISupplierOrderService, SupplierOrderService>();
-builder.Services.AddScoped<ISupplierOrderStorage, SupplierOrderStorage>();
-
-builder.Services.AddScoped<IOrderDetailStorage, OrderDetailStorage>();
 builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 builder.Services.AddScoped<IProductStorage, ProductStorage>();
 builder.Services.AddScoped<IProductService, ProductService>();

@@ -1,6 +1,6 @@
 ﻿using INV.App.IGeneratePdfServices;
 using INV.App.PurchaseOrders;
-using INV.Domain.Entity.PurchaseOrderEntity;
+using INV.Domain.Entities.PurchaseOrders;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 

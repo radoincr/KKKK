@@ -24,12 +24,36 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = T3JkZXJzXFB1cmNoYXNlT3JkZXJMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Orders/PurchaseOrderProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = T3JkZXJzXFB1cmNoYXNlT3JkZXJQcm9maWxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierForm.razor]
 build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierList.razor]
 build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierPofile/CommandSettings.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyUG9maWxlXENvbW1hbmRTZXR0aW5ncy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierPofile/EditProfileForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyUG9maWxlXEVkaXRQcm9maWxlRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierPofile/ProfileOverview.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyUG9maWxlXFByb2ZpbGVPdmVydmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierPofile/ReceptionComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyUG9maWxlXFJlY2VwdGlvbkNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierPofile/SupplierProfileSidebar.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VwcGxpZXJzXFN1cHBsaWVyUG9maWxlXFN1cHBsaWVyUHJvZmlsZVNpZGViYXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Suppliers/SupplierSelector.razor]

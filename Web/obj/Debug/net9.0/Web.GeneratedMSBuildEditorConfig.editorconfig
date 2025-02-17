@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/AA.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBQS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,12 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/Jamal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKYW1hbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PDF.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQREYucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PurchaseOrderPage.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQdXJjaGFzZU9yZGVyUGFnZS5yYXpvcg==
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PurchaseOrders/PurchaseOrderPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQdXJjaGFzZU9yZGVyc1xQdXJjaGFzZU9yZGVyUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PurchaseOrders/PurchaseOrderProfilePage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQdXJjaGFzZU9yZGVyc1xQdXJjaGFzZU9yZGVyUHJvZmlsZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PurchaseOrders/PurchseOrderListPage.razor]
@@ -46,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/SupplierPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdXBwbGllclBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/Suppliers/ProfilePage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdXBwbGllcnNcUHJvZmlsZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/Suppliers/SupplierListPage.razor]

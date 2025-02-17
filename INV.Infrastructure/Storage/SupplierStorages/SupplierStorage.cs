@@ -1,6 +1,5 @@
 ﻿using System.Data;
-using Entity.SupplierEntity;
-using INV.Domain.Entity.SupplierEntity;
+using INV.Domain.Entities.SupplierEntity;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
@@ -15,12 +14,28 @@ namespace INV.Infrastructure.Storage.SupplierStorages
             _connectionString = configuration.GetConnectionString("INV");
         }
 
-        private const string InsertSupplierQuery = @"
+        private const string insertSupplierQuery = @"
             INSERT INTO Supplier (ID, RC, NIS, RIB, SupplierName, CompanyName, AccountName, Address, Phone, Email, ART, NIF, BankAgency)
             VALUES (@ID, @RC, @NIS, @RIB, @SupplierName, @CompanyName, @AccountName, @Address, @Phone, @Email, @ART, @NIF, @BankAgency)";
 
         private const string SelectAllSuppliersQuery = "SELECT * FROM Supplier";
-        private const string SelectSuppliersByID = "SELECT * FROM Supplier where ID=@ID";
+        private const string selectSuppliersByIDQuery = "SELECT * FROM Supplier where ID=@ID";
+        private const string updateSupplierQuery = @"
+               UPDATE Supplier 
+SET [RC] = @RC, 
+    [NIS] = @NIS, 
+    [RIB] = @RIB, 
+    [SupplierName] = @SupplierName, 
+    [CompanyName] = @CompanyName, 
+    [AccountName] = @AccountName, 
+    [Address] = @Address, 
+    [Phone] = @Phone, 
+    [Email] = @Email, 
+    [ART] = @ART, 
+    [NIF] = @NIF, 
+    [BankAgency] = @BankAgency
+WHERE [ID] = @ID";
+
 
         private static Supplier getAllSupplier(SqlDataReader reader)
         {
@@ -48,7 +63,7 @@ namespace INV.Infrastructure.Storage.SupplierStorages
         public async Task<int> InsertSupplier(Supplier supplier)
         {
             using var sqlConnection = new SqlConnection(_connectionString);
-            using var cmd = new SqlCommand(InsertSupplierQuery, sqlConnection);
+            using var cmd = new SqlCommand(insertSupplierQuery, sqlConnection);
 
             cmd.Parameters.AddWithValue("@ID", supplier.ID);
             cmd.Parameters.AddWithValue("@RC", supplier.RC);
@@ -85,22 +100,44 @@ namespace INV.Infrastructure.Storage.SupplierStorages
 
             return suppliers;
         }
-
-       
-
-        public async Task<Supplier> SelectSupplierByID(Guid id)
+        
+        public async Task<Supplier?> SelectSupplierByID(Guid id)
         {
-            var suppliers = new Supplier();
-
             using var sqlConnection = new SqlConnection(_connectionString);
-            using var cmd = new SqlCommand(SelectSuppliersByID, sqlConnection);
+            using var cmd = new SqlCommand(selectSuppliersByIDQuery, sqlConnection);
             cmd.Parameters.AddWithValue("@ID", id);
+    
             await sqlConnection.OpenAsync();
             using var reader = await cmd.ExecuteReaderAsync();
-            
-            suppliers = (getAllSupplier(reader));
-            
-            return suppliers;
+
+            if (await reader.ReadAsync())  
+            {
+                return getAllSupplier(reader);
+            }
+            return null;  
         }
+        public async Task<int> UpdateSupplier(Supplier supplier)
+        {
+            using var sqlConnection = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand(updateSupplierQuery, sqlConnection);
+
+            cmd.Parameters.AddWithValue("@ID", supplier.ID);
+            cmd.Parameters.AddWithValue("@RC", supplier.RC);
+            cmd.Parameters.AddWithValue("@NIS", supplier.NIS);
+            cmd.Parameters.AddWithValue("@RIB", supplier.RIB);
+            cmd.Parameters.AddWithValue("@SupplierName", supplier.SupplierName);
+            cmd.Parameters.AddWithValue("@CompanyName", supplier.CompanyName);
+            cmd.Parameters.AddWithValue("@AccountName", supplier.AccountName);
+            cmd.Parameters.AddWithValue("@Address", supplier.Address);
+            cmd.Parameters.AddWithValue("@Phone", supplier.Phone);
+            cmd.Parameters.AddWithValue("@Email", supplier.Email);
+            cmd.Parameters.AddWithValue("@ART", supplier.ART);
+            cmd.Parameters.AddWithValue("@NIF", supplier.NIF);
+            cmd.Parameters.AddWithValue("@BankAgency", supplier.BankAgency);
+
+            await sqlConnection.OpenAsync();
+            return await cmd.ExecuteNonQueryAsync();
+        }
+
     }
 }

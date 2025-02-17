@@ -1,0 +1,193 @@
+﻿@page "/gg"
+@using INV.App.PurchaseOrders
+@using INV.Domain.Entities.PurchaseOrders
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<div class="search-container">
+    <input type="number" @bind="searchNumber" min="1" placeholder="Search by order number" class="search-input" />
+    <input type="date" @bind="searchDate" class="search-input" />
+    @*
+    <button class="search-button" @onclick="">Search</button>
+*@
+</div>
+
+<button class="add-order-button" @onclick="NavigateToPurchaseOrder">
+    <i class="bi bi-cart-plus"></i> Add a Purchase Order
+</button>
+
+@if (purchaseOrderInfos is null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div class="purchase-order-container">
+        @foreach (var purchaseOrderInfo in purchaseOrderInfos)
+        {
+            <div class="purchase-order-card" style="border-left: 6px solid @(GetBorderColor(purchaseOrderInfo.Status));" 
+                 @onclick="() => OpenPurchaseOrder(purchaseOrderInfo.ID)">
+                <div class="order-header">
+                    <a href="#" class="order-link">#@purchaseOrderInfo.Number</a>
+                    <span class="order-status" style="background-color: @(GetStatusColor(purchaseOrderInfo.Status))">
+                        @purchaseOrderInfo.Status
+                    </span>
+                </div>
+                <div class="order-body">
+                    <p><strong>Supplier:</strong> @purchaseOrderInfo.SupplierName</p>
+                    <p><strong>Date:</strong> @purchaseOrderInfo.Date.ToString("yyyy-MM-dd")</p>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private int? searchNumber;
+    private DateTime? searchDate;
+    private List<PurchaseOrderInfo> purchaseOrderInfos = new();
+
+    private string GetStatusColor(PurchaseStatus status) =>
+        status switch
+        {
+            PurchaseStatus.Validated => "#2ECC71", // Green
+            PurchaseStatus.Editing => "#F4D03F", // Yellow
+            PurchaseStatus.Cancelled => "#E74C3C", // Red
+            _ => "#BDC3C7" // Gray for unknown states
+        };
+
+    private string GetBorderColor(PurchaseStatus status) =>
+        status switch
+        {
+            PurchaseStatus.Validated => "#27AE60", // Dark Green
+            PurchaseStatus.Editing => "#F1C40F", // Dark Yellow
+            PurchaseStatus.Cancelled => "#C0392B", // Dark Red
+            _ => "#7F8C8D" // Default Gray
+        };
+    [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
+  
+    protected override async Task OnInitializedAsync()
+    {
+        purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrderInfo();
+    }
+    /*
+    private void GetPurchaseOrder()
+    {
+        purchaseOrderInfos = GetAllOrders()
+            .Where(po =>
+                (!searchNumber.HasValue || po.Number == searchNumber) &&
+                (!searchDate.HasValue || po.Date == DateOnly.FromDateTime(searchDate.Value))
+            ).ToList();
+    }
+    */
+
+    /*
+    private List<PurchaseOrderInfo> GetAllOrders()
+    {
+        return new List<PurchaseOrderInfo>
+        {
+            new() { ID = Guid.NewGuid(), Number = 1001, SupplierName = "Supplier A", Date = DateOnly.FromDateTime(DateTime.Now), State = PurchaseStatus.Validated },
+            new() { ID = Guid.NewGuid(), Number = 1002, SupplierName = "Supplier B", Date = DateOnly.FromDateTime(DateTime.Now), State = PurchaseStatus.Editing },
+            new() { ID = Guid.NewGuid(), Number = 1003, SupplierName = "Supplier C", Date = DateOnly.FromDateTime(DateTime.Now), State = PurchaseStatus.Cancelled }
+        };
+    }
+    */
+
+    private void NavigateToPurchaseOrder()
+    {
+        Navigation.NavigateTo("/purchaseOrde/new");
+    }
+
+    private void OpenPurchaseOrder(Guid id)
+    {
+        Navigation.NavigateTo($"/purchaseOrde/{id}");
+    }
+}
+
+
+<style>
+    .search-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .search-input {
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+    }
+
+    .search-button {
+        background-color: #3498db;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .search-button:hover {
+        background-color: #2980b9;
+    }
+
+    .add-order-button {
+        background-color: #2ecc71;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    .add-order-button:hover {
+        background-color: #27ae60;
+    }
+
+    .purchase-order-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+    }
+
+    .purchase-order-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .purchase-order-card:hover {
+        transform: scale(1.02);
+    }
+
+    .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .order-link {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .order-status {
+        font-size: 14px;
+        padding: 4px 8px;
+        border-radius: 12px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .order-body {
+        margin-top: 10px;
+    }
+
+</style>

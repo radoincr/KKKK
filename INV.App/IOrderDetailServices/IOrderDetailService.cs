@@ -1,4 +1,4 @@
-﻿using INV.Domain.Entity.OrderDetailsEntity;
+﻿using INV.Domain.Entities.PurchaseOrders;
 
 namespace INV.App.IOrderDetailServices
 {

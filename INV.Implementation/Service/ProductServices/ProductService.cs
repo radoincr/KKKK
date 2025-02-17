@@ -1,5 +1,5 @@
 ﻿using INV.App.Products;
-using INV.Domain.Entity.ProductEntity;
+using INV.Domain.Entities.ProductEntity;
 using INV.Infrastructure.Storage.ProductsStorages;
 
 namespace INV.Implementation.Service.ProductServices;

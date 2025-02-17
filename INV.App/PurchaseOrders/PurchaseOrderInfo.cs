@@ -1,4 +1,6 @@
-﻿namespace INV.App.PurchaseOrders;
+﻿using INV.Domain.Entities.PurchaseOrders;
+
+namespace INV.App.PurchaseOrders;
 
 public class PurchaseOrderInfo
 {
@@ -7,5 +9,5 @@ public class PurchaseOrderInfo
     public string SupplierName { set; get; }
     public int Number { set; get; }
     public DateOnly Date { set; get; }
-    public string State { set; get; }
+    public PurchaseStatus Status { get; set; }
 }

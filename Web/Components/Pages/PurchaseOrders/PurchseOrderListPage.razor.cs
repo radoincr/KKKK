@@ -7,12 +7,9 @@ public partial class PurchseOrderListPage : ComponentBase
 {
     [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
     private List<PurchaseOrderInfo> purchaseOrderInfos;
+
     protected override async Task OnInitializedAsync()
     {
-    
         purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrderInfo();
     }
 }
-
-
-

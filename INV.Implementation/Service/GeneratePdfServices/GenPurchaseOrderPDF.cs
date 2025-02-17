@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using INV.App.IGeneratePdfServices;
-using INV.Domain.Entity.ProductPDF;
-using INV.Domain.Entity.PurchaseOrderEntity;
-using INV.Domain.Entity.SupplierEntity;
+using INV.Domain.Entities.ProductPDF;
+using INV.Domain.Entities.PurchaseOrders;
+using INV.Domain.Entities.SupplierEntity;
 using INV.Implementation.Service.MyToolServices;
 using INV.Infrastructure.Storage.PurchaseOrderStorages;
 using PuppeteerSharp;
@@ -26,7 +26,7 @@ public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
             var (purchaseOrders, suppliers, orderDetails) =
                 await purchaseOrderStorage.SelectPurchaseOrderDetails(purchaseOrderNumber);
 
-            if (!purchaseOrders.Any())
+            if (purchaseOrders==null)
                 throw new InvalidOperationException($"Nember vide{purchaseOrderNumber}!!");
 
             string htmlContent = await File.ReadAllTextAsync(htmlTemplatePath);
@@ -81,17 +81,17 @@ public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
         }
     }
 
-    private static string injectPurchaseOrderToHtml(string htmlContent, List<PurchaseOrder> purchaseOrders,
-        List<Supplier> suppliers, List<ProductPdf> productpdfs)
+    private static string injectPurchaseOrderToHtml(string htmlContent, PurchaseOrder purchaseOrders,
+       Supplier suppliers, List<ProductPdf> productpdfs)
     {
         var sb = new StringBuilder(htmlContent);
         ArabicNumber conArabicNumber = new ArabicNumber();
-        if (purchaseOrders.Any())
+        if (purchaseOrders!=null)
         {
-            var po = purchaseOrders.First();
+            var po = purchaseOrders;
             sb.Replace("{{OrderNumber}}", po.Number.ToString());
             sb.Replace("{{OrderDate}}", po.Date.ToString("yyyy-MM-dd"));
-            sb.Replace("{{OrderStatus}}", po.Status);
+            sb.Replace("{{OrderStatus}}", po.Status.ToString());
             sb.Replace("{{TypeBudget}}", po.TypeBudget);
             sb.Replace("{{TypeService}}", po.TypeService);
             sb.Replace("{{Article}}", po.Article);
@@ -116,9 +116,9 @@ public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
             sb.Replace("{{TypeBudgetCheckboxes}}", budgetOptions);
         }
 
-        if (suppliers.Any())
+        if (suppliers!=null)
         {
-            var supplier = suppliers.First();
+            var supplier = suppliers;
             sb.Replace("{{SupplierName}}", supplier.SupplierName);
             sb.Replace("{{CompanyName}}", supplier.CompanyName);
             sb.Replace("{{AccountName}}", supplier.AccountName);

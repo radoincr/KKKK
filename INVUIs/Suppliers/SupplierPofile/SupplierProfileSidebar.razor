@@ -1,0 +1,38 @@
+﻿@using INV.Domain.Entities.SupplierEntity
+
+<div class="col-12 col-lg-4 col-xl-12">
+    <div class="row gy-4">
+        <div class="col-12">
+            <div class="card widget-card border-light shadow-sm">
+                <div class="card-header" style="background-color: #257180; color: white">
+                    Profile Supplier
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                             class="img-fluid rounded-circle" alt="Supplier Image">
+                    </div>
+                    <h5 class="text-center mb-1">@Supplier.SupplierName</h5>
+                    <p class="text-center text-secondary mb-4">@Supplier.CompanyName</p>
+                    <p class="text-center text-secondary mb-4">@Supplier.Phone</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card widget-card border-light shadow-sm">
+                <div class="card-header" style="background-color: #257180; color: white">
+                    Other Information
+                </div>
+                <div class="card-body">
+                    <div class="mt-3">
+                        <h6 class="mb-1">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            Location <span class="text-muted">@Supplier.Address</span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

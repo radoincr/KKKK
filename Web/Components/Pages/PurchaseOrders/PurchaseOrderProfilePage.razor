@@ -1,0 +1,9 @@
+﻿@page "/profileOrder/{id:guid}"
+@rendermode InteractiveServer
+
+<PageTitle>Profile of Purchase Order</PageTitle>
+
+<PurchaseOrderProfile Id=@Id/>
+@code {
+    [Parameter] public Guid Id { get; set; }
+}

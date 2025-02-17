@@ -29,4 +29,8 @@
       <None Include="wwwroot\ICSS\SupplierList.css" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Components\Pages\Just test\" />
+    </ItemGroup>
+
 </Project>

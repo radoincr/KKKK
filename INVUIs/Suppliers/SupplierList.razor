@@ -1,25 +1,26 @@
 ﻿@using INV.App.Suppliers
+@rendermode InteractiveServer
 
 <div class="list-title">
     <h4>List of Suppliers</h4>
 </div>
-<div>
-    <input type="text" @bind="searchName" placeholder="Search by supplier name" class="number-input" />
-    <button class="search-button">Search</button>
-</div>
-<br /> 
-<button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i>  Add a Supplier</button>
 
-@if (Suppliers is null)
+<div>
+    <input type="text" @bind="searchName" @bind:event="oninput" placeholder="Search by supplier name" class="number-input"/>
+<button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()">
+    <i class="bi bi-person-plus"></i> Add a Supplier
+</button></div>
+<br>
+@if (supplierFilter is null)
 {
     <h3>Loading...</h3>
 }
 else
-{ <div class="list-supplier-container">
-
-        @foreach (SupplierInfo supplier in Suppliers)
+{
+    <div class="list-supplier-container">
+        @foreach (SupplierInfo supplier in supplierFilter)
         {
-            <div class="purchase-order-card">
+            <div class="purchase-order-card" @onclick="()=>NavigateToSupplierDetails(supplier.ID)">
                 <label class="purchase-order-header">
                     <a href=@selectedLink(supplier.ID)>
                         @supplier.Name
@@ -31,34 +32,6 @@ else
             </div>
         }
     </div>
-
 }
+
 <SupplierForm @ref="supplierSelector"/>
-@code{
-    [Parameter] public List<SupplierInfo> Suppliers { get; set; }
-    private string selectedLink(Guid id)=> $"suppliers/{id}";
-    [Inject] private NavigationManager navigationManager { get; set; }
-    private string? searchName;
-    private SupplierForm supplierSelector = new SupplierForm();
-    private bool displayModal = false;
-   /* SupplierModel newSupplier = new SupplierModel();
-
-    private void Close()
-    {
-        newSupplier = new SupplierModel(); 
-        displayModal = false;
-        StateHasChanged(); 
-    }
-*/
-
-    public void NavigatePage()
-    {
-        navigationManager.NavigateTo("Supplier");
-    }
-    public void ShowModal()
-    {
-        displayModal = true;
-        StateHasChanged();
-    }
-}
-

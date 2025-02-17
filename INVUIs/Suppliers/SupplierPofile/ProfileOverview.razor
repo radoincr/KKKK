@@ -1,0 +1,73 @@
+﻿@using INV.Domain.Entities.SupplierEntity
+
+@if (Supplier == null)
+{
+    <div class="alert alert-info">Loading profile...</div>
+}
+else
+{
+    <div class="row g-0">
+
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">Supplier Name</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.SupplierName</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">Company</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.CompanyName</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">Phone</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.Phone</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">Address</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.Address</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">Email</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.Email</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">ART</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.ART</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">NIF</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.NIF</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">NIS</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.NIS</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">RIB</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.RIB</div>
+        </div>
+        <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+            <div class="p-2">Bank Address</div>
+        </div>
+        <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+            <div class="p-2">@Supplier.Address</div>
+        </div>
+
+    </div>
+}

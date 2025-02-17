@@ -1,5 +1,5 @@
 ﻿using INV.App.Suppliers;
-using INV.Domain.Entity.SupplierEntity;
+using INV.Domain.Entities.SupplierEntity;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.Extensions.Options;

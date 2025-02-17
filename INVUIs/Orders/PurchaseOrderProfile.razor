@@ -1,0 +1,36 @@
+﻿@if(purchase is not null)
+{
+<h3>Purchase Order Profile</h3>
+
+<div>
+    <h5>Supplier Information</h5>
+    <p><strong>Full Name: @purchase.Number</strong></p>
+    <p><strong>Company:@purchase.TypeBudget</strong> </p>
+    <p><strong>Email:</strong> </p>
+    <p><strong>Phone:</strong> </p>
+    <p><strong>Address:</strong> </p>
+
+    <h5>Order Details</h5>
+    <p><strong>Service:</strong> </p>
+    <p><strong>Budget:</strong> </p>
+    <p><strong>Delivery Time : </strong>  days</p>
+
+    <h5>Products</h5>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Number</th>
+            <th>Data</th>
+            <th>Unit of Measure</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>TVA</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+</div>
+}

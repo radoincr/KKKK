@@ -1,14 +1,14 @@
 ﻿using INV.App.IOrderDetailServices;
-using INV.Domain.Entity.OrderDetailsEntity;
-using INV.Infrastructure.Storage.OrderDetailsStorages;
+using INV.Domain.Entities.PurchaseOrders;
+using INV.Infrastructure.Storage.PurchaseOrderStorages;
 
 namespace INV.Implementation.Service.OrderDetailServices;
 
 public class OrderDetailService : IOrderDetailService
 {
-    private IOrderDetailStorage orderDetailStorage;
+    private IPurchaseOrderStorage orderDetailStorage;
     
-    public OrderDetailService(IOrderDetailStorage orderDetailStorage)
+    public OrderDetailService(IPurchaseOrderStorage orderDetailStorage)
     {
         this.orderDetailStorage = orderDetailStorage;
     }

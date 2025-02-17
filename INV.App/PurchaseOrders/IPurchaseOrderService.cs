@@ -1,4 +1,4 @@
-﻿using INV.Domain.Entity.PurchaseOrderEntity;
+﻿using INV.Domain.Entities.PurchaseOrders;
 
 namespace INV.App.PurchaseOrders
 {
@@ -8,6 +8,9 @@ namespace INV.App.PurchaseOrders
 
         Task<List<PurchaseOrder>> GetPurchaseOrdersByDate(DateOnly dateOnly);
         Task<List<PurchaseOrderInfo>> GetPurchaseOrderInfo();
+        Task<List<PurchaseOrder>> GetPurchaseOrdersByIdSupplier(Guid idSupplier);
+
+        Task<PurchaseOrder> GetPurchaseOrdersByID(Guid id);
 
     }
 }

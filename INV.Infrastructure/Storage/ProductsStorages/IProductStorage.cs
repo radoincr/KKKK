@@ -1,4 +1,4 @@
-﻿using INV.Domain.Entity.ProductEntity;
+﻿using INV.Domain.Entities.ProductEntity;
 
 namespace INV.Infrastructure.Storage.ProductsStorages
 {

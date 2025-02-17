@@ -1,0 +1,61 @@
+﻿@using INV.App.Suppliers
+@using INV.Domain.Entities.SupplierEntity
+@rendermode InteractiveServer
+<EditForm Model="supplierEdit" OnValidSubmit="UpdateSupplier" FormName="updatedata">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="row gy-3 gy-xxl-4">
+        <div class="col-12 col-md-6">
+            <label class="form-label">Full Name</label>
+            <input @bind="supplierEdit.SupplierName" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Company</label>
+            <input @bind="supplierEdit.CompanyName" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Address</label>
+            <input @bind="supplierEdit.Address" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Email</label>
+            <input @bind="supplierEdit.Email" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Phone</label>
+            <input @bind="supplierEdit.Phone" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">RC</label>
+            <input @bind="supplierEdit.RC" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">ART</label>
+            <input @bind="supplierEdit.ART" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">NIF</label>
+            <input @bind="supplierEdit.NIF" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">NIS</label>
+            <input @bind="supplierEdit.NIS" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">RIB</label>
+            <input @bind="supplierEdit.RIB" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Bank Address</label>
+            <input @bind="supplierEdit.BankAgency" class="form-control"/>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Social Media</label>
+            <input @bind="supplierEdit.AccountName" class="form-control"/>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-secondary ms-2" @*@onclick="Cancel"*@>Cancel</button>
+        </div>
+    </div>
+</EditForm>

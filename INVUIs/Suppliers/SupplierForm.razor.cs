@@ -1,5 +1,5 @@
 ﻿using INV.App.Suppliers;
-using INV.Domain.Entity.SupplierEntity;
+using INV.Domain.Entities.SupplierEntity;
 using INVUIs.Models.Supplier;
 using Microsoft.AspNetCore.Components;
 
