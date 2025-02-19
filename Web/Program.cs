@@ -28,6 +28,7 @@ builder.Services.AddScoped<IPurchaseOrderStorage, PurchaseOrderStorage>();
 builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
 builder.Services.AddScoped<IGenPurchaseOrderPDF, GenPurchaseOrderPDF>();
 builder.Services.AddBlazorBootstrap();
+builder.Services.AddBootstrapBlazor();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

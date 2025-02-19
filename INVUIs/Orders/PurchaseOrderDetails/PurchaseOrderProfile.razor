@@ -1,0 +1,47 @@
+﻿@page "/purchase/{id:guid}"
+@using INV.App.PurchaseOrders
+@using INV.App.Suppliers
+@inject IPurchaseOrderService PurchaseOrderService
+@inject ISupplierService SupplierService
+@using BlazorBootstrap
+
+@rendermode InteractiveServer
+
+@if (PurchaseOrder == null || Supplier == null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div class="row">
+        <div class="col-12 col-lg-4 col-xl-3">
+            <PurchaseSidebar Supplier="Supplier" purchaseOrder="PurchaseOrder"/>
+        </div>
+        <div class="col-12 col-lg-8 col-xl-9">
+            <div class="card widget-card border-light shadow-sm">
+                <div class="card-body p-4">
+
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#purchase-details">Purchase Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#product-details">Product Details</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content pt-4">
+                        <div class="tab-pane fade show active" id="purchase-details">
+                            <PurchaseDetails PurchaseOrder="PurchaseOrder"/>
+                        </div>
+                        <div class="tab-pane fade" id="product-details">
+                            <ProductDetails Products="productModels" OnEditProduct="EditProduct"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<ProductUpdate @ref="productUpdateComponent" Product="selectedProductModel"/>
+<Preload LoadingText="Loading Purchase..." />

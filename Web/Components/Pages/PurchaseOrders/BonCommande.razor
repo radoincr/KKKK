@@ -1,0 +1,30 @@
+﻿@page "/order"
+@using INVUIs.BonCommande
+@rendermode InteractiveServer
+
+<PageTitle>Purchase Order</PageTitle>
+<h4>Order Document</h4>
+
+<button class="click" @onclick="() => ShowSection(1)">Definition of the economic operator  <i class="bi bi-chevron-down"></i></button>
+<button class="click" @onclick="() => ShowSection(2)">Characteristics of the order  <i class="bi bi-chevron-down"></i></button>
+<button class="click" @onclick="() => ShowSection(3)">Products Order  <i class="bi bi-chevron-down"></i></button>
+
+<div style="margin-top:10px;">
+    @if (activeSection == 1)
+    {
+        <div class="section">  <SupplierCommande @ref="supBC" OnSupplier="GetSupplier"/> </div>
+    }
+    @if (activeSection == 2)
+    {
+        <div class="section"> <DetailsCommande @ref="detailsBC" OnPurchaseOrder="GetPurchase"></DetailsCommande></div>
+    }
+    @if (activeSection == 3)
+    {
+        <div class="section"> <ProductsCommande @ref="productsBC" OnProductAddProduct="GetProduct"></ProductsCommande></div>
+    }
+</div>
+<br/> <br/>
+<button type="submit" class="create-button" @onclick="create">Create</button>
+
+<ToastValidation Type="toastType" Title="@toastTitle" Message="@toastMessage" IsVisible="isToastVisible"
+                 OnClose="CloseToast"/>

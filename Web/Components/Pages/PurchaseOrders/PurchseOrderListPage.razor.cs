@@ -11,5 +11,6 @@ public partial class PurchseOrderListPage : ComponentBase
     protected override async Task OnInitializedAsync()
     {
         purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrderInfo();
+        purchaseOrderInfos = purchaseOrderInfos.OrderBy(s => s.Number).ToList();
     }
 }

@@ -1,7 +1,10 @@
-﻿using INV.App.PurchaseOrders;
+﻿using INV.App.Products;
+using INV.App.PurchaseOrders;
+using INV.Domain.Entities.ProductEntity;
 using INV.Domain.Entities.ProductPDF;
 using INV.Domain.Entities.PurchaseOrders;
 using INV.Domain.Entities.SupplierEntity;
+using INV.Infrastructure.Storage.ProductsStorages;
 using INV.Infrastructure.Storage.PurchaseOrderStorages;
 
 namespace INV.Implementation.Service.PurchseOrderServices;
@@ -10,9 +13,11 @@ public class PurchaseOrderService : IPurchaseOrderService
 {
     private readonly IPurchaseOrderStorage purchaseOrderStorage;
 
-    public PurchaseOrderService(IPurchaseOrderStorage purchaseOrderStorage)
+    private readonly IProductStorage productStorage;
+    public PurchaseOrderService(IPurchaseOrderStorage purchaseOrderStorage,IProductStorage productStorage)
     {
         this.purchaseOrderStorage = purchaseOrderStorage;
+        this.productStorage = productStorage;
     }
 
     public async Task<int> AddPurchaseOrder(PurchaseOrder purchaseOrder)
@@ -62,4 +67,25 @@ public class PurchaseOrderService : IPurchaseOrderService
             throw new ArgumentNullException(nameof(id));
         return await purchaseOrderStorage.SelectPurchaseOrdersByID(id);
     }
+    public async Task <int> ValicatePurchaseOrder(PurchaseOrder purchaseOrder)
+    {
+        if (purchaseOrder == null)
+            throw new ArgumentNullException(nameof(purchaseOrder));
+       return await purchaseOrderStorage.UpdatePurchaseOrder(purchaseOrder);
+    }
+
+    public async Task CreatePurchaseOrder(PurchaseOrder purchaseOrder, List<Product> products)
+    {
+        if (purchaseOrder == null)
+            throw new ArgumentNullException(nameof(purchaseOrder));
+        if (products == null)
+            throw new ArgumentNullException(nameof(products));
+        await purchaseOrderStorage.InsertPurchaseOrder(purchaseOrder);
+        foreach (var product in products)
+        {
+            await productStorage.InsertProduct(product);
+        }
+    }
+
+
 }

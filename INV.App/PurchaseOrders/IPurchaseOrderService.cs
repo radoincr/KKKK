@@ -1,4 +1,5 @@
-﻿using INV.Domain.Entities.PurchaseOrders;
+﻿using INV.Domain.Entities.ProductEntity;
+using INV.Domain.Entities.PurchaseOrders;
 
 namespace INV.App.PurchaseOrders
 {
@@ -11,6 +12,7 @@ namespace INV.App.PurchaseOrders
         Task<List<PurchaseOrder>> GetPurchaseOrdersByIdSupplier(Guid idSupplier);
 
         Task<PurchaseOrder> GetPurchaseOrdersByID(Guid id);
-
+        Task<int> ValicatePurchaseOrder(PurchaseOrder purchaseOrder);
+        Task CreatePurchaseOrder(PurchaseOrder purchaseOrder, List<Product> products);
     }
 }

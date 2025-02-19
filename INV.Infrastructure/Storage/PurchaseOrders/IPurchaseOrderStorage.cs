@@ -19,6 +19,7 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
         Task<List<PurchaseOrder>> SelectPurchaseOrdersByIDSupplier(Guid IDSupplier);
 
         Task<PurchaseOrder> SelectPurchaseOrdersByID(Guid id);
+        Task <int>UpdatePurchaseOrder(PurchaseOrder purchaseOrder);
 
     }
 }

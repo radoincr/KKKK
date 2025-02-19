@@ -1,0 +1,77 @@
+﻿@using INVUIs.Suppliers
+
+
+<div class="input">
+    <button type="button" @onclick="() => addSupplier.ShowModal(aaa)" class="search-supp  border-0" disabled=@controlDisabled>
+        Search a Supplier
+    </button>
+    <button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i> Add a Supplier</button>
+
+</div> <br/>
+
+@if (SupplierSelected)
+{
+    <div class="input2">
+        <div class="commend-input">
+            <label for="firstName">
+                Full Name : <span id="firstName" class="input-field">@sup.NameSupplier</span>
+            </label>
+        </div>
+        <div class="commend-input">
+            <label for="companyName">
+                Or Company Name : <span id="companyName" class="input-field">@sup.NameCompany</span>
+            </label>
+        </div>
+    </div>
+    <div class="input2">
+        <div class="commend-input">
+            <label for="email">Email : <span id="email" class="input-field">@sup.Email</span></label>
+
+        </div>
+        <div class="commend-input">
+            <label for="phone">
+                Phone : <span id="phone" class="input-field">@sup.Phone</span>
+            </label>
+        </div>
+    </div>
+    <div class="input2">
+        <div class="commend-input">
+            <label for="operatorAddress">
+                Address : <span id="operatorAddress" class="input-field">@sup.Address</span>
+            </label>
+        </div>
+    </div>
+    <div class="input2">
+        <div class="commend-input">
+            <label for="actsOnBehalf">Acts on Behalf of :</label>
+            <InputText id="actsOnBehalf" @bind-Value="sup.NameAccount" class="input-field"/>
+        </div>
+    </div>
+    <div class="input2">
+        <div class="commend-input">
+            <label>Article number (ART) : <span class="input-field">@sup.ART</span></label>
+        </div>
+        <div class="commend-input">
+            <label>Commercial registration number (RC) : <span class="input-field">@sup.RC</span></label>
+        </div>
+    </div>
+    <div class="input2">
+        <div class="commend-input">
+            <label>NIF : <span class="input-field">@sup.NIF</span></label>
+        </div>
+        <div class="commend-input">
+            <label>NIS : <span class="input-field">@sup.NIS</span></label>
+        </div>
+    </div>
+    <div class="input2">
+        <div class="commend-input">
+            <label>Bank Account (RIB) : <span class="input-field">@sup.RIB</span></label>
+        </div>
+        <div class="commend-input">
+            <label>Bank Address : <span class="input-field">@sup.BankAgency</span></label>
+        </div>
+    </div>
+}
+<SupplierForm @ref="supplierSelector"/>
+
+<SupplierSelector Title="Select a Supplier" @ref="addSupplier" OnSelected="SupplierSelectednew" Supplier="aaa"/>

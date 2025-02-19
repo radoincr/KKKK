@@ -1,8 +1,8 @@
 ﻿<div>
-    
+
     <div class="row gy-3">
 
-        @if (purchase is null || purchase.Count==0)
+        @if (purchase is null || purchase.Count == 0)
         {
             <table class="table table-striped">
                 <thead>
@@ -14,11 +14,11 @@
                 </tr>
                 </thead>
                 <tbody>
-        
+
                 <tr>
                     <td colspan="4">Unavailable Data</td>
                 </tr>
-            
+
                 </tbody>
             </table>
         }
@@ -28,7 +28,6 @@
                 <thead>
                 <tr>
                     <th>Number</th>
-                    <th>Supplier Name</th>
                     <th>Date</th>
                     <th>State</th>
                 </tr>
@@ -36,15 +35,28 @@
                 <tbody>
                 @foreach (var a in purchase)
                 {
-                    <tr>
+                    <tr style="cursor: pointer;" onmouseover="this.style.backgroundColor='#091f33'" onmouseout="this.style.backgroundColor=''"
+                        @onclick="() => navigateToPurchase(a.ID)">
                         <td>@a.Number</td>
-                        <td>@Supplier.SupplierName</td>
                         <td>@a.Date</td>
                         <td>@a.Status</td>
                     </tr>
+
                 }
                 </tbody>
             </table>
         }
     </div>
 </div>
+<style>
+    /* For hover effect on table row */
+    .hover-row {
+        cursor: pointer; /* Change cursor to pointer for clarity */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .hover-row:hover {
+        background-color: #064377; /* Set background color on hover */
+        color: white; /* Optional: change text color on hover */
+    }
+</style>

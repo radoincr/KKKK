@@ -262,12 +262,12 @@ public partial class PurchaseOrderPage
                 {
                     ID = _idproduct,
                     UnitMeasure = selectedProduct.UnitOfMeasure,
-                    DefaultTVARate = "19",
+                    DefaultTVARate = 19,
                     Designation = selectedProduct.Data
                 };
 
 
-                await productService.AddProduct(newProduct);
+              //  await productService.AddProduct(newProduct);
                 var orderDetail = new OrderDetail()
                 {
                     ID = Guid.NewGuid(),

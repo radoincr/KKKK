@@ -4,11 +4,11 @@ namespace INV.Infrastructure.Storage.ProductsStorages
 {
     public interface IProductStorage
     {
+        
         Task<int> InsertProduct(Product product);
-
-        Task<List<Product>> SelectAllProduct();
-
-
+        Task<int> UpdateProduct(Product product);
+        Task<int> DeleteProduct(Guid id);
+        Task<List<Product>> SelectProductsByPurchaseOrderId(Guid purchaseOrderId);
     }
 }
 

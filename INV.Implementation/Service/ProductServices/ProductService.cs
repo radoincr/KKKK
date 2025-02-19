@@ -12,12 +12,22 @@ public class ProductService : IProductService
     {
         this.productStorage = productStorage;
     }
-    public async Task<int> AddProduct(Product product)
+    public async Task<int> createProduct(Product product)
     {
         return await productStorage.InsertProduct(product);
     }
-    public async Task<List<Product>> GetAllProduct()
+    public async Task<int> SetProducts(Product product)
     {
-        return await productStorage.SelectAllProduct();
+        return await productStorage.UpdateProduct(product);
+    }
+
+    public async Task<int> RemoveProduct(Guid id)
+    {
+        return await productStorage.DeleteProduct(id);
+    }
+
+    public async Task<List<Product>> SelectProductsByPurchaseOrderId(Guid purchaseID)
+    {
+        return await productStorage.SelectProductsByPurchaseOrderId(purchaseID);
     }
 }

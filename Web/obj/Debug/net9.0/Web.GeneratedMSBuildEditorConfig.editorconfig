@@ -40,8 +40,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKYW1hbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/Modale.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2RhbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PDF.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQREYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PurchaseOrders/BonCommande.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQdXJjaGFzZU9yZGVyc1xCb25Db21tYW5kZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radoi/OneDrive/Desktop/web2/Web/Components/Pages/PurchaseOrders/PurchaseOrderPage.razor]

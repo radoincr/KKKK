@@ -11,9 +11,15 @@ public partial class CommandSettings
     
     public List<PurchaseOrder> purchase { set; get; } = new();
     [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
+    [Inject] public NavigationManager navigationManager { set; get; }
 
     protected override async Task OnParametersSetAsync()
     {
         purchase = await purchaseOrderService.GetPurchaseOrdersByIdSupplier(Supplier.ID);
+    }
+
+    public void navigateToPurchase(Guid id)
+    {
+        navigationManager.NavigateTo($"/profileOrder/{id}");
     }
 }

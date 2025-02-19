@@ -1,0 +1,82 @@
+﻿@using INV.Domain.Entities.PurchaseOrders
+
+@if (PurchaseOrder == null)
+{
+<div class="alert alert-info">Loading purchase order details...</div>
+}
+else
+{
+<div class="row g-0">
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Article</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.Article</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Chapter</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.Chapter</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Order Number</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.Number</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">THT</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.THT</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">TTC</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.TTC</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">TVA</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.TVA</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Delivery Time</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.CompletionDelay days</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Date Generated</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.Date</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Type Budget</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.TypeBudget</div>
+    </div>
+
+    <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
+        <div class="p-2">Type Service</div>
+    </div>
+    <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
+        <div class="p-2">@PurchaseOrder.TypeService</div>
+    </div>
+
+</div>
+}

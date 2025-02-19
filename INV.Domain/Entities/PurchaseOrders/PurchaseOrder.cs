@@ -27,10 +27,13 @@
         public Decimal TTC { set; get; }
         
         public int CompletionDelay { set; get; }
+        public string B { set; get; }
+        public string Fi { set; get; }
 
-        public List<OrderDetail> Products { get; set; }
+       // public List<OrderDetail> Products { get; set; }
         
     }
+    
 
     public enum PurchaseStatus
     {

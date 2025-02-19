@@ -31,7 +31,7 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 
         private const string selectPurchaseOrdersInfo = @"SELECT
         p.[Number],p.[ID],p.[IDSupplier],s.SupplierName As SupplierName,p.[Date],p.[State] FROM
-         [INV].[dbo].[PurchaseOrder] p left Join Supplier s ON p.IDSupplier=s.ID";
+         [INV].[dbo].[PurchaseOrder] p left Join Supplier s ON p.IDSupplier=s.ID  ";
 
         private const string selectAllPurchaseOrderByIDSupplier = @"SELECT * FROM [INV].[dbo].[PurchaseOrder]
         where IDSupplier=@IDSupplier"; 
@@ -42,7 +42,10 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
         
         private const string selectAllOrderDetails = @" SELECT * FROM OrderDetail";
 
-        private const string selectPurchceOrderByIdQuery = @" SELECT * FROM [INV].[dbo].[PurchaseOrder] WHER ID=@ID";
+        private const string selectPurchceOrderByIdQuery = @" SELECT * FROM [INV].[dbo].[PurchaseOrder] WHERE ID=@ID";
+
+        private const string updatePurchaseOrderByIDQuery =
+            @" UPDATE [INV].[dbo].[PurchaseOrder] SET [B]=@B , [FI]=@Fi ,State=@State Where ID=@ID";
         private static PurchaseOrder getPurchaseOrders(SqlDataReader reader)
         {
             return new PurchaseOrder
@@ -61,7 +64,9 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
                 THT = (decimal)reader["THT"],
                 TVA = (decimal)reader["TVA"],
                 TTC = (decimal)reader["TTC"],
-                CompletionDelay = (int)reader["CompletionDelay"]
+                CompletionDelay = (int)reader["CompletionDelay"],
+                B= reader["B"].ToString(),
+                Fi= reader["FI"].ToString()
             };
         }
 
@@ -114,8 +119,8 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 
                 cmd.Parameters.AddWithValue("@ID", purchaseOrder.ID);
                 cmd.Parameters.AddWithValue("@IDSupplier", purchaseOrder.IDSupplier);
-                cmd.Parameters.AddWithValue("@Date", purchaseOrder.Date.ToDateTime(TimeOnly.MinValue));
-                cmd.Parameters.AddWithValue("@Status", purchaseOrder.Status);
+               cmd.Parameters.AddWithValue("@Date", purchaseOrder.Date.ToDateTime(TimeOnly.MinValue));
+                cmd.Parameters.AddWithValue("@Status",PurchaseStatus.Editing.ToString());
                 cmd.Parameters.AddWithValue("@Chapter", purchaseOrder.Chapter);
                 cmd.Parameters.AddWithValue("@Article", purchaseOrder.Article);
                 cmd.Parameters.AddWithValue("@TypeBudget", purchaseOrder.TypeBudget);
@@ -159,31 +164,52 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 
             return purchaseOrders;
         }
-        public async Task<PurchaseOrder> SelectPurchaseOrdersByID(Guid id)
+        public async Task<PurchaseOrder?> SelectPurchaseOrdersByID(Guid id)
         {
-            var purchaseOrders = new  PurchaseOrder();
             try
             {
                 using var sqlConnection = new SqlConnection(_connectionString);
-                var cmd = new SqlCommand(selectPurchceOrderByIdQuery, sqlConnection);
+                await sqlConnection.OpenAsync(); 
 
+                using var cmd = new SqlCommand(selectPurchceOrderByIdQuery, sqlConnection);
                 cmd.Parameters.AddWithValue("@ID", id);
 
-                await sqlConnection.OpenAsync();
                 using var reader = await cmd.ExecuteReaderAsync();
-                while (await reader.ReadAsync())
+
+                if (await reader.ReadAsync())
                 {
-                    getPurchaseOrders(reader);
-                   
+                    return new PurchaseOrder
+                    {
+                        ID = (Guid)reader["ID"],
+                        IDSupplier = (Guid)reader["IDSupplier"],
+                        Number = (int)reader["Number"],
+                        Date = DateOnly.FromDateTime((DateTime)reader["Date"]),
+                        Status = Enum.TryParse<PurchaseStatus>(reader["State"].ToString(), out var state)
+                            ? state
+                            : PurchaseStatus.Validated,
+                        Chapter = reader["Chapter"].ToString(),
+                        Article = reader["Article"].ToString(),
+                        TypeBudget = reader["TypeBudget"].ToString(),
+                        TypeService = reader["TypeService"].ToString(),
+                        THT = (decimal)reader["THT"],
+                        TVA = (decimal)reader["TVA"],
+                        TTC = (decimal)reader["TTC"],
+                        CompletionDelay = (int)reader["CompletionDelay"],
+                        B= reader["B"].ToString(),
+                        Fi= reader["FI"].ToString()
+                    };
                 }
             }
             catch (Exception ex)
             {
-                throw;
+                Console.WriteLine($"Error fetching purchase order: {ex.Message}");
+                // Log the error (you can use a logger here)
             }
 
-            return purchaseOrders;
+            return null; // Return null if no data is found or an error occurs
         }
+
+
 
 
         public async Task<(PurchaseOrder, Supplier, List<ProductPdf>)> SelectPurchaseOrderDetails(
@@ -323,6 +349,7 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
                 State = Enum.TryParse<SupplierState>(reader["Status"].ToString(), out var state)
                     ? state
                     : SupplierState.Deleted
+               
             };
         }
         private static PurchaseOrder getPurchaseOrderData(SqlDataReader reader)
@@ -370,6 +397,25 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
                 throw;
             }
             return purchaseOrders;
+        }
+        public async Task<int> UpdatePurchaseOrder(PurchaseOrder purchaseOrder)
+        {
+            try
+            {
+                using var sqlConnection = new SqlConnection(_connectionString);
+                var cmd = new SqlCommand(updatePurchaseOrderByIDQuery, sqlConnection);
+                await sqlConnection.OpenAsync();
+
+                cmd.Parameters.AddWithValue("@ID", purchaseOrder.ID);
+                cmd.Parameters.AddWithValue("@Fi", purchaseOrder.Fi);
+                cmd.Parameters.AddWithValue("@B", purchaseOrder.B);
+                cmd.Parameters.AddWithValue("@State", PurchaseStatus.Validated.ToString());
+                return await cmd.ExecuteNonQueryAsync();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
         }
     }
 }

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\DCSS\\Supplier.css"
     },
     {
+      "Id": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\wwwroot\\ICSS\\BonCommande.css",
+      "PackagePath": "staticwebassets\\ICSS\\BonCommande.css"
+    },
+    {
       "Id": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\wwwroot\\ICSS\\Home.css",
       "PackagePath": "staticwebassets\\ICSS\\Home.css"
     },
