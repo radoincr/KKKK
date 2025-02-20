@@ -18,11 +18,13 @@ public partial class BonCommande : ComponentBase
     public PurchaseModel purchaseModel { get; set; }
     public SupplierModel supplierModel { get; set; }
 
+    public SupplierCommande sup = new SupplierCommande();
+    public DetailsCommande det = new DetailsCommande();
+    public ProductsCommande pro = new ProductsCommande();
+
     private int? activeSection = 0;
-    
-    private SupplierCommande supBC = new SupplierCommande();
+
     private DetailsCommande detailsBC = new DetailsCommande();
-    private ProductsCommande productsBC = new ProductsCommande();
     private string GetIconClass(int section)
     {
         return activeSection == section ? "bi-chevron-up" : "bi-chevron-down";

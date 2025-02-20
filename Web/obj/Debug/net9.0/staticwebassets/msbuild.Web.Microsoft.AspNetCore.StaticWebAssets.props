@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>edn3pk08wi</Fingerprint>
-      <Integrity>EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=</Integrity>
+      <Fingerprint>nt3rjssi1x</Fingerprint>
+      <Integrity>5ZCgOF5MHxS8sES6/kBtEWh1920vYfe7vPbCvezKV3Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ICSS\BonCommande.css'))</OriginalItemSpec>

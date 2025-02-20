@@ -54,4 +54,7 @@ public partial class ProductsCommande : ComponentBase
         StateHasChanged();
         Clear();
     }
+    private bool Display = false;
+    public void Show()=>Display=!Display;
+    public void Close()=>Display=false;
 }

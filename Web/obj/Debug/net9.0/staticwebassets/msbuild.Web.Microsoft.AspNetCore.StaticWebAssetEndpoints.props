@@ -51,14 +51,14 @@
     <StaticWebAssetEndpoint Include="_content/Web/ICSS/BonCommande.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ICSS\BonCommande.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2735"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Feb 2025 10:30:26 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5ZCgOF5MHxS8sES6/kBtEWh1920vYfe7vPbCvezKV3Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2564"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225ZCgOF5MHxS8sES6/kBtEWh1920vYfe7vPbCvezKV3Y=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Feb 2025 11:44:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Web/ICSS/BonCommande.edn3pk08wi.css">
+    <StaticWebAssetEndpoint Include="_content/Web/ICSS/BonCommande.nt3rjssi1x.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ICSS\BonCommande.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"edn3pk08wi"},{"Name":"integrity","Value":"sha256-EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8="},{"Name":"label","Value":"_content/Web/ICSS/BonCommande.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2735"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Feb 2025 10:30:26 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nt3rjssi1x"},{"Name":"integrity","Value":"sha256-5ZCgOF5MHxS8sES6/kBtEWh1920vYfe7vPbCvezKV3Y="},{"Name":"label","Value":"_content/Web/ICSS/BonCommande.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2564"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225ZCgOF5MHxS8sES6/kBtEWh1920vYfe7vPbCvezKV3Y=\u0022"},{"Name":"Last-Modified","Value":"Thu, 20 Feb 2025 11:44:39 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web/ICSS/Home.7ar6te8uqa.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ICSS\Home.css'))</AssetFile>

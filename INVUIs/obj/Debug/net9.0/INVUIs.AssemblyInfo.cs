@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("INVUIs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8cb0bda9f36f210ba7062e9b2e2792be3c8571b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1896a61009997b228348dbe9d2ae52fd14f3416d")]
 [assembly: System.Reflection.AssemblyProductAttribute("INVUIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("INVUIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,7 @@
 ﻿@using INVUIs.Suppliers
 
+@if (Display)
+{
 
 <div class="input">
     <button type="button" @onclick="() => addSupplier.ShowModal(aaa)" class="search-supp  border-0" disabled=@controlDisabled>
@@ -11,7 +13,7 @@
 
 @if (sup != null )
 {
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label for="firstName">
                 Full Name : <span id="firstName" class="input-field">@sup.NameSupplier</span>
@@ -23,7 +25,7 @@
             </label>
         </div>
     </div>
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label for="email">Email : <span id="email" class="input-field">@sup.Email</span></label>
 
@@ -34,20 +36,20 @@
             </label>
         </div>
     </div>
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label for="operatorAddress">
                 Address : <span id="operatorAddress" class="input-field">@sup.Address</span>
             </label>
         </div>
     </div>
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label for="actsOnBehalf">Acts on Behalf of :</label>
             <InputText id="actsOnBehalf" @bind-Value="sup.Behalf" class="input-field"/>
         </div>
     </div>
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label>Article number (ART) : <span class="input-field">@sup.ART</span></label>
         </div>
@@ -55,7 +57,7 @@
             <label>Commercial registration number (RC) : <span class="input-field">@sup.RC</span></label>
         </div>
     </div>
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label>NIF : <span class="input-field">@sup.NIF</span></label>
         </div>
@@ -63,7 +65,7 @@
             <label>NIS : <span class="input-field">@sup.NIS</span></label>
         </div>
     </div>
-    <div class="input2">
+    <div class="input3">
         <div class="commend-input">
             <label>Bank Account (RIB) : <span class="input-field">@sup.RIB</span></label>
         </div>
@@ -75,3 +77,4 @@
 <SupplierForm @ref="supplierSelector"/>
 
 <SupplierSelector Title="Select a Supplier" @ref="addSupplier" OnSelected="SupplierSelectednew" Supplier="aaa"/>
+}

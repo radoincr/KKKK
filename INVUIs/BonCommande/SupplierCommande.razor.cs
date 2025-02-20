@@ -20,8 +20,10 @@ public partial class SupplierCommande
     private EventCallback<SupplierInfo> supplierSelected;
     private SupplierForm supplierSelector = new SupplierForm();
     public SupplierModel sup = new SupplierModel();
-    
-    private bool SupplierSelected = false;
+    private bool Display = false;
+    public void Show()=>Display=!Display;
+
+private bool SupplierSelected = false;
     private bool controlDisabled = false;
     
     private async Task SupplierSelectednew(SupplierInfo supplierInfo)
@@ -106,9 +108,7 @@ public partial class SupplierCommande
     protected override async Task OnParametersSetAsync()
     {   
             aaa = await supplierService.GetAllSupplier();
-   
-        
     }
-
+public void Close()=>Display=false;
   
 }
