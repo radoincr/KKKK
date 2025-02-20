@@ -3,13 +3,13 @@
 
 <div class="input">
     <button type="button" @onclick="() => addSupplier.ShowModal(aaa)" class="search-supp  border-0" disabled=@controlDisabled>
-        Search a Supplier
+        <i class="bi bi-search"/> Search a Supplier
     </button>
     <button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i> Add a Supplier</button>
 
 </div> <br/>
 
-@if (SupplierSelected)
+@if (sup != null )
 {
     <div class="input2">
         <div class="commend-input">
@@ -44,7 +44,7 @@
     <div class="input2">
         <div class="commend-input">
             <label for="actsOnBehalf">Acts on Behalf of :</label>
-            <InputText id="actsOnBehalf" @bind-Value="sup.NameAccount" class="input-field"/>
+            <InputText id="actsOnBehalf" @bind-Value="sup.Behalf" class="input-field"/>
         </div>
     </div>
     <div class="input2">

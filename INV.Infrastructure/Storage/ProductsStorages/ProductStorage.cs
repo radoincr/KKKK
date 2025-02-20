@@ -17,8 +17,8 @@ namespace INV.Infrastructure.Storage.ProductsStorages
         }
 
         private const string insertProduct = @"
-            INSERT INTO Product (ID, IDPurchaseOrder, Designation, UnitMeasure, DefaultTVARate, Quantity, UnitPrice, TVA) 
-            VALUES (@ID, @IDPurchaseOrder, @Designation, @UnitMeasure, @DefaultTVARate, @Quantity, @UnitPrice, @TVA)";
+            INSERT INTO Product (ID, IDPurchaseOrder, Designation, UnitMeasure, DefaultTVARate, Quantity, UnitPrice, TVA,TotalPrice) 
+            VALUES (@ID, @IDPurchaseOrder, @Designation, @UnitMeasure, @DefaultTVARate, @Quantity, @UnitPrice, @TVA,@TotalPrice)";
 
         private const string updateProduct = @"
             UPDATE Product 
@@ -28,13 +28,14 @@ namespace INV.Infrastructure.Storage.ProductsStorages
                 DefaultTVARate = @DefaultTVARate,
                 Quantity = @Quantity,
                 UnitPrice = @UnitPrice,
-                TVA = @TVA
+                TVA = @TVA,
+                TotalPrice = @TotalPrice
             WHERE ID = @ID";
 
         private const string deleteProductQuery = @"Delete from Product where ID=@ID";
 
         private const string selectProductByIdPurchaseOrder = @"
-            SELECT ID, IDPurchaseOrder, Designation, UnitMeasure, DefaultTVARate, Quantity, UnitPrice, TVA 
+            SELECT ID, IDPurchaseOrder, Designation, UnitMeasure, DefaultTVARate, Quantity, UnitPrice, TVA ,TotalPrice
             FROM Product 
             WHERE IDPurchaseOrder = @IDPurchaseOrder";
 
@@ -49,7 +50,8 @@ namespace INV.Infrastructure.Storage.ProductsStorages
                 DefaultTVARate = (int)reader["DefaultTVARate"],
                 Quantity = Convert.ToInt32(reader["Quantity"]),
                 UnitPrice = Convert.ToDecimal(reader["UnitPrice"]),
-                TVA = Convert.ToDecimal(reader["TVA"])
+                TVA = Convert.ToDecimal(reader["TVA"]),
+                TotalePrice = Convert.ToDecimal(reader["TotalPrice"])
             };
         }
 
@@ -69,7 +71,7 @@ namespace INV.Infrastructure.Storage.ProductsStorages
                 cmd.Parameters.AddWithValue("@Quantity", product.Quantity);
                 cmd.Parameters.AddWithValue("@UnitPrice", product.UnitPrice);
                 cmd.Parameters.AddWithValue("@TVA", product.TVA);
-
+                cmd.Parameters.AddWithValue("@TotalPrice", product.TotalePrice);
                 return await cmd.ExecuteNonQueryAsync();
             }
             catch (Exception)
@@ -94,6 +96,7 @@ namespace INV.Infrastructure.Storage.ProductsStorages
                 cmd.Parameters.AddWithValue("@Quantity", product.Quantity);
                 cmd.Parameters.AddWithValue("@UnitPrice", product.UnitPrice);
                 cmd.Parameters.AddWithValue("@TVA", product.TVA);
+                cmd.Parameters.AddWithValue("@TotalPrice", product.TotalePrice);
 
                 return await cmd.ExecuteNonQueryAsync();
             }

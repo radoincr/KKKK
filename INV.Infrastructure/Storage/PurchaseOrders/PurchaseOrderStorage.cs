@@ -20,9 +20,9 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 
         private const string insertPurchaseOrder = @"
             INSERT INTO PurchaseOrder (ID, IDSupplier, Date, State, Chapter, Article, 
-                                       TypeBudget, TypeService, THT, TVA, TTC, CompletionDelay) 
+                                       TypeBudget, TypeService, THT, TVA, TTC, CompletionDelay,Behalf) 
             VALUES (@ID, @IDSupplier, @Date, @Status, @Chapter, @Article, 
-                    @TypeBudget, @TypeService, @THT, @TVA, @TTC, @CompletionDelay)";
+                    @TypeBudget, @TypeService, @THT, @TVA, @TTC, @CompletionDelay,@Behalf)";
 
 
         private const string selectAllPurchaseOrderByDate = 
@@ -129,6 +129,7 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
                 cmd.Parameters.AddWithValue("@TVA", purchaseOrder.TVA);
                 cmd.Parameters.AddWithValue("@TTC", purchaseOrder.TTC);
                 cmd.Parameters.AddWithValue("@CompletionDelay", purchaseOrder.CompletionDelay);
+                cmd.Parameters.AddWithValue("@Behalf", purchaseOrder.Behalf);
 
                 return await cmd.ExecuteNonQueryAsync();
             }

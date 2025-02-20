@@ -12,10 +12,9 @@ public partial class SupplierSelector
     private string SearchTerm { get; set; } = "";
 
     private List<SupplierInfo> displayedItems =>
-        Supplier.Where(i => i.Name.ToLower().Contains(SearchTerm.ToLower()) ||
-                            i.Email.ToString().ToLower().Contains(SearchTerm.ToLower()))
-            .ToList();
-
+        Supplier?.Where(i => i.Name?.ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) == true ||
+                             i.Email?.ToString().ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) == true)
+            .ToList() ?? new List<SupplierInfo>();
     private void close()
     {
         Supplier = null;

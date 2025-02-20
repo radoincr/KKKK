@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jngodqgCEsiV2/TaZMKKF9fjA/JbH6bdyNqAcV8TsXc=",
+  "Hash": "NeHFbnsQF3TqjrvrVq/Nokt/CvE6e69xgNClnaeRAiI=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -4803,12 +4803,12 @@
       "OriginalItemSpec": "C:\\Users\\radoi\\.nuget\\packages\\bootstrapblazor\\9.2.1\\staticwebassets\\Components\\Select\\Select.razor.js"
     },
     {
-      "Identity": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-uxiao1cwi4.gz",
+      "Identity": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-edn3pk08wi.gz",
       "SourceId": "Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Web",
-      "RelativePath": "ICSS/BonCommande#[.{fingerprint=uxiao1cwi4}]?.css.gz",
+      "RelativePath": "ICSS/BonCommande#[.{fingerprint=edn3pk08wi}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -4817,8 +4817,8 @@
       "RelatedAsset": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\wwwroot\\ICSS\\BonCommande.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jk0uv37su8",
-      "Integrity": "ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8=",
+      "Fingerprint": "x9fn6obwph",
+      "Integrity": "FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\wwwroot\\ICSS\\BonCommande.css"
@@ -6140,8 +6140,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uxiao1cwi4",
-      "Integrity": "ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU=",
+      "Fingerprint": "edn3pk08wi",
+      "Integrity": "EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ICSS\\BonCommande.css"
@@ -26878,12 +26878,12 @@
     },
     {
       "Route": "ICSS/BonCommande.css",
-      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-uxiao1cwi4.gz",
+      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-edn3pk08wi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002159827214"
+          "Quality": "0.001179245283"
         }
       ],
       "ResponseHeaders": [
@@ -26893,15 +26893,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "462"
+          "Value": "847"
         },
         {
           "Name": "ETag",
-          "Value": "\"ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8=\""
+          "Value": "\"FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 13:44:04 GMT"
+          "Value": "Thu, 20 Feb 2025 10:30:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26921,13 +26921,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU=\""
+          "Value": "W/\"EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU="
+          "Value": "sha256-EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8="
         }
       ]
     },
@@ -26942,7 +26942,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1349"
+          "Value": "2735"
         },
         {
           "Name": "Content-Type",
@@ -26950,11 +26950,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU=\""
+          "Value": "\"EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 13:44:04 GMT"
+          "Value": "Thu, 20 Feb 2025 10:30:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26964,13 +26964,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU="
+          "Value": "sha256-EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8="
         }
       ]
     },
     {
       "Route": "ICSS/BonCommande.css.gz",
-      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-uxiao1cwi4.gz",
+      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-edn3pk08wi.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -26979,7 +26979,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "462"
+          "Value": "847"
         },
         {
           "Name": "Content-Type",
@@ -26987,11 +26987,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8=\""
+          "Value": "\"FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 13:44:04 GMT"
+          "Value": "Thu, 20 Feb 2025 10:30:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -27009,18 +27009,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8="
+          "Value": "sha256-FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew="
         }
       ]
     },
     {
-      "Route": "ICSS/BonCommande.uxiao1cwi4.css",
-      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-uxiao1cwi4.gz",
+      "Route": "ICSS/BonCommande.edn3pk08wi.css",
+      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-edn3pk08wi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002159827214"
+          "Quality": "0.001179245283"
         }
       ],
       "ResponseHeaders": [
@@ -27030,15 +27030,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "462"
+          "Value": "847"
         },
         {
           "Name": "ETag",
-          "Value": "\"ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8=\""
+          "Value": "\"FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 13:44:04 GMT"
+          "Value": "Thu, 20 Feb 2025 10:30:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -27058,13 +27058,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU=\""
+          "Value": "W/\"EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uxiao1cwi4"
+          "Value": "edn3pk08wi"
         },
         {
           "Name": "label",
@@ -27072,12 +27072,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU="
+          "Value": "sha256-EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8="
         }
       ]
     },
     {
-      "Route": "ICSS/BonCommande.uxiao1cwi4.css",
+      "Route": "ICSS/BonCommande.edn3pk08wi.css",
       "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\wwwroot\\ICSS\\BonCommande.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -27087,7 +27087,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1349"
+          "Value": "2735"
         },
         {
           "Name": "Content-Type",
@@ -27095,11 +27095,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU=\""
+          "Value": "\"EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 13:44:04 GMT"
+          "Value": "Thu, 20 Feb 2025 10:30:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -27109,7 +27109,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uxiao1cwi4"
+          "Value": "edn3pk08wi"
         },
         {
           "Name": "label",
@@ -27117,13 +27117,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ngW4cOy/CvPmimPVr3r2ETVYFj/q+FcF7fX2uLHaWmU="
+          "Value": "sha256-EiJivcSbVcEVDqysFJxspczfzLeWb9BeuH9Xk8w5wv8="
         }
       ]
     },
     {
-      "Route": "ICSS/BonCommande.uxiao1cwi4.css.gz",
-      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-uxiao1cwi4.gz",
+      "Route": "ICSS/BonCommande.edn3pk08wi.css.gz",
+      "AssetFile": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\Web\\obj\\Debug\\net9.0\\compressed\\n0mil3fkon-edn3pk08wi.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -27132,7 +27132,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "462"
+          "Value": "847"
         },
         {
           "Name": "Content-Type",
@@ -27140,11 +27140,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8=\""
+          "Value": "\"FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 13:44:04 GMT"
+          "Value": "Thu, 20 Feb 2025 10:30:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -27162,7 +27162,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uxiao1cwi4"
+          "Value": "edn3pk08wi"
         },
         {
           "Name": "label",
@@ -27170,7 +27170,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ncZp0vtLKBrDeGGL6iL6f2jPalTr3Jjn2pQIVktNDQ8="
+          "Value": "sha256-FYNkHccdg0Zh9aj/eXUEIzbkmJ86GrxlxjeCfqvRYew="
         }
       ]
     },

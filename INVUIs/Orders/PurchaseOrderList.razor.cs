@@ -28,6 +28,6 @@ public partial class PurchaseOrderList
 
     private void NavigateToPurchaseOrder()
     {
-        Navigation.NavigateTo("/purchaseOrder");
+        Navigation.NavigateTo("/order");
     }
 }

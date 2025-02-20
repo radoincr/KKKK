@@ -54,7 +54,8 @@ public partial class ProductUpdate
             Quantity = productModel.Quantity,
             UnitPrice = productModel.UnitPrice,
             TVA = productModel.TVA,
-            DefaultTVARate = productModel.DefaultTVARate
+            DefaultTVARate = productModel.DefaultTVARate,
+            TotalePrice = productModel.Quantity * productModel.UnitPrice
         };
         await productService.SetProducts(product);
         navigationManager.NavigateTo(navigationManager.Uri,forceLoad:true);

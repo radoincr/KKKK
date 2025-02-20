@@ -56,7 +56,8 @@ public partial class PurchaseOrderProfile
             Quantity = product.Quantity,
             UnitPrice = product.UnitPrice,
             TVA = product.TVA,
-            DefaultTVARate = product.DefaultTVARate
+            DefaultTVARate = product.DefaultTVARate,
+            TotalPrice = product.TotalePrice
         };
     }
 }

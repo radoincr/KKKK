@@ -21,6 +21,7 @@ public class ProductModel
     
     [Required (ErrorMessage = "TVA is required")]
     public decimal TVA { get; set; }
-    
+
+    public decimal TotalPrice { set; get; }
     public int DefaultTVARate { get; set; }
 }

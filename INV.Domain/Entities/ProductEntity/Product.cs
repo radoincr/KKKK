@@ -12,8 +12,10 @@ namespace INV.Domain.Entities.ProductEntity
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal TVA { get; set; }
+
+        public decimal TotalePrice { set; get; }
     }
-} 
+}
 /* public Guid ID { set; get; }
 
          public string Designation { set; get; }

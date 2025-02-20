@@ -32,7 +32,7 @@
                 <td>@product.Quantity</td>
                 <td>@product.UnitPrice</td>
                 <td>@product.TVA %</td>
-                <td>@product.UnitPrice</td>
+                <td>@product.TotalPrice.ToString("N")</td>
                 <td>
                     <button type="button" class="deleteproduct-button" @onclick="() => DeleteProduct(product)">
                         <i class="bi bi-trash-fill"></i>
@@ -49,37 +49,48 @@
     <div class="popup-content">
         <h3>Add Product</h3>
         <br/>
-        <div class="form-grid">
-            <div class="commend-input">
-                <label>Data <span style="color: red">*</span></label>
-                <InputTextArea class="form-control valid" @bind-Value="newProduct.Designation"/>
-            </div>
+        <EditForm Model="newProduct" OnValidSubmit="SaveProduct" >
+            <DataAnnotationsValidator/>
+          
+            <div class="form-grid">
+                <div class="commend-input">
+                    <label>Data <span style="color: red">*</span></label>
+                    <InputTextArea class="form-control valid" @bind-Value="newProduct.Designation"/>
+                    <ValidationMessage For="@(() => newProduct.Designation)"/>
+                </div>
 
-            <div class="commend-input">
-                <label>Unit of Measure <span style="color: red">*</span></label>
-                <InputText class="form-control" @bind-Value="newProduct.UnitMeasure"/>
-            </div>
-            <div class="commend-input">
-                <label>Quantity<span style="color: red">*</span></label>
-                <InputNumber class="form-control" @bind-Value="newProduct.Quantity" min=1 />
-            </div>
-            <div class="commend-input">
-                <label>Unit Price <span style="color: red">*</span></label>
-                <InputNumber class="form-control" @bind-Value="newProduct.UnitPrice" min=1 />
-            </div>
-            <div class="commend-input">
-                <label>TVA</label>
-                <InputSelect class="form-control text-center valid" @bind-Value="newProduct.TVA">
-                    <option value="19" selected>19%</option>
-                    <option value="0">0%</option>
-                    <option value="9">9%</option>
-                </InputSelect>
-            </div>
-        </div>
-        <div class="popup-button">
-            <button type="button" class="cancel-btn" @onclick="closePopup">Cancel</button>
-            <button type="button" @onclick="SaveProduct">Save</button>
+                <div class="commend-input">
+                    <label>Unit of Measure <span style="color: red">*</span></label>
+                    <InputText class="form-control" @bind-Value="newProduct.UnitMeasure"/>
+                    <ValidationMessage For="@(() => newProduct.UnitMeasure)"/>
+                </div>
+                <div class="commend-input">
+                    <label>Quantity<span style="color: red">*</span></label>
+                    <InputNumber class="form-control" @bind-Value="newProduct.Quantity" min=1 />
+                    <ValidationMessage For="@(() => newProduct.Quantity)"/>
+                </div>
+                <div class="commend-input">
+                    <label>Unit Price <span style="color: red">*</span></label>
+                    <InputNumber class="form-control" @bind-Value="newProduct.UnitPrice" min=1 />
+                    <ValidationMessage For="@(() => newProduct.UnitPrice)"/>
 
-        </div>
+                </div>
+                <div class="commend-input">
+                    <label>TVA</label>
+                    <InputSelect class="form-control text-center valid" @bind-Value="newProduct.TVA">
+                        <Option value="19" selected>19%</Option>
+                        <option value="9">9%</option>
+                        <option value="0">0%</option>
+                    </InputSelect>
+                    <ValidationMessage For="@(() => newProduct.TVA)"/>
+                </div>
+            </div>
+            <div class="popup-button">
+                <button type="submit">Save</button>
+                <button type="button" class="cancel-btn" @onclick="closePopup">Cancel</button>
+
+
+            </div>
+        </EditForm>
     </div>
 </div>

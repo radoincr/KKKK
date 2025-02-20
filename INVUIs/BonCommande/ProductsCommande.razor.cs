@@ -23,7 +23,7 @@ public partial class ProductsCommande : ComponentBase
         }
         OnProductAddProduct.InvokeAsync(products);
     }
-    private void SaveProduct()
+    private async Task SaveProduct()
     {
         if (newProduct.Quantity > 0)
         {
@@ -37,6 +37,7 @@ public partial class ProductsCommande : ComponentBase
                 Quantity = newProduct.Quantity,
                 UnitPrice = newProduct.UnitPrice,
                 TVA = newProduct.TVA,
+                TotalPrice= newProduct.Quantity * newProduct.UnitPrice
             });
             closePopup();
             Clear();

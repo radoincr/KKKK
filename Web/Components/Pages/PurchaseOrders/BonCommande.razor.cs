@@ -19,18 +19,22 @@ public partial class BonCommande : ComponentBase
     public SupplierModel supplierModel { get; set; }
 
     private int? activeSection = 0;
+    
     private SupplierCommande supBC = new SupplierCommande();
     private DetailsCommande detailsBC = new DetailsCommande();
     private ProductsCommande productsBC = new ProductsCommande();
-
+    private string GetIconClass(int section)
+    {
+        return activeSection == section ? "bi-chevron-up" : "bi-chevron-down";
+    }
     public void GetProduct(List<ProductModel> product) => productModellist = product;
 
     public void GetPurchase(PurchaseModel purchase) => purchaseModel = purchase;
 
     public void GetSupplier(SupplierModel supplier) => supplierModel = supplier;
-
     private void ShowSection(int section)
     {
+
         activeSection = (activeSection == section) ? null : section;
     }
 
@@ -61,40 +65,7 @@ public partial class BonCommande : ComponentBase
     decimal THT = 0;
     decimal TTC = 0;
 
-    /*public async Task create()
-    {
-        detailsBC.PurchaseModelPass();
-        var purchaseOrder = new PurchaseOrder()
-        {
-            ID = Guid.NewGuid(),
-            IDSupplier = supplierModel.ID,
-            TypeBudget = purchaseModel.selectedCategory,
-            TypeService = purchaseModel.selectedService,
-            CompletionDelay = purchaseModel.DeliveryTime,
-            Article = purchaseModel.selectedArticle,
-            Chapter = purchaseModel.title_chapter,
-            Date = DateOnly.FromDateTime(DateTime.Now.Date),
-            TVA = 11,
-            TTC = 22,
-            THT = 33
-        };
-        await purchaseOrderService.AddPurchaseOrder(purchaseOrder);
-        foreach (var pd in productModellist)
-        {
-            products = new Product()
-            {
-                ID = Guid.NewGuid(),
-                IDPurchaseOrder = purchaseOrder.ID,
-                Designation = pd.Designation,
-                DefaultTVARate = 19,
-                UnitMeasure = pd.UnitMeasure,
-                UnitPrice = pd.UnitPrice,
-                Quantity = pd.Quantity,
-                TVA = pd.TVA
-            };
-            await productService.createProduct(products);
-        }
-    }*/
+  
     public async Task create()
     {
         detailsBC.PurchaseModelPass();
@@ -102,12 +73,15 @@ public partial class BonCommande : ComponentBase
         {
             ID = Guid.NewGuid(),
             IDSupplier = supplierModel.ID,
+            Behalf = supplierModel.Behalf,
             TypeBudget = purchaseModel.selectedCategory,
             TypeService = purchaseModel.selectedService,
             CompletionDelay = purchaseModel.DeliveryTime,
             Article = purchaseModel.selectedArticle,
             Chapter = purchaseModel.title_chapter,
             Date = DateOnly.FromDateTime(DateTime.Now.Date),
+            B = "a",
+            Fi = "c",
             TVA = 11,
             TTC = 22,
             THT = 33
@@ -122,7 +96,8 @@ public partial class BonCommande : ComponentBase
             UnitMeasure = pd.UnitMeasure,
             UnitPrice = pd.UnitPrice,
             Quantity = pd.Quantity,
-            TVA = pd.TVA
+            TVA = pd.TVA,
+            TotalePrice = pd.Quantity * pd.UnitPrice
         }).ToList();
 
         await purchaseOrderService.CreatePurchaseOrder(purchaseOrder, products);

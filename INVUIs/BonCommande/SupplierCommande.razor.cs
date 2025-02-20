@@ -1,4 +1,5 @@
 ﻿using INV.App.Suppliers;
+using INV.Domain.Entities.PurchaseOrders;
 using INV.Domain.Entities.SupplierEntity;
 using INVUIs.Models.Supplier;
 using INVUIs.Suppliers;
@@ -18,33 +19,38 @@ public partial class SupplierCommande
     private List<Supplier> suppliers = new List<Supplier>();
     private EventCallback<SupplierInfo> supplierSelected;
     private SupplierForm supplierSelector = new SupplierForm();
-    public SupplierModel sup;
+    public SupplierModel sup = new SupplierModel();
+    
     private bool SupplierSelected = false;
     private bool controlDisabled = false;
-
+    
     private async Task SupplierSelectednew(SupplierInfo supplierInfo)
     {
+       
         sup = new SupplierModel
         {
             ID = supplierInfo.ID,
+            Behalf = sup.Behalf,
             NameSupplier = supplierInfo.Name,
             NameCompany = supplierInfo.CompanyName,
-            Email = supplierInfo.Email,
-            Phone = supplierInfo.Phone,
             Address = supplierInfo.Address,
-            NameAccount = supplierInfo.AccountName,
+            Phone = supplierInfo.Phone,
+            Email = supplierInfo.Email,
             RC = supplierInfo.RC,
             ART = supplierInfo.ART,
-            NIS = supplierInfo.NIS,
             NIF = supplierInfo.NIF,
-            BankAgency = supplierInfo.BankAgency,
-            RIB = supplierInfo.RIB
+            NIS = supplierInfo.NIS,
+            RIB = supplierInfo.RIB,
+            BankAgency = supplierInfo.BankAgency
         };
-        SupplierSelected = true;
+        //SupplierSelected = true;
         StateHasChanged();
         await OnSupplier.InvokeAsync(sup);
+       
+
     }
 
+    /*
     private async Task OnSupplierSelected(ChangeEventArgs e)
     {
         string selectedSupplierId = e.Value.ToString();
@@ -95,15 +101,14 @@ public partial class SupplierCommande
             BankAgency = supplierEntity.BankAgency
         };
     }
+    */
 
-    protected override async Task OnInitializedAsync()
-    {
-        aaa = await supplierService.GetAllSupplier();
-        await Suppliers();
-    }
-
-    public async Task Suppliers()
-    {
+    protected override async Task OnParametersSetAsync()
+    {   
+            aaa = await supplierService.GetAllSupplier();
+   
         
     }
+
+  
 }

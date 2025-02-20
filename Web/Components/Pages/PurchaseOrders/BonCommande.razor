@@ -5,20 +5,23 @@
 <PageTitle>Purchase Order</PageTitle>
 <h4>Order Document</h4>
 
-<button class="click" @onclick="() => ShowSection(1)">Definition of the economic operator  <i class="bi bi-chevron-down"></i></button>
-<button class="click" @onclick="() => ShowSection(2)">Characteristics of the order  <i class="bi bi-chevron-down"></i></button>
-<button class="click" @onclick="() => ShowSection(3)">Products Order  <i class="bi bi-chevron-down"></i></button>
+<button type="button" class="click" @onclick="() => ShowSection(1)">Definition of the economic operator  <i class="bi @(GetIconClass(1))">
+    </i></button>
+<button  type="button" class="click" @onclick="() => ShowSection(2)">Characteristics of the order  <i class="bi @(GetIconClass(2))"></i>
+</button>
+<button type="button" class="click" @onclick="() => ShowSection(3)">Products Order <i class="bi @(GetIconClass(3))"></i>
+</button>
 
 <div style="margin-top:10px;">
-    @if (activeSection == 1)
+    @if (activeSection==1)
     {
-        <div class="section">  <SupplierCommande @ref="supBC" OnSupplier="GetSupplier"/> </div>
+         <SupplierCommande @ref="supBC" OnSupplier="GetSupplier"/>
     }
-    @if (activeSection == 2)
+    @if (activeSection==2)
     {
-        <div class="section"> <DetailsCommande @ref="detailsBC" OnPurchaseOrder="GetPurchase"></DetailsCommande></div>
+        <DetailsCommande @ref="detailsBC" OnPurchaseOrder="GetPurchase"></DetailsCommande>
     }
-    @if (activeSection == 3)
+    @if (activeSection==3)
     {
         <div class="section"> <ProductsCommande @ref="productsBC" OnProductAddProduct="GetProduct"></ProductsCommande></div>
     }

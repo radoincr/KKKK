@@ -44,5 +44,7 @@ namespace INVUIs.Models.Supplier
 
         [Required(ErrorMessage = "Bank Agency is required.")]
         public string BankAgency { get; set; }
+
+        public string Behalf { set; get; }
     }
 }
