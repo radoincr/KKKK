@@ -25,20 +25,25 @@ public partial class BonCommande : ComponentBase
     private int? activeSection = 0;
 
     private DetailsCommande detailsBC = new DetailsCommande();
-    private string GetIconClass(int section)
+
+    /*private void ToggleActiveSection(int section)
     {
-        return activeSection == section ? "bi-chevron-up" : "bi-chevron-down";
-    }
+        activeSection = (activeSection == section) ? (int?)null : section;
+        StateHasChanged();
+    }*/
+
+
+    /*private string GetIconClass(int section)
+    {
+        return activeSection == section ? "bi-caret-down-fill" : "bi-caret-right-fill";
+    }*/
+
+
     public void GetProduct(List<ProductModel> product) => productModellist = product;
 
     public void GetPurchase(PurchaseModel purchase) => purchaseModel = purchase;
 
     public void GetSupplier(SupplierModel supplier) => supplierModel = supplier;
-    private void ShowSection(int section)
-    {
-
-        activeSection = (activeSection == section) ? null : section;
-    }
 
     private bool isToastVisible = false;
     private ToastType toastType = ToastType.Success;
@@ -63,14 +68,13 @@ public partial class BonCommande : ComponentBase
     public Product products { get; set; } = new();
     public PurchaseOrder PurchaseOrder { get; set; } = new();
     public Supplier Supplier { get; set; } = new();
-    decimal TVA = 0;
-    decimal THT = 0;
-    decimal TTC = 0;
 
-  
+
     public async Task create()
     {
-        detailsBC.PurchaseModelPass();
+        await det.PurchaseModelPass();
+        await sup.SupplierPass();
+        await pro.ProductPass();
         var purchaseOrder = new PurchaseOrder()
         {
             ID = Guid.NewGuid(),
@@ -80,13 +84,13 @@ public partial class BonCommande : ComponentBase
             TypeService = purchaseModel.selectedService,
             CompletionDelay = purchaseModel.DeliveryTime,
             Article = purchaseModel.selectedArticle,
-            Chapter = purchaseModel.title_chapter,
+            Chapter = "aaa",
             Date = DateOnly.FromDateTime(DateTime.Now.Date),
-            B = "a",
+            /*B = "a",
             Fi = "c",
             TVA = 11,
             TTC = 22,
-            THT = 33
+            THT = 33*/
         };
 
         var products = productModellist.Select(pd => new Product()
@@ -162,5 +166,5 @@ public partial class BonCommande : ComponentBase
            ShowToast("Error", "Error From Purchase Order created ", ToastType.Danger);
            Console.Error.WriteLine($"{ex.Message}");
        }
-   }*/
+  } */
 }

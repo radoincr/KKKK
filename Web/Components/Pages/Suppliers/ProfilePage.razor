@@ -1,18 +1,17 @@
 ﻿@page "/r/{id:guid}"
 
 @rendermode InteractiveServer
-<div class="row">
-    <div class="col-12 col-lg-4 col-xl-3">
+<div class="content-profile">
+    <div class="container-info-supplier">
         <SupplierProfileSidebar Supplier="Supplier"/>
     </div>
 
-    <div class="col-12 col-lg-8 col-xl-9">
-        <div class="card widget-card border-light shadow-sm">
-            <div class="card-body p-4">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#profile-overview">Profile Overview</a>
-                    </li>
+
+    @*  <div>
+      <ul class="nav nav-tabs">
+      <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#profile-overview">Profile Overview</a>
+      </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" href="#edit-profile">Edit Profile</a>
                     </li>
@@ -43,5 +42,21 @@
                 </div>
             </div>
         </div>
+ *@
+    <div class="container-work-supplier">
+        <Tabs EnableFadeEffect="true" NavStyle="NavStyle.Pills">
+            <Tab Title="Command" IsActive="true">
+                <Content>
+                    <CommandSettings Supplier="Supplier" />
+                </Content>
+            </Tab>
+            <Tab Title="Reseption">
+                <Content>
+                    <ReceptionComponent />
+                </Content>
+            </Tab>
+
+        </Tabs>
     </div>
+
 </div>

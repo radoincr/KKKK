@@ -4,6 +4,7 @@ using INV.Domain.Entities.SupplierEntity;
 using INVUIs.Models.Supplier;
 using INVUIs.Suppliers;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
 
 
 namespace INVUIs.BonCommande;
@@ -11,7 +12,7 @@ namespace INVUIs.BonCommande;
 public partial class SupplierCommande
 {
     [Parameter] public EventCallback<SupplierModel> OnSupplier { get; set; }
-
+    public EditContext editContext { get; set; }
     [Inject] private ISupplierService supplierService { get; set; }
     private SupplierSelector addSupplier = new SupplierSelector();
     private SupplierModel supplierModel = new SupplierModel();
@@ -21,14 +22,12 @@ public partial class SupplierCommande
     private SupplierForm supplierSelector = new SupplierForm();
     public SupplierModel sup = new SupplierModel();
     private bool Display = false;
-    public void Show()=>Display=!Display;
-
-private bool SupplierSelected = false;
+    public void Show() => Display = !Display;
+    private bool SupplierSelected = false;
     private bool controlDisabled = false;
-    
+
     private async Task SupplierSelectednew(SupplierInfo supplierInfo)
     {
-       
         sup = new SupplierModel
         {
             ID = supplierInfo.ID,
@@ -45,70 +44,23 @@ private bool SupplierSelected = false;
             RIB = supplierInfo.RIB,
             BankAgency = supplierInfo.BankAgency
         };
-        //SupplierSelected = true;
+        editContext = new EditContext(sup);
+
+        SupplierSelected = true;
         StateHasChanged();
         await OnSupplier.InvokeAsync(sup);
-       
-
     }
 
-    /*
-    private async Task OnSupplierSelected(ChangeEventArgs e)
+    public async Task SupplierPass()
     {
-        string selectedSupplierId = e.Value.ToString();
-
-        if (Guid.TryParse(selectedSupplierId, out Guid supplierGuid))
-        {
-            var supplierEntity = suppliers.FirstOrDefault(s => s.ID == supplierGuid);
-
-            if (supplierEntity != null)
-            {
-                supplierModel = FetchSupplierModel(supplierEntity);
-                SupplierSelected = true;
-            }
-            else
-            {
-                supplierModel = null;
-                SupplierSelected = false;
-            }
-        }
-        else
-        {
-            supplierModel = new SupplierModel();
-            SupplierSelected = false;
-        }
+        await OnSupplier.InvokeAsync(sup);
     }
 
-    private SupplierModel FetchSupplierModel(Supplier? supplierEntity)
-    {
-        if (supplierEntity == null)
-        {
-            return null;
-        }
-
-        return new SupplierModel
-        {
-            ID = supplierEntity.ID,
-            NameSupplier = supplierEntity.SupplierName,
-            NameCompany = supplierEntity.CompanyName,
-            NameAccount = supplierEntity.AccountName,
-            Address = supplierEntity.Address,
-            Phone = supplierEntity.Phone,
-            Email = supplierEntity.Email,
-            RC = supplierEntity.RC,
-            ART = supplierEntity.ART,
-            NIF = supplierEntity.NIF,
-            NIS = supplierEntity.NIS,
-            RIB = supplierEntity.RIB,
-            BankAgency = supplierEntity.BankAgency
-        };
-    }
-    */
 
     protected override async Task OnParametersSetAsync()
-    {   
-            aaa = await supplierService.GetAllSupplier();
+    {
+        aaa = await supplierService.GetAllSupplier();
     }
-public void Close()=>Display=false;
-  
+
+    public void Close() => Display = false;
 }

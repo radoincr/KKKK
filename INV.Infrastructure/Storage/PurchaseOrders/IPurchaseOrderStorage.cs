@@ -7,7 +7,7 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
 {
     public interface IPurchaseOrderStorage
     {
-        Task<int> InsertPurchaseOrder(PurchaseOrder purchaseOrder);
+        Task<int> InsertPurchaseOrder(PurchaseOrder purchaseOrder,decimal tht,decimal tva);
     
         
         Task<(PurchaseOrder,Supplier,List<ProductPdf>)> SelectPurchaseOrderDetails(int purchaseOrderNumber);

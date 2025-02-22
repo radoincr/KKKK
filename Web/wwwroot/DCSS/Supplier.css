@@ -1,4 +1,5 @@
-﻿.form-container {
+﻿/* General Container Styling */
+.form-container {
     width: 100%;
     max-width: 600px;
     margin: 30px auto;
@@ -115,7 +116,6 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease;
-
 }
 
 /* Button Hover & Active States */
@@ -157,7 +157,8 @@
     .form-container {
         padding: 20px;
     }
-    hr{
+
+    hr {
         margin: 0rem;
     }
 
@@ -193,129 +194,6 @@
         width: 100%;
     }
 }
-
-
-
-/**============*/
-
-
-.container .steps {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.steps .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    color: #999;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 50%;
-    background: #fff;
-    border: 4px solid #e0e0e0;
-    transition: all 200ms ease;
-    transition-delay: 0s;
-}
-
-.steps .circle.active {
-    font-size: 26px;
-    background-color: #257180;
-    transition-delay: 100ms;
-    border-color: #257180;
-    color: #FFF;
-}
-
-.steps .progress-bar {
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: #e0e0e0;
-    z-index: -1;
-}
-
-.progress-bar .indicator {
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #FD8B51;
-    transition: all 300ms ease;
-}
-
-.container .buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.buttons button {
-    padding: 8px 20px;
-    background: #4070f4;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    transition: all 200ms linear;
-}
-
-.buttons button:active {
-    transform: scale(0.97);
-}
-
-.buttons button:disabled {
-    background: #87a5f8;
-    cursor: not-allowed;
-}
-
-/*================*/
-/* General Button Styles */
-.commend-pos-btn button {
-    padding: 10px 21px;
-    background-color: #257180; /* Primary color */
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-/* Hover Effect */
-.commend-pos-btn button:hover {
-    background-color: #FD8B51; /* Accent color */
-}
-
-/* Active/Pressed Effect */
-.commend-pos-btn button:active {
-    transform: scale(0.96);
-}
-
-/* Disabled Button */
-.commend-pos-btn button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-/* Back Button Styling */
-.commend-pos-btn button[type="button"] {
-    background-color: #F2E5BF;
-    color: #257180;
-    border: 1px solid #257180;
-}
-
-.commend-pos-btn button[type="button"]:hover {
-    background-color: #FFD08F;
-}
-
-/* Modal Overlay (Dark Background) */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -351,4 +229,83 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+/*==================================================*/
+.content-profile {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.container-info-supplier {
+    width: 100%;
+}
+
+.container-supplier {
+    border-radius:7px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-supplier:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px;
+}
+
+.info-boxs {
+    display: flex;
+}
+.info-box {
+    display: flex;
+    align-items: center;
+}
+
+.pos-titel-info-supplier {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-box-icon {
+    font-size: 1.5rem;
+    color: #257180;
+    padding-right:0.5rem;
+}
+
+.info-box-text{
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.info-box-part2{
+    margin-left:15%;
+}
+
+
+
+.container-work-supplier{
+    width:100%;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var( --primary-color) !important;
+}
+.nav-pills .nav-link{
+    color:black;
+    font-weight:600;
+}
+
+.nav-pills .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.btn-pos-supplier i.bi.bi-pen {
+    padding-right: 10px;
 }

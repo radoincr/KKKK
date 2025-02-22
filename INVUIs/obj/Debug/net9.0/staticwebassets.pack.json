@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INVUIs\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\INVUIs.bundle.scp.css",
+      "PackagePath": "staticwebassets\\INVUIs.su4batanr3.bundle.scp.css"
+    },
+    {
       "Id": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INVUIs\\wwwroot\\background.png",
       "PackagePath": "staticwebassets\\background.png"
     },

@@ -1,80 +1,48 @@
 ﻿@using INVUIs.Suppliers
 
-@if (Display)
-{
 
 <div class="input">
-    <button type="button" @onclick="() => addSupplier.ShowModal(aaa)" class="search-supp  border-0" disabled=@controlDisabled>
+    <button type="button" @onclick="() => addSupplier.ShowModal(aaa)" class="search-supp  border-0">
         <i class="bi bi-search"/> Search a Supplier
     </button>
-    <button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i> Add a Supplier</button>
+    <button type="button" disabled="@(SupplierSelected)" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()"><i class="bi bi-person-plus"></i> Add a Supplier</button>
 
 </div> <br/>
 
-@if (sup != null )
+@if (SupplierSelected)
 {
     <div class="input3">
         <div class="commend-input">
             <label for="firstName">
-                Full Name : <span id="firstName" class="input-field">@sup.NameSupplier</span>
+                Full Name : <span id="firstName" class="input-field fw-bold">@sup.NameSupplier</span>
             </label>
         </div>
         <div class="commend-input">
             <label for="companyName">
-                Or Company Name : <span id="companyName" class="input-field">@sup.NameCompany</span>
-            </label>
-        </div>
-    </div>
-    <div class="input3">
-        <div class="commend-input">
-            <label for="email">Email : <span id="email" class="input-field">@sup.Email</span></label>
-
-        </div>
-        <div class="commend-input">
-            <label for="phone">
-                Phone : <span id="phone" class="input-field">@sup.Phone</span>
+                Or Company Name : <span id="companyName" class="input-field fw-bold">@sup.NameCompany</span>
             </label>
         </div>
     </div>
     <div class="input3">
         <div class="commend-input">
             <label for="operatorAddress">
-                Address : <span id="operatorAddress" class="input-field">@sup.Address</span>
+                Address : <span id="operatorAddress" class="input-field fw-bold">@sup.Address</span>
             </label>
         </div>
     </div>
+<EditForm  EditContext="editContext" FormName="addbehalf">
+    <DataAnnotationsValidator/>
     <div class="input3">
         <div class="commend-input">
-            <label for="actsOnBehalf">Acts on Behalf of :</label>
+            <label for="actsOnBehalf">Acts on Behalf of</label>
             <InputText id="actsOnBehalf" @bind-Value="sup.Behalf" class="input-field"/>
+            <ValidationMessage For="() => sup.Behalf"/>
         </div>
     </div>
-    <div class="input3">
-        <div class="commend-input">
-            <label>Article number (ART) : <span class="input-field">@sup.ART</span></label>
-        </div>
-        <div class="commend-input">
-            <label>Commercial registration number (RC) : <span class="input-field">@sup.RC</span></label>
-        </div>
-    </div>
-    <div class="input3">
-        <div class="commend-input">
-            <label>NIF : <span class="input-field">@sup.NIF</span></label>
-        </div>
-        <div class="commend-input">
-            <label>NIS : <span class="input-field">@sup.NIS</span></label>
-        </div>
-    </div>
-    <div class="input3">
-        <div class="commend-input">
-            <label>Bank Account (RIB) : <span class="input-field">@sup.RIB</span></label>
-        </div>
-        <div class="commend-input">
-            <label>Bank Address : <span class="input-field">@sup.BankAgency</span></label>
-        </div>
-    </div>
+</EditForm>
+
 }
 <SupplierForm @ref="supplierSelector"/>
 
 <SupplierSelector Title="Select a Supplier" @ref="addSupplier" OnSelected="SupplierSelectednew" Supplier="aaa"/>
-}
+

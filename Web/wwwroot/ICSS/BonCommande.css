@@ -1,29 +1,19 @@
 
-
 .section {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #f0f0f040 ;
+    padding: 5px 18px 1px 18px;
+    margin: 3px 0;
+    background-color: white ;
     border: 1px solid #ccc;
-}
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
 .click {
-    padding: 10px 15px;
-    margin: 5px;
+    padding: 3px 5px;
     border: none;
-    background-color: #257180;
-    color: white;
+    background-color: transparent;
+    color: #257180;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
-}
-
-.click:hover {
-    background-color: #257180bd;
-}
-
-.click:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .popup-button {
@@ -76,7 +66,7 @@
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .commend-input {
@@ -86,7 +76,6 @@
 }
 label {
     font-weight: bold;
-    margin-bottom: 5px;
     color: #333;
 }
 
@@ -114,25 +103,26 @@ p.time {
     color: #555;
 }
 .search-supp {
-    background-color: white;
+    background-color: transparent;
     color: #FD8B51;
     font-size: 14px;
     font-weight: bold;
     padding:0.6rem 0.9rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.2s ease-in-out;
     border: 1px solid transparent;
 
 
 }
 
 .search-supp:hover {
-    border: 2px solid #FD8B51  !important;;
+    border: 1px solid #FD8B51  !important;;
 }
-
-
-.search-supp:disabled {
-    background-color: #ccc;
+.search-supp:disabled, .addsupplier-button:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    border: 1px solid #e0e0e0  !important;;
+    opacity: 0.4;
     cursor: not-allowed;
 }

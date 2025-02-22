@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = T3JkZXJzXFB1cmNoYXNlT3JkZXJEZXRhaWxzXFB1cmNoYXNlT3JkZXJQcm9maWxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Orders/PurchaseOrderDetails/PurchaseOrderValirdation.razor]
+build_metadata.AdditionalFiles.TargetPath = T3JkZXJzXFB1cmNoYXNlT3JkZXJEZXRhaWxzXFB1cmNoYXNlT3JkZXJWYWxpcmRhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Orders/PurchaseOrderDetails/PurchaseSidebar.razor]
 build_metadata.AdditionalFiles.TargetPath = T3JkZXJzXFB1cmNoYXNlT3JkZXJEZXRhaWxzXFB1cmNoYXNlU2lkZWJhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -91,3 +95,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radoi/OneDrive/Desktop/web2/INVUIs/Components/Status/Status.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdGF0dXNcU3RhdHVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8s2dm92tkz

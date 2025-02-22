@@ -1,51 +1,45 @@
-﻿@if (Display)
-{
-
-    <div class="card p-4 shadow-sm">
-        <div class="input2">
-            <div class="commend-input">
-                <label>Select your Service</label>
-                <InputSelect @bind-Value="purchaseModel.selectedService">
-                    <option value="" selected disabled>Choose your service</option>
-                    <option value="Works">Works</option>
-                    <option value="Equipment">Equipment</option>
-                    <option value="Services">Services</option>
-                </InputSelect>
-            </div>
-            <br/>
-            <div class="commend-input">
-                <label>Select your Budget</label>
-                <InputSelect @bind-Value="purchaseModel.selectedCategory">
-                    <option value="" selected disabled>Choose your budget</option>
-                    <option value="Operating Expenses">Operating Expenses</option>
-                    <option value="Equipment Expenses">Equipment Expenses</option>
-                    <option value="Other Expenses">Other Expenses</option>
-                </InputSelect>
-            </div>
-        </div>
-        <div class="input2">
-            <div class="commend-input">
-                <label for="chapter">Choose a Chapter</label>
-                <InputText id="chapter" @bind-Value="purchaseModel.selectedChapter" style="margin-top: 4px" placeholder="Enter Chapter" class="form-control valid"/>
-            </div>
-            <div class="commend-input">
-                <label for="title">Title of Chapter</label>
-                <InputTextArea id="title" @bind-Value="purchaseModel.title_chapter" style="margin-top: 4px" placeholder="Enter Title Chapter" class="form-control valid"/>
-            </div>
-        </div>
-        <div class="input2">
-            <div class="commend-input">
-                <label for="article">Choose an Article</label>
-                <InputText id="article" @bind-Value="purchaseModel.selectedArticle" style="margin-top: 4px" placeholder="Enter Article" class="form-control valid"/>
-            </div>
-            <div class="commend-input">
-                <label for="description">Description Article</label>
-                <InputTextArea id="description" @bind-Value="purchaseModel.description_article" style="margin-top: 4px" placeholder="Enter Description" class="form-control valid"/>
-            </div>
-        </div>
-        <p class="time">
-            The delivery or execution time is estimated at:
-            <InputNumber id="delivery_time" @bind-Value="purchaseModel.DeliveryTime" class="input-field delivery-time" min=1 /> days
-        </p>
+<div class="input2">
+    <div class="commend-input">
+        <label>Select a Service</label>
+        <InputSelect @bind-Value="purchaseModel.selectedService">
+            <option value="" selected disabled>Select a Service</option>
+            <option value="Works">Works</option>
+            <option value="Equipment">Equipment</option>
+            <option value="Services">Services</option>
+        </InputSelect>
     </div>
-}
+    <br/>
+    <div class="commend-input">
+        <label>Select a Budget</label>
+        <InputSelect @bind-Value="purchaseModel.selectedCategory">
+            <option value="" selected disabled>Select a Budget</option>
+            <option value="Operating Expenses">Operating Expenses</option>
+            <option value="Equipment Expenses">Equipment Expenses</option>
+            <option value="Other Expenses">Other Expenses</option>
+        </InputSelect>
+    </div>
+</div>
+<div class="input2">
+    <div class="commend-input">
+        <label for="chapter">Choose a Chapter</label>
+        <InputText id="chapter" @bind-Value="purchaseModel.selectedChapter" style="margin-top: 4px" placeholder="Enter Chapter" class="form-control valid"/>
+    </div>
+    <div class="commend-input">
+        <label for="title">Title of Chapter</label>
+        <InputText id="title" @bind-Value="purchaseModel.title_chapter" style="margin-top: 4px" readonly/>
+    </div>
+</div>
+<div class="input2">
+    <div class="commend-input">
+        <label for="article">Choose an Article</label>
+        <InputText id="article" @bind-Value="purchaseModel.selectedArticle" style="margin-top: 4px" placeholder="Enter Article" class="form-control valid"/>
+    </div>
+    <div class="commend-input">
+        <label for="description">Description Article</label>
+        <InputTextArea id="description" @bind-Value="purchaseModel.description_article" style="margin-top: 4px" placeholder="Enter Description" class="form-control valid"/>
+    </div>
+</div>
+<p class="time">
+    The delivery or execution time is estimated at:
+    <InputNumber id="delivery_time" @bind-Value="purchaseModel.DeliveryTime" class="input-field delivery-time" min=1 /> days
+</p>

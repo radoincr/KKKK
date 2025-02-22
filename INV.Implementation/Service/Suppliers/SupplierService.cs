@@ -1,5 +1,6 @@
 ﻿using INV.App.Suppliers;
 using INV.Domain.Entities.SupplierEntity;
+using INV.Domain.Shared;
 using INV.Infrastructure.Storage.SupplierStorages;
 
 namespace INV.Implementation.Service.Suppliers;
@@ -14,9 +15,28 @@ public class SupplierService : ISupplierService
         supplierstorage = _supplierStorage;
     }
 
-    public async Task<int> AddSupplier(Supplier supplier)
+    public async Task<Result> AddSupplier(Supplier supplier)
     {
-        return await supplierstorage.InsertSupplier(supplier);
+        try
+        {
+            List<ErrorCode> errorList = validateSupplierCreate(supplier);
+            if (errorList.Any())
+                return Result.Failure(errorList);
+            bool RcExsist = await supplierstorage.SupplierExistsByRC(supplier.RC);
+            errorList.Clear();
+            if (RcExsist)
+                errorList.Add(SupplierError.RCExsist);
+            if (errorList.Any())
+                return Result.Failure(errorList);
+            
+            await supplierstorage.InsertSupplier(supplier);
+            return Result.Succes;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public async Task<List<SupplierInfo>> GetAllSupplier()
@@ -29,7 +49,8 @@ public class SupplierService : ISupplierService
             Name = s.SupplierName,
             Address = s.Address,
             Phone = s.Phone,
-            Email = s.Email
+            Email = s.Email,
+            CompanyName = s.CompanyName
         }).ToList();
     }
 
@@ -61,5 +82,14 @@ public class SupplierService : ISupplierService
     public async Task<int> SetSupplier(Supplier supplier)
     {
         return await supplierstorage.UpdateSupplier(supplier);
+    }
+
+    private List<ErrorCode> validateSupplierCreate(Supplier supplier)
+    {
+        List<ErrorCode> errors = new List<ErrorCode>();
+
+        if (string.IsNullOrWhiteSpace(supplier.SupplierName))
+            errors.Add(SupplierError.RCExsist);
+        return errors;
     }
 }

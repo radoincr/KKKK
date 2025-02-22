@@ -1,77 +1,96 @@
 ﻿@using BlazorBootstrap
 @using INV.Domain.Entities.PurchaseOrders
-<div class="col-12 col-lg-4 col-xl-12">
-    <div class="row gy-4">
-        <div class="col-12">
-            <div class="card widget-card border-light shadow-sm">
-                <div class="card-header" style="background-color: #257180; color: white">
-                    Supplier
-                </div>
-                <div class="card-body">
-                    <div class="text-center mb-3">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-                             class="img-fluid rounded-circle"
-                             alt="Supplier Image"
-                             style="width: 100px; height: 100px;">
+<div class="container-supplier">
 
-                    </div>
-                    <h5 class="text-center mb-1">
-                        <a href="/r/{@Supplier.ID}">@Supplier.SupplierName</a>
-                    </h5>
-                    <p class="text-center text-secondary mb-4">@Supplier.CompanyName</p>
+
+    <div class="content-info-suplier">
+
+        <div class="info-box pos-titel-info-supplier">
+
+            <div class="titel-primary">
+                <h2>@Supplier.CompanyName</h2>
+            </div>
+
+            <div class="titel-secondary">
+                <h4> @Supplier.SupplierName</h4>
+            </div>
+        </div>
+
+        <div class="info-boxs">
+
+            <div class="info-box-part1">
+                <div class="info-box">
+                    <div class="info-box-icon"><i class="bi bi-telephone"></i></div>
+                    <div class="info-box-text">@Supplier.Phone</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-box-icon"><i class="bi bi-envelope-at"></i></div>
+                    <div class="info-box-text">@Supplier.Email</div>
+                </div>
+            </div>
+
+            <div class="info-box-part2">
+
+                <div class="info-box">
+                    <div class="info-box-icon"><i class="bi bi-geo-alt"></i></div>
+                    <div class="info-box-text">@Supplier.Address</div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-icon"><i class="bi bi-credit-card-fill"></i></div>
+                    <div class="info-box-text">@Supplier.RIB</div>
                 </div>
             </div>
         </div>
 
-        <div class="col-12">
-            <div class="card widget-card border-light shadow-sm">
-                <div class="card-header text-white" style="background-color: #257180;">
-                    <h5 class="mb-0" style="align-items: center;">Validate Purchase</h5>
-                </div>
-                <div class="card-body">
 
-                    <EditForm Model="purchaseValidateModel" OnValidSubmit="ValidetePurchase">
-                        @if (purchaseOrder.Status != PurchaseStatus.Validated){
-                        <DataAnnotationsValidator/>
-
-
-                        <div class="col-md-12">
-                            <label for="financialInterest" class="form-label fw-bold">Financial Interest</label>
-                            <InputText class="form-control" id="financialInterest" placeholder="في:"
-                                       @bind-Value="purchaseValidateModel.Data"/>
-                            <ValidationMessage For="() => purchaseValidateModel.Data"/>
-
-                        </div>
-                        <div class="col-md-12" style="border: none">
-                            <label for="interestDate" class="form-label fw-bold">Date</label>
-                            <InputText class="form-control" id="interestDate" placeholder="ب:"
-                                       @bind-Value="purchaseValidateModel.Data2"/>
-                            <ValidationMessage For="() => purchaseValidateModel.Data2"/>
-                           
-                        </div>
-                        }
-                        <div class="col-md-12 d-flex align-items-end">
-                            <Tooltip Class="me-4"
-                                     Title="@(purchaseOrder.Status == PurchaseStatus.Validated ? "Terminated step" : "Important step")"
-                                     IsHtml="true"
-                                     Color="@(purchaseOrder.Status == PurchaseStatus.Validated ? TooltipColor.Success : TooltipColor.Danger)"
-                                     Placement="TooltipPlacement.Right">
-
-                            <button type="submit" class="btn btn-success" style="width: 220px;"
-                                        disabled="@(purchaseOrder.Status == PurchaseStatus.Validated)">
-                                    @(purchaseOrder.Status == PurchaseStatus.Validated ? "Validated" : "Validate")
-                                </button>
-                            </Tooltip>
-                        </div>
-
-
-
-                    </EditForm>
-                </div>
-            </div>
-        </div>
 
     </div>
+
+    @*    <div class="btn-pos-supplier">
+        <EditForm Model="purchaseValidateModel" OnValidSubmit="ValidetePurchase">
+            @if (purchaseOrder.Status != PurchaseStatus.Validated)
+            {
+                <DataAnnotationsValidator />
+
+
+                <div class="col-md-12">
+                    <label for="financialInterest" class="form-label fw-bold">Financial Interest</label>
+                    <InputText class="form-control" id="financialInterest" placeholder="في:"
+                               @bind-Value="purchaseValidateModel.Data" />
+                    <ValidationMessage For="() => purchaseValidateModel.Data" />
+
+                </div>
+                <div class="col-md-12" style="border: none">
+                    <label for="interestDate" class="form-label fw-bold">Date</label>
+                    <InputText class="form-control" id="interestDate" placeholder="ب:"
+                               @bind-Value="purchaseValidateModel.Data2" />
+                    <ValidationMessage For="() => purchaseValidateModel.Data2" />
+
+                </div>
+            }
+            <div class="col-md-12 d-flex align-items-end">
+                <Tooltip Class="me-4"
+                         Title="@(purchaseOrder.Status == PurchaseStatus.Validated ? "Terminated step" : "Important step")"
+                         IsHtml="true"
+                         Color="@(purchaseOrder.Status == PurchaseStatus.Validated ? TooltipColor.Success : TooltipColor.Danger)"
+                         Placement="TooltipPlacement.Right">
+
+                    <button type="submit" class="btn btn-success" style="width: 220px;"
+                            disabled="@(purchaseOrder.Status == PurchaseStatus.Validated)">
+                        @(purchaseOrder.Status == PurchaseStatus.Validated ? "Validated" : "Validate")
+                    </button>
+                </Tooltip>
+            </div>
+
+
+
+        </EditForm>
+    </div> *@
+
 </div>
+
+
+
 
 <Toasts class="p-3" Messages="messages" AutoHide="true" Delay="4500" Placement="ToastsPlacement.TopRight"/>

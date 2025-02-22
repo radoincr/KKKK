@@ -1,3 +1,6 @@
+using Blazorise;
+using Blazorise.Bootstrap5;
+using Blazorise.Icons.FontAwesome;
 using INV.App.IGeneratePdfServices;
 using INV.App.IOrderDetailServices;
 using INV.App.Products;
@@ -29,6 +32,13 @@ builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
 builder.Services.AddScoped<IGenPurchaseOrderPDF, GenPurchaseOrderPDF>();
 builder.Services.AddBlazorBootstrap();
 builder.Services.AddBootstrapBlazor();
+/*builder.Services
+    .AddBlazorise( options =>
+    {
+        options.Immediate = true;
+    } )
+    .AddBootstrap5Providers()
+    .AddFontAwesomeIcons();*/
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

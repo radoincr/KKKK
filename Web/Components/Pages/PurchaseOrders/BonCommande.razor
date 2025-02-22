@@ -2,35 +2,25 @@
 @using INVUIs.BonCommande
 @rendermode InteractiveServer
 
-<PageTitle>Purchase Order</PageTitle>
-<h4>Order Document</h4>
-<br>
-<button type="button" class="click" @onclick="()=>sup.Show()">
-    Definition of the economic operator
-    <i class="bi @(GetIconClass(1))">
-    </i>
-</button>
-<button type="button" class="click"  @onclick="()=>det.Show()">
-    Characteristics of the order <i class="bi @(GetIconClass(2))"></i>
-</button>
-<button type="button" class="click" @onclick="()=>pro.Show()">
-    Products Order <i class="bi @(GetIconClass(3))"></i>
-</button>
-
-<div style="margin-top:10px;">
-
-    <SupplierCommande @ref="sup" OnSupplier="GetSupplier"/>
-
-
-    <DetailsCommande @ref="det" OnPurchaseOrder="GetPurchase"></DetailsCommande>
-
-    @*<div class="section">
-         </div>*@
-    <ProductsCommande @ref="pro" OnProductAddProduct="GetProduct"></ProductsCommande>
-
-</div>
-<br/> <br/>
-<button type="submit" class="create-button" @onclick="create">Create</button>
-
 <ToastValidation Type="toastType" Title="@toastTitle" Message="@toastMessage" IsVisible="isToastVisible"
                  OnClose="CloseToast"/>
+<PageTitle>Purchase Order</PageTitle>
+<h4>Order Document</h4>
+<Accordion>
+    <AccordionItem Title="Definition of the economic operator" >
+        <Content>
+            <SupplierCommande @ref="sup" OnSupplier="GetSupplier"/>
+        </Content>
+    </AccordionItem>
+    <AccordionItem Title="Details Order" >
+        <Content>
+            <DetailsCommande @ref="det" OnPurchaseOrder="GetPurchase"></DetailsCommande>
+        </Content>
+    </AccordionItem>
+    <AccordionItem Title="Products Order" >
+        <Content>
+            <ProductsCommande @ref="pro" OnProductAddProduct="GetProduct"></ProductsCommande>
+        </Content>
+    </AccordionItem>
+    <button type="button" class="create-button" @onclick="create">Register</button>
+</Accordion>

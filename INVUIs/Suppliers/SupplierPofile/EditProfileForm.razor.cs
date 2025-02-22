@@ -10,6 +10,9 @@ public partial class EditProfileForm
     [Inject] public ISupplierService supplierService { set; get; }
     [Inject] public NavigationManager navigation { set; get; }
     private Supplier supplierEdit { get; set; } = new();
+    
+
+    private bool display = false;
 
     protected override void OnParametersSet()
     {
@@ -39,5 +42,16 @@ public partial class EditProfileForm
         await Task.Delay(2000);
         navigation.NavigateTo(navigation.Uri, forceLoad: true);
     }
-}
+    public void show()
+    {
+        display = true;
+        StateHasChanged();
+    }
 
+    public void close()
+    {
+        display = false;
+        StateHasChanged();
+    }
+
+}

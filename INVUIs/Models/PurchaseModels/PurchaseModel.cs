@@ -3,6 +3,7 @@
 public class PurchaseModel
 {
     public string selectedArticle { get; set; }
+    
     public int delivery_time { get; set; }
     public string description_article { get; set; }
     public string title_chapter { get; set; }

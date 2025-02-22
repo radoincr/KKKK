@@ -35,7 +35,7 @@ namespace INVUIs.Models.Supplier
 
         [Required(ErrorMessage = "NIS is required.")]
         [Range(100000000000000, 999999999999999, ErrorMessage = "NIS must be exactly 15 digits.")]
-        public int NIS { get; set; }
+        public long NIS { get; set; }
 
         [Required(ErrorMessage = "RIB is required.")]
         [StringLength(20, MinimumLength = 20, ErrorMessage = "RIB must be exactly 20 characters.")]
@@ -45,6 +45,7 @@ namespace INVUIs.Models.Supplier
         [Required(ErrorMessage = "Bank Agency is required.")]
         public string BankAgency { get; set; }
 
+   
         public string Behalf { set; get; }
     }
 }

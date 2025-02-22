@@ -4,20 +4,21 @@
 @inject IPurchaseOrderService PurchaseOrderService
 @inject ISupplierService SupplierService
 @using BlazorBootstrap
+@using INV.Domain.Entities.PurchaseOrders
 
 @rendermode InteractiveServer
 
 @if (PurchaseOrder == null || Supplier == null)
 {
-    <h3>Loading...</h3>
+<h3>Loading...</h3>
 }
 else
 {
-    <div class="row">
-        <div class="col-12 col-lg-4 col-xl-3">
-            <PurchaseSidebar Supplier="Supplier" purchaseOrder="PurchaseOrder"/>
-        </div>
-        <div class="col-12 col-lg-8 col-xl-9">
+<div class="content-profile">
+    <div class="container-info-supplier">
+        <PurchaseSidebar Supplier="Supplier" purchaseOrder="PurchaseOrder"/>
+    </div>
+    @* <div class="col-12 col-lg-8 col-xl-9">
             <div class="card widget-card border-light shadow-sm">
                 <div class="card-body p-4">
 
@@ -39,8 +40,33 @@ else
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
+    <div class="container-work-supplier">
+        <Tabs EnableFadeEffect="true" NavStyle="NavStyle.Pills">
+            <Tab Title="Purchase Details" IsActive="true">
+                <Content>
+                    <PurchaseDetails PurchaseOrder="PurchaseOrder" />
+                </Content>
+            </Tab>
+            <Tab Title="Product Details">
+                <Content>
+                    <ProductDetails Products="productModels" OnEditProduct="EditProduct" />
+                </Content>
+            </Tab>
+            @if (PurchaseOrder.Status == PurchaseStatus.Editing)
+            {
+            <Tab Title="Purchase Status">
+                <Content>
+                    <PurchaseOrderValirdation PurchaseOrder="PurchaseOrder" />
+                </Content>
+            </Tab>
+            }
+
+
+        </Tabs>
     </div>
+
+</div>
 }
 
 <ProductUpdate @ref="productUpdateComponent" Product="selectedProductModel"/>

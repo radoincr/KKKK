@@ -15,11 +15,12 @@ namespace INV.Infrastructure.Storage.SupplierStorages
         }
 
         private const string insertSupplierQuery = @"
-            INSERT INTO Supplier (ID, RC, NIS, RIB, SupplierName, CompanyName, AccountName, Address, Phone, Email, ART, NIF, BankAgency)
-            VALUES (@ID, @RC, @NIS, @RIB, @SupplierName, @CompanyName, @AccountName, @Address, @Phone, @Email, @ART, @NIF, @BankAgency)";
+            INSERT INTO Supplier (ID, RC, NIS, RIB, SupplierName, CompanyName, AccountName, Address, Phone, Email, ART, NIF, BankAgency,Status)
+            VALUES (@ID, @RC, @NIS, @RIB, @SupplierName, @CompanyName, @AccountName, @Address, @Phone, @Email, @ART, @NIF, @BankAgency,@Status)";
 
         private const string SelectAllSuppliersQuery = "SELECT * FROM Supplier";
         private const string selectSuppliersByIDQuery = "SELECT * FROM Supplier where ID=@ID";
+
         private const string updateSupplierQuery = @"
                UPDATE Supplier 
 SET [RC] = @RC, 
@@ -35,6 +36,7 @@ SET [RC] = @RC,
     [NIF] = @NIF, 
     [BankAgency] = @BankAgency
 WHERE [ID] = @ID";
+        private const string selectSupplierCountByIdQuery = "select count(*) from Supplier WHERE RC = @RC";
 
 
         private static Supplier getAllSupplier(SqlDataReader reader)
@@ -43,7 +45,7 @@ WHERE [ID] = @ID";
             {
                 ID = (Guid)reader["ID"],
                 RC = reader["RC"].ToString(),
-                NIS = (int)reader["NIS"],
+                NIS = (long)reader["NIS"],
                 RIB = reader["RIB"].ToString(),
                 SupplierName = reader["SupplierName"].ToString(),
                 CompanyName = reader["CompanyName"].ToString(),
@@ -78,7 +80,7 @@ WHERE [ID] = @ID";
             cmd.Parameters.AddWithValue("@ART", supplier.ART);
             cmd.Parameters.AddWithValue("@NIF", supplier.NIF);
             cmd.Parameters.AddWithValue("@BankAgency", supplier.BankAgency);
-
+            cmd.Parameters.AddWithValue("@Status", 1);
             await sqlConnection.OpenAsync();
             return await cmd.ExecuteNonQueryAsync();
         }
@@ -100,22 +102,24 @@ WHERE [ID] = @ID";
 
             return suppliers;
         }
-        
+
         public async Task<Supplier?> SelectSupplierByID(Guid id)
         {
             using var sqlConnection = new SqlConnection(_connectionString);
             using var cmd = new SqlCommand(selectSuppliersByIDQuery, sqlConnection);
             cmd.Parameters.AddWithValue("@ID", id);
-    
+
             await sqlConnection.OpenAsync();
             using var reader = await cmd.ExecuteReaderAsync();
 
-            if (await reader.ReadAsync())  
+            if (await reader.ReadAsync())
             {
                 return getAllSupplier(reader);
             }
-            return null;  
+
+            return null;
         }
+
         public async Task<int> UpdateSupplier(Supplier supplier)
         {
             using var sqlConnection = new SqlConnection(_connectionString);
@@ -138,6 +142,19 @@ WHERE [ID] = @ID";
             await sqlConnection.OpenAsync();
             return await cmd.ExecuteNonQueryAsync();
         }
+     
+        public async Task<bool> SupplierExistsByRC(string rc)
+        {
+            await using var connection = new SqlConnection(_connectionString);
 
+            SqlCommand command = new SqlCommand(selectSupplierCountByIdQuery, connection);
+            command.Parameters.AddWithValue("@RC", rc);
+            connection.Open();
+
+            int count = (int)(await command.ExecuteScalarAsync() ?? 0);
+
+            return count > 0;
+        }
+        
     }
 }

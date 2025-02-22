@@ -6,7 +6,7 @@
         public Guid ID { set; get; }
         public string RC { set; get; }
 
-        public int NIS { set; get; }
+        public long NIS { set; get; }
 
         public string RIB { set; get; }
 

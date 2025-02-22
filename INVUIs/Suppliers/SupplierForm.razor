@@ -82,7 +82,8 @@
                             <ValidationMessage For="() => newSupplier.BankAgency" />
                         </div>
                     </div>
-
+                    @if (@result != null) { @if (@result.ErrorCodes is not null) { <div class="D-eroor-text">@foreach (var error in result.ErrorCodes) { <span> @error.Message !</span> }</div> }
+                    @if (@result.Successed) { <div class="D-success-text">"Laboratory is Created"</div>} }
                     <div class="commend-pos-btn">
                         <button type="submit">Create</button>
                         <button type="button" @onclick="close">Close</button>

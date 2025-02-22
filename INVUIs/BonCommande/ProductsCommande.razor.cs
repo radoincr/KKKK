@@ -14,6 +14,26 @@ public partial class ProductsCommande : ComponentBase
     {
         showPopup = true;
     }
+    private ProductModel? selectedProductModel = null;
+    [Parameter] public EventCallback<ProductModel> OnEditProduct { get; set; }
+
+
+    private void EditProduct(ProductModel product)
+    {
+        selectedProductModel = new ProductModel
+        {
+            ID = product.ID,
+            IDPurchaseOrder = product.IDPurchaseOrder,
+            Designation = product.Designation,
+            UnitMeasure = product.UnitMeasure,
+            Quantity = product.Quantity,
+            UnitPrice = product.UnitPrice,
+            TVA = product.TVA,
+            DefaultTVARate = product.DefaultTVARate
+        };
+
+        OnEditProduct.InvokeAsync(selectedProductModel);
+    }
     private void DeleteProduct(ProductModel product)
     {
         products.Remove(product);
@@ -23,7 +43,7 @@ public partial class ProductsCommande : ComponentBase
         }
         OnProductAddProduct.InvokeAsync(products);
     }
-    private async Task SaveProduct()
+    public async Task SaveProduct()
     {
         if (newProduct.Quantity > 0)
         {
@@ -41,7 +61,7 @@ public partial class ProductsCommande : ComponentBase
             });
             closePopup();
             Clear();
-            OnProductAddProduct.InvokeAsync(products);
+            await OnProductAddProduct.InvokeAsync(products);
         }
     }
     private async Task Clear()
@@ -57,4 +77,9 @@ public partial class ProductsCommande : ComponentBase
     private bool Display = false;
     public void Show()=>Display=!Display;
     public void Close()=>Display=false;
+    public async Task ProductPass()
+    {
+        await OnProductAddProduct.InvokeAsync(products);
+    }
+    
 }

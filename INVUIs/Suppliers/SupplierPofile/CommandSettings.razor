@@ -4,47 +4,47 @@
 
         @if (purchase is null || purchase.Count == 0)
         {
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Number</th>
-                    <th>Supplier Name</th>
-                    <th>Date</th>
-                    <th>State</th>
-                </tr>
-                </thead>
-                <tbody>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Number</th>
+                <th>Supplier Name</th>
+                <th>Date</th>
+                <th>State</th>
+            </tr>
+            </thead>
+            <tbody>
 
-                <tr>
-                    <td colspan="4">Unavailable Data</td>
-                </tr>
+            <tr>
+                <td colspan="4">Unavailable Data</td>
+            </tr>
 
-                </tbody>
-            </table>
+            </tbody>
+        </table>
         }
         else
         {
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Number</th>
-                    <th>Date</th>
-                    <th>State</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var a in purchase)
-                {
-                    <tr style="cursor: pointer;" onmouseover="this.style.backgroundColor='#091f33'" onmouseout="this.style.backgroundColor=''"
-                        @onclick="() => navigateToPurchase(a.ID)">
-                        <td>@a.Number</td>
-                        <td>@a.Date</td>
-                        <td>@a.Status</td>
-                    </tr>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Number</th>
+                <th>Date</th>
+                <th>State</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var a in purchase)
+            {
 
-                }
-                </tbody>
-            </table>
+            <tr @onclick="() => navigateToPurchase(a.ID)">
+                <td>@a.Number</td>
+                <td>@a.Date</td>
+                <td><Status status="@a.Status" /></td>
+            </tr>
+
+            }
+            </tbody>
+        </table>
         }
     </div>
 </div>

@@ -41,7 +41,7 @@ namespace Web.Models.SupplierModel
         public long NIF { get; set; }
 
         [Required(ErrorMessage = "NIS is required.")]
-        public int NIS { get; set; }
+        public long NIS { get; set; }
 
         [Required(ErrorMessage = "RIB is required.")]
         [StringLength(20, MinimumLength = 20, ErrorMessage = "RIB must be exactly 20 characters.")]

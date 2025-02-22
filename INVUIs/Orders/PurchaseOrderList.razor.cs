@@ -13,7 +13,7 @@ public partial class PurchaseOrderList
     [Inject] public NavigationManager navigationManager { set; get; }
 
     public async Task navigatepage( Guid id)
-    {    preloadService.Show();
+    {   preloadService.Show();
          await Task.Delay(2000);
         Navigation.NavigateTo($"/profileOrder/{id}");
          preloadService.Hide();

@@ -109,7 +109,7 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
             return purchaseOrders;
         }
 
-        public async Task<int> InsertPurchaseOrder(PurchaseOrder purchaseOrder)
+        public async Task<int> InsertPurchaseOrder(PurchaseOrder purchaseOrder,decimal tht,decimal tva)
         {
             try
             {
@@ -125,9 +125,9 @@ namespace INV.Infrastructure.Storage.PurchaseOrderStorages
                 cmd.Parameters.AddWithValue("@Article", purchaseOrder.Article);
                 cmd.Parameters.AddWithValue("@TypeBudget", purchaseOrder.TypeBudget);
                 cmd.Parameters.AddWithValue("@TypeService", purchaseOrder.TypeService);
-                cmd.Parameters.AddWithValue("@THT", purchaseOrder.THT);
-                cmd.Parameters.AddWithValue("@TVA", purchaseOrder.TVA);
-                cmd.Parameters.AddWithValue("@TTC", purchaseOrder.TTC);
+                cmd.Parameters.AddWithValue("@THT",tht);
+                cmd.Parameters.AddWithValue("@TVA", tva);
+                cmd.Parameters.AddWithValue("@TTC", tht+tva);
                 cmd.Parameters.AddWithValue("@CompletionDelay", purchaseOrder.CompletionDelay);
                 cmd.Parameters.AddWithValue("@Behalf", purchaseOrder.Behalf);
 

@@ -6,4 +6,5 @@ namespace INVUIs.Suppliers.SupplierPofile;
 public partial class ProfileOverview
 {
     [Parameter] public Supplier Supplier { get; set; }
+    private EditProfileForm editProfileForm;
 }
