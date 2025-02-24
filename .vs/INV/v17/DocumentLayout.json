@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4A70422-573D-4D8A-81A1-9923CD3A5846}|Web\\INV.Web.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4A70422-573D-4D8A-81A1-9923CD3A5846}|Web\\INV.Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4A70422-573D-4D8A-81A1-9923CD3A5846}|Web\\INV.Web.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\web\\components\\pages\\suppliers\\supplierlistpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4A70422-573D-4D8A-81A1-9923CD3A5846}|Web\\INV.Web.csproj|solutionrelative:web\\components\\pages\\suppliers\\supplierlistpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\invuis\\suppliers\\supplierlist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\suppliers\\supplierlist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\invuis\\suppliers\\supplierlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\suppliers\\supplierlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4A70422-573D-4D8A-81A1-9923CD3A5846}|Web\\INV.Web.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\web\\components\\pages\\suppliers\\supplierlistpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4A70422-573D-4D8A-81A1-9923CD3A5846}|Web\\INV.Web.csproj|solutionrelative:web\\components\\pages\\suppliers\\supplierlistpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\invuis\\suppliers\\supplierform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\suppliers\\supplierform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dell g3\\riderprojects\\inv2\\invuis\\suppliers\\supplierform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\suppliers\\supplierform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\Web\\Program.cs",
+              "RelativeDocumentMoniker": "Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\Web\\Program.cs",
+              "RelativeToolTip": "Web\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvxsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:10:49.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SupplierForm.razor",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierForm.razor",
+              "RelativeDocumentMoniker": "INVUIs\\Suppliers\\SupplierForm.razor",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierForm.razor",
+              "RelativeToolTip": "INVUIs\\Suppliers\\SupplierForm.razor",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T17:51:05.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SupplierListPage.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor.cs",
+              "RelativeDocumentMoniker": "Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor.cs",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor.cs",
+              "RelativeToolTip": "Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAwwBQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:50:41.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SupplierList.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierList.razor.cs",
+              "RelativeDocumentMoniker": "INVUIs\\Suppliers\\SupplierList.razor.cs",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierList.razor.cs",
+              "RelativeToolTip": "INVUIs\\Suppliers\\SupplierList.razor.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:50:34.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SupplierList.razor",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierList.razor",
+              "RelativeDocumentMoniker": "INVUIs\\Suppliers\\SupplierList.razor",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierList.razor",
+              "RelativeToolTip": "INVUIs\\Suppliers\\SupplierList.razor",
+              "ViewState": "AgIAAAgAAAAAAAAAAIAwwBMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T17:49:05.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SupplierForm.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierForm.razor.cs",
+              "RelativeDocumentMoniker": "INVUIs\\Suppliers\\SupplierForm.razor.cs",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\INVUIs\\Suppliers\\SupplierForm.razor.cs",
+              "RelativeToolTip": "INVUIs\\Suppliers\\SupplierForm.razor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAnwBoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:46:15.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SupplierListPage.razor",
+              "DocumentMoniker": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor",
+              "RelativeDocumentMoniker": "Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor",
+              "ToolTip": "C:\\Users\\Dell G3\\RiderProjects\\INV2\\Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor",
+              "RelativeToolTip": "Web\\Components\\Pages\\Suppliers\\SupplierListPage.razor",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T17:45:00.09Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1138,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

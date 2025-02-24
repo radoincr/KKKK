@@ -12,19 +12,17 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Blazor.Bootstrap" Version="3.3.1" />
-        <PackageReference Include="Blazorise.Bootstrap5" Version="1.6.2" />
-        <PackageReference Include="Blazorise.Charts" Version="1.5.3" />
-        <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.7.1" />
-        <PackageReference Include="BootstrapBlazor.BootstrapIcon.Extensions" Version="9.1.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <ProjectReference Include="..\INV.Shared\INV.Shared.csproj" />
       <ProjectReference Include="..\INV.App\INV.App.csproj" />
       <ProjectReference Include="..\INV.Domain\INV.Domain.csproj" />
       <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj" />
       <ProjectReference Include="..\INV.Infrastructure\INV.Infrastructure.csproj" />
+      <ProjectReference Include="..\INV.Shared\INV.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.2" />
+      <PackageReference Include="Radzen.Blazor" Version="6.1.1" />
     </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
-﻿@page "/a"
+@*@page "/a"
 @using INV.App.IGeneratePdfServices
 @rendermode InteractiveServer
 @inject IJSRuntime JS
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Error> L
 <button onclick="@generate">GEN</button>
 
 
@@ -37,4 +38,4 @@
         document.body.removeChild(a);
         window.URL.revokeObjectURL(url);
     };
-</script>
+</script>*@

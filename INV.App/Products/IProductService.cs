@@ -1,12 +1,13 @@
-﻿using INV.Domain.Entities.ProductEntity;
+﻿using INV.Domain.Entities.Products;
+using INV.Domain.Shared;
 
 namespace INV.App.Products
 {
     public interface IProductService
     {
-        Task<int> createProduct(Product product);
+        Task<Result> CreateProduct(Product product);
         Task<int> SetProducts(Product product);
         Task<int> RemoveProduct(Guid id);
-        Task<List<Product>> SelectProductsByPurchaseOrderId(Guid purchaseID);
+        Task<List<Product>> SelectProducts();
     }
 }

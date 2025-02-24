@@ -1,0 +1,51 @@
+﻿@using INV.App.Suppliers
+@using INVUIs.Suppliers
+
+
+<div class="supplier-details-container">
+
+    <SupplierSelector Title="Select a Supplier" @ref="supplierSelector"
+                      OnSelected="SupplierSelectednew" Supplier="supplierInfo"/>
+    @if (selectedSupplier != null)
+    {
+        <RadzenCard class="supplier-card fade-in" Variant="Variant.Filled">
+            <RadzenStack Orientation="Orientation.Vertical" AlignItems="AlignItems.Start" Gap="1rem">
+                <RadzenHeading Size="4">Supplier Details</RadzenHeading>
+
+                <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Start" Gap="1rem">
+                    <RadzenIcon Icon="account_circle" Style="font-size: 50px; color: var(--primary-color);"/>
+                    <RadzenLabel class="supplier-name">@selectedSupplier.Name</RadzenLabel>
+                </RadzenStack>
+
+                <RadzenDataList Data="@(new List<SupplierInfo> { selectedSupplier })" Style="width: 100%;">
+                    <Template Context="supplier">
+                        <div class="supplier-detail">
+                            <RadzenIcon Icon="business"/>
+                            <label>
+                                <span style="font-weight: bold;">Company:</span> <span style="font-weight: normal;">@supplier.CompanyName</span>
+                            </label>
+                        </div>
+                        <div class="supplier-detail">
+                            <RadzenIcon Icon="location_on"/>
+                            <label>
+                                <span style="font-weight: bold;">Address:</span> <span style="font-weight: normal;">@supplier.Address</span>
+                            </label>
+                        </div>
+                        <div class="supplier-detail">
+                            <RadzenIcon Icon="email"/>
+                            <label>
+                                <span style="font-weight: bold;">Email:</span> <span style="font-weight: normal;">@supplier.Email</span>
+                            </label>
+                        </div>
+                        <div class="supplier-detail">
+                            <RadzenIcon Icon="phone"/>
+                            <label>
+                                <span style="font-weight: bold;">Phone:</span> <span style="font-weight: normal;">@supplier.Phone</span>
+                            </label>
+                        </div>
+                    </Template>
+                </RadzenDataList>
+            </RadzenStack>
+        </RadzenCard>
+    }
+</div>

@@ -1,0 +1,12 @@
+﻿@page "/purchases"
+@using INVUIs.Purchases
+<PageTitle>List Purchase Order</PageTitle>
+
+<div class="list-title">
+    <h4>List of Purchase Orders</h4>
+</div>
+
+<button type="button" class="addsupplier-button" @onclick="NavigateToPurchaseOrder"><i class="bi bi-cart-plus"></i> Add a Purchase Order</button>
+
+<PurchaseList purchaseOrderInfos="purchaseOrderInfos"/>
+

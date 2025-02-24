@@ -1,0 +1,40 @@
+﻿@page "/a"
+@using INV.App.IGeneratePdfServices
+@rendermode InteractiveServer
+@inject IJSRuntime JS
+<button onclick="@generate">GEN</button>
+
+
+@code{
+    [Inject] public IGenPurchaseOrderPDF genPurchaseOrderPdf { get; set; }
+
+    private async Task generate()
+    {
+        try
+        {
+           await genPurchaseOrderPdf.GeneratePurchaseOrderPdf(30, @"C:\Users\radoi\Videos\pdf.pdf", @"C:\Users\radoi\RiderProjects\INV2\Web\Components\Pages\a.html");
+           var fileBytes = await File.ReadAllBytesAsync("C://Users//radoi//Videos//pdf.pdf");
+           await JS.InvokeVoidAsync("downloadFile", fileBytes, "C://Users//radoi//Videos//pdf.pdf");
+            Console.WriteLine("true");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("erro:" + e.Message);
+            throw;
+        }
+    }
+}
+
+<script>
+    window.downloadFile = (bytes, fileName) => {
+        const blob = new Blob([bytes], { type: 'application/pdf' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    };
+</script>

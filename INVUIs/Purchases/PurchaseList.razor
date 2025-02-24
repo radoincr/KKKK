@@ -1,0 +1,50 @@
+﻿@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<div class="d-flex justify-content-between">
+    <input type="text" @bind-value="SearchTerm" placeholder="Search by order number or by supplier name" class="number-input" @bind-value:event="oninput"/>
+    <div>
+        @Pills
+    </div>
+</div> <br/><br/><br/>
+@if (purchaseOrderInfos is null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div class="Container-list">
+
+    <table  style="width:600px;">
+        <thead>
+        <tr>
+            <th style="width:2rem"></th>
+            <th style="width:3rem"></th>
+            <th style="width:4rem;text-align: center;">Date</th>
+            @if (ShowSupplier)
+                    {
+                        <th> Supplier Name</th>
+
+                    }
+                    </tr>
+        </thead>
+        <tbody>
+        @foreach (var purchaseOrderInfo in displayedItems)
+        {
+                <tr @onclick="() => navigatepage(purchaseOrderInfo.Id)">
+                    <td style="text-align: center;"><Status status="@purchaseOrderInfo.Status" icon="true" text="false" /></td>
+                    <td style="text-align: center;">@purchaseOrderInfo.Number</td>
+                    <td style="text-align: center;">@purchaseOrderInfo.Date</td>
+                    @if (ShowSupplier)
+                        {
+                            <td style="text-align: center;">@purchaseOrderInfo.SupplierName</td>
+                        }
+                    
+
+                </tr>
+        }
+        </tbody>
+    </table>
+    </div>
+}
+<Preload LoadingText="Loading..." Class="align-content-center" />

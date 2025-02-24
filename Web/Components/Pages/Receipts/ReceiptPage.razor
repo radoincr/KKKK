@@ -1,0 +1,20 @@
+﻿@page "/reception/{Id:guid}"
+@using INV.App.Receipts
+@using INV.App.Services
+@using INV.Domain.Shared
+
+<NewReception ReceiptInfo="receiptInfo"/>
+
+@code {
+    
+    [Inject] public IReceiptService receiptService { set; get; }
+
+    [Parameter] public Guid Id { get; set; }
+    public ReceiptInfo receiptInfo { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        receiptInfo = await receiptService.GetReceiptInfoById(Id);
+    }
+
+}

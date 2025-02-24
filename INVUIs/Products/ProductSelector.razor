@@ -1,0 +1,91 @@
+﻿@using INVUIs.Products.ProductsModel
+
+@if (visibility)
+{
+    <div class="popup">
+        <div class="popup-content">
+            <RadzenTemplateForm TItem="ProductModel" Data="@selectedProductModel" Submit="@onSelectClicked">
+                <RadzenStack Gap="1rem">
+                    <RadzenDropDown TValue="Guid?" Name="ProductId" @bind-Value="SelectedProductId"
+                                    Data="@filteredProducts"
+                                    TextProperty="Designation" ValueProperty="Id"
+                                    Style="width: 100%; font-size: 14px;"
+                                    AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                    Change="onProductSelected">
+                        <Template Context="product">
+                            @if (product.Id == Guid.Empty)
+                            {
+                                <div class="d-flex align-items-center" @onclick:stopPropagation="true"
+                                     @onclick="showProductForm" style="cursor: pointer;">
+                                    <RadzenIcon Icon="add_circle" Style="margin-right: 8px;"/>
+                                    <span>Create Product</span>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="d-flex align-items-center">
+                                    <span>@product.Designation</span>
+                                </div>
+                            }
+                        </Template>
+                    </RadzenDropDown>
+
+                    @if (selectedProductModel != null)
+                    {
+                        <RadzenRow>
+                            <RadzenColumn Size="12">
+                                <RadzenLabel Text="Designation:" Style="font-size: 14px;"/>
+                                <RadzenTextBox ReadOnly="true" Value="@selectedProductModel.Designation" Style="width: 100%; opacity: 0.6; font-size: 14px;"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+
+                        <RadzenRow>
+                            <RadzenColumn Size="12">
+                                <RadzenLabel Text="Unit of Measure:" Style="font-size: 14px;"/>
+                                <RadzenTextBox ReadOnly="true" Value="@selectedProductModel.UnitMeasure" Style="width: 100%; opacity: 0.6; font-size: 14px;"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+
+                        <RadzenRow>
+                            <RadzenColumn Size="12">
+                                <RadzenLabel Text="TVA:" Style="font-size: 14px;"/>
+                                <RadzenTextBox ReadOnly="true" Value="@selectedProductModel.TVA.ToString()" Style="width: 100%;  opacity: 0.6; font-size: 14px;"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+
+                        <RadzenRow>
+                            <RadzenColumn Size="12">
+                                <RadzenLabel Text="Unit Price *" Style="font-size: 14px;"/>
+                                <RadzenNumeric TValue="decimal" Name="UnitPrice" @bind-Value="UnitPrice" Min="1"
+                                               Style="width: 100%; font-size: 14px;"/>
+                                <RadzenRequiredValidator Component="UnitPrice" Text="Unit Price is required" Style="font-size: 12px;"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+
+                        <RadzenRow>
+                            <RadzenColumn Size="12">
+                                <RadzenLabel Text="Quantity *" Style="font-size: 14px;"/>
+                                <RadzenNumeric TValue="int" Name="Quantity" @bind-Value="Quantity" Min="1"
+                                               Style="width: 100%; font-size: 14px;"/>
+                                <RadzenRequiredValidator Component="Quantity" Text="Quantity is required" Style="font-size: 12px;"/>
+                            </RadzenColumn>
+                        </RadzenRow>
+                    }
+
+                    <RadzenRow>
+                        <RadzenColumn Size="12" class="rz-text-align-center">
+                            <RadzenButton Text="Cancel" ButtonStyle="@ButtonStyle.Danger" ButtonType="ButtonType.Button"
+                                          Click="@HideModal" Style="font-size: 14px;"/>
+                            <RadzenButton Text="Select" ButtonType="ButtonType.Submit" Style="margin-left: 1rem; font-size: 14px;"
+                                          Disabled="@(selectedProductModel == null)"
+                                          Click="@Save"/>
+                        </RadzenColumn>
+                    </RadzenRow>
+
+                </RadzenStack>
+            </RadzenTemplateForm>
+        </div>
+    </div>
+}
+
+<ProductForm @ref="productForm"/>

@@ -1,17 +1,22 @@
 ﻿using INV.App.Suppliers;
 using Microsoft.AspNetCore.Components;
 
-namespace Web.Components.Pages.Suppliers;
-
-public partial class SupplierListPage
+namespace INV.Web.Components.Pages.Suppliers
 {
- [Inject] public ISupplierService supplierService { get; set; }
+    public partial class SupplierListPage : ComponentBase
+    {
+        [Inject] public ISupplierService supplierService { get; set; }
 
- private List<SupplierInfo> suppliers;
+        
 
- protected override async Task OnInitializedAsync()
- {
-    
-     suppliers = await supplierService.GetAllSupplier();
- }
+        private List<SupplierInfo> suppliers;
+
+        string texte = DateTime.Now.ToString("dd/MM/yyyy HH:ss");
+
+        protected override async Task OnInitializedAsync()
+        {
+            suppliers = await supplierService.GetAllSupplier();
+        }
+       
+    }
 }

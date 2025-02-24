@@ -1,61 +1,68 @@
 ﻿using INV.App.Suppliers;
 using Microsoft.AspNetCore.Components;
 
-namespace INVUIs.Suppliers;
-
-public partial class SupplierList
+namespace INVUIs.Suppliers
 {
-    [Inject] private ISupplierService supplierService { get; set; }
-    [Parameter] public List<SupplierInfo> Suppliers { get; set; } = new();
-    public List<SupplierInfo> supplierFilter { get; set; } = new();
-    private string _searchName = "";
-    private SupplierForm supplierSelector = new();
-    [Inject] private NavigationManager navigationManager { get; set; }
-    private string selectedLink(Guid id) => $"suppliers/{id}";
-    private void NavigateToSupplierDetails(Guid supplierId)
+    public partial class SupplierList
     {
-        navigationManager.NavigateTo($"/r/{supplierId}");
-    }
-    protected override void OnParametersSet()
-    {
-        supplierFilter = Suppliers;
-    }
-
-    private string searchName
-    {
-        get => _searchName;
-        set
+        [Inject] private ISupplierService supplierService { get; set; }
+        [Parameter] public List<SupplierInfo> Suppliers { get; set; } = new();
+        public List<SupplierInfo> supplierFilter { get; set; } = new();
+        private string _searchName = "";
+        [Inject] private NavigationManager navigationManager { get; set; }
+        private string selectedLink(Guid id) => $"suppliers/{id}";
+        private void NavigateToSupplierDetails(Guid supplierId)
         {
-            _searchName = value;
-            getByName();
+            navigationManager.NavigateTo($"/suppliers/{supplierId}");
         }
-    }
-
-    private void getByName()
-    {
-        if (string.IsNullOrWhiteSpace(searchName))
+        protected override void OnParametersSet()
         {
-            supplierFilter = Suppliers.ToList();
-            return;
+            supplierFilter = Suppliers;
+        }
+        private SupplierForm supplierForm;
+        private void showSupplierForm()
+        {
+            if (supplierForm != null)
+            {
+                supplierForm.ShowModal();
+            }
+        }
+        private string searchName
+        {
+            get => _searchName;
+            set
+            {
+                _searchName = value;
+                getByName();
+            }
         }
 
-        string searchLower = searchName.Trim().ToLower();
+        private void getByName()
+        {
+            if (string.IsNullOrWhiteSpace(searchName))
+            {
+                supplierFilter = Suppliers.ToList();
+                return;
+            }
 
-        supplierFilter = Suppliers
-            .Where(s => s.Name.ToLower().Contains(searchLower) || s.Email.ToLower().Contains(searchLower))
-            .OrderBy(s => s.Name)
-            .ToList();
+            string searchLower = searchName.Trim().ToLower();
 
-        StateHasChanged();
-    }
+            supplierFilter = Suppliers
+                .Where(s => s.Name.ToLower().Contains(searchLower) || s.Email.ToLower().Contains(searchLower))
+                .OrderBy(s => s.Name)
+                .ToList();
 
-    public void NavigatePage()
-    {
-        navigationManager.NavigateTo("Supplier");
-    }
+            StateHasChanged();
+        }
 
-    public void ShowModal()
-    {
-        StateHasChanged();
+        public void NavigatePage()
+        {
+            navigationManager.NavigateTo("Supplier");
+        }
+
+        public void ShowModal()
+        {
+            StateHasChanged();
+        }
     }
 }

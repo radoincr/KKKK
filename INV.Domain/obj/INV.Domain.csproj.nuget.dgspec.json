@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj": {}
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj",
         "projectName": "INV.Domain",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj",
         "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\obj\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -50,6 +50,10 @@
             "BootstrapBlazor.BootstrapIcon.Extensions": {
               "target": "Package",
               "version": "[9.1.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",

@@ -1,4 +1,4 @@
-﻿@if (displayModal)
+@if (displayModal)
 {
     <div class="modal-overlay">
         <div class="modal-content">
@@ -6,8 +6,8 @@
                 <DataAnnotationsValidator />
                 <ValidationSummary />
                 <div class="commend-content">
-                    <div class="commend-titel">
-                        <h3>Information of Supplier</h3>
+                    <div class="titel-primary">
+                        <h2>Information of Supplier</h2>
                     </div>
 
                     <div class="input">
@@ -15,7 +15,8 @@
                             <label>Full Name</label>
                             <InputText @bind-Value="newSupplier.NameSupplier" placeholder="Enter Supplier Name" />
                             <ValidationMessage For="() => newSupplier.NameSupplier" />
-                        </div>  </div>
+                        </div>  
+                        </div>
                         <div class="input">
                         <div class="commend-input">
                             <label>Company Name (Legal from determination)</label>
@@ -51,7 +52,7 @@
                         </div>
                         <div class="commend-input">
                             <label>Article number (ART)</label>
-                            <InputNumber @bind-Value="newSupplier.ART" placeholder="Enter ART"/>
+                            <InputText @bind-Value="newSupplier.ART" placeholder="Enter ART"/>
                             <ValidationMessage For="() => newSupplier.ART"/>
                         </div>
                     </div>
@@ -59,12 +60,12 @@
                     <div class="input2">
                         <div class="commend-input">
                             <label>NIF</label>
-                            <InputNumber @bind-Value="newSupplier.NIF" placeholder="Enter NIF"/>
+                            <InputText @bind-Value="newSupplier.NIF" placeholder="Enter NIF"/>
                             <ValidationMessage For="() => newSupplier.NIF"/>
                         </div>
                         <div class="commend-input">
                             <label>NIS</label>
-                            <InputNumber @bind-Value="newSupplier.NIS" placeholder="Enter NIS" />
+                            <InputText @bind-Value="newSupplier.NIS" placeholder="Enter NIS" />
                             <ValidationMessage For="() => newSupplier.NIS" />
                         </div>
                     </div>
@@ -82,14 +83,19 @@
                             <ValidationMessage For="() => newSupplier.BankAgency" />
                         </div>
                     </div>
+                    @*
                     @if (@result != null) { @if (@result.ErrorCodes is not null) { <div class="D-eroor-text">@foreach (var error in result.ErrorCodes) { <span> @error.Message !</span> }</div> }
                     @if (@result.Successed) { <div class="D-success-text">"Laboratory is Created"</div>} }
-                    <div class="commend-pos-btn">
-                        <button type="submit">Create</button>
-                        <button type="button" @onclick="close">Close</button>
+                    *@
+                    <div class="footer-form">
+                        <button class="btn-custom btn-cancel" type="button" @onclick="close">Close</button>
+                        <button class="btn-custom btn-submit" type="submit">Create</button>
+                        
                     </div>
                 </div>
             </EditForm>
         </div>
     </div>
+
+
 }

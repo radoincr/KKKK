@@ -275,6 +275,20 @@ select#supplierExists {
 .deleteproduct-button:hover {
     background-color: darkred;
 }
+.editproduct-button {
+    background-color: #178f17;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2px;
+    color: white; 
+    padding: 5px 10px; 
+}
+.editproduct-button:hover {
+    background-color: darkgreen;
+}
+
 .bi-trash-fill {
     color: white;
     font-size: 1.1rem;

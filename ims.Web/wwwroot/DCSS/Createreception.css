@@ -1,0 +1,118 @@
+﻿/* Style général pour le conteneur */
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+    /* Titre du formulaire */
+    .form-container h3 {
+        text-align: center;
+        color: #333;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+/* Lignes et champs */
+.line-1, .line-2, .line-3, .line-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.fieldInput {
+    flex: 1 1 calc(50% - 20px); /* 2 colonnes */
+    display: flex;
+    flex-direction: column;
+}
+
+    .fieldInput label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .fieldInput input,
+    .fieldInput select {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: border-color 0.3s ease;
+    }
+
+        .fieldInput input:focus,
+        .fieldInput select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+/* Boutons */
+.pos-btn-reception2 {
+    text-align: end;
+    margin-top: 20px;
+}
+
+/* Texte d'état de chargement */
+.fieldInput p {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .fieldInput {
+        flex: 1 1 100%; /* Passe à une seule colonne sur les petits écrans */
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+    .popup-content h3 {
+        margin-top: 0;
+    }
+
+.cart-container {
+    margin-top: 30px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .cart-table th, .cart-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }

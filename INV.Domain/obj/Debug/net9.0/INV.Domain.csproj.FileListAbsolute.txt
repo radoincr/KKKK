@@ -75,3 +75,42 @@ C:\Users\radoi\OneDrive\Desktop\web2\INV.Domain\obj\Debug\net9.0\INV.Domain.dll
 C:\Users\radoi\OneDrive\Desktop\web2\INV.Domain\obj\Debug\net9.0\refint\INV.Domain.dll
 C:\Users\radoi\OneDrive\Desktop\web2\INV.Domain\obj\Debug\net9.0\INV.Domain.pdb
 C:\Users\radoi\OneDrive\Desktop\web2\INV.Domain\obj\Debug\net9.0\ref\INV.Domain.dll
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\bin\Debug\net9.0\INV.Domain.deps.json
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.AssemblyReference.cache
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfoInputs.cache
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfo.cs
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.sourcelink.json
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.dll
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\refint\INV.Domain.dll
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\INV.Domain.pdb
+C:\Users\Dali_Raki\Source\Repos\INVupdate\INV.Domain\obj\Debug\net9.0\ref\INV.Domain.dll
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\bin\Debug\net9.0\INV.Domain.deps.json
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.AssemblyReference.cache
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfoInputs.cache
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfo.cs
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.sourcelink.json
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.dll
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\refint\INV.Domain.dll
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.pdb
+C:\Users\Dell G3\RiderProjects\INV2\INV.Domain\obj\Debug\net9.0\ref\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\bin\Debug\net9.0\INV.Domain.deps.json
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.AssemblyReference.cache
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfoInputs.cache
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.AssemblyInfo.cs
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.csproj.CoreCompileInputs.cache
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.sourcelink.json
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\refint\INV.Domain.dll
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\INV.Domain.pdb
+C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.Domain\obj\Debug\net9.0\ref\INV.Domain.dll

@@ -1,42 +1,36 @@
-﻿using Microsoft.AspNetCore.Components;
-using INV.App.Suppliers;
-namespace INVUIs.Suppliers;
+﻿using INV.App.Suppliers;
+using Microsoft.AspNetCore.Components;
+using Radzen.Blazor;
 
-public partial class SupplierSelector 
+namespace INVUIs.Suppliers
 {
-    [Parameter] public List<SupplierInfo> Supplier { get; set; }
-    [Parameter] public string Title { get; set; }
-    [Parameter] public EventCallback<SupplierInfo> OnSelected { get; set; }
-    public SupplierInfo SelectedSupplier = null;
-    private bool displayModal = false;
-    private string SearchTerm { get; set; } = "";
-
-    private List<SupplierInfo> displayedItems =>
-        Supplier?.Where(i => i.Name?.ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) == true ||
-                             i.Email?.ToString().ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) == true)
-            .ToList() ?? new List<SupplierInfo>();
-    private void close()
+    public partial class SupplierSelector
     {
-        Supplier = null;
-        displayModal = false;
-        StateHasChanged();
-    }
+        [Parameter] public string Title { set; get; }
+        [Parameter] public EventCallback<SupplierInfo> OnSelected { set; get; }
+        [Parameter] public List<SupplierInfo> Supplier { set; get; }
+        [Inject] public ISupplierService supplierService { set; get; }
 
-    private void selectItem(SupplierInfo selected)
-    {
-        OnSelected.InvokeAsync(selected);
-        close();
-    }
+        private IEnumerable<SupplierInfo> displayedItems = new List<SupplierInfo>();
+        private RadzenDataGrid<SupplierInfo> grid;
+        private SupplierInfo selectedSupplier = new();
 
-    public void ShowModal()
-    {
-        displayModal = true;
-        StateHasChanged();
-    }
+        
+        protected override async Task OnInitializedAsync()
+        {
+            await Task.Delay(1000);
+            displayedItems = await supplierService.GetAllSupplier();
+            StateHasChanged();
+        }
 
-    public void ShowModal(List<SupplierInfo> Supplier)
-    {
-        Supplier = Supplier;
-        ShowModal();
+        private async Task selectRowSepplier(SupplierInfo supplier)
+        {
+            if (supplier != null)
+            {
+                selectedSupplier = supplier;
+                await OnSelected.InvokeAsync(supplier);
+            }
+        }
+
     }
 }

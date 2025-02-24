@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Implementation\\INV.Implementation.csproj": {}
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Implementation\\INV.Implementation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj",
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj",
         "projectName": "INV.App",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj",
         "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\obj\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj"
               }
             }
           }
@@ -54,6 +54,10 @@
             "BootstrapBlazor.BootstrapIcon.Extensions": {
               "target": "Package",
               "version": "[9.1.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -92,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj",
         "projectName": "INV.Domain",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj",
         "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\obj\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -139,6 +143,10 @@
               "target": "Package",
               "version": "[9.1.0, )"
             },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -172,14 +180,14 @@
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Implementation\\INV.Implementation.csproj": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Implementation\\INV.Implementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Implementation\\INV.Implementation.csproj",
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Implementation\\INV.Implementation.csproj",
         "projectName": "INV.Implementation",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Implementation\\INV.Implementation.csproj",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Implementation\\INV.Implementation.csproj",
         "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Implementation\\obj\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Implementation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -194,14 +202,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj"
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj"
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj"
               }
             }
           }
@@ -237,9 +245,21 @@
               "target": "Package",
               "version": "[2.7.0, )"
             },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
             },
             "NumberToWordsConverter": {
               "target": "Package",
@@ -249,9 +269,21 @@
               "target": "Package",
               "version": "[20.1.0, )"
             },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "System.Linq.Async": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
             }
           },
           "imports": [
@@ -274,14 +306,14 @@
         }
       }
     },
-    "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+    "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj",
         "projectName": "INV.Infrastructure",
-        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Infrastructure\\INV.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Infrastructure\\INV.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -296,11 +328,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.App\\INV.App.csproj"
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.App\\INV.App.csproj"
               },
-              "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj": {
-                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\web2\\INV.Domain\\INV.Domain.csproj"
+              "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj": {
+                "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj"
               }
             }
           }
@@ -324,9 +356,17 @@
               "target": "Package",
               "version": "[3.3.1, )"
             },
+            "BootstrapBlazor": {
+              "target": "Package",
+              "version": "[9.3.1-beta02, )"
+            },
             "BootstrapBlazor.BootstrapIcon.Extensions": {
               "target": "Package",
               "version": "[9.1.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.1, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -336,6 +376,14 @@
               "target": "Package",
               "version": "[9.0.1, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.13.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
             "PuppeteerSharp": {
               "target": "Package",
               "version": "[20.1.0, )"
@@ -343,6 +391,10 @@
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
             }
           },
           "imports": [

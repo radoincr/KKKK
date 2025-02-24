@@ -1,0 +1,21 @@
+﻿@page "/purchases/create"
+@rendermode InteractiveServer
+
+
+<PageTitle>Purchase Order</PageTitle>
+<h4>Order Document</h4>
+<PurchaseHeader OnPurchaseOrder="GetPurchase"></PurchaseHeader>
+<Accordion>
+    <AccordionItem Title="Definition of the economic operator" >
+        <Content>
+            <PurchaseSupplier  OnSupplier="GetSupplier"/>
+        </Content>
+    </AccordionItem>
+    
+    <AccordionItem Title="Products Order" >
+        <Content>
+            <PurchaseProducts  OnProductAddProduct="GetProduct"></PurchaseProducts>
+        </Content>
+    </AccordionItem>
+    <button type="button" class="create-button" @onclick="create">Register</button>
+</Accordion>

@@ -1,13 +1,14 @@
 ﻿using INV.App.Suppliers;
-using INV.Domain.Entities.SupplierEntity;
+using INV.Domain.Entities.Suppliers;
 using INV.Domain.Shared;
-using INVUIs.Models.Supplier;
+using INVUIs.Suppliers.Models;
 using Microsoft.AspNetCore.Components;
 
 namespace INVUIs.Suppliers
 {
-    public partial class SupplierForm
+    public partial class SupplierForm : ComponentBase
     {
+        [Parameter] public EventCallback<SupplierInfo> OnSave { get; set; }
         [Inject] public ISupplierService SupplierService { get; set; }
         SupplierModel newSupplier = new SupplierModel();
         private bool displayModal = false;
@@ -16,9 +17,9 @@ namespace INVUIs.Suppliers
 
         private void close()
         {
-            newSupplier = new SupplierModel(); // Reset instead of null
+            newSupplier = new SupplierModel();
             displayModal = false;
-            StateHasChanged(); // Force UI re-render
+            StateHasChanged();
         }
 
 
@@ -30,50 +31,32 @@ namespace INVUIs.Suppliers
 
         private async Task OnCreate()
         {
-            try
+            var sup = new Supplier()
             {
-                var sup = new Supplier()
-                {
-                    ID = Guid.NewGuid(),
-                    SupplierName = newSupplier.NameSupplier,
-                    CompanyName = newSupplier.NameCompany,
-                    AccountName = newSupplier.NameCompany,
-                    Email = newSupplier.Email,
-                    Address = newSupplier.Address,
-                    Phone = newSupplier.Phone,
-                    ART = newSupplier.ART,
-                    NIF = newSupplier.NIF,
-                    RC = newSupplier.RC,
-                    NIS = newSupplier.NIS,
-                    RIB = newSupplier.RIB,
-                    BankAgency = newSupplier.BankAgency
-                };
+                Id = Guid.NewGuid(),
+                ManagerName = newSupplier.NameSupplier,
+                CompanyName = newSupplier.NameCompany,
+                Email = newSupplier.Email,
+                Address = newSupplier.Address,
+                Phone = newSupplier.Phone,
+                ART = newSupplier.ART,
+                NIF = newSupplier.NIF,
+                RC = newSupplier.RC,
+                NIS = newSupplier.NIS,
+                RIB = newSupplier.RIB,
+                BankAgency = newSupplier.BankAgency
+            };
 
-                result = await SupplierService.AddSupplier(sup);
+            result = await SupplierService.AddSupplier(sup);
 
-                success = "the supplier has been added successfully";
-                if (result.Successed)
-                {
-                    await ClearForm();
-                }
-            }
-            catch (Exception ex)
+            success = "the supplier has been added successfully";
+            /*if (result.Successed)
             {
-                Console.WriteLine(ex.Message);
-            }
+              
+            }*/
+            await ClearForm();
         }
 
-        /*   private void ShowToast(string title, string message, ToastType type)
-           {
-               toastTitle = title;
-               toastMessage = message;
-               toastType = type;
-               isToastVisible = true;
-           }
-           public void CloseToast()
-           {
-               isToastVisible = false;
-           }*/
         private async Task ClearForm()
         {
             newSupplier = new SupplierModel();

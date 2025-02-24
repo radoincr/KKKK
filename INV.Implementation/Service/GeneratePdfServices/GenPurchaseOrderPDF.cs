@@ -1,52 +1,52 @@
-﻿using System.Text;
+﻿/*using System.Text;
 using INV.App.IGeneratePdfServices;
-using INV.Domain.Entities.ProductPDF;
-using INV.Domain.Entities.PurchaseOrders;
+
+using INV.Domain.Entities.Purchases;
 using INV.Domain.Entities.SupplierEntity;
 using INV.Implementation.Service.MyToolServices;
-using INV.Infrastructure.Storage.PurchaseOrderStorages;
+using INV.Infrastructure.Storage.PurchaseOrders;
 using PuppeteerSharp;
 using PuppeteerSharp.Media;
 
-namespace INV.Implementation.Service.GeneratePdfServices;
-
-public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
+namespace INV.Implementation.Service.GeneratePdfServices
 {
-    private readonly IPurchaseOrderStorage purchaseOrderStorage;
-
-    public GenPurchaseOrderPDF(IPurchaseOrderStorage purchaseOrderStorage)
+    public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
     {
-        this.purchaseOrderStorage = purchaseOrderStorage;
-    }
+        private readonly IPurchaseOrderStorage purchaseOrderStorage;
 
-    public async Task GeneratePurchaseOrderPdf(int purchaseOrderNumber, string outputPdfPath, string htmlTemplatePath)
-    {
-        try
+        public GenPurchaseOrderPDF(IPurchaseOrderStorage purchaseOrderStorage)
         {
-            var (purchaseOrders, suppliers, orderDetails) =
-                await purchaseOrderStorage.SelectPurchaseOrderDetails(purchaseOrderNumber);
+            this.purchaseOrderStorage = purchaseOrderStorage;
+        }
 
-            if (purchaseOrders==null)
-                throw new InvalidOperationException($"Nember vide{purchaseOrderNumber}!!");
-
-            string htmlContent = await File.ReadAllTextAsync(htmlTemplatePath);
-
-            string updatedHtmlContent = injectPurchaseOrderToHtml(htmlContent, purchaseOrders, suppliers, orderDetails);
-
-         /*await new BrowserFetcher().DownloadAsync();*/
-
-            await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
+        public async Task GeneratePurchaseOrderPdf(int purchaseOrderNumber, string outputPdfPath, string htmlTemplatePath)
+        {
+            try
             {
-                Headless = true,
-                ExecutablePath = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
-            });
-            await using var page = await browser.NewPageAsync();
-            await page.SetContentAsync(
-                $"<html dir='rtl'><head><meta charset='utf-8'></head><body>{updatedHtmlContent}</body></html>",
-                new NavigationOptions { WaitUntil = new[] { WaitUntilNavigation.Load } });
-            await page.AddStyleTagAsync(new AddTagOptions
-            {
-                Content = @"
+                var (purchaseOrders, suppliers, orderDetails) =
+                    await purchaseOrderStorage.SelectPurchaseOrderDetails(purchaseOrderNumber);
+
+                if (purchaseOrders==null)
+                    throw new InvalidOperationException($"Nember vide{purchaseOrderNumber}!!");
+
+                string htmlContent = await File.ReadAllTextAsync(htmlTemplatePath);
+
+                string updatedHtmlContent = injectPurchaseOrderToHtml(htmlContent, purchaseOrders, suppliers, orderDetails);
+
+             *//*await new BrowserFetcher().DownloadAsync();*//*
+
+                await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
+                {
+                    Headless = true,
+                    ExecutablePath = @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+                });
+                await using var page = await browser.NewPageAsync();
+                await page.SetContentAsync(
+                    $"<html dir='rtl'><head><meta charset='utf-8'></head><body>{updatedHtmlContent}</body></html>",
+                    new NavigationOptions { WaitUntil = new[] { WaitUntilNavigation.Load } });
+                await page.AddStyleTagAsync(new AddTagOptions
+                {
+                    Content = @"
         body { font-family: 'Amiri', 'Tajawal', 'Arial', sans-serif; direction: rtl; text-align: right; }
         
         .red { 
@@ -65,80 +65,80 @@ public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
             font-size: 18px;
         }
     "
-            });
+                });
 
-            await page.PdfAsync(outputPdfPath, new PdfOptions
+                await page.PdfAsync(outputPdfPath, new PdfOptions
+                {
+                    Format = PaperFormat.A4,
+                    PrintBackground = true,
+                    MarginOptions = new MarginOptions { Top = "20px", Bottom = "20px", Left = "20px", Right = "20px" },
+                });
+            }
+            catch (Exception ex)
             {
-                Format = PaperFormat.A4,
-                PrintBackground = true,
-                MarginOptions = new MarginOptions { Top = "20px", Bottom = "20px", Left = "20px", Right = "20px" },
-            });
+                Console.WriteLine($"{ex.Message}");
+                throw;
+            }
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"{ex.Message}");
-            throw;
-        }
-    }
 
-    private static string injectPurchaseOrderToHtml(string htmlContent, PurchaseOrder purchaseOrders,
-       Supplier suppliers, List<ProductPdf> productpdfs)
-    {
-        var sb = new StringBuilder(htmlContent);
-        ArabicNumber conArabicNumber = new ArabicNumber();
-        if (purchaseOrders!=null)
+        private static string injectPurchaseOrderToHtml(string htmlContent, PurchaseOrder purchaseOrders,
+           Supplier suppliers, List<ProductPdf> productpdfs)
         {
-            var po = purchaseOrders;
-            sb.Replace("{{OrderNumber}}", po.Number.ToString());
-            sb.Replace("{{OrderDate}}", po.Date.ToString("yyyy-MM-dd"));
-            sb.Replace("{{OrderStatus}}", po.Status.ToString());
-            sb.Replace("{{TypeBudget}}", po.TypeBudget);
-            sb.Replace("{{TypeService}}", po.TypeService);
-            sb.Replace("{{Article}}", po.Article);
-            sb.Replace("{{Chapter}}", po.Chapter);
-            sb.Replace("{{CompletionDelay}}", po.CompletionDelay.ToString());
-            sb.Replace("{{TotalHT}}", po.THT.ToString("F"));
-            sb.Replace("{{TVA}}", po.TVA.ToString("F"));
-            sb.Replace("{{TotalTTC}}", po.TTC.ToString("F"));
-            string arabicWords = conArabicNumber.arabicNumber((double)po.TTC);
-            sb.Replace("{{TotalTTCArabic}}", arabicWords);
+            var sb = new StringBuilder(htmlContent);
+            ArabicNumber conArabicNumber = new ArabicNumber();
+            if (purchaseOrders!=null)
+            {
+                var po = purchaseOrders;
+                sb.Replace("{{OrderNumber}}", po.Number.ToString());
+                sb.Replace("{{OrderDate}}", po.Date.ToString("yyyy-MM-dd"));
+                sb.Replace("{{OrderStatus}}", po.Status.ToString());
+                sb.Replace("{{TypeBudget}}", po.TypeBudget);
+                sb.Replace("{{TypeService}}", po.TypeService);
+                sb.Replace("{{Article}}", po.Article);
+                sb.Replace("{{Chapter}}", po.Chapter);
+                sb.Replace("{{CompletionDelay}}", po.CompletionDelay.ToString());
+                sb.Replace("{{TotalHT}}", po.THT.ToString("F"));
+                sb.Replace("{{TVA}}", po.TVA.ToString("F"));
+                sb.Replace("{{TotalTTC}}", po.TTC.ToString("F"));
+                string arabicWords = conArabicNumber.arabicNumber((double)po.TTC);
+                sb.Replace("{{TotalTTCArabic}}", arabicWords);
 
-            string serviceOptions = $@"
+                string serviceOptions = $@"
             <li><span class='square'>{(po.TypeService == "Bg1" ? "✔" : "   ")}</span>  اشغال </li>
             <li><span class='square'>{(po.TypeService == "Bg2" ? "✔" : "   ")}</span>لوازم </li>
             <li><span class='square'>{(po.TypeService == "Bg3" ? "✔" : "   ")}</span> خدمات </li>";
-            sb.Replace("{{TypeServiceCheckboxes}}", serviceOptions);
+                sb.Replace("{{TypeServiceCheckboxes}}", serviceOptions);
 
-            string budgetOptions = $@"
+                string budgetOptions = $@"
             <li><span class='square'>{(po.TypeBudget == "s1" ? "✔" : "   ")}</span> نفقات التسيير </li>
             <li><span class='square'>{(po.TypeBudget == "s2" ? "✔" : "   ")}</span> نفقات التجهيز </li>
             <li><span class='square'>{(po.TypeBudget == "s3" ? "✔" : "   ")}</span> نفقات اخرى </li>";
-            sb.Replace("{{TypeBudgetCheckboxes}}", budgetOptions);
-        }
+                sb.Replace("{{TypeBudgetCheckboxes}}", budgetOptions);
+            }
 
-        if (suppliers!=null)
-        {
-            var supplier = suppliers;
-            sb.Replace("{{SupplierName}}", supplier.SupplierName);
-            sb.Replace("{{CompanyName}}", supplier.CompanyName);
-            sb.Replace("{{AccountName}}", supplier.AccountName);
-            sb.Replace("{{Email}}", supplier.Email);
-            sb.Replace("{{Phone}}", supplier.Phone);
-            sb.Replace("{{RC}}", supplier.RC);
-            sb.Replace("{{ART}}", supplier.ART.ToString());
-            sb.Replace("{{NIS}}", supplier.NIS.ToString());
-            sb.Replace("{{NIF}}", supplier.NIF.ToString());
-            sb.Replace("{{RIB}}", supplier.RIB);
-            sb.Replace("{{BankAgency}}", supplier.BankAgency);
-        }
-
-        if (productpdfs.Any())
-        {
-            var tableContent = new StringBuilder();
-            int i = 1;
-            foreach (var item in productpdfs)
+            if (suppliers!=null)
             {
-                tableContent.Append($@"
+                var supplier = suppliers;
+                sb.Replace("{{SupplierName}}", supplier.Name);
+                sb.Replace("{{CompanyName}}", supplier.CompanyName);
+                sb.Replace("{{AccountName}}", supplier.AccountName);
+                sb.Replace("{{Email}}", supplier.Email);
+                sb.Replace("{{Phone}}", supplier.Phone);
+                sb.Replace("{{RC}}", supplier.RC);
+                sb.Replace("{{ART}}", supplier.ART.ToString());
+                sb.Replace("{{NIS}}", supplier.NIS.ToString());
+                sb.Replace("{{NIF}}", supplier.NIF.ToString());
+                sb.Replace("{{RIB}}", supplier.RIB);
+                sb.Replace("{{BankAgency}}", supplier.BankAgency);
+            }
+
+            if (productpdfs.Any())
+            {
+                var tableContent = new StringBuilder();
+                int i = 1;
+                foreach (var item in productpdfs)
+                {
+                    tableContent.Append($@"
                 <tr>
                     <td>{i++}</td>
                     <td>{item.Designation}</td>
@@ -149,11 +149,12 @@ public class GenPurchaseOrderPDF : IGenPurchaseOrderPDF
                     <td>{item.Quantity * item.Price}</td>
 
                 </tr>");
+                }
+
+                sb.Replace("{{OrderDetails}}", tableContent.ToString());
             }
 
-            sb.Replace("{{OrderDetails}}", tableContent.ToString());
+            return sb.ToString();
         }
-
-        return sb.ToString();
     }
-}
+}*/

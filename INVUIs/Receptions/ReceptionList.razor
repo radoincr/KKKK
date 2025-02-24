@@ -1,0 +1,39 @@
+﻿@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<div class="d-flex justify-content-between">
+      <div>
+        @Pills
+    </div> 
+</div>
+
+@if (receptions is null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div class="Container-list">
+        <table style="width:600px;">
+            <thead>
+                <tr>
+                    <th style="width:2rem"></th>
+                    <th style="width:3rem">Delivery Number</th>
+                    <th style="width:4rem;text-align: center;">Delivery Date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reception in receptions)
+                {
+                    <tr>
+                        <td style="text-align: center;">@reception.Status</td>
+                        <td style="text-align: center;">@reception.DeliveryNumber</td>
+                        <td style="text-align: center;">@reception.DeliveryDate</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

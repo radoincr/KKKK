@@ -1,0 +1,29 @@
+﻿@page "/suppliers/{id:guid}"
+
+@rendermode InteractiveServer
+
+@if(Supplier is not null){
+    <div class="content-profile">
+        <div class="container-info-supplier ">
+            <SupplierCard Supplier="Supplier"/>
+        </div>
+
+
+        <div class="container-work-supplier">
+            <Tabs EnableFadeEffect="true" NavStyle="NavStyle.Pills">
+                <Tab Title="Command" IsActive="true">
+                    <Content>
+                        <PurchaseList purchaseOrderInfos="Supplier.Purchases" ShowSupplier="false" />
+                    </Content>
+                </Tab>
+                <Tab Title="Reseption">
+                    <Content>
+                 
+                    </Content>
+                </Tab>
+
+            </Tabs>
+        </div>
+
+    </div>
+}

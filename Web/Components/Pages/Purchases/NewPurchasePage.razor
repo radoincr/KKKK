@@ -1,0 +1,20 @@
+﻿@page "/purchases/create"
+@rendermode InteractiveServer
+@inject DialogService DialogService
+<PageTitle>Purchase Order</PageTitle>
+<h4>Order Document</h4>
+
+<PurchaseHeader OnPurchaseOrder="GetPurchase"/>
+
+<RadzenTabs RenderMode="TabRenderMode.Client" >
+    <Tabs>
+        <RadzenTabsItem Text="economic operator">
+            <PurchaseSupplier OnSupplier="GetSupplier"/>
+        </RadzenTabsItem>
+        <RadzenTabsItem Text="Products Order">
+            <PurchaseProducts OnProductAddProduct="GetProduct"></PurchaseProducts>
+        </RadzenTabsItem>
+    </Tabs>
+</RadzenTabs>
+
+<ProductForm @ref="productForm"/>

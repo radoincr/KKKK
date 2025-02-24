@@ -1,46 +1,35 @@
-using Blazorise;
-using Blazorise.Bootstrap5;
-using Blazorise.Icons.FontAwesome;
-using INV.App.IGeneratePdfServices;
-using INV.App.IOrderDetailServices;
 using INV.App.Products;
-using INV.App.PurchaseOrders;
+using INV.App.Purchases;
+using INV.App.Services;
 using INV.App.Suppliers;
-using INV.Implementation.Service.GeneratePdfServices;
-using INV.Implementation.Service.OrderDetailServices;
 using INV.Implementation.Service.ProductServices;
-using INV.Implementation.Service.PurchseOrderServices;
+using INV.Implementation.Service.Purchses;
 using INV.Implementation.Service.Suppliers;
-
-using INV.Infrastructure.Storage.ProductsStorages;
-using INV.Infrastructure.Storage.PurchaseOrderStorages;
+using INV.Infrastructure.Storage.Products;
+using INV.Infrastructure.Storage.Purchases;
+using INV.Infrastructure.Storage.Receipts;
 using INV.Infrastructure.Storage.SupplierStorages;
-using Web.Components;
+using INV.Web.Components;
+using INV.Web.Services.Suppliers;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddScoped<ISupplierStorage, SupplierStorage>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
-builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 builder.Services.AddScoped<IProductStorage, ProductStorage>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPurchaseOrderStorage, PurchaseOrderStorage>();
 builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
-builder.Services.AddScoped<IGenPurchaseOrderPDF, GenPurchaseOrderPDF>();
-builder.Services.AddBlazorBootstrap();
-builder.Services.AddBootstrapBlazor();
-/*builder.Services
-    .AddBlazorise( options =>
-    {
-        options.Immediate = true;
-    } )
-    .AddBootstrap5Providers()
-    .AddFontAwesomeIcons();*/
+builder.Services.AddScoped<IAppSupplierService, AppSupplierService>();
+builder.Services.AddScoped<IReceiptService, ReceiptService>();
+builder.Services.AddScoped<IReceiptStorage, ReceiptStorage>();
+builder.Services.AddRadzenComponents();
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddScoped<DialogService>();
+builder.Services.AddLocalization();
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -50,12 +39,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-
 app.UseAntiforgery();
-
 app.MapStaticAssets();
-app.MapRazorComponents<Web.Components.App>()
-    .AddInteractiveServerRenderMode();
-
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 app.Run();

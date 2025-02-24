@@ -1,15 +1,15 @@
 ﻿@using INV.App.Suppliers
 @rendermode InteractiveServer
 
-<div class="list-title">
-    <h4>List of Suppliers</h4>
-</div>
+
+<button type="button" class="addsupplier-button" @onclick=@showSupplierForm>
+    <i class="bi bi-person-plus"></i> Add a Supplier
+</button>
 
 <div>
     <input type="text" @bind="searchName" @bind:event="oninput" placeholder="Search by supplier name" class="number-input"/>
-<button type="button" class="addsupplier-button" @onclick="() => supplierSelector.ShowModal()">
-    <i class="bi bi-person-plus"></i> Add a Supplier
-</button></div>
+
+</div>
 <br>
 @if (supplierFilter is null)
 {
@@ -34,4 +34,4 @@ else
     </div>
 }
 
-<SupplierForm @ref="supplierSelector"/>
+<SupplierForm @ref=supplierForm />

@@ -1,0 +1,52 @@
+<EditForm Model="ReceiptInfo" OnInvalidSubmit="Create" FormName="hello">
+
+
+    @if (ReceiptInfo != null)
+    {
+        <div class="details-container">
+            <p class="detail-number">@ReceiptInfo.purchaseNumber</p>
+            <p class="detail-budget">@ReceiptInfo.supplierName</p>
+            <p class="detail-delay">@ReceiptInfo.Id</p>
+            <p class="detail-service">@ReceiptInfo.PurchaseId</p>
+            @*<InputDate @bind-Value="newReception.purchaseOrder.Date"/>
+            <InputDate @bind-Value="newReception.purchaseOrder.VisaDate"/>*@
+        </div>
+    }
+
+    @if (ReceiptInfo.ReceiptProducts != null)
+    {
+        <div class="table-container">
+            <table class="reception-table">
+                <thead>
+                <tr>
+                    <th>Designation</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Received</th>
+                    <th>Rest</th>
+                    <th>New Received</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var tabreception in ReceiptInfo.ReceiptProducts)
+                {
+                    <tr>
+                        <td>@tabreception.Quantity</td>
+                        <td>@tabreception.ProductId</td>
+                        <td>@tabreception.ReceptionId</td>
+                        @*<td>
+                            <input class="input-received" type="number" @bind="newreceived"/>
+                        </td>*@
+
+                    </tr>
+                }
+                </tbody>
+
+                <button type="submit">Create Reception</button>
+            </table>
+        </div>
+    }
+
+
+</EditForm>

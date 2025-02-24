@@ -1,9 +1,16 @@
 ﻿<div class="container-status">
-    <div class="content-status  @GetStatusClass()">
-        <p>@status</p>
-    </div>
-    <div class="content-icon">
-        <i class=" @GetStatusIcon()"></i>
-    </div>
+    @if(text)
+    {
+        <div class="content-status  @GetStatusClass()">
+            <p>@status</p>
+        </div>
+    }
+    
+    @if(icon){
+        <div class="content-icon">
+            <i class=" @GetStatusIcon()"></i>
+        </div>
+    }
+    
 
 </div>
