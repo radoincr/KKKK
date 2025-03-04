@@ -13,5 +13,5 @@ public class ReceiptInfo
     public string DeliveryName { get; set; }
     public  DateOnly? DeliveryDate { get; set; }
     public  ReceiptStatus Status { get; set; }
-    public List<ReceiptProduct> ReceiptProducts { get; set; }
+    public List<ReceiptProductInfo> ReceiptProducts { get; set; }
 }

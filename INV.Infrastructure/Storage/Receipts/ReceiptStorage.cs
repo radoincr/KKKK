@@ -104,7 +104,18 @@ namespace INV.Infrastructure.Storage.Receipts
                 ProductId = reader.GetGuid(reader.GetOrdinal("ProductId")),
                 Quantity = reader.GetInt32(reader.GetOrdinal("Quantity"))
             };
+        }  
+        private static ReceiptProductInfo GetReceiptProductInfoData(SqlDataReader reader)
+        {
+            return new ReceiptProductInfo()
+            {
+                ReceptionId = reader.GetGuid(reader.GetOrdinal("ReceptionId")),
+                ProductId = reader.GetGuid(reader.GetOrdinal("ProductId")),
+                Quantity = reader.GetInt32(reader.GetOrdinal("Quantity")),
+                Designation =  reader.GetString(reader.GetOrdinal("Designation"))
+            };
         }
+        
         public async ValueTask<Guid> CreateReceiptFromPurchase(Guid purchaseId)
         {
             try
@@ -366,18 +377,19 @@ namespace INV.Infrastructure.Storage.Receipts
                     DeliveryNumber = headerRow.IsNull("DeliveryNumber") ? null : (string)headerRow["DeliveryNumber"],
                     DeliveryDate = headerRow.IsNull("DeliveryDate") ? (DateOnly?)null : DateOnly.FromDateTime((DateTime)headerRow["DeliveryDate"]),
                     Status = (ReceiptStatus)headerRow["Status"],
-                    ReceiptProducts = new List<ReceiptProduct>()
+                    ReceiptProducts = new List<ReceiptProductInfo>()
                 };
 
                 if (ds.Tables.Count > 1)
                 {
                     foreach (DataRow productRow in ds.Tables[1].Rows)
                     {
-                        receiptInfo.ReceiptProducts.Add(new ReceiptProduct
+                        receiptInfo.ReceiptProducts.Add(new ReceiptProductInfo
                         {
                             ReceptionId = (Guid)productRow["ReceptionId"],
                             ProductId = (Guid)productRow["ProductId"],
-                            Quantity = (int)productRow["Quantity"]
+                            Quantity = (int)productRow["Quantity"],
+                            Designation = (string)productRow["Designation"]
                         });
                     }
                 }
