@@ -3,4 +3,13 @@
 
 <PageTitle>Purchase Order</PageTitle>
 
-@*<PurchaseOrderProfile Id=@Id/>*@
+<PurchaseCard purchaseInfo="purchaseOrder" />
+
+
+<RadzenTabs RenderMode="TabRenderMode.Client">
+    <Tabs>
+        <RadzenTabsItem Text="Receipts">
+            <ReceptionListByPurchase Receptions="ReceptionsListByPurchase" />
+        </RadzenTabsItem>
+    </Tabs>
+</RadzenTabs>

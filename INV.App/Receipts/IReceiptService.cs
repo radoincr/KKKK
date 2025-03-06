@@ -7,22 +7,28 @@ namespace INV.App.Services
 {
     public interface IReceiptService
     {
-        ValueTask<Guid> CreateReceiptFromPurchase(Guid purchaseId);
-        ValueTask<Result> ValidateReceipt(Guid receiptId);
-        ValueTask<Result<List<Receipt>>> GetAllReceipts();
-        ValueTask<Result<Receipt?>> GetReceiptById(Guid id);
-        ValueTask<Result<List<Receipt>>> GetReceiptsByPurchaseId(Guid purchaseId);
-        ValueTask<Result> CreateReceipt(Receipt receipt);
-        ValueTask<Result> SetReceipt(Receipt receipt);
-        ValueTask<Result> RemoveReceipt(Guid id);
-        ValueTask<Result<List<ReceiptProduct>>> GetAllReceiptProducts();
-        ValueTask<Result<List<ReceiptProduct>>> GetProductsByReceptionId(Guid receptionId);
-        ValueTask<Result> CreateReceiptProduct(ReceiptProduct receiptProduct);
-        ValueTask<Result> SetReceiptProduct(ReceiptProduct receiptProduct);
-        ValueTask<Result> RemoveReceiptProductAsync(Guid receptionId, Guid productId);
-        ValueTask<ReceiptInfo> GetReceiptInfoById(Guid receiptId);
+        ValueTask<ReceiptInfo> CreateReceiptFromPurchase(Guid purchaseId);
 
-        ValueTask<Result<(List<ReceiptProduct> products, Receipt? receipt, PurchaseOrder? purchaseOrder)>>
-            GetReceptionDetails(Guid receptionId);
+        ValueTask<Result> ValidateReceipt(Guid receiptId);
+
+        ValueTask<Result<List<ReceiptInfo>>> GetAllReceipts();
+
+        ValueTask<Result<Receipt?>> GetReceiptById(Guid id);
+
+        ValueTask<Result<List<Receipt>>> GetReceiptsByPurchaseId(Guid purchaseId);
+
+        ValueTask<Result> CreateReceipt(Receipt receipt);
+
+        ValueTask<Result> UpdateReceipt(Receipt receipt);
+
+        ValueTask<Result> RemoveReceipt(Guid id);
+
+        ValueTask<Result<List<ReceiptProduct>>> GetAllReceiptProducts();
+
+        ValueTask<Result<List<ReceiptProduct>>> GetProductsByReceptionId(Guid receptionId);
+
+        ValueTask<Result> RemoveReceiptProductAsync(Guid receptionId, Guid productId);
+
+        ValueTask<ReceiptInfo> GetReceiptInfoById(Guid receiptId);
     }
 }

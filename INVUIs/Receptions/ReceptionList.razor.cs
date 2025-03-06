@@ -1,3 +1,4 @@
+using INV.App.Receipts;
 using INV.Domain.Entities.Receipts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
@@ -9,8 +10,9 @@ namespace INVUIs.Receptions
     public partial class ReceptionList
     {
         [Parameter] public EventCallback<ReceptionModel> OnCommand { get; set; }
-        [Parameter] public List<Receipt> receptions { get; set; }
+        [Parameter] public List<ReceiptInfo> Receptions { get; set; }
         [Parameter] public RenderFragment Pills { get; set; }
+        [Inject] public NavigationManager navigationManager { set; get; }
 
        
 
@@ -35,6 +37,12 @@ namespace INVUIs.Receptions
            
             StateHasChanged();
             await OnCommand.InvokeAsync(commandshow);*/
+        }
+
+        private void NavigateToReceiption(Guid receiptId)
+        {
+            navigationManager.NavigateTo($"/reception/{receiptId}");
+
         }
     }
 }

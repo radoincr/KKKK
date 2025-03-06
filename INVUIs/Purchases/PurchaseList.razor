@@ -1,4 +1,5 @@
-﻿@inject NavigationManager Navigation
+﻿@using INV.App.Purchases
+@inject NavigationManager Navigation
 @rendermode InteractiveServer
 
 <div class="d-flex justify-content-between">
@@ -6,7 +7,7 @@
     <div>
         @Pills
     </div>
-</div> <br/><br/><br/>
+</div> 
 @if (purchaseOrderInfos is null)
 {
     <h3>Loading...</h3>
@@ -14,37 +15,16 @@
 else
 {
     <div class="Container-list">
+        <RadzenDataGrid Data="@purchaseOrderInfos" AllowSorting="true" AllowFiltering="true"
+                        Style="width: 100%;" RowSelect="@((PurchaseOrderInfo purchaseOrderInfo) => navigatepage(purchaseOrderInfo.Id))">
+            <Columns>
 
-    <table  style="width:600px;">
-        <thead>
-        <tr>
-            <th style="width:2rem"></th>
-            <th style="width:3rem"></th>
-            <th style="width:4rem;text-align: center;">Date</th>
-            @if (ShowSupplier)
-                    {
-                        <th> Supplier Name</th>
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Status)" Title="Status" />
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Number)" Title="Number" />
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Date)" Title="Date" />
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.SupplierName)" Title="Supplier Name" />
 
-                    }
-                    </tr>
-        </thead>
-        <tbody>
-        @foreach (var purchaseOrderInfo in displayedItems)
-        {
-                <tr @onclick="() => navigatepage(purchaseOrderInfo.Id)">
-                    <td style="text-align: center;"><Status status="@purchaseOrderInfo.Status" icon="true" text="false" /></td>
-                    <td style="text-align: center;">@purchaseOrderInfo.Number</td>
-                    <td style="text-align: center;">@purchaseOrderInfo.Date</td>
-                    @if (ShowSupplier)
-                        {
-                            <td style="text-align: center;">@purchaseOrderInfo.SupplierName</td>
-                        }
-                    
-
-                </tr>
-        }
-        </tbody>
-    </table>
+            </Columns>
+        </RadzenDataGrid>
     </div>
 }
-<Preload LoadingText="Loading..." Class="align-content-center" />

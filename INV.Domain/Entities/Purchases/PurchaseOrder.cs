@@ -5,7 +5,7 @@ namespace INV.Domain.Entities.Purchases
     public class PurchaseOrder
     {
         public Guid Id { set; get; }
-        public int Number { set; get; }
+        public string Number { set; get; }
 
         public Guid SupplierId { set; get; }
 
@@ -29,7 +29,7 @@ namespace INV.Domain.Entities.Purchases
         //public decimal TotalTTC => TotalHT + TotalTVA;
 
         public int CompletionDelay { set; get; }
-        public string? VisaNumber { set; get; }
+        public string? VisaNumber { set; get; } 
         public DateOnly? VisaDate { set; get; }
 
         public PurchaseStatus Status { set; get; }

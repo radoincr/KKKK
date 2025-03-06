@@ -14,7 +14,7 @@ namespace INV.Web.Components.Pages
         [Inject] public IJSRuntime JS { set; get; }
         private List<PurchaseOrder> purchaseOrders = new();
         private List<PurchaseOrder> filteredOrders = new();
-        private int? searchNumber;
+        private string? searchNumber;
         private DateTime? searchDate;
         private async Task GetPurchaseOrder()
         {
@@ -31,13 +31,13 @@ namespace INV.Web.Components.Pages
             DateOnly? selectedDate = searchDate.HasValue ? DateOnly.FromDateTime(searchDate.Value) : null;
 
             filteredOrders = purchaseOrders.Where(order =>
-                (!searchNumber.HasValue || order.Number == searchNumber.Value) &&
+              /*  (!searchNumber.HasValue || order.Number == searchNumber.Value)*/ 
                 (!selectedDate.HasValue || order.Date == selectedDate.Value)
             ).ToList();
         }
 
-
-        private async Task DownloadFile(int orderNumber)
+/*
+        private async Task DownloadFile(string orderNumber)
         {
             try
             {
@@ -52,6 +52,6 @@ namespace INV.Web.Components.Pages
             {
                 Console.WriteLine($"error{e.Message}");
             }
-        }
+        }*/
     }
 }

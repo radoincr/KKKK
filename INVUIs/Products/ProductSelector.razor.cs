@@ -50,7 +50,12 @@ public partial class ProductSelector
     public void HideModal()
     {
         visibility = false;
-        List<Product> filteredProducts = new List<Product>();
+        SelectedProductId = null;
+        selectedProductModel = null;
+        UnitPrice = 0;
+        Quantity = 0;
+        filterText = string.Empty;
+        //filteredProducts = new List<Product>();
         StateHasChanged();
     }
 
@@ -80,7 +85,7 @@ public partial class ProductSelector
                         UnitPrice = product.UnitPrice,
                         Quantity = product.Quantity
                     };
-                  //  await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
+                    //  await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
                 }
             }
 
@@ -94,7 +99,7 @@ public partial class ProductSelector
         {
             selectedProductModel.UnitPrice = UnitPrice;
             selectedProductModel.Quantity = Quantity;
-          //  await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
+            //  await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
             HideModal();
         }
     }

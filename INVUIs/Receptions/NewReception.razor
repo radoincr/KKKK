@@ -1,15 +1,27 @@
-<EditForm Model="ReceiptInfo" OnInvalidSubmit="Create" FormName="hello">
+@using INV.Domain.Entities.Receipts
 
+<EditForm Model="ReceiptInfo" OnInvalidSubmit="Create" FormName="hello">
+    
 
     @if (ReceiptInfo != null)
     {
         <div class="details-container">
-            <p class="detail-number">@ReceiptInfo.purchaseNumber</p>
-            <p class="detail-budget">@ReceiptInfo.supplierName</p>
-            <p class="detail-delay">@ReceiptInfo.Id</p>
-            <p class="detail-service">@ReceiptInfo.PurchaseId</p>
-            @*<InputDate @bind-Value="newReception.purchaseOrder.Date"/>
-            <InputDate @bind-Value="newReception.purchaseOrder.VisaDate"/>*@
+            <div class="detail-row"><span class="detail-label">Purchase Number:</span><span class="detail-value number">@ReceiptInfo.purchaseNumber</span></div>
+            <div class="detail-row"><span class="detail-label">Supplier Name:</span><span class="detail-value">@ReceiptInfo.supplierName</span></div>
+            <div class="detail-row"><span class="detail-label">Status:</span><span class="detail-value service">@ReceiptInfo.Status</span></div>
+            <div class="detail-row"><span class="detail-label">Date:</span><span class="detail-value service">@ReceiptInfo.Date</span></div>
+            <InputDate @bind-Value="@ReceiptInfo.DeliveryDate" />
+            <InputText @bind-Value="@ReceiptInfo.DeliveryNumber" />
+            <InputFile/>
+        
+        
+        </div>
+    }
+
+    @if (ReceiptInfo.Status == ReceiptStatus.editing && !isEditing)
+    {
+        <div class="button-container">
+            <button type="button" class="btn btn-modifier" @onclick="StartEditing">Modifier</button>
         </div>
     }
 
@@ -18,36 +30,161 @@
         <div class="table-container">
             <table class="reception-table">
                 <thead>
-                <tr>
-                    <th>Designation</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Received</th>
-                    <th>Rest</th>
-                    <th>New Received</th>
-                    <th>Action</th>
-                </tr>
+                    <tr>
+                        <th>Designation</th>
+                        <th>Quantity</th>
+                        @if (ReceiptInfo.Status == ReceiptStatus.editing) { <th>Rest</th> }
+                        <th>Received</th>
+                    </tr>
                 </thead>
                 <tbody>
-                @foreach (var tabreception in ReceiptInfo.ReceiptProducts)
-                {
-                    <tr>
-                        <td>@tabreception.Quantity</td>
-                        <td>@tabreception.ProductId</td>
-                        <td>@tabreception.ReceptionId</td>
-                        <td>@tabreception.Designation</td>
-                        @*<td>
-                            <input class="input-received" type="number" @bind="newreceived"/>
-                        </td>*@
-
-                    </tr>
-                }
+                    @foreach (var tabreception in products)
+                    {
+                        <tr>
+                            <td>@tabreception.Designation</td>
+                            <td>@tabreception.Quantity</td>
+                            @if (ReceiptInfo.Status == ReceiptStatus.editing)
+                            {
+                                <td>@tabreception.Received</td>
+                                <td>
+                                    <input class="input-received" type="number"
+                                           @bind="@tabreception.Quantity"
+                                           readonly="@(!isEditing)"
+                                           disabled="@(!isEditing)" />
+                                </td>
+                            }
+                            
+                               
+                            
+                        </tr>
+                    }
                 </tbody>
-
-                <button type="submit">Create Reception</button>
             </table>
         </div>
+
+        <div class="footer-form">
+            @if (ReceiptInfo.Status == ReceiptStatus.validated) { }
+            else if (ReceiptInfo.Status == ReceiptStatus.editing)
+            {
+                @if (isEditing)
+                {
+
+                    <button type="button" class="btn btn-annuler" @onclick="CancelEditing">Annuler</button>
+                    <button type="button" class="btn btn-enregistrer" @onclick="SaveChanges">Enregistrer</button>
+                  
+
+                    
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-valider" @onclick="Validate">Valider</button>
+                }
+            }
+          
+        </div>
+    }
+</EditForm>
+<style>
+    .details-container {
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
+    .detail-row {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
 
-</EditForm>
+    .detail-label {
+        font-size: 1.1em;
+        color: #2c3e50;
+        font-weight: 600;
+        margin-right: 10px;
+        min-width: 120px;
+    }
+
+    .detail-value {
+        font-size: 1em;
+        color: #34495e;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        margin: 20px 0;
+    }
+
+    .reception-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+        .reception-table th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .reception-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+    .input-received {
+        width: 80px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+
+        .input-received:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-modifier {
+        background-color: #e67e22;
+        color: white;
+    }
+
+    .btn-valider {
+        background-color: #2ecc71;
+        color: white;
+    }
+
+    .btn-enregistrer {
+        background-color: #2ecc71;
+        color: white;
+    }
+
+    .btn-annuler {
+        background-color: #e74c3c;
+        color: white;
+    }
+</style>

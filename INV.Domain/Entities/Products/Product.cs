@@ -8,5 +8,6 @@
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public int TVA { get; set; }
+        public Guid DefaultWareHouseId { get; set; }
     }
 }

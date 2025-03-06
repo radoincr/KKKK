@@ -16,6 +16,7 @@ namespace INVUIs.Products
         private bool visibility = false;
         private Result result;
         private string success = string.Empty;
+        private string failure = string.Empty;
 
         public async Task CreateProduct()
         {
@@ -25,19 +26,23 @@ namespace INVUIs.Products
                 UnitMeasure = newProduct.UnitMeasure,
                 Designation = newProduct.Designation,
                 TVA = newProduct.TVA,
-                UnitPrice = newProduct.UnitPrice,
-                Quantity = newProduct.Quantity
+                UnitPrice = 0,
+                Quantity = 0
             };
             result = await productService.CreateProduct(product);
-            /*if (result.Successed)
+            if (result.IsSuccess)
             {
                 success = "the Product has been added successfully";
-            }*/
-            await Task.Delay(1500);
-            /*navigationManager.NavigateTo(navigationManager.Uri,forceLoad:true);
-            */
+            }
+            else if (result.IsFailure)
+            {
+                failure = result.Error.Description;
+            }
             StateHasChanged();
+            await Task.Delay(1500);
+
             HideModal();
+            StateHasChanged();
         }
 
         public void ShowModal()

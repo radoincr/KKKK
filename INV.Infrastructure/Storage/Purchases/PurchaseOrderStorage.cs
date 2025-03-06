@@ -28,7 +28,7 @@ namespace INV.Infrastructure.Storage.Purchases
 
         private const string selectPurchaseProductsQuery = @" SELECT * FROM [purchase].[PRODUCTS]";
 
-        private const string selectPurchceOrderByIdQuery = @" SELECT * FROM [INV].[dbo].[PurchaseOrder] WHERE Id=@aId";
+        private const string selectPurchceOrderByIdQuery = @" SELECT * FROM [INV].[purchase].[ORDERS] WHERE Id=@aId";
 
         private const string insertOrderDetailCommand = @"
             INSERT INTO [purchase].[PRODUCTS] (PurchaseId, ProductId, Quantity, UnitPrice)
@@ -49,19 +49,19 @@ namespace INV.Infrastructure.Storage.Purchases
             return new PurchaseOrder
             {
                 Id = (Guid)reader["Id"],
-                Number = reader.GetInt16("Number"),
+                Number = (string)reader["Number"],
                 SupplierId = (Guid)reader["SupplierId"],
                 Date = DateOnly.FromDateTime((DateTime)reader["Date"]),
-                BudgeArticle = reader.GetString("BudgetArticle"),
-                BudgeType = (BudgeType)reader.GetInt16("BudgetType"),
-                ServiceType = (ServiceType)reader.GetInt16("ServiceType"),
+                BudgeArticle = (string)reader["BudgetArticle"],
+                BudgeType = (BudgeType)reader["BudgetType"],
+                ServiceType = (ServiceType)reader["ServiceType"],
                 TotalHT = (decimal)reader["TotalHT"],
                 TotalTVA = (decimal)reader["TotalVA"],
                 TotalTTC = (decimal)reader["TotalTC"],
                 CompletionDelay = (int)reader["CompletionDelay"],
-                VisaNumber = (string)reader["VisaNumber"],
-                VisaDate = DateOnly.FromDateTime((DateTime)reader["VisaDate"]),
-                Status = (PurchaseStatus)reader["State"]
+                VisaNumber = reader.IsDBNull(reader.GetOrdinal("VisaNumber")) ? null : reader["VisaNumber"].ToString(),
+                VisaDate = reader.IsDBNull(reader.GetOrdinal("VisaDate")) ? null : DateOnly.FromDateTime((DateTime)reader["VisaDate"]),
+                Status = (PurchaseStatus)reader["Status"] 
             };
         }
 
@@ -71,7 +71,7 @@ namespace INV.Infrastructure.Storage.Purchases
             {
                 Id = (Guid)reader["Id"],
                 SupplierId = (Guid)reader["SupplierId"],
-                Number = (int)reader["Number"],
+                Number = (string)reader["Number"],
                 Status = (PurchaseStatus)reader["Status"],
                 SupplierName = (string)reader["CompanyName"],
                 Date = DateOnly.FromDateTime((DateTime)reader["Date"])

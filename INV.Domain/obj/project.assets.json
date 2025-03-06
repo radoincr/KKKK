@@ -1805,24 +1805,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\radoi\\.nuget\\packages\\": {}
+    "C:\\Users\\Dali_Raki\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INV.Domain\\INV.Domain.csproj",
       "projectName": "INV.Domain",
-      "projectPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\INV.Domain.csproj",
-      "packagesPath": "C:\\Users\\radoi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\radoi\\OneDrive\\Desktop\\New folder\\INV2\\INV.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INV.Domain\\INV.Domain.csproj",
+      "packagesPath": "C:\\Users\\Dali_Raki\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INV.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\radoi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Dali_Raki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1840,7 +1847,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -1887,7 +1895,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

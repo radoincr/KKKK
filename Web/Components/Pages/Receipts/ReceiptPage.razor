@@ -1,4 +1,5 @@
-﻿@page "/reception/{Id:guid}"
+﻿@page "/receptions/{Id:guid}"
+@page "/receptions/new/{purchaseId:guid}"
 @using INV.App.Receipts
 @using INV.App.Services
 @using INV.Domain.Shared
@@ -6,15 +7,22 @@
 <NewReception ReceiptInfo="receiptInfo"/>
 
 @code {
-    
+
     [Inject] public IReceiptService receiptService { set; get; }
 
-    [Parameter] public Guid Id { get; set; }
+    [Parameter] public Guid Id { get; set; } = Guid.Empty;
+    [Parameter] public Guid purchaseId { get; set; } = Guid.Empty;
     public ReceiptInfo receiptInfo { get; set; }
-
+  
     protected override async Task OnInitializedAsync()
     {
-        receiptInfo = await receiptService.GetReceiptInfoById(Id);
+        if (Id != Guid.Empty)
+        {
+         receiptInfo = await receiptService.GetReceiptInfoById(Id);   
+        }
+        else {
+            receiptInfo =  await receiptService.CreateReceiptFromPurchase(purchaseId);
+        }
     }
 
 }

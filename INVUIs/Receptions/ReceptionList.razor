@@ -1,39 +1,42 @@
-﻿@inject NavigationManager Navigation
+﻿@using INV.App.Receipts
+@inject NavigationManager Navigation
 @rendermode InteractiveServer
 
 <div class="d-flex justify-content-between">
-      <div>
+    <div>
         @Pills
-    </div> 
+    </div>
 </div>
-
-@if (receptions is null)
+@if (Receptions is null)
 {
     <h3>Loading...</h3>
 }
 else
 {
     <div class="Container-list">
-        <table style="width:600px;">
-            <thead>
-                <tr>
-                    <th style="width:2rem"></th>
-                    <th style="width:3rem">Delivery Number</th>
-                    <th style="width:4rem;text-align: center;">Delivery Date</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var reception in receptions)
-                {
-                    <tr>
-                        <td style="text-align: center;">@reception.Status</td>
-                        <td style="text-align: center;">@reception.DeliveryNumber</td>
-                        <td style="text-align: center;">@reception.DeliveryDate</td>
-
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <RadzenDataGrid Data="@Receptions" AllowSorting="true" AllowFiltering="true"
+                        Style="width: 100%;" RowSelect="@((ReceiptInfo reception) => NavigateToReceiption(reception.Id))">
+            <Columns>
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.BudgetArticle)" Title="Article" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.Date)" Title="Date">
+                    <Template Context="reception">
+                        @(reception.Date == default ? string.Empty : reception.Date.ToString())
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.purchaseNumber)" Title="Purchase N°" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.PurchaseDate)" Title="Purchase Date">
+                    <Template Context="reception">
+                        @(reception.PurchaseDate == default ? string.Empty : reception.PurchaseDate)
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.supplierName)" Title="Supplier Name" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.DeliveryNumber)" Title="Delivery Number" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.DeliveryDate)" Title="Delivery Date">
+                    <Template Context="reception">
+                        @(reception.DeliveryDate == default ? string.Empty : reception.DeliveryDate)
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
     </div>
 }

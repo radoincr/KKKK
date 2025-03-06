@@ -142,3 +142,35 @@ C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.App\obj\Debug\net9.0\INV.App
 C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.App\obj\Debug\net9.0\refint\INV.App.dll
 C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.App\obj\Debug\net9.0\INV.App.pdb
 C:\Users\radoi\OneDrive\Desktop\New folder\INV2\INV.App\obj\Debug\net9.0\ref\INV.App.dll
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.dll
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\refint\INV.App.dll
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.pdb
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\bin\Debug\net9.0\INV.App.deps.json
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\bin\Debug\net9.0\INV.App.dll
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\bin\Debug\net9.0\INV.App.pdb
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.csproj.AssemblyReference.cache
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.AssemblyInfoInputs.cache
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.AssemblyInfo.cs
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.csproj.CoreCompileInputs.cache
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.sourcelink.json
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.csproj.Up2Date
+C:\Users\Dell G3\source\repos\INV_2.0\INV.App\obj\Debug\net9.0\ref\INV.App.dll
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\bin\Debug\net9.0\INV.App.deps.json
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\bin\Debug\net9.0\INV.App.dll
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\bin\Debug\net9.0\INV.App.pdb
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.csproj.AssemblyReference.cache
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.AssemblyInfoInputs.cache
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.AssemblyInfo.cs
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.csproj.CoreCompileInputs.cache
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.sourcelink.json
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.csproj.Up2Date
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.dll
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\refint\INV.App.dll
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\INV.App.pdb
+C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.App\obj\Debug\net9.0\ref\INV.App.dll
