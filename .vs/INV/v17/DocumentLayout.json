@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dali_raki\\desktop\\new folder (2)\\inv_2.0\\invuis\\warehouses\\warehouseform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\warehouses\\warehouseform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dali_raki\\desktop\\new folder (2)\\inv_2.0\\invuis\\warehouses\\warehouseform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\warehouses\\warehouseform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dali_raki\\desktop\\new folder (2)\\inv_2.0\\invuis\\products\\productselector.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\products\\productselector.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|c:\\users\\dali_raki\\desktop\\new folder (2)\\inv_2.0\\invuis\\products\\productsmodel\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CA4533B-949D-4985-96A2-627900575F4F}|INVUIs\\INVUIs.csproj|solutionrelative:invuis\\products\\productsmodel\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,55 +42,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WareHouseForm.razor.cs",
-              "DocumentMoniker": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\WareHouses\\WareHouseForm.razor.cs",
-              "RelativeDocumentMoniker": "INVUIs\\WareHouses\\WareHouseForm.razor.cs",
-              "ToolTip": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\WareHouses\\WareHouseForm.razor.cs",
-              "RelativeToolTip": "INVUIs\\WareHouses\\WareHouseForm.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:09:04.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductSelector.razor.cs",
-              "DocumentMoniker": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\Products\\ProductSelector.razor.cs",
-              "RelativeDocumentMoniker": "INVUIs\\Products\\ProductSelector.razor.cs",
-              "ToolTip": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\Products\\ProductSelector.razor.cs",
-              "RelativeToolTip": "INVUIs\\Products\\ProductSelector.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:08:27.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\Products\\ProductsModel\\ProductModel.cs",
-              "RelativeDocumentMoniker": "INVUIs\\Products\\ProductsModel\\ProductModel.cs",
-              "ToolTip": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\Products\\ProductsModel\\ProductModel.cs",
-              "RelativeToolTip": "INVUIs\\Products\\ProductsModel\\ProductModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:08:12.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WareHouseForm.razor",
-              "DocumentMoniker": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\WareHouses\\WareHouseForm.razor",
-              "RelativeDocumentMoniker": "INVUIs\\WareHouses\\WareHouseForm.razor",
-              "ToolTip": "C:\\Users\\Dali_Raki\\Desktop\\New folder (2)\\INV_2.0\\INVUIs\\WareHouses\\WareHouseForm.razor",
-              "RelativeToolTip": "INVUIs\\WareHouses\\WareHouseForm.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-06T14:08:04.063Z",
-              "EditorCaption": ""
             }
           ]
         },
