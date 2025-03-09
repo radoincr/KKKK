@@ -1,5 +1,4 @@
 ﻿using INV.App.Receipts;
-using INV.Domain.Entities.Purchases;
 using INV.Domain.Entities.Receipts;
 
 namespace INV.Infrastructure.Storage.Receipts;

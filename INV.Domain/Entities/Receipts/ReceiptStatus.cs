@@ -2,7 +2,7 @@
 
 public enum ReceiptStatus
 {
-    validated=1,
-    editing=0,
-    canceled=-1
+    validated = 1,
+    editing = 0,
+    canceled = -1
 }

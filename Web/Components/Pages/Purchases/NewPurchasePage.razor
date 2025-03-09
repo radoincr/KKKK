@@ -1,20 +1,38 @@
 ﻿@page "/purchases/create"
 @rendermode InteractiveServer
-@inject DialogService DialogService
+@using BlazorBootstrap
 <PageTitle>Purchase Order</PageTitle>
-<h4>Order Document</h4>
+<div class="list-title">
+    <h4>New Purchase</h4>
+</div>
+@if (showAlert)
+{
+    <Alert Color="AlertColor.Warning" >
+        <Icon Name="IconName.ExclamationTriangleFill" class="me-2"></Icon>
+        @errorMessage
+    </Alert>
+}
 
-<PurchaseHeader OnPurchaseOrder="GetPurchase"/>
+<CascadingValue Value="purchaseModel">
+    <PurchaseHeader @ref="purchaseHeaderRef"/>
+</CascadingValue>
 
-<RadzenTabs RenderMode="TabRenderMode.Client" >
+<RadzenTabs RenderMode="TabRenderMode.Client">
     <Tabs>
         <RadzenTabsItem Text="economic operator">
-            <PurchaseSupplier OnSupplier="GetSupplier"/>
+            <CascadingValue Value="selectedSupplier">
+                <PurchaseSupplier OnSupplierSelected="@(supplier => selectedSupplier = supplier)"/>
+            </CascadingValue>
         </RadzenTabsItem>
+
         <RadzenTabsItem Text="Products Order">
-            <PurchaseProducts OnProductAddProduct="GetProduct"></PurchaseProducts>
+            <CascadingValue Value="productModel">
+                <PurchaseProducts />
+            </CascadingValue>
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                
+                <button @onclick="create" class="btn btn-primary">Enregistre</button>
+            </div>
         </RadzenTabsItem>
     </Tabs>
 </RadzenTabs>
-
-<ProductForm @ref="productForm"/>

@@ -1,5 +1,4 @@
-﻿using INV.Domain.Entities.Receipts;
-using INV.Domain.Entities.WareHouse;
+﻿using INV.Domain.Entities.WareHouse;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
@@ -7,23 +6,13 @@ namespace INV.Infrastructure.Storage.WareHouseStorages;
 
 public class WareHouseStrorage : IWareHouseStorage
 {
+    private const string selectAllQuery = "SELECT * FROM WareHouse";
+    private const string insertQuery = "INSERT INTO WareHouse (Id, Name) VALUES (@Id, @Name)";
     private readonly string _connectionString;
 
     public WareHouseStrorage(IConfiguration configuration)
     {
         _connectionString = configuration.GetConnectionString("INV");
-    }
-
-    private const string selectAllQuery = "SELECT * FROM WareHouse";
-    private const string insertQuery = "INSERT INTO WareHouse (Id, Name) VALUES (@Id, @Name)";
-
-    private static WareHouse getWareHouseData(SqlDataReader reader)
-    {
-        return new WareHouse
-        {
-            Id = reader.GetGuid(reader.GetOrdinal("Id")),
-            Name = reader.GetString(reader.GetOrdinal("Name")),
-        };
     }
 
     public async ValueTask<List<WareHouse>> SelectAllReceipts()
@@ -34,10 +23,7 @@ public class WareHouseStrorage : IWareHouseStorage
 
         var reader = await cmd.ExecuteReaderAsync();
         var wareHouses = new List<WareHouse>();
-        while (await reader.ReadAsync())
-        {
-            wareHouses.Add(getWareHouseData(reader));
-        }
+        while (await reader.ReadAsync()) wareHouses.Add(getWareHouseData(reader));
         return wareHouses;
     }
 
@@ -49,5 +35,14 @@ public class WareHouseStrorage : IWareHouseStorage
         cmd.Parameters.AddWithValue("@Name", wareHouse.Name);
         await sqlConnection.OpenAsync();
         return await cmd.ExecuteNonQueryAsync();
+    }
+
+    private static WareHouse getWareHouseData(SqlDataReader reader)
+    {
+        return new WareHouse
+        {
+            Id = reader.GetGuid(reader.GetOrdinal("Id")),
+            Name = reader.GetString(reader.GetOrdinal("Name"))
+        };
     }
 }

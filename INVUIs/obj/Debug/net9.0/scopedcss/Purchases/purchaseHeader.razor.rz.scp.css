@@ -1,0 +1,11 @@
+.label-input-group[b-62smu07chy] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+}
+
+.label-input-group label[b-62smu07chy] {
+    white-space: nowrap;
+    font-weight: 600;
+}

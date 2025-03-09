@@ -1,0 +1,11 @@
+﻿.label-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+}
+
+.label-input-group label {
+    white-space: nowrap;
+    font-weight: 600;
+}

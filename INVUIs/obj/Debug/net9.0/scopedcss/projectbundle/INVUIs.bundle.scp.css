@@ -45,6 +45,18 @@
     font-size: 1.2rem;
     color: rgb(30 64 175);
 }
+/* _content/INVUIs/Purchases/purchaseHeader.razor.rz.scp.css */
+.label-input-group[b-62smu07chy] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+}
+
+.label-input-group label[b-62smu07chy] {
+    white-space: nowrap;
+    font-weight: 600;
+}
 /* _content/INVUIs/Purchases/PurchaseSupplier.razor.rz.scp.css */
 .supplier-detail[b-q7so4rwle3] {
     display: flex;
@@ -60,10 +72,12 @@
     font-weight: bold;
     color: var(--primary-color);
 }
-.Supplier-title[b-q7so4rwle3]{
+
+.Supplier-title[b-q7so4rwle3] {
     font-size: 22px;
     font: bold;
 }
+
 .fade-in[b-q7so4rwle3] {
     opacity: 0;
     transform: translateY(-10px);

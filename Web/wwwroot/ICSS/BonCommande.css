@@ -2,10 +2,11 @@
 .section {
     padding: 5px 18px 1px 18px;
     margin: 3px 0;
-    background-color: white ;
+    background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 .click {
     padding: 3px 5px;
@@ -57,10 +58,12 @@
 .popup-button .cancel-btn:focus {
     outline: 3px solid #f5c6cb;
     outline-offset: 2px;
-}textarea.form-control.valid {
-     height: 10px;
-     font-size: 14px;
- }
+}
+
+textarea.form-control.valid {
+    height: 10px;
+    font-size: 14px;
+}
 
 .input3 {
     display: flex;
@@ -74,6 +77,7 @@
     display: flex;
     flex-direction: column;
 }
+
 label {
     font-weight: bold;
     color: #333;
@@ -102,12 +106,13 @@ p.time {
     margin-top: 10px;
     color: #555;
 }
+
 .search-supp {
     background-color: transparent;
     color: #FD8B51;
     font-size: 14px;
     font-weight: bold;
-    padding:0.6rem 0.9rem;
+    padding: 0.6rem 0.9rem;
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
@@ -117,12 +122,13 @@ p.time {
 }
 
 .search-supp:hover {
-    border: 1px solid #FD8B51  !important;;
+    border: 1px solid #FD8B51 !important;;
 }
+
 .search-supp:disabled, .addsupplier-button:disabled {
     background-color: #e0e0e0;
     color: #a0a0a0;
-    border: 1px solid #e0e0e0  !important;;
+    border: 1px solid #e0e0e0 !important;;
     opacity: 0.4;
     cursor: not-allowed;
 }

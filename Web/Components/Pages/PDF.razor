@@ -1,32 +1,31 @@
-@inject Microsoft.Extensions.Localization.IStringLocalizer<PDF> L
+@inject IStringLocalizer<PDF> L
 @page "/PuchaseOrdera"
+@using Microsoft.Extensions.Localization
 @rendermode InteractiveServer
 
 
 <PageTitle>Purchase Order List</PageTitle>
 
 <div>
-    <input type="number" @bind="searchNumber" min="1" placeholder="Search by order number" class="number-input" />
-    <input type="date" @bind="searchDate" />
+    <input type="number" @bind="searchNumber" min="1" placeholder="Search by order number" class="number-input"/>
+    <input type="date" @bind="searchDate"/>
     <button class="search-button" @onclick="GetPurchaseOrder">Search</button>
 </div>
-<br />
+<br/>
 
 @if (filteredOrders != null && filteredOrders.Any())
 {
     <div class="purchase-order-container">
-  
+
         @foreach (var order in filteredOrders)
         {
-                  
             <div class="purchase-order-card">
                 <label class="purchase-order-header">Order #@order.Number</label>
                 <label class="purchase-order-date">@order.Status</label>
                 <img src="/Images/pdf.png" alt="PDF" class="mx-auto"/>
                 <a target="_blank" class="purchase-order-link">@order.BudgeArticle</a>
-              @*   <button @onclick="() => DownloadFile(order.Number)" class="purchase-order-button">Download</button> *@
+                @*   <button @onclick="() => DownloadFile(order.Number)" class="purchase-order-button">Download</button> *@
             </div>
-            
         }
     </div>
 }

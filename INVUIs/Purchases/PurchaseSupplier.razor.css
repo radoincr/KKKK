@@ -12,10 +12,12 @@
     font-weight: bold;
     color: var(--primary-color);
 }
-.Supplier-title{
+
+.Supplier-title {
     font-size: 22px;
     font: bold;
 }
+
 .fade-in {
     opacity: 0;
     transform: translateY(-10px);

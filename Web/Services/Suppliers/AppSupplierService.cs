@@ -1,24 +1,24 @@
 ﻿using INV.App.Purchases;
 using INV.App.Suppliers;
-using INV.Domain.Entities.Suppliers;
 
 namespace INV.Web.Services.Suppliers;
 
 public class AppSupplierService : IAppSupplierService
 {
-    private readonly ISupplierService supplierService;
     private readonly IPurchaseOrderService purchaseOrderService;
+    private readonly ISupplierService supplierService;
 
     public AppSupplierService(ISupplierService supplierService, IPurchaseOrderService purchaseOrderService)
     {
         this.supplierService = supplierService;
         this.purchaseOrderService = purchaseOrderService;
     }
+
     public async ValueTask<SupplierDetail> GetSupplierDetail(Guid id)
     {
-        ISupplier supplier = await supplierService.GetSupplierByID(id);
+        var supplier = await supplierService.GetSupplierByID(id);
 
-        return new SupplierDetail()
+        return new SupplierDetail
         {
             Id = supplier.Id,
             CompanyName = supplier.CompanyName,
@@ -33,7 +33,7 @@ public class AppSupplierService : IAppSupplierService
             NIF = supplier.NIF,
             BankAgency = supplier.BankAgency,
             State = supplier.State,
-           Purchases = await purchaseOrderService.GetPurchaseOrdersByIdSupplier(supplier.Id)
+            Purchases = await purchaseOrderService.GetPurchaseOrdersByIdSupplier(supplier.Id)
         };
     }
 }

@@ -1,8 +1,7 @@
 ﻿@using INV.Domain.Entities.Receipts
-
 <EditForm Model="ReceiptInfo" OnInvalidSubmit="Create" FormName="hello">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
     @if (ReceiptInfo != null)
     {
         <div class="details-container">
@@ -14,8 +13,8 @@
 
                 <div class="detail-item">
                     <span class="detail-label">Delivery Number</span>
-                    <InputText @bind-Value="@ReceiptInfo.DeliveryNumber" class="date-input" disabled="@statusInput" />
-                    <ValidationMessage For="() => ReceiptInfo.DeliveryNumber" />
+                    <InputText @bind-Value="@ReceiptInfo.DeliveryNumber" class="date-input" disabled="@statusInput"/>
+                    <ValidationMessage For="() => ReceiptInfo.DeliveryNumber"/>
                 </div>
 
                 <div class="detail-item">
@@ -25,10 +24,10 @@
 
                 <div class="detail-item">
                     <span class="detail-label">Delivery Date</span>
-                    <InputDate @bind-Value="@ReceiptInfo.DeliveryDate" class="date-input" disabled="@statusInput" />
-                    <ValidationMessage For="() => ReceiptInfo.DeliveryDate" />
+                    <InputDate @bind-Value="@ReceiptInfo.DeliveryDate" class="date-input" disabled="@statusInput"/>
+                    <ValidationMessage For="() => ReceiptInfo.DeliveryDate"/>
                 </div>
-               
+
 
                 <div class="detail-item">
                     <span class="detail-label">Status</span>
@@ -37,64 +36,55 @@
 
                 <div class="detail-item">
                     <span class="detail-label">Documents</span>
-                    <InputFile class="file-upload" disabled="@statusInput" />
+                    <InputFile class="file-upload" disabled="@statusInput"/>
                 </div>
-                
+
             </div>
         </div>
     }
 
-   
 
     @if (ReceiptInfo.ReceiptProducts != null)
     {
-        
-
         <div class="Container-list">
             <RadzenDataGrid Data="@products" AllowSorting="true" AllowFiltering="true" Style="width: 100%;">
                 <Columns>
-                    <RadzenDataGridColumn Property="@nameof(ReceiptProductModel.Designation)" Title="Designation" />
-                    <RadzenDataGridColumn Property="@nameof(ReceiptProductModel.Quantity)" Title="Quantity" />
+                    <RadzenDataGridColumn Property="@nameof(ReceiptProductModel.Designation)" Title="Designation"/>
+                    <RadzenDataGridColumn Property="@nameof(ReceiptProductModel.Quantity)" Title="Quantity"/>
                     <RadzenDataGridColumn Title="Rest">
                         <Template Context="product">
-                            @(product.Quantity - product.Received)
+                            @(product.Quantity)
                         </Template>
                     </RadzenDataGridColumn>
-                    <RadzenDataGridColumn  Property="@nameof(ReceiptProductModel.Quantity)" Title="Received">
-                        <Template Context="product" >
-                            <InputNumber @bind-Value="product.Received" disabled="@statusInput" />
+                    <RadzenDataGridColumn Property="@nameof(ReceiptProductModel.Quantity)" Title="Received">
+                        <Template Context="product">
+                            <InputNumber @bind-Value="product.Received" disabled="@statusInput"/>
                         </Template>
                     </RadzenDataGridColumn>
-                    
+
                 </Columns>
             </RadzenDataGrid>
         </div>
 
         <div class="footer-form" style="display: flex; flex-direction: row-reverse;">
-            @if (ReceiptInfo.Status == ReceiptStatus.validated) { }
+            @if (ReceiptInfo.Status == ReceiptStatus.validated)
+            {
+            }
             else if (ReceiptInfo.Status == ReceiptStatus.editing)
             {
                 @if (statusInput)
                 {
-                    <button type="button" class="btn-custom btn-submit" @onclick="SaveChanges">Enregistrer</button>
-                    <button type="button" class="btn-custom btn-cancel" @onclick="CancelEditing">Annuler</button>
-                  
-                  
-
-                    
+                    <button type="submit" class="btn-custom btn-submit" @onclick="Validate">Valider</button>
+                    <button type="button" class="btn-custom btn-cancel" @onclick="StartEditing">Modifier</button>
                 }
                 else
                 {
-                    <button type="submit" class="btn-custom btn-submit" @onclick="Validate">Valider</button>
+                    <button type="button" class="btn-custom btn-submit" @onclick="SaveChanges">Enregistrer</button>
+                    <button type="button" class="btn-custom btn-cancel" @onclick="CancelEditing">Annuler</button>
                 }
             }
-            @if (ReceiptInfo.Status == ReceiptStatus.editing && !statusInput)
-            {
-             
-                    <button type="button" class="btn-custom btn-cancel" @onclick="StartEditing">Modifier</button>
-                
-            }
-          
+
+
         </div>
     }
 </EditForm>

@@ -2,27 +2,25 @@
 using INV.Web.Services.Suppliers;
 using Microsoft.AspNetCore.Components;
 
-namespace INV.Web.Components.Pages.Suppliers
+namespace INV.Web.Components.Pages.Suppliers;
+
+public partial class SupplierPage
 {
-    public partial class SupplierPage
+    private List<PurchaseOrderInfo> purchases;
+    [Parameter] public Guid id { get; set; }
+    private SupplierDetail Supplier { get; set; }
+    [Inject] public IAppSupplierService serviceSupplier { set; get; }
+
+
+    protected override async Task OnInitializedAsync()
     {
-        [Parameter] public Guid id { get; set; }
-        private SupplierDetail Supplier { get; set; } 
-        private List<PurchaseOrderInfo> purchases;
-        [Inject] public IAppSupplierService serviceSupplier { set; get; }
-
-       
-
-        protected override async Task OnInitializedAsync()
+        try
         {
-            try
-            {
-                Supplier = await serviceSupplier.GetSupplierDetail(id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+            Supplier = await serviceSupplier.GetSupplierDetail(id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
         }
     }
 }

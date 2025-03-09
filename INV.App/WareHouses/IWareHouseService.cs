@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using INV.Domain.Entities.WareHouse;
+﻿using INV.Domain.Entities.WareHouse;
 using INV.Domain.Shared;
 
-namespace INV.App.WareHouses
-{
-    public interface IWareHouseService
-    {
-        ValueTask<List<WareHouse>> GetAllReceipts();
+namespace INV.App.WareHouses;
 
-        ValueTask<Result> CreateWareHouse(WareHouse wareHouse);
-    }
+public interface IWareHouseService
+{
+    ValueTask<List<WareHouse>> GetAllReceipts();
+
+    ValueTask<Result> CreateWareHouse(WareHouse wareHouse);
 }

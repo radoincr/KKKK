@@ -7,7 +7,7 @@
     <div>
         @Pills
     </div>
-</div> 
+</div>
 @if (purchaseOrderInfos is null)
 {
     <h3>Loading...</h3>
@@ -19,10 +19,10 @@ else
                         Style="width: 100%;" RowSelect="@((PurchaseOrderInfo purchaseOrderInfo) => navigatepage(purchaseOrderInfo.Id))">
             <Columns>
 
-                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Status)" Title="Status" />
-                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Number)" Title="Number" />
-                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Date)" Title="Date" />
-                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.SupplierName)" Title="Supplier Name" />
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Status)" Title="Status"/>
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Number)" Title="Number"/>
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.Date)" Title="Date"/>
+                <RadzenDataGridColumn Property="@nameof(PurchaseOrderInfo.SupplierName)" Title="Supplier Name"/>
 
             </Columns>
         </RadzenDataGrid>

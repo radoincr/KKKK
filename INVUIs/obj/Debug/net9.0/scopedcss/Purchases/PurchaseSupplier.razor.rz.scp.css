@@ -12,10 +12,12 @@
     font-weight: bold;
     color: var(--primary-color);
 }
-.Supplier-title[b-q7so4rwle3]{
+
+.Supplier-title[b-q7so4rwle3] {
     font-size: 22px;
     font: bold;
 }
+
 .fade-in[b-q7so4rwle3] {
     opacity: 0;
     transform: translateY(-10px);

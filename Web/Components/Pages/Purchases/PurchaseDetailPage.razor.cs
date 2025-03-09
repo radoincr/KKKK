@@ -1,40 +1,29 @@
 ﻿using INV.App.Purchases;
-using INV.App.Receipts;
 using INV.App.Services;
 using INV.Domain.Entities.Purchases;
 using INV.Domain.Entities.Receipts;
-using INV.Domain.Shared;
-using INV.Implementation.Service.Purchses;
 using Microsoft.AspNetCore.Components;
 
-namespace INV.Web.Components.Pages.Purchases
+namespace INV.Web.Components.Pages.Purchases;
+
+public partial class PurchaseDetailPage
 {
-    public partial class PurchaseDetailPage
+    public PurchaseOrder purchaseOrder = new();
+
+    //  public List<PurchaseOrderInfo> purchaseOrderListById;
+
+    public List<Receipt> ReceptionsListByPurchase;
+    [Parameter] public Guid Id { get; set; }
+    [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
+    [Inject] public IReceiptService receiptService { set; get; }
+
+    protected override async Task OnInitializedAsync()
     {
-        [Parameter] public Guid Id { get; set; }
-        [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
-        [Inject] public IReceiptService receiptService { set; get; }
+        purchaseOrder = await purchaseOrderService.GetPurchaseOrdersByID(Id);
 
-        public PurchaseOrder purchaseOrder = new PurchaseOrder();
+        // purchaseOrderListById = await purchaseOrderService.GetPurchaseOrdersByIdSupplier(purchaseOrder.SupplierId);
 
-      //  public List<PurchaseOrderInfo> purchaseOrderListById;
-
-        public List<Receipt> ReceptionsListByPurchase;
-
-        protected override async Task OnInitializedAsync()
-        {
-            purchaseOrder = await purchaseOrderService.GetPurchaseOrdersByID(Id);
-
-           // purchaseOrderListById = await purchaseOrderService.GetPurchaseOrdersByIdSupplier(purchaseOrder.SupplierId);
-
-            var result = await receiptService.GetReceiptsByPurchaseId(purchaseOrder.Id);
-            if(result.IsSuccess)
-            {
-                ReceptionsListByPurchase = result.Value;
-            }
-
-        }
-
-       
+        var result = await receiptService.GetReceiptsByPurchaseId(purchaseOrder.Id);
+        if (result.IsSuccess) ReceptionsListByPurchase = result.Value;
     }
 }

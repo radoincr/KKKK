@@ -1,8 +1,7 @@
-﻿namespace INV.Domain.Entities.Budget
+﻿namespace INV.Domain.Entities.Budget;
+
+public class Chapter
 {
-    public class Chapter
-    {
-        public int CodeChapter { get; set; }
-        public string Name { get; set; }
-    }
+    public int CodeChapter { get; set; }
+    public string Name { get; set; }
 }

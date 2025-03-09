@@ -1,21 +1,22 @@
-@inject Microsoft.Extensions.Localization.IStringLocalizer<NavMenu> L
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<NavMenu> L
 
 <div class="top-row ps-3 navbar navbar-dark" style="background-color:#257180 ">
     <div class="container-fluid d-flex align-items-center">
-        <img src="Images/logo1.png" alt="Logo" style="width: 100px;margin-left: 30px;" />
+        <img src="Images/logo1.png" alt="Logo" style="width: 100px;margin-left: 30px;"/>
         <span class="ms-auto" style="font-weight: normal; font-size: 0.9em; color: #FD8B51;">Manage your inventory online</span>
     </div>
 
 
 </div>
 
-<input type="checkbox" class="navbar-toggler" id="navbar-toggler" />
+<input type="checkbox" class="navbar-toggler" id="navbar-toggler"/>
 <div class="nav-scrollable" style="background-color:#257180">
     <nav class="flex-column" aria-expanded="false">
-        <br />
-        <br />
-        <br />
-        <br />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <div class="nav-item px-4">
             <NavLink class="nav-link d-flex align-items-center" href="/" Match="NavLinkMatch.All" style="color: white;">
                 <span class="bi bi-house-door me-3" aria-hidden="true"></span> Home
@@ -26,7 +27,7 @@
                 <span class="bi bi-person-lines-fill me-3" aria-hidden="true"></span> List of Suppliers
             </NavLink>
         </div>
-<!--
+        <!--
         <div class="nav-item px-4">
             <NavLink class="nav-link d-flex align-items-center" href="purchaseOrder" style="color: white;">
                 <span class="bi bi-cart-plus me-3" aria-hidden="true"></span> Add Purchase Order
@@ -45,7 +46,7 @@
             </NavLink>
         </div>
 
-       @*  <div class="nav-item px-4">
+        @*  <div class="nav-item px-4">
             <NavLink class="nav-link d-flex align-items-center" href="inventory" style="color: white;">
                 <span class="bi bi-archive me-3" aria-hidden="true"></span> Inventory
             </NavLink>

@@ -1,12 +1,15 @@
+using INV.App.Budgets;
 using INV.App.Products;
 using INV.App.Purchases;
 using INV.App.Services;
 using INV.App.Suppliers;
 using INV.App.WareHouses;
-using INV.Implementation.Service.ProductServices;
+using INV.Implementation.Service.BudgetServices;
+using INV.Implementation.Service.Products;
 using INV.Implementation.Service.Purchses;
 using INV.Implementation.Service.Suppliers;
 using INV.Implementation.Service.WareHouses;
+using INV.Infrastructure.Storage.Budgets;
 using INV.Infrastructure.Storage.Products;
 using INV.Infrastructure.Storage.Purchases;
 using INV.Infrastructure.Storage.Receipts;
@@ -29,6 +32,8 @@ builder.Services.AddScoped<IReceiptService, ReceiptService>();
 builder.Services.AddScoped<IReceiptStorage, ReceiptStorage>();
 builder.Services.AddScoped<IWareHouseStorage, WareHouseStrorage>();
 builder.Services.AddScoped<IWareHouseService, WareHouseService>();
+builder.Services.AddScoped<IBudgetStorage, BudgetStorage>();
+builder.Services.AddScoped<IBudgetService, BudgetService>();
 builder.Services.AddRadzenComponents();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -38,7 +43,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseExceptionHandler("/Error", true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }

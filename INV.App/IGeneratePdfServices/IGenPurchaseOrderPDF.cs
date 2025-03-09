@@ -1,7 +1,6 @@
-﻿namespace INV.App.IGeneratePdfServices
+﻿namespace INV.App.IGeneratePdfServices;
+
+public interface IGenPurchaseOrderPDF
 {
-    public interface IGenPurchaseOrderPDF
-    {
-        Task GeneratePurchaseOrderPdf(int purchaseOrderNumber, string outputPdfPath, string htmlTemplatePath);
-    }
+    Task GeneratePurchaseOrderPdf(int purchaseOrderNumber, string outputPdfPath, string htmlTemplatePath);
 }

@@ -8,24 +8,21 @@ namespace INVUIs.WareHouses;
 
 public partial class WareHouseForm : ComponentBase
 {
-    [Inject] public IWareHouseService wareHouseService { set; get; }
-    private WareHouseModel newWareHouse = new WareHouseModel();
-    private bool visibility = false;
+    private WareHouseModel newWareHouse = new();
     private Result result;
     private string success = string.Empty;
+    private bool visibility = false;
+    [Inject] public IWareHouseService wareHouseService { set; get; }
 
     public async Task CreateWareHouse()
     {
-        var wareHouse = new WareHouse()
+        var wareHouse = new WareHouse
         {
             Id = Guid.NewGuid(),
             Name = newWareHouse.WareHouseName
         };
         result = await wareHouseService.CreateWareHouse(wareHouse);
-        if (result.IsSuccess)
-        {
-            success = "warehouse has been create ";
-        }
+        if (result.IsSuccess) success = "warehouse has been create ";
 
         StateHasChanged();
         await Task.Delay(1500);

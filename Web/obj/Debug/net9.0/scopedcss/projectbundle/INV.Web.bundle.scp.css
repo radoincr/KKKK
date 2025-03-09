@@ -22,20 +22,20 @@ main[b-ljz8einsnp] {
     align-items: center;
 }
 
-    .top-row[b-ljz8einsnp]  a, .top-row[b-ljz8einsnp]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.top-row[b-ljz8einsnp]  a, .top-row[b-ljz8einsnp]  .btn-link {
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
 
-    .top-row[b-ljz8einsnp]  a:hover, .top-row[b-ljz8einsnp]  .btn-link:hover {
-        text-decoration: underline;
-    }
+.top-row[b-ljz8einsnp]  a:hover, .top-row[b-ljz8einsnp]  .btn-link:hover {
+    text-decoration: underline;
+}
 
-    .top-row[b-ljz8einsnp]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.top-row[b-ljz8einsnp]  a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 640.98px) {
     .top-row[b-ljz8einsnp] {
@@ -91,12 +91,12 @@ main[b-ljz8einsnp] {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss[b-ljz8einsnp] {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+#blazor-error-ui .dismiss[b-ljz8einsnp] {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
 /* _content/INV.Web/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-7831hfb3uy] {
     appearance: none;
@@ -117,7 +117,7 @@ main[b-ljz8einsnp] {
 
 .top-row[b-7831hfb3uy] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 
@@ -150,12 +150,12 @@ main[b-ljz8einsnp] {
 }
 
 .nav-item[b-7831hfb3uy]  a.active {
-    background-color: rgba(255,255,255,0.37);
+    background-color: rgba(255, 255, 255, 0.37);
     color: white;
 }
 
 .nav-item[b-7831hfb3uy]  .nav-link:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
 }
 

@@ -3,8 +3,8 @@
     <div class="modal-overlay">
         <div class="modal-content">
             <EditForm Model="newSupplier" OnValidSubmit="OnCreate" FormName="AddSupplier">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
+                <DataAnnotationsValidator/>
+                <ValidationSummary/>
                 <div class="commend-content">
                     <div class="titel-primary">
                         <h2>Information of Supplier</h2>
@@ -13,29 +13,30 @@
                     <div class="input">
                         <div class="commend-input">
                             <label>Full Name</label>
-                            <InputText @bind-Value="newSupplier.NameSupplier" placeholder="Enter Supplier Name" />
-                            <ValidationMessage For="() => newSupplier.NameSupplier" />
-                        </div>  
+                            <InputText @bind-Value="newSupplier.NameSupplier" placeholder="Enter Supplier Name"/>
+                            <ValidationMessage For="() => newSupplier.NameSupplier"/>
                         </div>
-                        <div class="input">
+                    </div>
+                    <div class="input">
                         <div class="commend-input">
                             <label>Company Name (Legal from determination)</label>
-                            <InputText @bind-Value="newSupplier.NameCompany" placeholder="Enter Supplier Company" />
-                            <ValidationMessage For="() => newSupplier.NameCompany" />
-                        </div> </div>
-                        <div class="input">
+                            <InputText @bind-Value="newSupplier.NameCompany" placeholder="Enter Supplier Company"/>
+                            <ValidationMessage For="() => newSupplier.NameCompany"/>
+                        </div>
+                    </div>
+                    <div class="input">
                         <div class="commend-input">
                             <label>Address</label>
-                            <InputText @bind-Value="newSupplier.Address" placeholder="Enter Supplier Address" />
-                            <ValidationMessage For="() => newSupplier.Address" />
+                            <InputText @bind-Value="newSupplier.Address" placeholder="Enter Supplier Address"/>
+                            <ValidationMessage For="() => newSupplier.Address"/>
                         </div>
                     </div>
 
                     <div class="input2">
                         <div class="commend-input">
                             <label>Phone</label>
-                            <InputText @bind-Value="newSupplier.Phone" placeholder="Enter Supplier Phone" />
-                            <ValidationMessage For="() => newSupplier.Phone" />
+                            <InputText @bind-Value="newSupplier.Phone" placeholder="Enter Supplier Phone"/>
+                            <ValidationMessage For="() => newSupplier.Phone"/>
                         </div>
                         <div class="commend-input">
                             <label>Email</label>
@@ -47,8 +48,8 @@
                     <div class="input2">
                         <div class="commend-input">
                             <label>Commercial registration number (RC)</label>
-                            <InputText @bind-Value="newSupplier.RC" placeholder="Enter RC" />
-                            <ValidationMessage For="() => newSupplier.RC" />
+                            <InputText @bind-Value="newSupplier.RC" placeholder="Enter RC"/>
+                            <ValidationMessage For="() => newSupplier.RC"/>
                         </div>
                         <div class="commend-input">
                             <label>Article number (ART)</label>
@@ -65,22 +66,22 @@
                         </div>
                         <div class="commend-input">
                             <label>NIS</label>
-                            <InputText @bind-Value="newSupplier.NIS" placeholder="Enter NIS" />
-                            <ValidationMessage For="() => newSupplier.NIS" />
+                            <InputText @bind-Value="newSupplier.NIS" placeholder="Enter NIS"/>
+                            <ValidationMessage For="() => newSupplier.NIS"/>
                         </div>
                     </div>
-                    
+
                     <div class="input2">
                         <div class="commend-input">
                             <label>Bank Account (RIB)</label>
-                            <InputText @bind-Value="newSupplier.RIB" placeholder="Enter RIB" />
-                            <ValidationMessage For="() => newSupplier.RIB" />
+                            <InputText @bind-Value="newSupplier.RIB" placeholder="Enter RIB"/>
+                            <ValidationMessage For="() => newSupplier.RIB"/>
                         </div>
 
                         <div class="commend-input">
                             <label>Bank Address</label>
-                            <InputText @bind-Value="newSupplier.BankAgency" placeholder="Enter Bank Address" />
-                            <ValidationMessage For="() => newSupplier.BankAgency" />
+                            <InputText @bind-Value="newSupplier.BankAgency" placeholder="Enter Bank Address"/>
+                            <ValidationMessage For="() => newSupplier.BankAgency"/>
                         </div>
                     </div>
                     @*
@@ -88,14 +89,12 @@
                     @if (@result.Successed) { <div class="D-success-text">"Laboratory is Created"</div>} }
                     *@
                     <div class="footer-form">
-                        <button class="btn-custom btn-cancel" type="button" @onclick="close">Close</button>
-                        <button class="btn-custom btn-submit" type="submit">Create</button>
-                        
+                        <button class="btn-custom btn-cancel" type="button" @onclick="closeModel">Close</button>
+                        <button class="btn-custom btn-submit" type="submit">@CreateButtonLabel</button>
+
                     </div>
                 </div>
             </EditForm>
         </div>
     </div>
-
-
 }

@@ -33,7 +33,7 @@ namespace INV.Implementation.Service.GeneratePdfServices
 
                 string updatedHtmlContent = injectPurchaseOrderToHtml(htmlContent, purchaseOrders, suppliers, orderDetails);
 
-             *//*await new BrowserFetcher().DownloadAsync();*//*
+             */ /*await new BrowserFetcher().DownloadAsync();*/ /*
 
                 await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
                 {
@@ -48,20 +48,20 @@ namespace INV.Implementation.Service.GeneratePdfServices
                 {
                     Content = @"
         body { font-family: 'Amiri', 'Tajawal', 'Arial', sans-serif; direction: rtl; text-align: right; }
-        
-        .red { 
-            width: 100%; 
-            border-collapse: separate; 
-            border-spacing: 0; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            border: 1px solid black; 
+
+        .red {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid black;
         }
-        .header { 
-            background-color: #e2e2e2;  
-            font-weight: bold; 
-            text-align: center; 
-            padding: 4px; 
+        .header {
+            background-color: #e2e2e2;
+            font-weight: bold;
+            text-align: center;
+            padding: 4px;
             font-size: 18px;
         }
     "
@@ -158,3 +158,4 @@ namespace INV.Implementation.Service.GeneratePdfServices
         }
     }
 }*/
+

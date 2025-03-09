@@ -2,19 +2,22 @@
 using INV.Shared;
 using Microsoft.AspNetCore.Components;
 
-namespace INV.Web.Components.Pages.Purchases
-{
-    public partial class PurchseOrderListPage : ComponentBase
-    {
-        [Inject] public NavigationManager navigationManager { set; get; }
-        [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
-        private List<PurchaseOrderInfo> purchaseOrderInfos;
+namespace INV.Web.Components.Pages.Purchases;
 
-        protected override async Task OnInitializedAsync()
-        {
-            purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrderInfo();
-            purchaseOrderInfos = purchaseOrderInfos.OrderBy(s => s.Number).ToList();
-        }
-        private void NavigateToPurchaseOrder() => navigationManager.NavigateTo($"{PageRoutes.CreatePurchase}");
+public partial class PurchseOrderListPage : ComponentBase
+{
+    private List<PurchaseOrderInfo> purchaseOrderInfos;
+    [Inject] public NavigationManager navigationManager { set; get; }
+    [Inject] public IPurchaseOrderService purchaseOrderService { set; get; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        purchaseOrderInfos = await purchaseOrderService.GetPurchaseOrderInfo();
+        purchaseOrderInfos = purchaseOrderInfos.OrderBy(s => s.Number).ToList();
+    }
+
+    private void NavigateToPurchaseOrder()
+    {
+        navigationManager.NavigateTo($"{PageRoutes.CreatePurchase}");
     }
 }

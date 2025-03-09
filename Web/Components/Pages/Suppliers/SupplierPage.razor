@@ -2,7 +2,8 @@
 
 @rendermode InteractiveServer
 
-@if(Supplier is not null){
+@if (Supplier is not null)
+{
     <div class="content-profile">
         <div class="container-info-supplier ">
             <SupplierCard Supplier="Supplier"/>
@@ -13,12 +14,12 @@
             <Tabs EnableFadeEffect="true" NavStyle="NavStyle.Pills">
                 <Tab Title="Command" IsActive="true">
                     <Content>
-                        <PurchaseList purchaseOrderInfos="Supplier.Purchases" ShowSupplier="false" />
+                        <PurchaseList purchaseOrderInfos="Supplier.Purchases" ShowSupplier="false"/>
                     </Content>
                 </Tab>
                 <Tab Title="Reseption">
                     <Content>
-                 
+
                     </Content>
                 </Tab>
 

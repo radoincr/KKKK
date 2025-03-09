@@ -6,26 +6,26 @@ namespace INVUIs.Purchases;
 
 public partial class PurchaseSelector
 {
+    private bool displayModal = false;
     [Inject] public NavigationManager Navigation { get; set; }
     [Parameter] public List<PurchaseOrderInfo> Command { get; set; }
     [Parameter] public string Title { get; set; }
     [Parameter] public EventCallback<Guid> OnSelected { get; set; }
-    private bool displayModal = false;
     private string SearchTerm { get; set; } = "";
 
     private List<PurchaseOrderInfo> displayedItems =>
         Command?.Where(i =>
-                i.Date.ToString("yyyy-MM-dd").ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) == true ||
+                i.Date.ToString("yyyy-MM-dd").ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) ||
                 i.SupplierName?.ToLower().Contains(SearchTerm?.ToLower() ?? string.Empty) == true)
             .ToList() ?? new List<PurchaseOrderInfo>();
+
+    [Inject] public IReceiptService receiptService { set; get; }
 
     private void close()
     {
         displayModal = false;
         StateHasChanged();
     }
-
-    [Inject] public IReceiptService receiptService { set; get; }
 
     private async void selectItem(PurchaseOrderInfo selected)
     {

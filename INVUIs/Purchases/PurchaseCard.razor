@@ -1,35 +1,50 @@
-﻿@using INV.App.Purchases
-@using INV.Domain.Entities.Purchases
-@using INVUIs.Shared
+﻿@using INV.Domain.Entities.Purchases
 <div class="container-supplier">
-	<div class="content-info-suplier">
-		<div class="info-box pos-titel-info-supplier">
-		
-
-		<div class="info-boxs-show">
-			<div class="info-box-part1">
-                <div class="purchase-container d-f justify-content:center">
-					<h2>Purchase Details</h2>
-					<div class="purchase-info">
-						<div class="purchase-item"><strong>Status:</strong> <span>@purchaseInfo.Status</span></div>
-						<div class="purchase-item"><strong>Number:</strong> <span>@purchaseInfo.Number</span></div>
-						<div class="purchase-item"><strong>Date:</strong> <span>@purchaseInfo.Date.ToShortDateString()</span></div>
-						<div class="purchase-item"><strong>Service Type:</strong> <span>@purchaseInfo.ServiceType</span></div>
-						<div class="purchase-item"><strong>Budget Type:</strong> <span>@purchaseInfo.BudgeType</span></div>
-						<div class="purchase-item"><strong>Budget Article:</strong> <span>@purchaseInfo.BudgeArticle</span></div>
-						<div class="purchase-item"><strong>Total (HT):</strong> <span>@purchaseInfo.TotalHT.ToString("C")</span></div>
-						<div class="purchase-item"><strong>Total TVA:</strong> <span>@purchaseInfo.TotalTVA.ToString("C")</span></div>
-						<div class="purchase-item"><strong>Total (TTC):</strong> <span>@purchaseInfo.TotalTTC.ToString("C")</span></div>
-						<div class="purchase-item"><strong>Completion Delay:</strong> <span>@purchaseInfo.CompletionDelay days</span></div>
-					</div>
-				</div>
+    <div class="content-info-suplier">
+        <div class="info-box pos-titel-info-supplier">
 
 
+            <div class="info-boxs-show">
+                <div class="info-box-part1">
+                    <div class="purchase-container d-f justify-content:center">
+                        <h2>Purchase Details</h2>
+                        <div class="purchase-info">
+                            <div class="purchase-item">
+                                <strong>Status:</strong> <span>@purchaseInfo.Status</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Number:</strong> <span>@purchaseInfo.Number</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Date:</strong> <span>@purchaseInfo.Date.ToShortDateString()</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Service Type:</strong> <span>@purchaseInfo.ServiceType</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Budget Type:</strong> <span>@purchaseInfo.BudgeType</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Budget Article:</strong> <span>@purchaseInfo.BudgeArticle</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Total (HT):</strong> <span>@purchaseInfo.TotalHT.ToString("C")</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Total TVA:</strong> <span>@purchaseInfo.TotalTVA.ToString("C")</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Total (TTC):</strong> <span>@purchaseInfo.TotalTTC.ToString("C")</span>
+                            </div>
+                            <div class="purchase-item">
+                                <strong>Completion Delay:</strong> <span>@purchaseInfo.CompletionDelay days</span>
+                            </div>
+                        </div>
+                    </div>
 
-				
-				
-			</div>
-		</div>
+
+                </div>
+            </div>
 
 
         </div>
@@ -91,7 +106,7 @@
 </style>
 
 @code{
-	[Parameter] public PurchaseOrder purchaseInfo { set; get; }
+    [Parameter] public PurchaseOrder purchaseInfo { set; get; }
 
 
-} 
+}

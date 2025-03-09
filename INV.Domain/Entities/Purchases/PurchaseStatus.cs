@@ -1,10 +1,9 @@
-﻿namespace INV.Domain.Entities.Purchases
+﻿namespace INV.Domain.Entities.Purchases;
+
+public enum PurchaseStatus
 {
-    public enum PurchaseStatus
-    {
-        Validated = 1,
-        Cancelled = 2,
-        Deleted = 3,
-        Editing = 4
-    }
+    Validated = 1,
+    Cancelled = 2,
+    Deleted = 3,
+    Editing = 4
 }

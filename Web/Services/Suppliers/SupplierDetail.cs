@@ -5,6 +5,7 @@ namespace INV.Web.Services.Suppliers;
 
 public class SupplierDetail : ISupplier
 {
+    public List<PurchaseOrderInfo> Purchases { get; set; } = new();
     public Guid Id { set; get; }
     public string CompanyName { set; get; }
     public string ManagerName { get; set; }
@@ -18,5 +19,4 @@ public class SupplierDetail : ISupplier
     public string NIF { set; get; }
     public string BankAgency { set; get; }
     public SupplierState State { set; get; }
-    public List<PurchaseOrderInfo> Purchases { get; set; } = new ();
 }

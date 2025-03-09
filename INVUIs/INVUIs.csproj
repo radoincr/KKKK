@@ -8,21 +8,21 @@
 
 
     <ItemGroup>
-        <SupportedPlatform Include="browser" />
+        <SupportedPlatform Include="browser"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\INV.Shared\INV.Shared.csproj" />
-      <ProjectReference Include="..\INV.App\INV.App.csproj" />
-      <ProjectReference Include="..\INV.Domain\INV.Domain.csproj" />
-      <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj" />
-      <ProjectReference Include="..\INV.Infrastructure\INV.Infrastructure.csproj" />
-      <ProjectReference Include="..\INV.Shared\INV.Shared.csproj" />
+        <ProjectReference Include="..\INV.Shared\INV.Shared.csproj"/>
+        <ProjectReference Include="..\INV.App\INV.App.csproj"/>
+        <ProjectReference Include="..\INV.Domain\INV.Domain.csproj"/>
+        <ProjectReference Include="..\INV.Implementation\INV.Implementation.csproj"/>
+        <ProjectReference Include="..\INV.Infrastructure\INV.Infrastructure.csproj"/>
+        <ProjectReference Include="..\INV.Shared\INV.Shared.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.2" />
-      <PackageReference Include="Radzen.Blazor" Version="6.1.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.2"/>
+        <PackageReference Include="Radzen.Blazor" Version="6.1.1"/>
     </ItemGroup>
 
 </Project>

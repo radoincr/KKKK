@@ -179,7 +179,6 @@
     }
 
 
-
     .commend-pos-btn {
         flex-direction: column;
         align-items: center;
@@ -194,6 +193,7 @@
         width: 100%;
     }
 }
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -218,6 +218,7 @@
     animation: fadeIn 0.3s ease-in-out;
     background-color: #fff !important;
 }
+
 /* Modal Animation */
 @keyframes fadeIn {
     from {
@@ -230,6 +231,7 @@
         opacity: 1;
     }
 }
+
 /*==================================================*/
 .content-profile {
 
@@ -246,13 +248,14 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-    .container-info-supplier:hover {
-        transform: translateY(-3px);
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px;
-    }
+
+.container-info-supplier:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px;
+}
 
 .container-supplier {
-    border-radius:7px;
+    border-radius: 7px;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
@@ -261,10 +264,10 @@
 }
 
 
-
 .info-boxs-show {
     display: flex;
 }
+
 .info-box {
     display: flex;
     align-items: center;
@@ -279,30 +282,30 @@
 .info-box-icon {
     font-size: 1.5rem;
     color: #257180;
-    padding-right:0.5rem;
+    padding-right: 0.5rem;
 }
 
-.info-box-text{
-    font-size:1.2rem;
-    font-weight:600;
+.info-box-text {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.info-box-part2{
-    margin-left:15%;
+.info-box-part2 {
+    margin-left: 15%;
 }
 
 
-
-.container-work-supplier{
-    width:100%;
+.container-work-supplier {
+    width: 100%;
 }
 
 .nav-pills .nav-link.active {
-    background-color: var( --primary-color) !important;
+    background-color: var(--primary-color) !important;
 }
-.nav-pills .nav-link{
-    color:black;
-    font-weight:600;
+
+.nav-pills .nav-link {
+    color: black;
+    font-weight: 600;
 }
 
 .nav-pills .nav-link:hover {
@@ -319,15 +322,16 @@
 }
 
 .btn-pos-supplier {
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .info-boxs-hide {
     display: flex;
     margin-top: 2rem;
 }
+
 .info-boxs {
     display: flex;
 }

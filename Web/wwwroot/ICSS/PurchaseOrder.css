@@ -26,9 +26,9 @@
     transition: color 0.3s ease;
 }
 
-    .toggle-button:hover {
-        color: #25718;
-    }
+.toggle-button:hover {
+    color: #25718;
+}
 
 .section-title {
     font-size: 18px;
@@ -63,10 +63,10 @@ textarea.form-control.valid {
     width: 100%;
 }
 
-    .input-field:focus {
-        border-color: #257180;
-        outline: none;
-    }
+.input-field:focus {
+    border-color: #257180;
+    outline: none;
+}
 
 h4 {
     text-align: center;
@@ -85,9 +85,9 @@ h4 {
     font-size: 16px;
 }
 
-    .create-button:hover {
-        background-color: #0056b3;
-    }
+.create-button:hover {
+    background-color: #0056b3;
+}
 
 .addproduct-button, .addsupplier-button {
     margin-left: 20px;
@@ -101,6 +101,7 @@ h4 {
     transition: background 0.3s ease;
     margin-top: 10px;
 }
+
 .addproduct-button:hover,
 .addsupplier-button:hover {
     background-color: #fd8b51b5;
@@ -115,14 +116,15 @@ select.input-field {
     background-color: #fff;
 }
 
-    select.input-field:focus {
-        border-color: #257180;
-        outline: none;
-    }
+select.input-field:focus {
+    border-color: #257180;
+    outline: none;
+}
 
-    select.input-field option {
-        padding: 6px;
-    }
+select.input-field option {
+    padding: 6px;
+}
+
 /*
 select.input-field2 {
     padding: 6px;
@@ -140,15 +142,16 @@ select.input-field2 {
 
     select.input-field2 option {
         padding: 4px;
-    }  */ 
-.input-description{
+    }  */
+.input-description {
     padding: 6px;
     margin-top: 4px;
     font-size: 14px;
     border: 1px solid #257180;
     border-radius: 6px;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     appearance: none;
     width: 20px;
     height: 20px;
@@ -157,19 +160,19 @@ input[type="radio"]{
     cursor: pointer;
 }
 
-    input[type="radio"]:checked{
-        background-color: #FD8B51;
-        border-color: #FD8B51;
-    }
+input[type="radio"]:checked {
+    background-color: #FD8B51;
+    border-color: #FD8B51;
+}
 
-        input[type="radio"]:checked::after {
-            content: "✔";
-            font-size: 14px;
-            color: white;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+input[type="radio"]:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 p {
     margin-bottom: 15px;
@@ -188,10 +191,11 @@ label {
     width: 100%;
     margin-bottom: 7px;
 }
-    .input-titel h6 {
-        font-size: 1rem;
-        font-weight: bold;
-    }
+
+.input-titel h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
 
 .input-container {
     display: flex;
@@ -264,17 +268,20 @@ select#supplierExists {
 .input-chapter {
     width: 100%;
 }
+
 .deleteproduct-button {
-     background-color: red;
-     transition: color 0.3s ease;
-     cursor: pointer;
-     border: none;
-     border-radius: 4px;
+    background-color: red;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
     margin-top: 2px;
- }
+}
+
 .deleteproduct-button:hover {
     background-color: darkred;
 }
+
 .editproduct-button {
     background-color: #178f17;
     transition: color 0.3s ease;
@@ -282,9 +289,10 @@ select#supplierExists {
     border: none;
     border-radius: 4px;
     margin-top: 2px;
-    color: white; 
-    padding: 5px 10px; 
+    color: white;
+    padding: 5px 10px;
 }
+
 .editproduct-button:hover {
     background-color: darkgreen;
 }
@@ -293,12 +301,14 @@ select#supplierExists {
     color: white;
     font-size: 1.1rem;
 }
+
 .commend-inputt label {
     display: block;
     font-weight: 500;
     color: #257180;
     font-size: 14px;
 }
+
 @media (max-width: 800px) {
     .form-row {
         grid-template-columns: 1fr;

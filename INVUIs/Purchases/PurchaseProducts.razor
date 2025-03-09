@@ -1,58 +1,79 @@
 ﻿@using INVUIs.Products.ProductsModel
-
 @rendermode InteractiveServer
+<CascadingValue Value="products">
+    <RadzenButton ButtonStyle="ButtonStyle.Success" Icon="add_circle" Text="Add Product" Click="() => productSelector.ShowModal()"/>
 
-<RadzenDataGrid @ref="grid" TItem="ProductModel" Data="@products" AllowVirtualization="true" Style="height:400px"
-                GridLines="DataGridGridLines.Horizontal">
-    <HeaderTemplate>
-        <RadzenButton ButtonStyle="ButtonStyle.Success" Icon="add_circle" Text="Add New Order" Click="() => productSelector.ShowModal()"/>
-        <RadzenButton ButtonStyle="ButtonStyle.Base" Icon="note_add" Text="Create New Product" Click="() => productForm.ShowModal()"/>
+    <RadzenDataGrid @ref="grid" TItem="ProductModel" Data="@products" AllowVirtualization="true" Style="height:370px"
+                    GridLines="DataGridGridLines.Horizontal">
+      
+        @*<HeaderTemplate>*@
+        @*</HeaderTemplate>*@
+        <Columns>
+            <RadzenDataGridColumn Property="Number" Title="N°" Width="7%"/>
+            <RadzenDataGridColumn Property="Designation" Title="Designation" Width="34%"/>
+            <RadzenDataGridColumn Property="UnitMeasure" Title="Unit" Width="10%"/>
+            <RadzenDataGridColumn Property="Quantity" Title="Quantity" Width="10%"/>
+            <RadzenDataGridColumn Property="UnitPrice" Title="Unit Price" Width="10%"/>
+            <RadzenDataGridColumn Property="TVA" Title="TVA" Width="9%">
+                <Template Context="product">
+                    @product.TVA %
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="TotalPrice" Title="Total" Width="18%">
+                <Template Context="product">
+                    @((product.UnitPrice * product.Quantity).ToString("N"))
+                </Template>
+                <FooterTemplate>
+                    <div style="display: flex; flex-direction: column;">
+                        @*<span>Total THT: @getTHT().ToString("N")</span>
+                        <span>Total TVA: @getTVA().ToString("N")</span>*@
+                        <strong>Total TTC: @getTTC().ToString("N")</strong>
+                    </div>
+                </FooterTemplate>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Title="" Width="15%">
+                <Template Context="product">
+                    <RadzenButton ButtonStyle="ButtonStyle.Success" Click="() => EditProduct(product)" Icon="offline_pin"></RadzenButton>
+                    <RadzenButton ButtonStyle="ButtonStyle.Danger" Click="() => DeleteProduct(product)" Icon="highlight_off"></RadzenButton>
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
 
-    </HeaderTemplate>
-    <Columns>
-        <RadzenDataGridColumn Property="Number" Title="N°" Width="7%"/>
-        <RadzenDataGridColumn Property="Designation" Title="Data" Width="34%"/>
-        <RadzenDataGridColumn Property="UnitMeasure" Title="Unit" Width="10%"/>
-        <RadzenDataGridColumn Property="Quantity" Title="Quantity" Width="10%"/>
-        <RadzenDataGridColumn Property="UnitPrice" Title="Unit Price" Width="10%"/>
-        <RadzenDataGridColumn Property="TVA" Title="TVA" Width="9%">
-            <Template Context="product">
-                @product.TVA %
-            </Template>
-        </RadzenDataGridColumn>
-        <RadzenDataGridColumn Property="TotalPrice" Title="Total" Width="18%">
-            <Template Context="product">
-                @((product.UnitPrice * product.Quantity).ToString("N"))
-            </Template>
-            <FooterTemplate>
-                <strong>Total: @getTotalPrice().ToString("N")</strong>
-            </FooterTemplate>
-        </RadzenDataGridColumn>
-        <RadzenDataGridColumn Title="" Width="15%">
-            <Template Context="product">
-                <RadzenButton ButtonStyle="ButtonStyle.Success" Click="() => EditProduct(product)" Icon="offline_pin"></RadzenButton>
-                <RadzenButton ButtonStyle="ButtonStyle.Danger" Click="() => DeleteProduct(product)" Icon="highlight_off"></RadzenButton>
-            </Template>
-        </RadzenDataGridColumn>
-    </Columns>
-</RadzenDataGrid>
-
-<ProductForm @ref="productForm"/>
-<ProductSelector @ref="productSelector" OnProductSelectedEvent="AddProductToGrid" OnCreateNewProduct="ShowProductForm"/>
+    </RadzenDataGrid>
+</CascadingValue>
+<ProductSelector @ref="productSelector" OnProductSelected="AddProductToGrid"/>
 
 
-@code {
-
-    private void ShowProductForm()
-    {
-        productForm.ShowModal();
-    }
-
+@if (showEditPopup)
+{
+    <div class="popup">
+        <div class="popup-content">
+            <RadzenTemplateForm TItem="ProductModel" Data="@selectedProductModel" Submit="@SaveEditedProduct">
+                <RadzenStack Gap="1rem">
+                    <RadzenRow Style="display: flex; align-items: center;">
+                        <RadzenColumn Size="12" Style="text-align: left;">
+                            <RadzenLabel Text="@selectedProductModel.Designation"
+                                         Style="font-size: 25px; font-weight: bold; color: #257180FF; display: block;"/>
+                        </RadzenColumn>
+                    </RadzenRow>
+                    <RadzenRow>
+                        <RadzenColumn Size="4">
+                            <RadzenLabel Text="Quantity" Style="font-size: 14px;"/>
+                            <RadzenNumeric TValue="int" @bind-Value="selectedProductModel.Quantity" Min="1" Style="width: 100%; font-size: 14px;"/>
+                        </RadzenColumn>
+                        <RadzenColumn Size="6">
+                            <RadzenLabel Text="Unit Price" Style="font-size: 14px;"/>
+                            <RadzenNumeric TValue="decimal" @bind-Value="selectedProductModel.UnitPrice" Min="1" Style="width: 100%; font-size: 14px;"/>
+                        </RadzenColumn>
+                    </RadzenRow>
+                    <RadzenRow Style="display: flex; justify-content: flex-end;">
+                        <RadzenColumn Size="8" Style="text-align: right;">
+                            <RadzenButton Text="Save" ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Style="margin-left: 1rem; font-size: 14px;"/>
+                            <RadzenButton Text="Cancel" ButtonStyle="ButtonStyle.Danger" ButtonType="ButtonType.Button" Click="@CloseEditPopup" Style="font-size: 14px;"/>
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenStack>
+            </RadzenTemplateForm>
+        </div>
+    </div>
 }
-
-@*<RadzenTemplateForm>
-    <RadzenLabel Text="Delivery time :"/>
-    <RadzenNumeric id="delivery_time" @bind-Value="newProduct.DateDilevry"/> days
-    <RadzenRequiredValidator Component="UnitMeasure" Text="Unit of Measure is required"/>
-    
-</RadzenTemplateForm>*@

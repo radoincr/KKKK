@@ -1,41 +1,86 @@
-<div class="input2">
-    <div class="commend-input">
-        <label>Select a Service</label>
-        <InputSelect @bind-Value="purchaseModel.selectedService">
-            <option value="" selected disabled>Select a Service</option>
-            <option value="Works">Works</option>
-            <option value="Equipment">Equipment</option>
-            <option value="Services">Services</option>
-        </InputSelect>
-    </div>
-    <br/>
-    <div class="commend-input">
-        <label>Select a Budget</label>
-        <InputSelect @bind-Value="purchaseModel.selectedCategory">
-            <option value="" selected disabled>Select a Budget</option>
-            <option value="Operating Expenses">Operating Expenses</option>
-            <option value="Equipment Expenses">Equipment Expenses</option>
-            <option value="Other Expenses">Other Expenses</option>
-        </InputSelect>
-    </div>
-</div>
-<div class="input2">
-    <div class="commend-input">
-        <label for="chapter">Choose a Chapter</label>
-        <InputText id="chapter" @bind-Value="purchaseModel.selectedChapter" style="margin-top: 4px" placeholder="Enter Chapter" class="form-control valid"/>
-    </div>
-    <div class="commend-input">
-        <label for="title">Title of Chapter</label>
-        <InputText id="title" @bind-Value="purchaseModel.title_chapter" style="margin-top: 4px" readonly/>
-    </div>
-</div>
-<div class="input2">
-    <div class="commend-input">
-        <label for="article">Choose an Article</label>
-        <InputText id="article" @bind-Value="purchaseModel.selectedArticle" style="margin-top: 4px" placeholder="Enter Article" class="form-control valid"/>
-    </div>
-    <div class="commend-input">
-        <label for="description">Description Article</label>
-        <InputTextArea id="description" @bind-Value="purchaseModel.description_article" style="margin-top: 4px" placeholder="Enter Description" class="form-control valid"/>
-    </div>
-</div>
+@rendermode InteractiveServer
+<EditForm Model="purchaseModel" OnValidSubmit="Save" FormName="purchaseForm" Enhance @ref="form">
+    <DataAnnotationsValidator/>
+
+    <CascadingValue Value="purchaseModel">
+        <div style="display: grid;grid-template-columns: 1fr 1fr;grid-gap: 32px; padding-inline: 32px">
+            <div>
+                <div class="commend-input">
+                    <div class="label-input-group">
+                        <label style="width: 10rem">Select a Budget:</label>
+                        <InputSelect @bind-Value="purchaseModel.selectedCategory">
+                            <option value="" selected disabled>Select a Budget</option>
+                            <option value="1">Operating Expenses</option>
+                            <option value="2">Equipment Expenses</option>
+                            <option value="3">Other Expenses</option>
+                        </InputSelect>
+
+                        <ValidationMessage For="@(() => purchaseModel.selectedCategory)" class="text-danger"/>
+                    </div>
+
+                </div>
+                <div class="input2">
+                    <div class="commend-input">
+                        <div class="label-input-group">
+                            <label for="chapter" style="width: 10rem">Choose a Chapter:</label>
+                            <InputSelect id="chapter" style="width: 6rem" @bind-Value="SelectedChapterCode" class="form-control valid">
+                                <option value="" selected >-- Select a Chapter --</option>
+                                @foreach (var chapter in chapters)
+                                {
+                                    <option value="@chapter.CodeChapter">@chapter.CodeChapter</option>
+                                }
+                            </InputSelect>
+                            <InputText id="title" @bind-Value="purchaseModel.title_chapter" class="form-control valid" readonly/>
+
+                            <ValidationMessage For="@(() => purchaseModel.selectedChapter)" class="text-danger"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="input2">
+                    <div class="commend-input">
+                        <div class="label-input-group">
+                            <label for="article" style="width: 10rem">Choose an Article:</label>
+                            <InputSelect id="article" style="width: 6rem" @bind-Value="SelectedArticleCode" class="form-control valid">
+                                <option value="" selected>-- Select an Article --</option>
+                                @foreach (var article in articles)
+                                {
+                                    <option value="@article.CodeArticle">@article.CodeArticle</option>
+                                }
+                            </InputSelect>
+
+                            <InputText id="description" @bind-Value="purchaseModel.description_article"
+                                       class="form-control valid" placeholder="Enter Description" readonly/>
+                        </div>
+                        <ValidationMessage For="@(() => purchaseModel.selectedArticle)" class="text-danger"/>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="commend-input">
+                    <div class="label-input-group">
+                        <label>Select a Service:</label>
+                        <InputSelect @bind-Value="purchaseModel.selectedService">
+                            <option value="" selected disabled>Select a Service</option>
+                            <option value="1">Works</option>
+                            <option value="2">Equipment</option>
+                            <option value="3">Services</option>
+                        </InputSelect>
+
+                        <ValidationMessage For="@(() => purchaseModel.selectedService)" class="text-danger"/>
+                    </div>
+                    <div class="commend-input">
+                        <div class="label-input-group">
+                            <label for="productNumber" class="form-label" style="width: 10rem">Delivery Time :</label>
+                            <InputText @bind-Value="purchaseModel.DeliveryTime" style="width: 6rem" />
+                            <label class="form-label">days</label>
+                            <ValidationMessage For="@(() => purchaseModel.DeliveryTime)" class="text-danger"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </CascadingValue>
+</EditForm>

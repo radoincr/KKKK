@@ -15,22 +15,22 @@ else
 {
     <div class="Container-list">
         <RadzenDataGrid Data="@Receptions" AllowSorting="true" AllowFiltering="true"
-                        Style="width: 100%;">
+                        Style="width: 100%;" RowSelect="@((ReceiptInfo Receptions) => navigatepage(Receptions.Id))">
             <Columns>
-                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.BudgetArticle)" Title="Article" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.BudgetArticle)" Title="Article"/>
                 <RadzenDataGridColumn Property="@nameof(ReceiptInfo.Date)" Title="Date">
                     <Template Context="reception">
                         @(reception.Date == default ? string.Empty : reception.Date.ToString())
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.purchaseNumber)" Title="Purchase N°" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.purchaseNumber)" Title="Purchase N°"/>
                 <RadzenDataGridColumn Property="@nameof(ReceiptInfo.PurchaseDate)" Title="Purchase Date">
                     <Template Context="reception">
                         @(reception.PurchaseDate == default ? string.Empty : reception.PurchaseDate)
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.supplierName)" Title="Supplier Name" />
-                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.DeliveryNumber)" Title="Delivery Number" />
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.supplierName)" Title="Supplier Name"/>
+                <RadzenDataGridColumn Property="@nameof(ReceiptInfo.DeliveryNumber)" Title="Delivery Number"/>
                 <RadzenDataGridColumn Property="@nameof(ReceiptInfo.DeliveryDate)" Title="Delivery Date">
                     <Template Context="reception">
                         @(reception.DeliveryDate == default ? string.Empty : reception.DeliveryDate)

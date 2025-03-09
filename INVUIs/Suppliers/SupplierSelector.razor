@@ -4,8 +4,8 @@
 <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.Start" Gap="0.5rem" class="supplier-selector">
     <RadzenLabel Text="Select Supplier" Component="DropDownDataGridChangeEvent" Style="width: 100px"/>
 
-    <RadzenDropDownDataGrid TValue="SupplierInfo" 
-                            @bind-Value="selectedSupplier" 
+    <RadzenDropDownDataGrid TValue="SupplierInfo"
+                            @bind-Value="selectedSupplier"
                             Data="@displayedItems"
                             Name="DropDownDataGridChangeEvent"
                             TextProperty="CompanyName"
@@ -15,6 +15,8 @@
             <RadzenDropDownDataGridColumn Property="Email" Title="Email"/>
         </Columns>
     </RadzenDropDownDataGrid>
+    <RadzenButton Text="Create Supplier" Click="supplierForm.ShowModal" Style="margin-left: 1rem;"/>
+
 </RadzenStack>
 <style>
     .supplier-selector {
@@ -22,3 +24,5 @@
         margin: 0 !important;
     }
 </style>
+@*OnSave=""*@
+<SupplierForm @ref="supplierForm" CreateButtonLabel="Create and select" OnSupplierCreated="OnSupplierSelected"/>

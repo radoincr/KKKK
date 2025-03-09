@@ -12,16 +12,17 @@ else
 {
     <div class="Container-list">
         <RadzenDataGrid Data="@Receptions" AllowSorting="true" AllowFiltering="true"
-                        Style="width: 100%;" >
+                        Style="width: 100%;">
             <Columns>
-                <RadzenDataGridColumn Property="@nameof(Receipt.Status)" Title="Article" />
-                <RadzenDataGridColumn Property="@nameof(Receipt.Date)" Title="Date"/>  
+                <RadzenDataGridColumn Property="@nameof(Receipt.Status)" Title="Article"/>
+                <RadzenDataGridColumn Property="@nameof(Receipt.Date)" Title="Date"/>
             </Columns>
         </RadzenDataGrid>
     </div>
 }
+
 @code{
-  
+
     [Parameter] public List<Receipt> Receptions { get; set; }
     [Parameter] public RenderFragment Pills { get; set; }
 

@@ -1,8 +1,7 @@
-﻿@using INV.App.Suppliers
-@rendermode InteractiveServer
+﻿@rendermode InteractiveServer
 
 
-<button type="button" class="addsupplier-button" @onclick=@showSupplierForm>
+<button type="button" class="addsupplier-button" @onclick="@showSupplierForm">
     <i class="bi bi-person-plus"></i> Add a Supplier
 </button>
 
@@ -18,9 +17,9 @@
 else
 {
     <div class="list-supplier-container">
-        @foreach (SupplierInfo supplier in supplierFilter)
+        @foreach (var supplier in supplierFilter)
         {
-            <div class="purchase-order-card" @onclick="()=>NavigateToSupplierDetails(supplier.ID)">
+            <div class="purchase-order-card" @onclick="() => NavigateToSupplierDetails(supplier.ID)">
                 <label class="purchase-order-header">
                     <a href=@selectedLink(supplier.ID)>
                         @supplier.Name
@@ -34,4 +33,4 @@ else
     </div>
 }
 
-<SupplierForm @ref=supplierForm />
+<SupplierForm @ref="supplierForm"/>

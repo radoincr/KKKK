@@ -1,9 +1,8 @@
-﻿namespace INV.Domain.Entities.Suppliers
+﻿namespace INV.Domain.Entities.Suppliers;
+
+public enum SupplierState
 {
-    public enum SupplierState
-    {
-        Active = 1,
-        Blocked = 0,
-        Deleted = -1,
-    }
+    Active = 1,
+    Blocked = 0,
+    Deleted = -1
 }

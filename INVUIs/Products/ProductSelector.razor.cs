@@ -1,22 +1,23 @@
 ﻿using INV.App.Products;
 using INV.Domain.Entities.Products;
-using Microsoft.AspNetCore.Components;
 using INVUIs.Products.ProductsModel;
+using Microsoft.AspNetCore.Components;
 
 namespace INVUIs.Products;
 
-public partial class ProductSelector
+public partial class ProductSelector : ComponentBase
 {
-    [Inject] public IProductService productService { set; get; }
+    private List<Product> filteredProducts;
+    private string filterText;
+    private bool isProductSelected = false;
+    private ProductForm productForm = new();
+
     private List<Product> products;
     private ProductModel selectedProductModel;
-    private ProductForm productForm = new();
-    private string filterText;
-    private List<Product> filteredProducts;
 
     private bool visibility = false;
-    [Parameter] public EventCallback<ProductModel> OnProductSelectedEvent { get; set; }
-    [Parameter] public EventCallback OnCreateNewProduct { get; set; }
+    [Parameter] public EventCallback<ProductModel> OnProductSelected { get; set; }
+    [Inject] public IProductService productService { set; get; }
     private Guid? SelectedProductId { get; set; } = null;
     public decimal UnitPrice { get; set; }
     public int Quantity { get; set; }
@@ -27,9 +28,29 @@ public partial class ProductSelector
         StateHasChanged();
     }
 
+    public void ShowModal(Product product)
+    {
+        selectedProductModel = new ProductModel
+        {
+            ID = product.Id,
+            Designation = product.Designation,
+            UnitMeasure = product.UnitMeasure,
+            TVA = product.TVA,
+            UnitPrice = product.UnitPrice,
+            Quantity = product.Quantity
+        };
+        visibility = true;
+        StateHasChanged();
+    }
+
     protected override async Task OnInitializedAsync()
     {
-        products = await productService.SelectProducts();
+        LoadProducts();
+    }
+
+    public async Task LoadProducts()
+    {
+        products = await productService.GetProducts();
         filterProducts();
     }
 
@@ -37,10 +58,9 @@ public partial class ProductSelector
     {
         if (string.IsNullOrEmpty(filterText))
             filteredProducts = products.ToList();
-
         else
             filteredProducts = products
-                .Where(p => (p.Designation?.ToLower().Contains(filterText.ToLower()) ?? false))
+                .Where(p => p.Designation?.ToLower().Contains(filterText.ToLower()) ?? false)
                 .ToList();
 
         if (!filteredProducts.Any(p => p.Id == Guid.Empty))
@@ -55,7 +75,7 @@ public partial class ProductSelector
         UnitPrice = 0;
         Quantity = 0;
         filterText = string.Empty;
-        //filteredProducts = new List<Product>();
+        isProductSelected = false;
         StateHasChanged();
     }
 
@@ -63,7 +83,7 @@ public partial class ProductSelector
     {
         if (value == null) return;
 
-        if (Guid.TryParse(value.ToString(), out Guid productId))
+        if (Guid.TryParse(value.ToString(), out var productId))
         {
             if (productId == Guid.Empty)
             {
@@ -85,7 +105,10 @@ public partial class ProductSelector
                         UnitPrice = product.UnitPrice,
                         Quantity = product.Quantity
                     };
-                    //  await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
+
+                    products.RemoveAll(p => p.Id == product.Id);
+                    filteredProducts.RemoveAll(p => p.Id == product.Id);
+                    isProductSelected = true;
                 }
             }
 
@@ -99,19 +122,31 @@ public partial class ProductSelector
         {
             selectedProductModel.UnitPrice = UnitPrice;
             selectedProductModel.Quantity = Quantity;
-            //  await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
             HideModal();
         }
     }
+
     private async Task Save()
     {
         if (selectedProductModel != null)
         {
             selectedProductModel.UnitPrice = UnitPrice;
             selectedProductModel.Quantity = Quantity;
-            await OnProductSelectedEvent.InvokeAsync(selectedProductModel);
+
+            products.RemoveAll(p => p.Id == selectedProductModel.ID);
+            filteredProducts.RemoveAll(p => p.Id == selectedProductModel.ID);
+
+            await OnProductSelected.InvokeAsync(selectedProductModel);
             HideModal();
         }
+    }
+
+    private async Task onProductCreated(Product product)
+    {
+        products.Add(product);
+        filteredProducts.Add(product);
+        isProductSelected = true;
+        ShowModal(product);
     }
 
     private async Task showProductForm()

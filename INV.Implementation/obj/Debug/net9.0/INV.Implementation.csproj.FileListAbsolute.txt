@@ -238,3 +238,29 @@ C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.Implementation\obj\Debug\n
 C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.pdb
 C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.genruntimeconfig.cache
 C:\Users\Dali_Raki\Desktop\New folder (2)\INV_2.0\INV.Implementation\obj\Debug\net9.0\ref\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\testhost.exe
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\testhost.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Infrastructure.deps.json
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Infrastructure.runtimeconfig.json
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Implementation.deps.json
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Implementation.runtimeconfig.json
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Implementation.pdb
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.App.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Domain.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Infrastructure.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.App.pdb
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Domain.pdb
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\bin\Debug\net9.0\INV.Infrastructure.pdb
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.csproj.AssemblyReference.cache
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.AssemblyInfoInputs.cache
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.AssemblyInfo.cs
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.csproj.CoreCompileInputs.cache
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.sourcelink.json
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Impl.1F5F8874.Up2Date
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\refint\INV.Implementation.dll
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.pdb
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\INV.Implementation.genruntimeconfig.cache
+C:\Users\radoi\RiderProjects\INV_3.0\INV.Implementation\obj\Debug\net9.0\ref\INV.Implementation.dll

@@ -7,17 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\INV.Domain\INV.Domain.csproj" />
+        <ProjectReference Include="..\INV.Domain\INV.Domain.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Blazor.Bootstrap" Version="3.3.1" />
-      <PackageReference Include="BootstrapBlazor.BootstrapIcon.Extensions" Version="9.1.0" />
-      <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1" />
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
-      <PackageReference Include="NumberToWordsArabic" Version="1.0.0" />
-      <PackageReference Include="PuppeteerSharp" Version="20.1.0" />
-      <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.1" />
+        <PackageReference Include="Blazor.Bootstrap" Version="3.3.1"/>
+        <PackageReference Include="BootstrapBlazor.BootstrapIcon.Extensions" Version="9.1.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1"/>
+        <PackageReference Include="NumberToWordsArabic" Version="1.0.0"/>
+        <PackageReference Include="PuppeteerSharp" Version="20.1.0"/>
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.1"/>
     </ItemGroup>
 
 </Project>

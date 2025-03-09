@@ -4,57 +4,69 @@ using INV.Domain.Shared;
 using INVUIs.Products.ProductsModel;
 using Microsoft.AspNetCore.Components;
 
-namespace INVUIs.Products
+namespace INVUIs.Products;
+
+public partial class ProductForm : ComponentBase
 {
-    public partial class ProductForm
+    private string failure = string.Empty;
+
+
+    private bool isCreatingProduct = false;
+
+    private ProductModel newProduct = new() { TVA = 19, UnitMeasure = "U" };
+    private Result result;
+    private string success = string.Empty;
+    private List<int> TVAOptions = new() { 9, 19 };
+    private List<string> UnitMesures = new() { "U", "KG", "M", "L" };
+    private bool visibility = false;
+    [Parameter] public EventCallback<Product> OnProductCreated { get; set; }
+    [Inject] private IProductService productService { set; get; }
+    [Inject] private NavigationManager navigationManager { set; get; }
+
+
+    public async Task CreateProduct()
     {
-        private ProductModel newProduct = new ProductModel();
-        [Inject] private IProductService productService { set; get; }
-        [Inject] private NavigationManager navigationManager { set; get; }
-        private List<string> UnitMesures = new() { "U", "KG", "M", "L" };
-        private List<int> TVAOptions = new() { 9, 19 };
-        private bool visibility = false;
-        private Result result;
-        private string success = string.Empty;
-        private string failure = string.Empty;
-
-        public async Task CreateProduct()
+        var product = new Product
         {
-            var product = new Product()
-            {
-                Id = Guid.NewGuid(),
-                UnitMeasure = newProduct.UnitMeasure,
-                Designation = newProduct.Designation,
-                TVA = newProduct.TVA,
-                UnitPrice = 0,
-                Quantity = 0
-            };
-            result = await productService.CreateProduct(product);
-            if (result.IsSuccess)
-            {
-                success = "the Product has been added successfully";
-            }
-            else if (result.IsFailure)
-            {
-                failure = result.Error.Description;
-            }
-            StateHasChanged();
-            await Task.Delay(1500);
+            Id = Guid.NewGuid(),
+            UnitMeasure = newProduct.UnitMeasure,
+            Designation = newProduct.Designation,
+            TVA = newProduct.TVA,
+            UnitPrice = 0,
+            Quantity = 0
+        };
 
-            HideModal();
-            StateHasChanged();
+        result = await productService.CreateProduct(product);
+
+        if (result.IsSuccess)
+        {
+            success = "The product has been added successfully";
+            await OnProductCreated.InvokeAsync(product);
+        }
+        else
+        {
+            failure = result.Error.Description;
         }
 
-        public void ShowModal()
-        {
-            visibility = true;
-            StateHasChanged();
-        }
 
-        public void HideModal()
-        {
-            visibility = false;
-            StateHasChanged();
-        }
+        HideModal();
+        StateHasChanged();
+    }
+
+    public void ShowModal()
+    {
+        visibility = true;
+        success = string.Empty;
+        failure = string.Empty;
+        StateHasChanged();
+    }
+
+    public void HideModal()
+    {
+        isCreatingProduct = false;
+        visibility = false;
+        success = string.Empty;
+        failure = string.Empty;
+        StateHasChanged();
     }
 }

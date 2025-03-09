@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace INVUIs.Purchases.PurchaseModels
+namespace INVUIs.Purchases.PurchaseModels;
+
+public class PurchaseValidateModel
 {
-    public class PurchaseValidateModel
-    {
-        [Required (ErrorMessage = "يلزم ادخال البيانات ب:")]
-        public String Data { get; set; }
-        [Required (ErrorMessage = "يلزم ادخال البيانات في:")]
-        public String Data2 { get; set; }
-    }
+    [Required(ErrorMessage = "يلزم ادخال البيانات ب:")]
+    public string Data { get; set; }
+
+    [Required(ErrorMessage = "يلزم ادخال البيانات في:")]
+    public string Data2 { get; set; }
 }
