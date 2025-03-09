@@ -14,35 +14,9 @@ namespace INVUIs.Receptions
         [Parameter] public RenderFragment Pills { get; set; }
         [Inject] public NavigationManager navigationManager { set; get; }
 
-       
-
         private ReceptionModel commandshow = new ReceptionModel();
-       
+
         public EditContext editContext { get; set; }
         private bool CommandSelected = false;
-        
-        
-
-        private async Task CommandSelectednew(Result result)
-        {/*
-            commandshow = new ReceptionModel
-            {
-               Date = commandInfo.Date,
-               DeliveryNumber = commandInfo.Date.ToString(),
-               Status = (ReceptionStatus)commandInfo.Status,
-
-            };
-            editContext = new EditContext(commandshow);
-
-           
-            StateHasChanged();
-            await OnCommand.InvokeAsync(commandshow);*/
-        }
-
-        private void NavigateToReceiption(Guid receiptId)
-        {
-            navigationManager.NavigateTo($"/reception/{receiptId}");
-
-        }
     }
 }

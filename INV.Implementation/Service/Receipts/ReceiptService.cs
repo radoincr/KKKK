@@ -18,28 +18,37 @@ namespace INV.App.Services
 
         public async ValueTask<ReceiptInfo> CreateReceiptFromPurchase(Guid purchaseId)
         {
-            try
+            using(TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled) )
             {
-                var receipt = await receiptStorage.CreateReceiptFromPurchase(purchaseId);
-                return receipt;
+                try
+                {
+                    var receipt = await receiptStorage.CreateReceiptFromPurchase(purchaseId);
+                    return receipt;
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
             }
-            catch (Exception ex)
-            {
-                throw;
-            }
+           
         }
 
         public async ValueTask<Result> ValidateReceipt(Guid receiptId)
         {
-            try
+            using(TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                await receiptStorage.ValidateReceipt(receiptId);
-                return Result.Success();
+                try
+                {
+                    await receiptStorage.ValidateReceipt(receiptId);
+                    scope.Complete();
+                    return Result.Success();
+                }
+                catch (Exception ex)
+                {
+                    return Error.Exception(ex);
+                }
             }
-            catch (Exception ex)
-            {
-                return Result.Failure(ReceiptError.ReceiptAlreadyValidated(receiptId));
-            }
+           
         }
 
         public async ValueTask<Result<List<ReceiptInfo>>> GetAllReceipts()
@@ -98,7 +107,7 @@ namespace INV.App.Services
                 }
                 catch (Exception ex)
                 {
-                    scope.Dispose();
+                  
                     return Error.Exception(ex);
                 }
             }
@@ -106,15 +115,20 @@ namespace INV.App.Services
 
         public async ValueTask<Result> UpdateReceipt(Receipt receipt)
         {
-            try
+            using(TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                await receiptStorage.UpdateReceipt(receipt);
-                return Result.Success();
+                try
+                {
+                    await receiptStorage.UpdateReceipt(receipt);
+                    scope.Complete();
+                    return Result.Success();
+                }
+                catch (Exception ex)
+                {
+                    return Result.Failure(ReceiptError.ReceiptUpdateFailed);
+                }
             }
-            catch (Exception ex)
-            {
-                return Result.Failure(ReceiptError.ReceiptUpdateFailed);
-            }
+           
         }
 
         public async ValueTask<Result> RemoveReceipt(Guid id)

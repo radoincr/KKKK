@@ -36,52 +36,66 @@ namespace INVUIs.Receptions
 
         private async Task Validate()
         {
+            statusInput = true;
             receptionService.ValidateReceipt(ReceiptInfo.Id);
             ReceiptInfo.Status = ReceiptStatus.validated;
             StateHasChanged();
         }
 
-        private bool isEditing = true;
+        private bool statusInput = false;
 
         private void StartEditing()
         {
-            isEditing = true;
+            statusInput = true;
         }
 
         private async Task SaveChanges()
         {
-            var result = await receptionService.GetReceiptById(ReceiptInfo.Id);
-            Receipt receiptToSave = new()
+            bool send = checkInputs();
+            if (send)
             {
-                Id = ReceiptInfo.Id,
-                Date = (DateOnly)ReceiptInfo.Date,
-                DeliveryDate = (DateOnly)ReceiptInfo.DeliveryDate,
-                DeliveryNumber = ReceiptInfo.DeliveryNumber,
-                PurchaseId = ReceiptInfo.PurchaseId,
-                Products = ReceiptInfo.ReceiptProducts.Select(p => new ReceiptProduct()
+                var result = await receptionService.GetReceiptById(ReceiptInfo.Id);
+                Receipt receiptToSave = new()
                 {
-                    ReceptionId = p.ReceptionId,
-                    ProductId = p.ProductId,
-                    Quantity = p.Quantity
-                }).ToList(),
-                Status = ReceiptStatus.editing
-            };
+                    Id = ReceiptInfo.Id,
+                    Date = (DateOnly)ReceiptInfo.Date,
+                    DeliveryDate = (DateOnly)ReceiptInfo.DeliveryDate,
+                    DeliveryNumber = ReceiptInfo.DeliveryNumber,
+                    PurchaseId = ReceiptInfo.PurchaseId,
+                    Products = ReceiptInfo.ReceiptProducts.Select(p => new ReceiptProduct()
+                    {
+                        ReceptionId = p.ReceptionId,
+                        ProductId = p.ProductId,
+                        Quantity = p.Quantity,
+                        WareHouseId = Guid.Parse("BF33EB94-40DA-452F-BB30-9525E052CB46")
 
-            if (result.IsSuccess)
-            {
-               // await receptionService.UpdateReceipt(receiptToSave);
 
-            }
-            else
-            {
-                await receptionService.CreateReceipt(receiptToSave);
-                
+                    }).ToList(),
+                    Status = ReceiptStatus.editing
+                };
+                if (result.IsSuccess)
+                {
+                    await receptionService.UpdateReceipt(receiptToSave);
+                }
+                else
+                {
+                    await receptionService.CreateReceipt(receiptToSave);
+                }
             }
         }
 
         private void CancelEditing()
         {
-            isEditing = false;
+            statusInput = false;
+        }
+
+        private bool checkInputs()
+        {
+            if (ReceiptInfo.DeliveryDate == null || ReceiptInfo.DeliveryNumber == null)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
